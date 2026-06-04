@@ -8663,7 +8663,7 @@
         let href = t.getAttribute("href") || t.getAttribute("data-href");
         if (!href) {
             let text = t.textContent.toLowerCase();
-            if (text.includes("register")) href = "/esper/register";
+            if (text.includes("register")) href = "/esper/popular/register";
         }
         if (!href) return;
         e.preventDefault(); e.stopPropagation();
