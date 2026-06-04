@@ -1,0 +1,409 @@
+
+> src\pages\esper\popular.html:5047:                          Most Popular School Science Quiz Team
+  src\pages\esper\popular.html:5048:                        </h3>
+  src\pages\esper\popular.html:5049:
+  src\pages\esper\popular.html:5050:
+  src\pages\esper\popular.html:5051:                      </div>
+  src\pages\esper\popular.html:5052:
+  src\pages\esper\popular.html:5053:
+  src\pages\esper\popular.html:5054:                      <div class="framer-1rquw6u" data-framer-component-type="RichTextContainer"
+  src\pages\esper\popular.html:5055:                        data-framer-name="Creative Director"
+  src\pages\esper\popular.html:5056:                        style="--extracted-r6o4lv:var(--token-3ecf9004-c795-4969-8dc2-46e9a5f93615, rgb(214, 214, 214));--framer-paragraph-spacing:0px;transform:none">
+  src\pages\esper\popular.html:5057:                        <p class="framer-text framer-styles-preset-1ypvmaz" data-styles-preset="hkyTNy7BG"
+  src\pages\esper\popular.html:5058:                          style="--framer-text-alignment:left;--framer-text-color:var(--extracted-r6o4lv, var(--token-3ecf9004-c795-4969-8dc2-46e9a5f93615, rgb(214, 214, 214)))">
+  src\pages\esper\popular.html:5059:                          Of The Year
+  src\pages\esper\popular.html:5060:                        </p>
+  src\pages\esper\popular.html:5061:
+  src\pages\esper\popular.html:5062:
+  src\pages\esper\popular.html:5063:                      </div>
+  src\pages\esper\popular.html:5064:
+  src\pages\esper\popular.html:5065:
+  src\pages\esper\popular.html:5066:                    </div>
+  src\pages\esper\popular.html:5067:
+  src\pages\esper\popular.html:5068:
+  src\pages\esper\popular.html:5069:                  </div>
+  src\pages\esper\popular.html:5070:
+  src\pages\esper\popular.html:5071:
+  src\pages\esper\popular.html:5072:                  <div class="framer-kccf2v-container">
+  src\pages\esper\popular.html:5073:                    <!--$-->
+  src\pages\esper\popular.html:5074:                    <a href="/esper/register" class="framer-NuCN4 framer-1ew7p8v framer-v-xz6rdl framer-1x2xllv"
+  src\pages\esper\popular.html:5075:                      data-framer-name="Subscribe Button" data-nested-link="true" role="link"
+  src\pages\esper\popular.html:5076:                      style="width:100%; text-decoration: none;" tabindex="0">
+  src\pages\esper\popular.html:5077:                      <div class="framer-mzpatg" data-framer-name="Button"
+  src\pages\esper\popular.html:5078:                        style="background-color:rgb(59, 59, 59);border-bottom-left-radius:11.5px;border-bottom-right-radius:11.5px;border-top-left-radius:11.5px;border-top-right-radius:11.5px">
+  src\pages\esper\popular.html:5079:                        <div class="framer-10095da" data-framer-name="Container"
+  src\pages\esper\popular.html:5080:                          style="background-color:var(--token-4afc5ccf-bc51-4b9c-8168-fdeed00f09c1, rgb(12, 12, 12));border-bottom-left-radius:10px;border-bottom-right-radius:10px;border-top-left-radius:10px;border-top-right-radius:10px">
+  src\pages\esper\popular.html:5081:                          <div class="framer-1fatjcu" data-framer-name="Black"
+  src\pages\esper\popular.html:5082:                            style="background-color:rgb(0, 0, 0);filter:blur(5px);-webkit-filter:blur(5px);transform:rotate(-30deg)">
+  src\pages\esper\popular.html:5083:                          </div>
+  src\pages\esper\popular.html:5084:
+  src\pages\esper\popular.html:5085:
+  src\pages\esper\popular.html:5086:                          <div class="framer-n4zy3s" data-framer-name="Glow"
+  src\pages\esper\popular.html:5087:                            style="background:radial-gradient(50% 50% at 50% 50%, rgb(209, 206, 6) 0%, rgba(0, 0, 0, 0) 100%);border-bottom-left-radius:999px;border-bottom-right-radius:999px;border-top-left-radius:999px;border-top-right-radius:999px;filter:blur(10px);-webkit-filter:blur(10px);opacity:0.41">
+  src\pages\esper\popular.html:5088:                          </div>
+  src\pages\esper\popular.html:5089:
+  src\pages\esper\popular.html:5090:
+  src\pages\esper\popular.html:5091:                          <div class="framer-rmlbh7" data-framer-name="Glow"
+  src\pages\esper\popular.html:5092:                            style="background:radial-gradient(50% 50% at 50% 50%, rgb(115, 115, 115) 0%, rgba(0, 0, 0, 0) 100%);border-bottom-left-radius:999px;border-bottom-right-radius:999px;border-top-left-radius:999px;border-top-right-radius:999px;filter:blur(10px);-webkit-filter:blur(10px)">
+  src\pages\esper\popular.html:5093:                          </div>
+  src\pages\esper\popular.html:5094:
+  src\pages\esper\popular.html:5095:
+  src\pages\esper\popular.html:5096:                          <div class="framer-6qo4hj">
+  src\pages\esper\popular.html:5097:                            <div class="framer-nkc9va" data-framer-component-type="RichTextContainer"
+  src\pages\esper\popular.html:5098:                              style="--extracted-r6o4lv:rgb(255, 255, 255);--framer-link-text-color:rgb(0, 153, 255);--framer-link-text-decoration:underline;transform:none">
+  src\pages\esper\popular.html:5099:                              <p class="framer-text"
+  src\pages\esper\popular.html:5100:                                style='--font-selector:RlI7SW50ZXJEaXNwbGF5;--framer-font-family:"Inter Display", "Inter Display Placeholder", sans-serif;--framer-font-size:18px;--framer-text-color:var(--extracted-r6o4lv, rgb(255, 255, 255))'>
+  src\pages\esper\popular.html:5101:                                Register
+  src\pages\esper\popular.html:5102:                              </p>
+  src\pages\esper\popular.html:5103:
+  src\pages\esper\popular.html:5104:
+  src\pages\esper\popular.html:5105:                            </div>
+  src\pages\esper\popular.html:5106:
+  src\pages\esper\popular.html:5107:
+  src\pages\esper\popular.html:5108:                          </div>
+  src\pages\esper\popular.html:5109:
+  src\pages\esper\popular.html:5110:
+  src\pages\esper\popular.html:5111:                        </div>
+  src\pages\esper\popular.html:5112:
+  src\pages\esper\popular.html:5113:
+  src\pages\esper\popular.html:5114:                        <div class="framer-vutim4" data-framer-name="White Top"
+  src\pages\esper\popular.html:5115:                          style="background-color:rgb(255, 255, 255);filter:blur(8px);-webkit-filter:blur(8px)">
+  src\pages\esper\popular.html:5116:                        </div>
+  src\pages\esper\popular.html:5117:
+  src\pages\esper\popular.html:5118:
+  src\pages\esper\popular.html:5119:                        <div class="framer-tb25bi" data-framer-name="Deep Blue"
+  src\pages\esper\popular.html:5120:                          style="background-color:rgb(255, 195, 0);filter:blur(8px);-webkit-filter:blur(8px)">
+  src\pages\esper\popular.html:5121:                        </div>
+  src\pages\esper\popular.html:5122:
+  src\pages\esper\popular.html:5123:
+  src\pages\esper\popular.html:5124:                        <div class="framer-1uv56pk" data-framer-name="Light Blue"
+  src\pages\esper\popular.html:5125:                          style="background-color:rgb(255, 208, 0);filter:blur(8px);-webkit-filter:blur(8px)">
+  src\pages\esper\popular.html:5126:                        </div>
+  src\pages\esper\popular.html:5127:
+> src\pages\esper\popular.html:5343:                          Most Popular School Science Quiz Team
+  src\pages\esper\popular.html:5344:                        </h3>
+  src\pages\esper\popular.html:5345:
+  src\pages\esper\popular.html:5346:
+  src\pages\esper\popular.html:5347:                      </div>
+  src\pages\esper\popular.html:5348:
+  src\pages\esper\popular.html:5349:
+  src\pages\esper\popular.html:5350:                      <div class="framer-1rquw6u" data-framer-component-type="RichTextContainer"
+  src\pages\esper\popular.html:5351:                        data-framer-name="Creative Director"
+  src\pages\esper\popular.html:5352:                        style="--extracted-r6o4lv:var(--token-3ecf9004-c795-4969-8dc2-46e9a5f93615, rgb(214, 214, 214));--framer-paragraph-spacing:0px;transform:none">
+  src\pages\esper\popular.html:5353:                        <p class="framer-text framer-styles-preset-1ypvmaz" data-styles-preset="hkyTNy7BG"
+  src\pages\esper\popular.html:5354:                          style="--framer-text-alignment:left;--framer-text-color:var(--extracted-r6o4lv, var(--token-3ecf9004-c795-4969-8dc2-46e9a5f93615, rgb(214, 214, 214)))">
+  src\pages\esper\popular.html:5355:                          Of The Year
+  src\pages\esper\popular.html:5356:                        </p>
+  src\pages\esper\popular.html:5357:
+  src\pages\esper\popular.html:5358:
+  src\pages\esper\popular.html:5359:                      </div>
+  src\pages\esper\popular.html:5360:
+  src\pages\esper\popular.html:5361:
+  src\pages\esper\popular.html:5362:                    </div>
+  src\pages\esper\popular.html:5363:
+  src\pages\esper\popular.html:5364:
+  src\pages\esper\popular.html:5365:                  </div>
+  src\pages\esper\popular.html:5366:
+  src\pages\esper\popular.html:5367:
+  src\pages\esper\popular.html:5368:                  <div class="framer-kccf2v-container">
+  src\pages\esper\popular.html:5369:                    <!--$-->
+  src\pages\esper\popular.html:5370:                    <a href="/esper/register" class="framer-NuCN4 framer-1ew7p8v framer-v-xz6rdl framer-1x2xllv"
+  src\pages\esper\popular.html:5371:                      data-framer-name="Subscribe Button" data-nested-link="true" role="link"
+  src\pages\esper\popular.html:5372:                      style="width:100%; text-decoration: none;" tabindex="0">
+  src\pages\esper\popular.html:5373:                      <div class="framer-mzpatg" data-framer-name="Button"
+  src\pages\esper\popular.html:5374:                        style="background-color:rgb(59, 59, 59);border-bottom-left-radius:11.5px;border-bottom-right-radius:11.5px;border-top-left-radius:11.5px;border-top-right-radius:11.5px">
+  src\pages\esper\popular.html:5375:                        <div class="framer-10095da" data-framer-name="Container"
+  src\pages\esper\popular.html:5376:                          style="background-color:var(--token-4afc5ccf-bc51-4b9c-8168-fdeed00f09c1, rgb(12, 12, 12));border-bottom-left-radius:10px;border-bottom-right-radius:10px;border-top-left-radius:10px;border-top-right-radius:10px">
+  src\pages\esper\popular.html:5377:                          <div class="framer-1fatjcu" data-framer-name="Black"
+  src\pages\esper\popular.html:5378:                            style="background-color:rgb(0, 0, 0);filter:blur(5px);-webkit-filter:blur(5px);transform:rotate(-30deg)">
+  src\pages\esper\popular.html:5379:                          </div>
+  src\pages\esper\popular.html:5380:
+  src\pages\esper\popular.html:5381:
+  src\pages\esper\popular.html:5382:                          <div class="framer-n4zy3s" data-framer-name="Glow"
+  src\pages\esper\popular.html:5383:                            style="background:radial-gradient(50% 50% at 50% 50%, rgb(209, 206, 6) 0%, rgba(0, 0, 0, 0) 100%);border-bottom-left-radius:999px;border-bottom-right-radius:999px;border-top-left-radius:999px;border-top-right-radius:999px;filter:blur(10px);-webkit-filter:blur(10px);opacity:0.41">
+  src\pages\esper\popular.html:5384:                          </div>
+  src\pages\esper\popular.html:5385:
+  src\pages\esper\popular.html:5386:
+  src\pages\esper\popular.html:5387:                          <div class="framer-rmlbh7" data-framer-name="Glow"
+  src\pages\esper\popular.html:5388:                            style="background:radial-gradient(50% 50% at 50% 50%, rgb(115, 115, 115) 0%, rgba(0, 0, 0, 0) 100%);border-bottom-left-radius:999px;border-bottom-right-radius:999px;border-top-left-radius:999px;border-top-right-radius:999px;filter:blur(10px);-webkit-filter:blur(10px)">
+  src\pages\esper\popular.html:5389:                          </div>
+  src\pages\esper\popular.html:5390:
+  src\pages\esper\popular.html:5391:
+  src\pages\esper\popular.html:5392:                          <div class="framer-6qo4hj">
+  src\pages\esper\popular.html:5393:                            <div class="framer-nkc9va" data-framer-component-type="RichTextContainer"
+  src\pages\esper\popular.html:5394:                              style="--extracted-r6o4lv:rgb(255, 255, 255);--framer-link-text-color:rgb(0, 153, 255);--framer-link-text-decoration:underline;transform:none">
+  src\pages\esper\popular.html:5395:                              <p class="framer-text"
+  src\pages\esper\popular.html:5396:                                style='--font-selector:RlI7SW50ZXJEaXNwbGF5;--framer-font-family:"Inter Display", "Inter Display Placeholder", sans-serif;--framer-font-size:18px;--framer-text-color:var(--extracted-r6o4lv, rgb(255, 255, 255))'>
+  src\pages\esper\popular.html:5397:                                Register
+  src\pages\esper\popular.html:5398:                              </p>
+  src\pages\esper\popular.html:5399:
+  src\pages\esper\popular.html:5400:
+  src\pages\esper\popular.html:5401:                            </div>
+  src\pages\esper\popular.html:5402:
+  src\pages\esper\popular.html:5403:
+  src\pages\esper\popular.html:5404:                          </div>
+  src\pages\esper\popular.html:5405:
+  src\pages\esper\popular.html:5406:
+  src\pages\esper\popular.html:5407:                        </div>
+  src\pages\esper\popular.html:5408:
+  src\pages\esper\popular.html:5409:
+  src\pages\esper\popular.html:5410:                        <div class="framer-vutim4" data-framer-name="White Top"
+  src\pages\esper\popular.html:5411:                          style="background-color:rgb(255, 255, 255);filter:blur(8px);-webkit-filter:blur(8px)">
+  src\pages\esper\popular.html:5412:                        </div>
+  src\pages\esper\popular.html:5413:
+  src\pages\esper\popular.html:5414:
+  src\pages\esper\popular.html:5415:                        <div class="framer-tb25bi" data-framer-name="Deep Blue"
+  src\pages\esper\popular.html:5416:                          style="background-color:rgb(255, 195, 0);filter:blur(8px);-webkit-filter:blur(8px)">
+  src\pages\esper\popular.html:5417:                        </div>
+  src\pages\esper\popular.html:5418:
+  src\pages\esper\popular.html:5419:
+  src\pages\esper\popular.html:5420:                        <div class="framer-1uv56pk" data-framer-name="Light Blue"
+  src\pages\esper\popular.html:5421:                          style="background-color:rgb(255, 208, 0);filter:blur(8px);-webkit-filter:blur(8px)">
+  src\pages\esper\popular.html:5422:                        </div>
+  src\pages\esper\popular.html:5423:
+> src\pages\esper\popular.html:5493:                          Most Popular School Science Quiz Team
+  src\pages\esper\popular.html:5494:                        </h3>
+  src\pages\esper\popular.html:5495:
+  src\pages\esper\popular.html:5496:
+  src\pages\esper\popular.html:5497:                      </div>
+  src\pages\esper\popular.html:5498:
+  src\pages\esper\popular.html:5499:
+  src\pages\esper\popular.html:5500:                      <div class="framer-1rquw6u" data-framer-component-type="RichTextContainer"
+  src\pages\esper\popular.html:5501:                        data-framer-name="Creative Director"
+  src\pages\esper\popular.html:5502:                        style="--extracted-r6o4lv:var(--token-3ecf9004-c795-4969-8dc2-46e9a5f93615, rgb(214, 214, 214));--framer-paragraph-spacing:0px;transform:none">
+  src\pages\esper\popular.html:5503:                        <p class="framer-text framer-styles-preset-1ypvmaz" data-styles-preset="hkyTNy7BG"
+  src\pages\esper\popular.html:5504:                          style="--framer-text-alignment:left;--framer-text-color:var(--extracted-r6o4lv, var(--token-3ecf9004-c795-4969-8dc2-46e9a5f93615, rgb(214, 214, 214)))">
+  src\pages\esper\popular.html:5505:                          Of The Year
+  src\pages\esper\popular.html:5506:                        </p>
+  src\pages\esper\popular.html:5507:
+  src\pages\esper\popular.html:5508:
+  src\pages\esper\popular.html:5509:                      </div>
+  src\pages\esper\popular.html:5510:
+  src\pages\esper\popular.html:5511:
+  src\pages\esper\popular.html:5512:                    </div>
+  src\pages\esper\popular.html:5513:
+  src\pages\esper\popular.html:5514:
+  src\pages\esper\popular.html:5515:                  </div>
+  src\pages\esper\popular.html:5516:
+  src\pages\esper\popular.html:5517:
+  src\pages\esper\popular.html:5518:                  <div class="framer-kccf2v-container">
+  src\pages\esper\popular.html:5519:                    <!--$-->
+  src\pages\esper\popular.html:5520:                    <a href="/esper/register" class="framer-NuCN4 framer-1ew7p8v framer-v-xz6rdl framer-1x2xllv"
+  src\pages\esper\popular.html:5521:                      data-framer-name="Subscribe Button" data-nested-link="true" role="link"
+  src\pages\esper\popular.html:5522:                      style="width:100%; text-decoration: none;" tabindex="0">
+  src\pages\esper\popular.html:5523:                      <div class="framer-mzpatg" data-framer-name="Button"
+  src\pages\esper\popular.html:5524:                        style="background-color:rgb(59, 59, 59);border-bottom-left-radius:11.5px;border-bottom-right-radius:11.5px;border-top-left-radius:11.5px;border-top-right-radius:11.5px">
+  src\pages\esper\popular.html:5525:                        <div class="framer-10095da" data-framer-name="Container"
+  src\pages\esper\popular.html:5526:                          style="background-color:var(--token-4afc5ccf-bc51-4b9c-8168-fdeed00f09c1, rgb(12, 12, 12));border-bottom-left-radius:10px;border-bottom-right-radius:10px;border-top-left-radius:10px;border-top-right-radius:10px">
+  src\pages\esper\popular.html:5527:                          <div class="framer-1fatjcu" data-framer-name="Black"
+  src\pages\esper\popular.html:5528:                            style="background-color:rgb(0, 0, 0);filter:blur(5px);-webkit-filter:blur(5px);transform:rotate(-30deg)">
+  src\pages\esper\popular.html:5529:                          </div>
+  src\pages\esper\popular.html:5530:
+  src\pages\esper\popular.html:5531:
+  src\pages\esper\popular.html:5532:                          <div class="framer-n4zy3s" data-framer-name="Glow"
+  src\pages\esper\popular.html:5533:                            style="background:radial-gradient(50% 50% at 50% 50%, rgb(209, 206, 6) 0%, rgba(0, 0, 0, 0) 100%);border-bottom-left-radius:999px;border-bottom-right-radius:999px;border-top-left-radius:999px;border-top-right-radius:999px;filter:blur(10px);-webkit-filter:blur(10px);opacity:0.41">
+  src\pages\esper\popular.html:5534:                          </div>
+  src\pages\esper\popular.html:5535:
+  src\pages\esper\popular.html:5536:
+  src\pages\esper\popular.html:5537:                          <div class="framer-rmlbh7" data-framer-name="Glow"
+  src\pages\esper\popular.html:5538:                            style="background:radial-gradient(50% 50% at 50% 50%, rgb(115, 115, 115) 0%, rgba(0, 0, 0, 0) 100%);border-bottom-left-radius:999px;border-bottom-right-radius:999px;border-top-left-radius:999px;border-top-right-radius:999px;filter:blur(10px);-webkit-filter:blur(10px)">
+  src\pages\esper\popular.html:5539:                          </div>
+  src\pages\esper\popular.html:5540:
+  src\pages\esper\popular.html:5541:
+  src\pages\esper\popular.html:5542:                          <div class="framer-6qo4hj">
+  src\pages\esper\popular.html:5543:                            <div class="framer-nkc9va" data-framer-component-type="RichTextContainer"
+  src\pages\esper\popular.html:5544:                              style="--extracted-r6o4lv:rgb(255, 255, 255);--framer-link-text-color:rgb(0, 153, 255);--framer-link-text-decoration:underline;transform:none">
+  src\pages\esper\popular.html:5545:                              <p class="framer-text"
+  src\pages\esper\popular.html:5546:                                style='--font-selector:RlI7SW50ZXJEaXNwbGF5;--framer-font-family:"Inter Display", "Inter Display Placeholder", sans-serif;--framer-font-size:18px;--framer-text-color:var(--extracted-r6o4lv, rgb(255, 255, 255))'>
+  src\pages\esper\popular.html:5547:                                Register
+  src\pages\esper\popular.html:5548:                              </p>
+  src\pages\esper\popular.html:5549:
+  src\pages\esper\popular.html:5550:
+  src\pages\esper\popular.html:5551:                            </div>
+  src\pages\esper\popular.html:5552:
+  src\pages\esper\popular.html:5553:
+  src\pages\esper\popular.html:5554:                          </div>
+  src\pages\esper\popular.html:5555:
+  src\pages\esper\popular.html:5556:
+  src\pages\esper\popular.html:5557:                        </div>
+  src\pages\esper\popular.html:5558:
+  src\pages\esper\popular.html:5559:
+  src\pages\esper\popular.html:5560:                        <div class="framer-vutim4" data-framer-name="White Top"
+  src\pages\esper\popular.html:5561:                          style="background-color:rgb(255, 255, 255);filter:blur(8px);-webkit-filter:blur(8px)">
+  src\pages\esper\popular.html:5562:                        </div>
+  src\pages\esper\popular.html:5563:
+  src\pages\esper\popular.html:5564:
+  src\pages\esper\popular.html:5565:                        <div class="framer-tb25bi" data-framer-name="Deep Blue"
+  src\pages\esper\popular.html:5566:                          style="background-color:rgb(255, 195, 0);filter:blur(8px);-webkit-filter:blur(8px)">
+  src\pages\esper\popular.html:5567:                        </div>
+  src\pages\esper\popular.html:5568:
+  src\pages\esper\popular.html:5569:
+  src\pages\esper\popular.html:5570:                        <div class="framer-1uv56pk" data-framer-name="Light Blue"
+  src\pages\esper\popular.html:5571:                          style="background-color:rgb(255, 208, 0);filter:blur(8px);-webkit-filter:blur(8px)">
+  src\pages\esper\popular.html:5572:                        </div>
+  src\pages\esper\popular.html:5573:
+> src\pages\esper\popular.html:5638:                          Most Popular School Science Quiz Team
+  src\pages\esper\popular.html:5639:                        </h4>
+  src\pages\esper\popular.html:5640:
+  src\pages\esper\popular.html:5641:
+  src\pages\esper\popular.html:5642:                      </div>
+  src\pages\esper\popular.html:5643:
+  src\pages\esper\popular.html:5644:
+  src\pages\esper\popular.html:5645:                      <div class="framer-1rquw6u" data-framer-component-type="RichTextContainer"
+  src\pages\esper\popular.html:5646:                        data-framer-name="Creative Director"
+  src\pages\esper\popular.html:5647:                        style="--extracted-r6o4lv:var(--token-3ecf9004-c795-4969-8dc2-46e9a5f93615, rgb(214, 214, 214));--framer-paragraph-spacing:0px;transform:none">
+  src\pages\esper\popular.html:5648:                        <p class="framer-text framer-styles-preset-1ypvmaz" data-styles-preset="hkyTNy7BG"
+  src\pages\esper\popular.html:5649:                          style="--framer-text-alignment:left;--framer-text-color:var(--extracted-r6o4lv, var(--token-3ecf9004-c795-4969-8dc2-46e9a5f93615, rgb(214, 214, 214)))">
+  src\pages\esper\popular.html:5650:                          Of The Year
+  src\pages\esper\popular.html:5651:                        </p>
+  src\pages\esper\popular.html:5652:
+  src\pages\esper\popular.html:5653:
+  src\pages\esper\popular.html:5654:                      </div>
+  src\pages\esper\popular.html:5655:
+  src\pages\esper\popular.html:5656:
+  src\pages\esper\popular.html:5657:                    </div>
+  src\pages\esper\popular.html:5658:
+  src\pages\esper\popular.html:5659:
+  src\pages\esper\popular.html:5660:                  </div>
+  src\pages\esper\popular.html:5661:
+  src\pages\esper\popular.html:5662:
+  src\pages\esper\popular.html:5663:                  <div class="framer-kccf2v-container">
+  src\pages\esper\popular.html:5664:                    <!--$-->
+  src\pages\esper\popular.html:5665:                    <a href="/esper/register" class="framer-NuCN4 framer-1ew7p8v framer-v-xz6rdl framer-1x2xllv"
+  src\pages\esper\popular.html:5666:                      data-framer-name="Subscribe Button" data-nested-link="true" role="link"
+  src\pages\esper\popular.html:5667:                      style="width:100%; text-decoration: none;" tabindex="0">
+  src\pages\esper\popular.html:5668:                      <div class="framer-mzpatg" data-framer-name="Button"
+  src\pages\esper\popular.html:5669:                        style="background-color:rgb(59, 59, 59);border-bottom-left-radius:11.5px;border-bottom-right-radius:11.5px;border-top-left-radius:11.5px;border-top-right-radius:11.5px">
+  src\pages\esper\popular.html:5670:                        <div class="framer-10095da" data-framer-name="Container"
+  src\pages\esper\popular.html:5671:                          style="background-color:var(--token-4afc5ccf-bc51-4b9c-8168-fdeed00f09c1, rgb(12, 12, 12));border-bottom-left-radius:10px;border-bottom-right-radius:10px;border-top-left-radius:10px;border-top-right-radius:10px">
+  src\pages\esper\popular.html:5672:                          <div class="framer-1fatjcu" data-framer-name="Black"
+  src\pages\esper\popular.html:5673:                            style="background-color:rgb(0, 0, 0);filter:blur(5px);-webkit-filter:blur(5px);transform:rotate(-30deg)">
+  src\pages\esper\popular.html:5674:                          </div>
+  src\pages\esper\popular.html:5675:
+  src\pages\esper\popular.html:5676:
+  src\pages\esper\popular.html:5677:                          <div class="framer-n4zy3s" data-framer-name="Glow"
+  src\pages\esper\popular.html:5678:                            style="background:radial-gradient(50% 50% at 50% 50%, rgb(209, 206, 6) 0%, rgba(0, 0, 0, 0) 100%);border-bottom-left-radius:999px;border-bottom-right-radius:999px;border-top-left-radius:999px;border-top-right-radius:999px;filter:blur(10px);-webkit-filter:blur(10px);opacity:0.41">
+  src\pages\esper\popular.html:5679:                          </div>
+  src\pages\esper\popular.html:5680:
+  src\pages\esper\popular.html:5681:
+  src\pages\esper\popular.html:5682:                          <div class="framer-rmlbh7" data-framer-name="Glow"
+  src\pages\esper\popular.html:5683:                            style="background:radial-gradient(50% 50% at 50% 50%, rgb(115, 115, 115) 0%, rgba(0, 0, 0, 0) 100%);border-bottom-left-radius:999px;border-bottom-right-radius:999px;border-top-left-radius:999px;border-top-right-radius:999px;filter:blur(10px);-webkit-filter:blur(10px)">
+  src\pages\esper\popular.html:5684:                          </div>
+  src\pages\esper\popular.html:5685:
+  src\pages\esper\popular.html:5686:
+  src\pages\esper\popular.html:5687:                          <div class="framer-6qo4hj">
+  src\pages\esper\popular.html:5688:                            <div class="framer-nkc9va" data-framer-component-type="RichTextContainer"
+  src\pages\esper\popular.html:5689:                              style="--extracted-r6o4lv:rgb(255, 255, 255);--framer-link-text-color:rgb(0, 153, 255);--framer-link-text-decoration:underline;transform:none">
+  src\pages\esper\popular.html:5690:                              <p class="framer-text"
+  src\pages\esper\popular.html:5691:                                style='--font-selector:RlI7SW50ZXJEaXNwbGF5;--framer-font-family:"Inter Display", "Inter Display Placeholder", sans-serif;--framer-font-size:18px;--framer-text-color:var(--extracted-r6o4lv, rgb(255, 255, 255))'>
+  src\pages\esper\popular.html:5692:                                Register
+  src\pages\esper\popular.html:5693:                              </p>
+  src\pages\esper\popular.html:5694:
+  src\pages\esper\popular.html:5695:
+  src\pages\esper\popular.html:5696:                            </div>
+  src\pages\esper\popular.html:5697:
+  src\pages\esper\popular.html:5698:
+  src\pages\esper\popular.html:5699:                          </div>
+  src\pages\esper\popular.html:5700:
+  src\pages\esper\popular.html:5701:
+  src\pages\esper\popular.html:5702:                        </div>
+  src\pages\esper\popular.html:5703:
+  src\pages\esper\popular.html:5704:
+  src\pages\esper\popular.html:5705:                        <div class="framer-vutim4" data-framer-name="White Top"
+  src\pages\esper\popular.html:5706:                          style="background-color:rgb(255, 255, 255);filter:blur(8px);-webkit-filter:blur(8px)">
+  src\pages\esper\popular.html:5707:                        </div>
+  src\pages\esper\popular.html:5708:
+  src\pages\esper\popular.html:5709:
+  src\pages\esper\popular.html:5710:                        <div class="framer-tb25bi" data-framer-name="Deep Blue"
+  src\pages\esper\popular.html:5711:                          style="background-color:rgb(255, 195, 0);filter:blur(8px);-webkit-filter:blur(8px)">
+  src\pages\esper\popular.html:5712:                        </div>
+  src\pages\esper\popular.html:5713:
+  src\pages\esper\popular.html:5714:
+  src\pages\esper\popular.html:5715:                        <div class="framer-1uv56pk" data-framer-name="Light Blue"
+  src\pages\esper\popular.html:5716:                          style="background-color:rgb(255, 208, 0);filter:blur(8px);-webkit-filter:blur(8px)">
+  src\pages\esper\popular.html:5717:                        </div>
+  src\pages\esper\popular.html:5718:
+> src\pages\esper\popular.html:5784:                          Most Popular School Science Quiz Team
+  src\pages\esper\popular.html:5785:                        </h4>
+  src\pages\esper\popular.html:5786:
+  src\pages\esper\popular.html:5787:
+  src\pages\esper\popular.html:5788:                      </div>
+  src\pages\esper\popular.html:5789:
+  src\pages\esper\popular.html:5790:
+  src\pages\esper\popular.html:5791:                      <div class="framer-1rquw6u" data-framer-component-type="RichTextContainer"
+  src\pages\esper\popular.html:5792:                        data-framer-name="Creative Director"
+  src\pages\esper\popular.html:5793:                        style="--extracted-r6o4lv:var(--token-3ecf9004-c795-4969-8dc2-46e9a5f93615, rgb(214, 214, 214));--framer-paragraph-spacing:0px;transform:none">
+  src\pages\esper\popular.html:5794:                        <p class="framer-text framer-styles-preset-1ypvmaz" data-styles-preset="hkyTNy7BG"
+  src\pages\esper\popular.html:5795:                          style="--framer-text-alignment:left;--framer-text-color:var(--extracted-r6o4lv, var(--token-3ecf9004-c795-4969-8dc2-46e9a5f93615, rgb(214, 214, 214)))">
+  src\pages\esper\popular.html:5796:                          Of The Year
+  src\pages\esper\popular.html:5797:                        </p>
+  src\pages\esper\popular.html:5798:
+  src\pages\esper\popular.html:5799:
+  src\pages\esper\popular.html:5800:                      </div>
+  src\pages\esper\popular.html:5801:
+  src\pages\esper\popular.html:5802:
+  src\pages\esper\popular.html:5803:                    </div>
+  src\pages\esper\popular.html:5804:
+  src\pages\esper\popular.html:5805:
+  src\pages\esper\popular.html:5806:                  </div>
+  src\pages\esper\popular.html:5807:
+  src\pages\esper\popular.html:5808:
+  src\pages\esper\popular.html:5809:                  <div class="framer-kccf2v-container">
+  src\pages\esper\popular.html:5810:                    <!--$-->
+  src\pages\esper\popular.html:5811:                    <a href="/esper/register" class="framer-NuCN4 framer-1ew7p8v framer-v-xz6rdl framer-1x2xllv"
+  src\pages\esper\popular.html:5812:                      data-framer-name="Subscribe Button" data-nested-link="true" role="link"
+  src\pages\esper\popular.html:5813:                      style="width:100%; text-decoration: none;" tabindex="0">
+  src\pages\esper\popular.html:5814:                      <div class="framer-mzpatg" data-framer-name="Button"
+  src\pages\esper\popular.html:5815:                        style="background-color:rgb(59, 59, 59);border-bottom-left-radius:11.5px;border-bottom-right-radius:11.5px;border-top-left-radius:11.5px;border-top-right-radius:11.5px">
+  src\pages\esper\popular.html:5816:                        <div class="framer-10095da" data-framer-name="Container"
+  src\pages\esper\popular.html:5817:                          style="background-color:var(--token-4afc5ccf-bc51-4b9c-8168-fdeed00f09c1, rgb(12, 12, 12));border-bottom-left-radius:10px;border-bottom-right-radius:10px;border-top-left-radius:10px;border-top-right-radius:10px">
+  src\pages\esper\popular.html:5818:                          <div class="framer-1fatjcu" data-framer-name="Black"
+  src\pages\esper\popular.html:5819:                            style="background-color:rgb(0, 0, 0);filter:blur(5px);-webkit-filter:blur(5px);transform:rotate(-30deg)">
+  src\pages\esper\popular.html:5820:                          </div>
+  src\pages\esper\popular.html:5821:
+  src\pages\esper\popular.html:5822:
+  src\pages\esper\popular.html:5823:                          <div class="framer-n4zy3s" data-framer-name="Glow"
+  src\pages\esper\popular.html:5824:                            style="background:radial-gradient(50% 50% at 50% 50%, rgb(209, 206, 6) 0%, rgba(0, 0, 0, 0) 100%);border-bottom-left-radius:999px;border-bottom-right-radius:999px;border-top-left-radius:999px;border-top-right-radius:999px;filter:blur(10px);-webkit-filter:blur(10px);opacity:0.41">
+  src\pages\esper\popular.html:5825:                          </div>
+  src\pages\esper\popular.html:5826:
+  src\pages\esper\popular.html:5827:
+  src\pages\esper\popular.html:5828:                          <div class="framer-rmlbh7" data-framer-name="Glow"
+  src\pages\esper\popular.html:5829:                            style="background:radial-gradient(50% 50% at 50% 50%, rgb(115, 115, 115) 0%, rgba(0, 0, 0, 0) 100%);border-bottom-left-radius:999px;border-bottom-right-radius:999px;border-top-left-radius:999px;border-top-right-radius:999px;filter:blur(10px);-webkit-filter:blur(10px)">
+  src\pages\esper\popular.html:5830:                          </div>
+  src\pages\esper\popular.html:5831:
+  src\pages\esper\popular.html:5832:
+  src\pages\esper\popular.html:5833:                          <div class="framer-6qo4hj">
+  src\pages\esper\popular.html:5834:                            <div class="framer-nkc9va" data-framer-component-type="RichTextContainer"
+  src\pages\esper\popular.html:5835:                              style="--extracted-r6o4lv:rgb(255, 255, 255);--framer-link-text-color:rgb(0, 153, 255);--framer-link-text-decoration:underline;transform:none">
+  src\pages\esper\popular.html:5836:                              <p class="framer-text"
+  src\pages\esper\popular.html:5837:                                style='--font-selector:RlI7SW50ZXJEaXNwbGF5;--framer-font-family:"Inter Display", "Inter Display Placeholder", sans-serif;--framer-font-size:18px;--framer-text-color:var(--extracted-r6o4lv, rgb(255, 255, 255))'>
+  src\pages\esper\popular.html:5838:                                Register
+  src\pages\esper\popular.html:5839:                              </p>
+  src\pages\esper\popular.html:5840:
+  src\pages\esper\popular.html:5841:
+  src\pages\esper\popular.html:5842:                            </div>
+  src\pages\esper\popular.html:5843:
+  src\pages\esper\popular.html:5844:
+  src\pages\esper\popular.html:5845:                          </div>
+  src\pages\esper\popular.html:5846:
+  src\pages\esper\popular.html:5847:
+  src\pages\esper\popular.html:5848:                        </div>
+  src\pages\esper\popular.html:5849:
+  src\pages\esper\popular.html:5850:
+  src\pages\esper\popular.html:5851:                        <div class="framer-vutim4" data-framer-name="White Top"
+  src\pages\esper\popular.html:5852:                          style="background-color:rgb(255, 255, 255);filter:blur(8px);-webkit-filter:blur(8px)">
+  src\pages\esper\popular.html:5853:                        </div>
+  src\pages\esper\popular.html:5854:
+  src\pages\esper\popular.html:5855:
+  src\pages\esper\popular.html:5856:                        <div class="framer-tb25bi" data-framer-name="Deep Blue"
+  src\pages\esper\popular.html:5857:                          style="background-color:rgb(255, 195, 0);filter:blur(8px);-webkit-filter:blur(8px)">
+  src\pages\esper\popular.html:5858:                        </div>
+  src\pages\esper\popular.html:5859:
+  src\pages\esper\popular.html:5860:
+  src\pages\esper\popular.html:5861:                        <div class="framer-1uv56pk" data-framer-name="Light Blue"
+  src\pages\esper\popular.html:5862:                          style="background-color:rgb(255, 208, 0);filter:blur(8px);-webkit-filter:blur(8px)">
+  src\pages\esper\popular.html:5863:                        </div>
+  src\pages\esper\popular.html:5864:
+
+
+

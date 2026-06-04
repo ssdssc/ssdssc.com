@@ -1,0 +1,309 @@
+
+  src\pages\esper\popular copy.html:5003:                  <div data-framer-background-image-wrapper="true"
+  src\pages\esper\popular copy.html:5004:                    style="position:absolute;border-radius:inherit;top:0;right:0;bottom:0;left:0">
+  src\pages\esper\popular copy.html:5005:                    <img alt="" data-framer-original-sizes="max((min(100vw, 1160px) - 24px) / 2, 50px)" decoding="async"
+  src\pages\esper\popular copy.html:5006:                      height="1350" loading="lazy"
+  src\pages\esper\popular copy.html:5007:                      sizes="(min-width: 1200px) and (max-width: 1439.98px) max(max((min(100vw, 1160px) - 24px) / 2, 50px), 100vw), (min-width: 1440px) max(688px, 100vw), (min-width: 810px) and (max-width: 1199.98px) max(363px, 100vw), (max-width: 809.98px) max(max(min(100vw, 1160px) - 32px, 50px), 100vw)"
+  src\pages\esper\popular copy.html:5008:                      src="/esper/images/xxna12h46ku2jjt716wn00ab7q.png"
+  src\pages\esper\popular copy.html:5009:                      srcset="/esper/images/xxna12h46ku2jjt716wn00ab7q.png 819w,/esper/images/xxna12h46ku2jjt716wn00ab7q.png 1080w"
+  src\pages\esper\popular copy.html:5010:                      style="display:block;width:100%;height:100%;border-radius:inherit;object-position:center;object-fit:cover"
+  src\pages\esper\popular copy.html:5011:                      width="1080" />
+  src\pages\esper\popular copy.html:5012:                  </div>
+  src\pages\esper\popular copy.html:5013:
+  src\pages\esper\popular copy.html:5014:
+  src\pages\esper\popular copy.html:5015:                </div>
+  src\pages\esper\popular copy.html:5016:
+  src\pages\esper\popular copy.html:5017:
+  src\pages\esper\popular copy.html:5018:                <div class="framer-z9yiom" data-framer-name="Light Effect"
+  src\pages\esper\popular copy.html:5019:                  style="background:radial-gradient(40.2% 99.24161073825503% at 50% 50%, rgba(222, 222, 222, 0.2) 0%, rgba(68, 68, 68, 0) 100%);filter:blur(15px);-webkit-filter:blur(15px);transform:rotate(45deg)">
+  src\pages\esper\popular copy.html:5020:                </div>
+  src\pages\esper\popular copy.html:5021:
+  src\pages\esper\popular copy.html:5022:
+  src\pages\esper\popular copy.html:5023:              </div>
+  src\pages\esper\popular copy.html:5024:
+  src\pages\esper\popular copy.html:5025:
+  src\pages\esper\popular copy.html:5026:              <div class="framer-1sg81zm" data-framer-name="Text+Icon">
+  src\pages\esper\popular copy.html:5027:                <div class="framer-1uwndhu" data-framer-name="Text">
+  src\pages\esper\popular copy.html:5028:                  <div class="framer-nsuui8" data-framer-component-type="RichTextContainer"
+  src\pages\esper\popular copy.html:5029:                    data-framer-name="Alex Johnson"
+  src\pages\esper\popular copy.html:5030:                    style="--extracted-a0htzi:var(--token-c05d7eb5-3b85-4d38-a5b8-65cb0e0a1652, rgb(255, 255, 255));--framer-paragraph-spacing:0px;transform:none">
+  src\pages\esper\popular copy.html:5031:                    <h3 class="framer-text framer-styles-preset-13p7sgr" data-styles-preset="JUBZ8oPFx"
+  src\pages\esper\popular copy.html:5032:                      style="--framer-text-alignment:left;--framer-text-color:var(--extracted-a0htzi, var(--token-c05d7eb5-3b85-4d38-a5b8-65cb0e0a1652, rgb(255, 255, 255)))">
+> src\pages\esper\popular copy.html:5033:                      Most Popular School Science Quiz Team
+  src\pages\esper\popular copy.html:5034:                    </h3>
+  src\pages\esper\popular copy.html:5035:
+  src\pages\esper\popular copy.html:5036:
+  src\pages\esper\popular copy.html:5037:                  </div>
+  src\pages\esper\popular copy.html:5038:
+  src\pages\esper\popular copy.html:5039:
+  src\pages\esper\popular copy.html:5040:                  <div class="framer-1rquw6u" data-framer-component-type="RichTextContainer"
+  src\pages\esper\popular copy.html:5041:                    data-framer-name="Creative Director"
+  src\pages\esper\popular copy.html:5042:                    style="--extracted-r6o4lv:var(--token-3ecf9004-c795-4969-8dc2-46e9a5f93615, rgb(214, 214, 214));--framer-paragraph-spacing:0px;transform:none">
+  src\pages\esper\popular copy.html:5043:                    <p class="framer-text framer-styles-preset-1ypvmaz" data-styles-preset="hkyTNy7BG"
+  src\pages\esper\popular copy.html:5044:                      style="--framer-text-alignment:left;--framer-text-color:var(--extracted-r6o4lv, var(--token-3ecf9004-c795-4969-8dc2-46e9a5f93615, rgb(214, 214, 214)))">
+  src\pages\esper\popular copy.html:5045:                      Of The Year
+  src\pages\esper\popular copy.html:5046:                    </p>
+  src\pages\esper\popular copy.html:5047:
+  src\pages\esper\popular copy.html:5048:
+  src\pages\esper\popular copy.html:5049:                  </div>
+  src\pages\esper\popular copy.html:5050:
+  src\pages\esper\popular copy.html:5051:
+  src\pages\esper\popular copy.html:5052:                </div>
+  src\pages\esper\popular copy.html:5053:
+  src\pages\esper\popular copy.html:5054:
+  src\pages\esper\popular copy.html:5055:              </div>
+  src\pages\esper\popular copy.html:5056:
+  src\pages\esper\popular copy.html:5057:
+  src\pages\esper\popular copy.html:5058:              <div class="framer-kccf2v-container">
+  src\pages\esper\popular copy.html:5059:                <!--$-->
+  src\pages\esper\popular copy.html:5060:                <span class="framer-NuCN4 framer-1ew7p8v framer-v-xz6rdl framer-1x2xllv"
+  src\pages\esper\popular copy.html:5061:                  data-framer-name="Subscribe Button" data-nested-link="true" role="link" style="width:100%"
+  src\pages\esper\popular copy.html:5062:                  tabindex="0">
+  src\pages\esper\popular copy.html:5063:                  <div class="framer-mzpatg" data-framer-name="Button"
+  src\pages\esper\popular copy.html:5300:                  style="border-bottom-left-radius:0;border-bottom-right-radius:0;border-top-left-radius:0;border-top-right-radius:0">
+  src\pages\esper\popular copy.html:5301:                  <div data-framer-background-image-wrapper="true"
+  src\pages\esper\popular copy.html:5302:                    style="position:absolute;border-radius:inherit;top:0;right:0;bottom:0;left:0">
+  src\pages\esper\popular copy.html:5303:                    <img alt="" data-framer-original-sizes="688px" decoding="async" height="1350" loading="lazy"
+  src\pages\esper\popular copy.html:5304:                      sizes="(min-width: 1200px) and (max-width: 1439.98px) max(max((min(100vw, 1160px) - 24px) / 2, 50px), 100vw), (min-width: 1440px) max(688px, 100vw), (min-width: 810px) and (max-width: 1199.98px) max(363px, 100vw), (max-width: 809.98px) max(max(min(100vw, 1160px) - 32px, 50px), 100vw)"
+  src\pages\esper\popular copy.html:5305:                      src="/esper/images/xxna12h46ku2jjt716wn00ab7q.png"
+  src\pages\esper\popular copy.html:5306:                      srcset="/esper/images/xxna12h46ku2jjt716wn00ab7q.png 819w,/esper/images/xxna12h46ku2jjt716wn00ab7q.png 1080w"
+  src\pages\esper\popular copy.html:5307:                      style="display:block;width:100%;height:100%;border-radius:inherit;object-position:center;object-fit:cover"
+  src\pages\esper\popular copy.html:5308:                      width="1080" />
+  src\pages\esper\popular copy.html:5309:                  </div>
+  src\pages\esper\popular copy.html:5310:
+  src\pages\esper\popular copy.html:5311:
+  src\pages\esper\popular copy.html:5312:                </div>
+  src\pages\esper\popular copy.html:5313:
+  src\pages\esper\popular copy.html:5314:
+  src\pages\esper\popular copy.html:5315:                <div class="framer-z9yiom" data-framer-name="Light Effect"
+  src\pages\esper\popular copy.html:5316:                  style="background:radial-gradient(40.2% 99.24161073825503% at 50% 50%, rgba(222, 222, 222, 0.2) 0%, rgba(68, 68, 68, 0) 100%);filter:blur(15px);-webkit-filter:blur(15px);transform:rotate(45deg)">
+  src\pages\esper\popular copy.html:5317:                </div>
+  src\pages\esper\popular copy.html:5318:
+  src\pages\esper\popular copy.html:5319:
+  src\pages\esper\popular copy.html:5320:              </div>
+  src\pages\esper\popular copy.html:5321:
+  src\pages\esper\popular copy.html:5322:
+  src\pages\esper\popular copy.html:5323:              <div class="framer-1sg81zm" data-framer-name="Text+Icon">
+  src\pages\esper\popular copy.html:5324:                <div class="framer-1uwndhu" data-framer-name="Text">
+  src\pages\esper\popular copy.html:5325:                  <div class="framer-nsuui8" data-framer-component-type="RichTextContainer"
+  src\pages\esper\popular copy.html:5326:                    data-framer-name="Alex Johnson"
+  src\pages\esper\popular copy.html:5327:                    style="--extracted-a0htzi:var(--token-c05d7eb5-3b85-4d38-a5b8-65cb0e0a1652, rgb(255, 255, 255));--framer-paragraph-spacing:0px;transform:none">
+  src\pages\esper\popular copy.html:5328:                    <h3 class="framer-text framer-styles-preset-13p7sgr" data-styles-preset="JUBZ8oPFx"
+  src\pages\esper\popular copy.html:5329:                      style="--framer-text-alignment:left;--framer-text-color:var(--extracted-a0htzi, var(--token-c05d7eb5-3b85-4d38-a5b8-65cb0e0a1652, rgb(255, 255, 255)))">
+> src\pages\esper\popular copy.html:5330:                      Most Popular School Science Quiz Team
+  src\pages\esper\popular copy.html:5331:                    </h3>
+  src\pages\esper\popular copy.html:5332:
+  src\pages\esper\popular copy.html:5333:
+  src\pages\esper\popular copy.html:5334:                  </div>
+  src\pages\esper\popular copy.html:5335:
+  src\pages\esper\popular copy.html:5336:
+  src\pages\esper\popular copy.html:5337:                  <div class="framer-1rquw6u" data-framer-component-type="RichTextContainer"
+  src\pages\esper\popular copy.html:5338:                    data-framer-name="Creative Director"
+  src\pages\esper\popular copy.html:5339:                    style="--extracted-r6o4lv:var(--token-3ecf9004-c795-4969-8dc2-46e9a5f93615, rgb(214, 214, 214));--framer-paragraph-spacing:0px;transform:none">
+  src\pages\esper\popular copy.html:5340:                    <p class="framer-text framer-styles-preset-1ypvmaz" data-styles-preset="hkyTNy7BG"
+  src\pages\esper\popular copy.html:5341:                      style="--framer-text-alignment:left;--framer-text-color:var(--extracted-r6o4lv, var(--token-3ecf9004-c795-4969-8dc2-46e9a5f93615, rgb(214, 214, 214)))">
+  src\pages\esper\popular copy.html:5342:                      Of The Year
+  src\pages\esper\popular copy.html:5343:                    </p>
+  src\pages\esper\popular copy.html:5344:
+  src\pages\esper\popular copy.html:5345:
+  src\pages\esper\popular copy.html:5346:                  </div>
+  src\pages\esper\popular copy.html:5347:
+  src\pages\esper\popular copy.html:5348:
+  src\pages\esper\popular copy.html:5349:                </div>
+  src\pages\esper\popular copy.html:5350:
+  src\pages\esper\popular copy.html:5351:
+  src\pages\esper\popular copy.html:5352:              </div>
+  src\pages\esper\popular copy.html:5353:
+  src\pages\esper\popular copy.html:5354:
+  src\pages\esper\popular copy.html:5355:              <div class="framer-kccf2v-container">
+  src\pages\esper\popular copy.html:5356:                <!--$-->
+  src\pages\esper\popular copy.html:5357:                <span class="framer-NuCN4 framer-1ew7p8v framer-v-xz6rdl framer-1x2xllv"
+  src\pages\esper\popular copy.html:5358:                  data-framer-name="Subscribe Button" data-nested-link="true" role="link" style="width:100%"
+  src\pages\esper\popular copy.html:5359:                  tabindex="0">
+  src\pages\esper\popular copy.html:5360:                  <div class="framer-mzpatg" data-framer-name="Button"
+  src\pages\esper\popular copy.html:5450:                  style="border-bottom-left-radius:0;border-bottom-right-radius:0;border-top-left-radius:0;border-top-right-radius:0">
+  src\pages\esper\popular copy.html:5451:                  <div data-framer-background-image-wrapper="true"
+  src\pages\esper\popular copy.html:5452:                    style="position:absolute;border-radius:inherit;top:0;right:0;bottom:0;left:0">
+  src\pages\esper\popular copy.html:5453:                    <img alt="" data-framer-original-sizes="363px" decoding="async" height="1350" loading="lazy"
+  src\pages\esper\popular copy.html:5454:                      sizes="(min-width: 1200px) and (max-width: 1439.98px) max(max((min(100vw, 1160px) - 24px) / 2, 50px), 100vw), (min-width: 1440px) max(688px, 100vw), (min-width: 810px) and (max-width: 1199.98px) max(363px, 100vw), (max-width: 809.98px) max(max(min(100vw, 1160px) - 32px, 50px), 100vw)"
+  src\pages\esper\popular copy.html:5455:                      src="/esper/images/xxna12h46ku2jjt716wn00ab7q.png"
+  src\pages\esper\popular copy.html:5456:                      srcset="/esper/images/xxna12h46ku2jjt716wn00ab7q.png 819w,/esper/images/xxna12h46ku2jjt716wn00ab7q.png 1080w"
+  src\pages\esper\popular copy.html:5457:                      style="display:block;width:100%;height:100%;border-radius:inherit;object-position:center;object-fit:cover"
+  src\pages\esper\popular copy.html:5458:                      width="1080" />
+  src\pages\esper\popular copy.html:5459:                  </div>
+  src\pages\esper\popular copy.html:5460:
+  src\pages\esper\popular copy.html:5461:
+  src\pages\esper\popular copy.html:5462:                </div>
+  src\pages\esper\popular copy.html:5463:
+  src\pages\esper\popular copy.html:5464:
+  src\pages\esper\popular copy.html:5465:                <div class="framer-z9yiom" data-framer-name="Light Effect"
+  src\pages\esper\popular copy.html:5466:                  style="background:radial-gradient(40.2% 99.24161073825503% at 50% 50%, rgba(222, 222, 222, 0.2) 0%, rgba(68, 68, 68, 0) 100%);filter:blur(15px);-webkit-filter:blur(15px);transform:rotate(45deg)">
+  src\pages\esper\popular copy.html:5467:                </div>
+  src\pages\esper\popular copy.html:5468:
+  src\pages\esper\popular copy.html:5469:
+  src\pages\esper\popular copy.html:5470:              </div>
+  src\pages\esper\popular copy.html:5471:
+  src\pages\esper\popular copy.html:5472:
+  src\pages\esper\popular copy.html:5473:              <div class="framer-1sg81zm" data-framer-name="Text+Icon">
+  src\pages\esper\popular copy.html:5474:                <div class="framer-1uwndhu" data-framer-name="Text">
+  src\pages\esper\popular copy.html:5475:                  <div class="framer-nsuui8" data-framer-component-type="RichTextContainer"
+  src\pages\esper\popular copy.html:5476:                    data-framer-name="Alex Johnson"
+  src\pages\esper\popular copy.html:5477:                    style="--extracted-a0htzi:var(--token-c05d7eb5-3b85-4d38-a5b8-65cb0e0a1652, rgb(255, 255, 255));--framer-paragraph-spacing:0px;transform:none">
+  src\pages\esper\popular copy.html:5478:                    <h3 class="framer-text framer-styles-preset-13p7sgr" data-styles-preset="JUBZ8oPFx"
+  src\pages\esper\popular copy.html:5479:                      style="--framer-text-alignment:left;--framer-text-color:var(--extracted-a0htzi, var(--token-c05d7eb5-3b85-4d38-a5b8-65cb0e0a1652, rgb(255, 255, 255)))">
+> src\pages\esper\popular copy.html:5480:                      Most Popular School Science Quiz Team
+  src\pages\esper\popular copy.html:5481:                    </h3>
+  src\pages\esper\popular copy.html:5482:
+  src\pages\esper\popular copy.html:5483:
+  src\pages\esper\popular copy.html:5484:                  </div>
+  src\pages\esper\popular copy.html:5485:
+  src\pages\esper\popular copy.html:5486:
+  src\pages\esper\popular copy.html:5487:                  <div class="framer-1rquw6u" data-framer-component-type="RichTextContainer"
+  src\pages\esper\popular copy.html:5488:                    data-framer-name="Creative Director"
+  src\pages\esper\popular copy.html:5489:                    style="--extracted-r6o4lv:var(--token-3ecf9004-c795-4969-8dc2-46e9a5f93615, rgb(214, 214, 214));--framer-paragraph-spacing:0px;transform:none">
+  src\pages\esper\popular copy.html:5490:                    <p class="framer-text framer-styles-preset-1ypvmaz" data-styles-preset="hkyTNy7BG"
+  src\pages\esper\popular copy.html:5491:                      style="--framer-text-alignment:left;--framer-text-color:var(--extracted-r6o4lv, var(--token-3ecf9004-c795-4969-8dc2-46e9a5f93615, rgb(214, 214, 214)))">
+  src\pages\esper\popular copy.html:5492:                      Of The Year
+  src\pages\esper\popular copy.html:5493:                    </p>
+  src\pages\esper\popular copy.html:5494:
+  src\pages\esper\popular copy.html:5495:
+  src\pages\esper\popular copy.html:5496:                  </div>
+  src\pages\esper\popular copy.html:5497:
+  src\pages\esper\popular copy.html:5498:
+  src\pages\esper\popular copy.html:5499:                </div>
+  src\pages\esper\popular copy.html:5500:
+  src\pages\esper\popular copy.html:5501:
+  src\pages\esper\popular copy.html:5502:              </div>
+  src\pages\esper\popular copy.html:5503:
+  src\pages\esper\popular copy.html:5504:
+  src\pages\esper\popular copy.html:5505:              <div class="framer-kccf2v-container">
+  src\pages\esper\popular copy.html:5506:                <!--$-->
+  src\pages\esper\popular copy.html:5507:                <span class="framer-NuCN4 framer-1ew7p8v framer-v-xz6rdl framer-1x2xllv"
+  src\pages\esper\popular copy.html:5508:                  data-framer-name="Subscribe Button" data-nested-link="true" role="link" style="width:100%"
+  src\pages\esper\popular copy.html:5509:                  tabindex="0">
+  src\pages\esper\popular copy.html:5510:                  <div class="framer-mzpatg" data-framer-name="Button"
+  src\pages\esper\popular copy.html:5595:            <!--$-->
+  src\pages\esper\popular copy.html:5596:            <a class="framer-14ovzi3 framer-y1pa43" data-framer-name="Card">
+  src\pages\esper\popular copy.html:5597:              <div class="framer-9xp6kq" data-framer-name="Member Image"
+  src\pages\esper\popular copy.html:5598:                style="border-bottom-left-radius:20px;border-bottom-right-radius:20px;border-top-left-radius:20px;border-top-right-radius:20px">
+  src\pages\esper\popular copy.html:5599:                <div class="framer-1oeo7ga" data-framer-name="Image"
+  src\pages\esper\popular copy.html:5600:                  style="border-bottom-left-radius:0;border-bottom-right-radius:0;border-top-left-radius:0;border-top-right-radius:0">
+  src\pages\esper\popular copy.html:5601:                  <div data-framer-background-image-wrapper="true"
+  src\pages\esper\popular copy.html:5602:                    style="position:absolute;border-radius:inherit;top:0;right:0;bottom:0;left:0">
+  src\pages\esper\popular copy.html:5603:                    <img alt="" data-framer-original-sizes="100vw" decoding="async" height="1350"
+  src\pages\esper\popular copy.html:5604:                      sizes="(min-width: 1200px) and (max-width: 1439.98px) max(max((min(100vw, 1160px) - 24px) / 2, 50px), 100vw), (min-width: 1440px) max(688px, 100vw), (min-width: 810px) and (max-width: 1199.98px) max(363px, 100vw), (max-width: 809.98px) max(max(min(100vw, 1160px) - 32px, 50px), 100vw)"
+  src\pages\esper\popular copy.html:5605:                      src="/esper/images/xxna12h46ku2jjt716wn00ab7q.png"
+  src\pages\esper\popular copy.html:5606:                      srcset="/esper/images/xxna12h46ku2jjt716wn00ab7q.png 819w,/esper/images/xxna12h46ku2jjt716wn00ab7q.png 1080w"
+  src\pages\esper\popular copy.html:5607:                      style="display:block;width:100%;height:100%;border-radius:inherit;object-position:center;object-fit:cover"
+  src\pages\esper\popular copy.html:5608:                      width="1080" />
+  src\pages\esper\popular copy.html:5609:                  </div>
+  src\pages\esper\popular copy.html:5610:
+  src\pages\esper\popular copy.html:5611:
+  src\pages\esper\popular copy.html:5612:                </div>
+  src\pages\esper\popular copy.html:5613:
+  src\pages\esper\popular copy.html:5614:
+  src\pages\esper\popular copy.html:5615:              </div>
+  src\pages\esper\popular copy.html:5616:
+  src\pages\esper\popular copy.html:5617:
+  src\pages\esper\popular copy.html:5618:              <div class="framer-1sg81zm" data-framer-name="Text+Icon">
+  src\pages\esper\popular copy.html:5619:                <div class="framer-1uwndhu" data-framer-name="Text">
+  src\pages\esper\popular copy.html:5620:                  <div class="framer-nsuui8" data-framer-component-type="RichTextContainer"
+  src\pages\esper\popular copy.html:5621:                    data-framer-name="Alex Johnson"
+  src\pages\esper\popular copy.html:5622:                    style="--extracted-a0htzi:var(--token-c05d7eb5-3b85-4d38-a5b8-65cb0e0a1652, rgb(255, 255, 255));--framer-paragraph-spacing:0px;--extracted-1eung3n:var(--token-c05d7eb5-3b85-4d38-a5b8-65cb0e0a1652, rgb(255, 255, 255));transform:none">
+  src\pages\esper\popular copy.html:5623:                    <h4 class="framer-text framer-styles-preset-xc8e4b" data-styles-preset="kplr9XhmC"
+  src\pages\esper\popular copy.html:5624:                      style="--framer-text-alignment:left;--framer-text-color:var(--extracted-1eung3n, var(--token-c05d7eb5-3b85-4d38-a5b8-65cb0e0a1652, rgb(255, 255, 255)))">
+> src\pages\esper\popular copy.html:5625:                      Most Popular School Science Quiz Team
+  src\pages\esper\popular copy.html:5626:                    </h4>
+  src\pages\esper\popular copy.html:5627:
+  src\pages\esper\popular copy.html:5628:
+  src\pages\esper\popular copy.html:5629:                  </div>
+  src\pages\esper\popular copy.html:5630:
+  src\pages\esper\popular copy.html:5631:
+  src\pages\esper\popular copy.html:5632:                  <div class="framer-1rquw6u" data-framer-component-type="RichTextContainer"
+  src\pages\esper\popular copy.html:5633:                    data-framer-name="Creative Director"
+  src\pages\esper\popular copy.html:5634:                    style="--extracted-r6o4lv:var(--token-3ecf9004-c795-4969-8dc2-46e9a5f93615, rgb(214, 214, 214));--framer-paragraph-spacing:0px;transform:none">
+  src\pages\esper\popular copy.html:5635:                    <p class="framer-text framer-styles-preset-1ypvmaz" data-styles-preset="hkyTNy7BG"
+  src\pages\esper\popular copy.html:5636:                      style="--framer-text-alignment:left;--framer-text-color:var(--extracted-r6o4lv, var(--token-3ecf9004-c795-4969-8dc2-46e9a5f93615, rgb(214, 214, 214)))">
+  src\pages\esper\popular copy.html:5637:                      Of The Year
+  src\pages\esper\popular copy.html:5638:                    </p>
+  src\pages\esper\popular copy.html:5639:
+  src\pages\esper\popular copy.html:5640:
+  src\pages\esper\popular copy.html:5641:                  </div>
+  src\pages\esper\popular copy.html:5642:
+  src\pages\esper\popular copy.html:5643:
+  src\pages\esper\popular copy.html:5644:                </div>
+  src\pages\esper\popular copy.html:5645:
+  src\pages\esper\popular copy.html:5646:
+  src\pages\esper\popular copy.html:5647:              </div>
+  src\pages\esper\popular copy.html:5648:
+  src\pages\esper\popular copy.html:5649:
+  src\pages\esper\popular copy.html:5650:              <div class="framer-kccf2v-container">
+  src\pages\esper\popular copy.html:5651:                <!--$-->
+  src\pages\esper\popular copy.html:5652:                <span class="framer-NuCN4 framer-1ew7p8v framer-v-xz6rdl framer-1x2xllv"
+  src\pages\esper\popular copy.html:5653:                  data-framer-name="Subscribe Button" data-nested-link="true" role="link" style="width:100%"
+  src\pages\esper\popular copy.html:5654:                  tabindex="0">
+  src\pages\esper\popular copy.html:5655:                  <div class="framer-mzpatg" data-framer-name="Button"
+  src\pages\esper\popular copy.html:5741:            <a class="framer-14ovzi3 framer-y1pa43" data-framer-name="Card">
+  src\pages\esper\popular copy.html:5742:              <div class="framer-9xp6kq" data-framer-name="Member Image"
+  src\pages\esper\popular copy.html:5743:                style="border-bottom-left-radius:20px;border-bottom-right-radius:20px;border-top-left-radius:20px;border-top-right-radius:20px">
+  src\pages\esper\popular copy.html:5744:                <div class="framer-1oeo7ga" data-framer-name="Image"
+  src\pages\esper\popular copy.html:5745:                  style="border-bottom-left-radius:0;border-bottom-right-radius:0;border-top-left-radius:0;border-top-right-radius:0">
+  src\pages\esper\popular copy.html:5746:                  <div data-framer-background-image-wrapper="true"
+  src\pages\esper\popular copy.html:5747:                    style="position:absolute;border-radius:inherit;top:0;right:0;bottom:0;left:0">
+  src\pages\esper\popular copy.html:5748:                    <img alt="" data-framer-original-sizes="max(min(100vw, 1160px) - 32px, 50px)" decoding="async"
+  src\pages\esper\popular copy.html:5749:                      height="1350" loading="lazy"
+  src\pages\esper\popular copy.html:5750:                      sizes="(min-width: 1200px) and (max-width: 1439.98px) max(max((min(100vw, 1160px) - 24px) / 2, 50px), 100vw), (min-width: 1440px) max(688px, 100vw), (min-width: 810px) and (max-width: 1199.98px) max(363px, 100vw), (max-width: 809.98px) max(max(min(100vw, 1160px) - 32px, 50px), 100vw)"
+  src\pages\esper\popular copy.html:5751:                      src="/esper/images/xxna12h46ku2jjt716wn00ab7q.png"
+  src\pages\esper\popular copy.html:5752:                      srcset="/esper/images/xxna12h46ku2jjt716wn00ab7q.png 819w,/esper/images/xxna12h46ku2jjt716wn00ab7q.png 1080w"
+  src\pages\esper\popular copy.html:5753:                      style="display:block;width:100%;height:100%;border-radius:inherit;object-position:center;object-fit:cover"
+  src\pages\esper\popular copy.html:5754:                      width="1080" />
+  src\pages\esper\popular copy.html:5755:                  </div>
+  src\pages\esper\popular copy.html:5756:
+  src\pages\esper\popular copy.html:5757:
+  src\pages\esper\popular copy.html:5758:                </div>
+  src\pages\esper\popular copy.html:5759:
+  src\pages\esper\popular copy.html:5760:
+  src\pages\esper\popular copy.html:5761:              </div>
+  src\pages\esper\popular copy.html:5762:
+  src\pages\esper\popular copy.html:5763:
+  src\pages\esper\popular copy.html:5764:              <div class="framer-1sg81zm" data-framer-name="Text+Icon">
+  src\pages\esper\popular copy.html:5765:                <div class="framer-1uwndhu" data-framer-name="Text">
+  src\pages\esper\popular copy.html:5766:                  <div class="framer-nsuui8" data-framer-component-type="RichTextContainer"
+  src\pages\esper\popular copy.html:5767:                    data-framer-name="Alex Johnson"
+  src\pages\esper\popular copy.html:5768:                    style="--extracted-a0htzi:var(--token-c05d7eb5-3b85-4d38-a5b8-65cb0e0a1652, rgb(255, 255, 255));--framer-paragraph-spacing:0px;--extracted-1eung3n:var(--token-c05d7eb5-3b85-4d38-a5b8-65cb0e0a1652, rgb(255, 255, 255));transform:none">
+  src\pages\esper\popular copy.html:5769:                    <h4 class="framer-text framer-styles-preset-xc8e4b" data-styles-preset="kplr9XhmC"
+  src\pages\esper\popular copy.html:5770:                      style="--framer-text-alignment:left;--framer-text-color:var(--extracted-1eung3n, var(--token-c05d7eb5-3b85-4d38-a5b8-65cb0e0a1652, rgb(255, 255, 255)))">
+> src\pages\esper\popular copy.html:5771:                      Most Popular School Science Quiz Team
+  src\pages\esper\popular copy.html:5772:                    </h4>
+  src\pages\esper\popular copy.html:5773:
+  src\pages\esper\popular copy.html:5774:
+  src\pages\esper\popular copy.html:5775:                  </div>
+  src\pages\esper\popular copy.html:5776:
+  src\pages\esper\popular copy.html:5777:
+  src\pages\esper\popular copy.html:5778:                  <div class="framer-1rquw6u" data-framer-component-type="RichTextContainer"
+  src\pages\esper\popular copy.html:5779:                    data-framer-name="Creative Director"
+  src\pages\esper\popular copy.html:5780:                    style="--extracted-r6o4lv:var(--token-3ecf9004-c795-4969-8dc2-46e9a5f93615, rgb(214, 214, 214));--framer-paragraph-spacing:0px;transform:none">
+  src\pages\esper\popular copy.html:5781:                    <p class="framer-text framer-styles-preset-1ypvmaz" data-styles-preset="hkyTNy7BG"
+  src\pages\esper\popular copy.html:5782:                      style="--framer-text-alignment:left;--framer-text-color:var(--extracted-r6o4lv, var(--token-3ecf9004-c795-4969-8dc2-46e9a5f93615, rgb(214, 214, 214)))">
+  src\pages\esper\popular copy.html:5783:                      Of The Year
+  src\pages\esper\popular copy.html:5784:                    </p>
+  src\pages\esper\popular copy.html:5785:
+  src\pages\esper\popular copy.html:5786:
+  src\pages\esper\popular copy.html:5787:                  </div>
+  src\pages\esper\popular copy.html:5788:
+  src\pages\esper\popular copy.html:5789:
+  src\pages\esper\popular copy.html:5790:                </div>
+  src\pages\esper\popular copy.html:5791:
+  src\pages\esper\popular copy.html:5792:
+  src\pages\esper\popular copy.html:5793:              </div>
+  src\pages\esper\popular copy.html:5794:
+  src\pages\esper\popular copy.html:5795:
+  src\pages\esper\popular copy.html:5796:              <div class="framer-kccf2v-container">
+  src\pages\esper\popular copy.html:5797:                <!--$-->
+  src\pages\esper\popular copy.html:5798:                <span class="framer-NuCN4 framer-1ew7p8v framer-v-xz6rdl framer-1x2xllv"
+  src\pages\esper\popular copy.html:5799:                  data-framer-name="Subscribe Button" data-nested-link="true" role="link" style="width:100%"
+  src\pages\esper\popular copy.html:5800:                  tabindex="0">
+  src\pages\esper\popular copy.html:5801:                  <div class="framer-mzpatg" data-framer-name="Button"
+
+
+
