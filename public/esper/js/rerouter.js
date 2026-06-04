@@ -125,12 +125,26 @@
           "/esper/images/j5g4kfbwy38as4gp6ttkvhgplg.png",
         "https://framerusercontent.com/images/aqlCWCBd3o1mr54LN2StvoqPi0.png":
           "/esper/images/aqlcwcbd3o1mr54ln2stvoqpi0.png",
-        "https://framerusercontent.com/images/Nh3h81q0fVWhTVEIazR9fRdWi4.png":
-          "/esper/images/nh3h81q0fvwhtveiazr9frdwi4.png",
-        "https://framerusercontent.com/sites/6DpVRkHafWL581Jb56P9ez/rolldown-runtime.CWR5Z7Jy.mjs":
-          "/esper/js/rolldown-runtime.cwr5z7jy.mjs",
-        "https://framerusercontent.com/sites/6DpVRkHafWL581Jb56P9ez/framer.BCmn9LUH.mjs":
+        "https://framerusercontent.com/sites/iyV7VNt2Dt1Y5p1EqXu5q/script_main.VpL499Yr.mjs":
+          "/esper/js/script_main.vpl499yr.mjs",
+        "https://framerusercontent.com/sites/iyV7VNt2Dt1Y5p1EqXu5q/react.Cq8oxfYJ.mjs":
+          "/esper/js/react.dmfexh9x.mjs",
+        "https://framerusercontent.com/sites/iyV7VNt2Dt1Y5p1EqXu5q/framer.BUXr1hGZ.mjs":
           "/esper/js/framer.bcmn9luh.mjs",
+        "https://framerusercontent.com/sites/iyV7VNt2Dt1Y5p1EqXu5q/rolldown-runtime.DuUl1Rk5.mjs":
+          "/esper/js/rolldown-runtime.cwr5z7jy.mjs",
+        "https://framerusercontent.com/sites/iyV7VNt2Dt1Y5p1EqXu5q/motion.Ba_qRR3p.mjs":
+          "/esper/js/motion.bafvjhfu.mjs",
+        "https://framerusercontent.com/sites/iyV7VNt2Dt1Y5p1EqXu5q/shared-lib.D_RJvpHY.mjs":
+          "/esper/js/shared-lib.bbcal4fm.mjs",
+        "https://framerusercontent.com/sites/iyV7VNt2Dt1Y5p1EqXu5q/vtMx1ujdK.DBoDZC3O.mjs":
+          "/esper/js/vtmx1ujdk.d4lsrcmq.mjs",
+        "https://framerusercontent.com/sites/iyV7VNt2Dt1Y5p1EqXu5q/m3aPhWwZw.DYu7tj_-.mjs":
+          "/esper/js/m3aphwwzw.clbc3scn.mjs",
+        "https://framerusercontent.com/sites/iyV7VNt2Dt1Y5p1EqXu5q/augiA20Il.RAqgRTJD.mjs":
+          "/esper/js/augia20il.kexl8cpf.mjs",
+        "https://framerusercontent.com/sites/iyV7VNt2Dt1Y5p1EqXu5q/04KNLvbpislanL_zOXIFk9ejvaGSMORuTZYbyejRkQU.DMd3i_2I.mjs":
+          "/esper/js/o7wvzteacsxnakiuhpoannchw_gaoblpvkkmiorr9w8.cbp_ynts.mjs",
         "https://framerusercontent.com/images/7yQZD58x3tMSVmBLICznFPhXg.png":
           "/esper/images/7yqzd58x3tmsvmblicznfphxg.png",
         "https://framerusercontent.com/images/dh6yErsAXUjk2eNUQyJ6hLueA.png":
