@@ -4077,43 +4077,6 @@
             text-decoration: underline;
         }
     </style>
-
-    <!-- Mobile nav fix: header is 1248px fixed width; on mobile items 2 & 3 are off-screen to the right -->
-    <style>
-        @media (max-width: 820px) {
-            /* Make the header fill the viewport instead of fixed 1248px */
-            .framer-vPAcs.framer-1exli70 {
-                width: 100% !important;
-                box-sizing: border-box !important;
-                padding: 16px !important;
-                overflow: hidden !important;
-            }
-            /* Stack logo + nav vertically */
-            .framer-vPAcs .framer-bu79ji {
-                flex-direction: column !important;
-                align-items: flex-start !important;
-                gap: 16px !important;
-                width: 100% !important;
-            }
-            /* Stack all 3 nav links vertically */
-            .framer-vPAcs .framer-1qupc9b {
-                flex-direction: column !important;
-                gap: 12px !important;
-                width: 100% !important;
-                overflow: visible !important;
-            }
-            /* Ensure each nav item is visible */
-            .framer-vPAcs .framer-132ym2t-container,
-            .framer-vPAcs .framer-1lcz1wz-container,
-            .framer-vPAcs .framer-10zzbz2-container {
-                display: block !important;
-                opacity: 1 !important;
-                visibility: visible !important;
-                position: relative !important;
-                height: auto !important;
-            }
-        }
-    </style>
 </head>
 
 <body>
