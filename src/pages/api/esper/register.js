@@ -1,16 +1,13 @@
 import { createClient } from '@supabase/supabase-js';
 
-// Initialize Supabase client
-const supabaseUrl = import.meta.env.SUPABASE_URL || process.env.SUPABASE_URL;
-const supabaseKey = import.meta.env.SUPABASE_SERVICE_ROLE_KEY || import.meta.env.SUPABASE_ANON_KEY || process.env.SUPABASE_SERVICE_ROLE_KEY;
-
-// console.log('API Initialization:');
-// console.log('- URL:', supabaseUrl);
-// console.log('- Key present:', !!supabaseKey);
-
-const supabase = createClient(supabaseUrl, supabaseKey);
+// This is a server-side API route — never prerender it
+export const prerender = false;
 
 export const POST = async ({ request }) => {
+  // Initialize Supabase client at request time so env vars are available
+  const supabaseUrl = import.meta.env.SUPABASE_URL || process.env.SUPABASE_URL;
+  const supabaseKey = import.meta.env.SUPABASE_SERVICE_ROLE_KEY || import.meta.env.SUPABASE_ANON_KEY || process.env.SUPABASE_SERVICE_ROLE_KEY;
+  const supabase = createClient(supabaseUrl, supabaseKey);
   try {
     const data = await request.json();
 
