@@ -7246,7 +7246,7 @@
                     behalf of their school.</p>
             </section>
             <form class="registration-form" id="esper-registration-form"
-                onsubmit="event.preventDefault(); alert('Registration submitted successfully! Integration pending.');">
+                onsubmit="window.handleEsperFormSubmit(event)">
                 <div class="form-row">
                     <label for="award-category">Award Category</label>
                     <div class="input-wrapper">
@@ -7298,6 +7298,7 @@
                 <div class="action-section">
                     <button class="submit-btn" type="submit">Submit Now</button>
                 </div>
+                <div id="form-message" style="margin-top: 15px; text-align: center; font-size: 14px; border-radius: 6px; padding: 10px; display: none;"></div>
             </form>
             <div class="helpline">
                 Need help with registration?<br>
@@ -7307,6 +7308,55 @@
     </template>
 
     <script>
+        window.handleEsperFormSubmit = async function(event) {
+            event.preventDefault();
+            const form = event.target;
+            const btn = form.querySelector('.submit-btn');
+            const originalText = btn.innerText;
+            const msgBox = form.querySelector('#form-message');
+
+            btn.innerText = 'Submitting...';
+            btn.disabled = true;
+            msgBox.style.display = 'none';
+            msgBox.className = '';
+
+            const formData = new FormData(form);
+            const data = Object.fromEntries(formData.entries());
+
+            try {
+                const response = await fetch('/api/esper/register', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify(data)
+                });
+                const result = await response.json();
+
+                msgBox.style.display = 'block';
+                if (response.ok) {
+                    msgBox.style.backgroundColor = '#d4edda';
+                    msgBox.style.color = '#155724';
+                    msgBox.style.border = '1px solid #c3e6cb';
+                    msgBox.innerText = 'Registration submitted successfully!';
+                    form.reset();
+                } else {
+                    msgBox.style.backgroundColor = '#f8d7da';
+                    msgBox.style.color = '#721c24';
+                    msgBox.style.border = '1px solid #f5c6cb';
+                    msgBox.innerText = 'Error: ' + (result.error || 'Something went wrong.');
+                }
+            } catch (err) {
+                console.error(err);
+                msgBox.style.display = 'block';
+                msgBox.style.backgroundColor = '#f8d7da';
+                msgBox.style.color = '#721c24';
+                msgBox.style.border = '1px solid #f5c6cb';
+                msgBox.innerText = 'Connection error submitting registration.';
+            } finally {
+                btn.innerText = originalText;
+                btn.disabled = false;
+            }
+        };
+
         let isInjecting = false;
         const observer = new MutationObserver((mutations) => {
             if (isInjecting) return;
