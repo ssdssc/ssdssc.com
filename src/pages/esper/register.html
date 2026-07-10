@@ -4077,6 +4077,32 @@
             text-decoration: underline;
         }
     </style>
+
+    <!-- Mobile nav fix: force all 3 nav items visible when hamburger menu is open -->
+    <style>
+        /* Phone Open state (framer-v-w7utna) — remove clipping and ensure all items render */
+        .framer-vPAcs.framer-v-w7utna.framer-1exli70 {
+            overflow: visible !important;
+            max-height: none !important;
+        }
+        .framer-vPAcs.framer-v-w7utna .framer-bu79ji {
+            overflow: visible !important;
+        }
+        .framer-vPAcs.framer-v-w7utna .framer-1qupc9b {
+            overflow: visible !important;
+            height: auto !important;
+        }
+        .framer-vPAcs.framer-v-w7utna .framer-132ym2t-container,
+        .framer-vPAcs.framer-v-w7utna .framer-1lcz1wz-container,
+        .framer-vPAcs.framer-v-w7utna .framer-10zzbz2-container {
+            opacity: 1 !important;
+            visibility: visible !important;
+            position: relative !important;
+            height: auto !important;
+            display: block !important;
+            transform: none !important;
+        }
+    </style>
 </head>
 
 <body>
