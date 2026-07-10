@@ -4078,29 +4078,44 @@
         }
     </style>
 
-    <!-- Mobile nav fix: force all 3 nav items visible when hamburger menu is open -->
+    <!-- Mobile nav fix: header is 1248px fixed width; on mobile items 2 & 3 are off-screen to the right -->
     <style>
-        /* Phone Open state (framer-v-w7utna) — remove clipping and ensure all items render */
-        .framer-vPAcs.framer-v-w7utna.framer-1exli70 {
-            overflow: visible !important;
-            max-height: none !important;
-        }
-        .framer-vPAcs.framer-v-w7utna .framer-bu79ji {
-            overflow: visible !important;
-        }
-        .framer-vPAcs.framer-v-w7utna .framer-1qupc9b {
-            overflow: visible !important;
-            height: auto !important;
-        }
-        .framer-vPAcs.framer-v-w7utna .framer-132ym2t-container,
-        .framer-vPAcs.framer-v-w7utna .framer-1lcz1wz-container,
-        .framer-vPAcs.framer-v-w7utna .framer-10zzbz2-container {
-            opacity: 1 !important;
-            visibility: visible !important;
-            position: relative !important;
-            height: auto !important;
-            display: block !important;
-            transform: none !important;
+        @media (max-width: 820px) {
+            /* Make the header fill the viewport instead of fixed 1248px */
+            .framer-vPAcs.framer-1exli70 {
+                width: 100% !important;
+                box-sizing: border-box !important;
+                padding: 16px !important;
+                overflow: hidden !important;
+            }
+            /* Stack logo + nav vertically */
+            .framer-vPAcs .framer-bu79ji {
+                flex-direction: column !important;
+                align-items: flex-start !important;
+                gap: 16px !important;
+                width: 100% !important;
+            }
+            /* Stack all 3 nav links vertically */
+            .framer-vPAcs .framer-1qupc9b {
+                flex-direction: column !important;
+                gap: 12px !important;
+                width: 100% !important;
+                overflow: visible !important;
+            }
+            /* Ensure each nav item is visible */
+            .framer-vPAcs .framer-132ym2t-container,
+            .framer-vPAcs .framer-1lcz1wz-container,
+            .framer-vPAcs .framer-10zzbz2-container {
+                display: block !important;
+                opacity: 1 !important;
+                visibility: visible !important;
+                position: relative !important;
+                height: auto !important;
+            }
+            /* Hide the hamburger icon since we show nav inline */
+            .framer-vPAcs .framer-z2h1x2 {
+                display: none !important;
+            }
         }
     </style>
 </head>
