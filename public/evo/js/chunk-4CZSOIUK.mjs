@@ -1,4 +1,4 @@
-﻿import {
+import {
   Aa as X,
   D as s,
   G as R,
@@ -205,13 +205,13 @@ var me = { damping: 60, delay: 0, mass: 1, stiffness: 200, type: "spring" },
                 "--border-top-width":
                   (o.borderTopWidth ?? o.borderWidth) + "px",
                 background:
-                  'linear-gradient(180deg, var(--token-f951c3a8-aa43-4825-aa75-915aa92c20d1, rgb(79, 26, 214)) /* {"name":"Purple"} */ 0%, rgb(128, 89, 227) 100%)',
+                  'linear-gradient(180deg, var(--token-f951c3a8-aa43-4825-aa75-915aa92c20d1, rgb(0, 110, 170)) /* {"name":"Purple"} */ 0%, rgb(0, 175, 220) 100%)',
                 backgroundColor: "rgba(0, 0, 0, 0)",
                 borderBottomLeftRadius: 10,
                 borderBottomRightRadius: 10,
                 borderTopLeftRadius: 10,
                 borderTopRightRadius: 10,
-                boxShadow: "0px 0px 0px 0px rgba(79, 26, 214, 0.3)",
+                boxShadow: "0px 0px 0px 0px rgba(0, 130, 185, 0.3)",
                 opacity: 1,
                 ...y,
               },
@@ -219,7 +219,7 @@ var me = { damping: 60, delay: 0, mass: 1, stiffness: 200, type: "spring" },
                 "GXXGb1Hah-hover": { opacity: 0.6 },
                 "vf6JWDf13-hover": {
                   backgroundColor: "rgba(0, 0, 0, 0)",
-                  boxShadow: "0px 0px 0px 5px rgba(79, 26, 214, 0.3)",
+                  boxShadow: "0px 0px 0px 5px rgba(0, 130, 185, 0.3)",
                 },
                 "xQAMtyuwR-hover": { opacity: 0.6 },
                 GXXGb1Hah: {

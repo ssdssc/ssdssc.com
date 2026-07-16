@@ -1,4 +1,4 @@
-﻿import {
+import {
   g as p,
   h as E,
   i as G,
@@ -249,7 +249,7 @@ var be = { bounce: 0.2, delay: 0, duration: 0.4, type: "spring" },
                 layoutId: "qwNeQyBdz",
                 style: {
                   background:
-                    "conic-gradient(from 0deg at 50% 50%, rgba(255, 255, 255, 0.15) 0deg, rgba(255, 255, 255, 0) 72deg, rgba(79, 26, 214, 0.2) 171.8918918918919deg, rgba(255, 255, 255, 0) 270deg, rgba(255, 255, 255, 0.15) 360deg)",
+                    "conic-gradient(from 0deg at 50% 50%, rgba(255, 255, 255, 0.15) 0deg, rgba(255, 255, 255, 0) 72deg, rgba(0, 130, 185, 0.2) 171.8918918918919deg, rgba(255, 255, 255, 0) 270deg, rgba(255, 255, 255, 0.15) 360deg)",
                   opacity: 0.2,
                 },
               }),
@@ -269,7 +269,7 @@ var be = { bounce: 0.2, delay: 0, duration: 0.4, type: "spring" },
                     "--border-style": "solid",
                     "--border-top-width": "2px",
                     background:
-                      'linear-gradient(180deg, var(--token-f951c3a8-aa43-4825-aa75-915aa92c20d1, rgb(79, 26, 214)) /* {"name":"Purple"} */ 0%, rgb(128, 89, 227) 100%)',
+                      'linear-gradient(180deg, var(--token-f951c3a8-aa43-4825-aa75-915aa92c20d1, rgb(0, 110, 170)) /* {"name":"Purple"} */ 0%, rgb(0, 175, 220) 100%)',
                     borderBottomLeftRadius: 26,
                     borderBottomRightRadius: 26,
                     borderTopLeftRadius: 26,
@@ -380,7 +380,7 @@ var be = { bounce: 0.2, delay: 0, duration: 0.4, type: "spring" },
                     "--border-style": "solid",
                     "--border-top-width": "2px",
                     background:
-                      'linear-gradient(180deg, var(--token-f951c3a8-aa43-4825-aa75-915aa92c20d1, rgb(79, 26, 214)) /* {"name":"Purple"} */ 0%, rgb(128, 89, 227) 100%)',
+                      'linear-gradient(180deg, var(--token-f951c3a8-aa43-4825-aa75-915aa92c20d1, rgb(0, 110, 170)) /* {"name":"Purple"} */ 0%, rgb(0, 175, 220) 100%)',
                     borderBottomLeftRadius: 30,
                     borderBottomRightRadius: 30,
                     borderTopLeftRadius: 30,
@@ -465,7 +465,7 @@ var be = { bounce: 0.2, delay: 0, duration: 0.4, type: "spring" },
                   layoutId: "u9huyaQK_",
                   style: {
                     background:
-                      'linear-gradient(90.00000000000155deg, rgba(79, 26, 214, 0) 0%, var(--token-f951c3a8-aa43-4825-aa75-915aa92c20d1, rgb(79, 26, 214)) /* {"name":"Blue"} */ 50%, rgba(0, 85, 255, 0) 100%)',
+                      'linear-gradient(90.00000000000155deg, rgba(0, 110, 170, 0) 0%, var(--token-f951c3a8-aa43-4825-aa75-915aa92c20d1, rgb(0, 110, 170)) /* {"name":"Blue"} */ 50%, rgba(0, 85, 255, 0) 100%)',
                   },
                 }),
               fe() &&
@@ -476,9 +476,9 @@ var be = { bounce: 0.2, delay: 0, duration: 0.4, type: "spring" },
                   layoutId: "rgcJEQNal",
                   style: {
                     background:
-                      "radial-gradient(50% 50% at 50% 50%, rgba(79, 26, 214, 0.15) 0%, rgb(15, 9, 18) 100%)",
+                      "radial-gradient(50% 50% at 50% 50%, rgba(0, 110, 170, 0.15) 0%, rgb(15, 9, 18) 100%)",
                     boxShadow:
-                      "inset 0px 10px 10px -1px rgba(79, 26, 214, 0.1)",
+                      "inset 0px 10px 10px -1px rgba(0, 110, 170, 0.1)",
                   },
                 }),
             ],

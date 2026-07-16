@@ -1,4 +1,4 @@
-﻿import { a as Jr } from "./chunk-EN26E4LI.mjs";
+import { a as Jr } from "./chunk-EN26E4LI.mjs";
 import { a as Yr, b as zr, c as Gr, d as M } from "./chunk-5H6VPJUI.mjs";
 import { a as Or, b as qr, c as Er } from "./chunk-KH3IMKDI.mjs";
 import { a as Ke } from "./chunk-JPQXC4RY.mjs";
@@ -213,13 +213,13 @@ var ft = { damping: 60, delay: 0, mass: 1, stiffness: 200, type: "spring" },
                 "--border-top-width":
                   (A.borderTopWidth ?? A.borderWidth) + "px",
                 background:
-                  'linear-gradient(180deg, var(--token-f951c3a8-aa43-4825-aa75-915aa92c20d1, rgb(79, 26, 214)) /* {"name":"Purple"} */ 0%, rgb(128, 89, 227) 100%)',
+                  'linear-gradient(180deg, var(--token-f951c3a8-aa43-4825-aa75-915aa92c20d1, rgb(0, 110, 170)) /* {"name":"Purple"} */ 0%, rgb(0, 175, 220) 100%)',
                 backgroundColor: "rgba(0, 0, 0, 0)",
                 borderBottomLeftRadius: 10,
                 borderBottomRightRadius: 10,
                 borderTopLeftRadius: 10,
                 borderTopRightRadius: 10,
-                boxShadow: "0px 0px 0px 0px rgba(79, 26, 214, 0.3)",
+                boxShadow: "0px 0px 0px 0px rgba(0, 130, 185, 0.3)",
                 opacity: 1,
                 ...I,
               },
@@ -227,7 +227,7 @@ var ft = { damping: 60, delay: 0, mass: 1, stiffness: 200, type: "spring" },
                 "GXXGb1Hah-hover": { opacity: 0.6 },
                 "vf6JWDf13-hover": {
                   backgroundColor: "rgba(0, 0, 0, 0)",
-                  boxShadow: "0px 0px 0px 5px rgba(79, 26, 214, 0.3)",
+                  boxShadow: "0px 0px 0px 5px rgba(0, 130, 185, 0.3)",
                 },
                 "xQAMtyuwR-hover": { opacity: 0.6 },
                 GXXGb1Hah: {
@@ -613,9 +613,9 @@ var Nt = { bounce: 0.2, delay: 0, duration: 0.4, type: "spring" },
                   layoutId: "pcbAzB9ki",
                   style: {
                     background:
-                      "radial-gradient(43% 50% at 50% 50%, rgba(15, 9, 18, 0.15) 0%, rgb(12, 9, 18) 100%)",
+                      "radial-gradient(43% 50% at 50% 50%, rgba(0, 15, 18, 0.15) 0%, rgb(0, 15, 18) 100%)",
                     boxShadow:
-                      "inset 0px 10px 5px -1px var(--token-f5219c3a-5ee2-4639-9e23-4bdcf5509ebd, rgba(79, 26, 214, 0.15))",
+                      "inset 0px 10px 5px -1px var(--token-f5219c3a-5ee2-4639-9e23-4bdcf5509ebd, rgba(0, 110, 170, 0.15))",
                   },
                 }),
                 d(t.div, {
@@ -643,7 +643,7 @@ var Nt = { bounce: 0.2, delay: 0, duration: 0.4, type: "spring" },
                         borderTopLeftRadius: 10,
                         borderTopRightRadius: 10,
                         boxShadow:
-                          "0px 0.3613123810646357px 1.083937143193907px -0.5px rgba(79, 26, 214, 0.08), 0px 1.3731199819460742px 4.119359945838223px -1px rgba(79, 26, 214, 0.1), 0px 6px 18px -1.5px rgba(79, 26, 214, 0.18), inset 0px 10px 5px -1px rgba(255, 255, 255, 0.08)",
+                          "0px 0.3613123810646357px 1.083937143193907px -0.5px rgba(0, 110, 170, 0.08), 0px 1.3731199819460742px 4.119359945838223px -1px rgba(0, 110, 170, 0.1), 0px 6px 18px -1.5px rgba(0, 110, 170, 0.18), inset 0px 10px 5px -1px rgba(255, 255, 255, 0.08)",
                       },
                       children: [
                         e(t.div, {
@@ -653,9 +653,9 @@ var Nt = { bounce: 0.2, delay: 0, duration: 0.4, type: "spring" },
                           layoutId: "QOxniejb7",
                           style: {
                             background:
-                              "radial-gradient(43% 50% at 50% 50%, rgba(15, 9, 18, 0.15) 0%, rgb(12, 9, 18) 100%)",
+                              "radial-gradient(43% 50% at 50% 50%, rgba(0, 15, 18, 0.15) 0%, rgb(0, 15, 18) 100%)",
                             boxShadow:
-                              "inset 0px 10px 10px -1px var(--token-f5219c3a-5ee2-4639-9e23-4bdcf5509ebd, rgba(79, 26, 214, 0.15))",
+                              "inset 0px 10px 10px -1px var(--token-f5219c3a-5ee2-4639-9e23-4bdcf5509ebd, rgba(0, 110, 170, 0.15))",
                           },
                         }),
                         e(p, {
@@ -1202,7 +1202,7 @@ var jt = { bounce: 0.2, delay: 0, duration: 0.4, type: "spring" },
                 layoutId: "qwNeQyBdz",
                 style: {
                   background:
-                    "conic-gradient(from 0deg at 50% 50%, rgba(255, 255, 255, 0.15) 0deg, rgba(255, 255, 255, 0) 72deg, rgba(79, 26, 214, 0.2) 171.8918918918919deg, rgba(255, 255, 255, 0) 270deg, rgba(255, 255, 255, 0.15) 360deg)",
+                    "conic-gradient(from 0deg at 50% 50%, rgba(255, 255, 255, 0.15) 0deg, rgba(255, 255, 255, 0) 72deg, rgba(0, 130, 185, 0.2) 171.8918918918919deg, rgba(255, 255, 255, 0) 270deg, rgba(255, 255, 255, 0.15) 360deg)",
                   opacity: 0.2,
                 },
               }),
@@ -1222,7 +1222,7 @@ var jt = { bounce: 0.2, delay: 0, duration: 0.4, type: "spring" },
                     "--border-style": "solid",
                     "--border-top-width": "2px",
                     background:
-                      'linear-gradient(180deg, var(--token-f951c3a8-aa43-4825-aa75-915aa92c20d1, rgb(79, 26, 214)) /* {"name":"Purple"} */ 0%, rgb(128, 89, 227) 100%)',
+                      'linear-gradient(180deg, var(--token-f951c3a8-aa43-4825-aa75-915aa92c20d1, rgb(0, 110, 170)) /* {"name":"Purple"} */ 0%, rgb(0, 175, 220) 100%)',
                     borderBottomLeftRadius: 26,
                     borderBottomRightRadius: 26,
                     borderTopLeftRadius: 26,
@@ -1333,7 +1333,7 @@ var jt = { bounce: 0.2, delay: 0, duration: 0.4, type: "spring" },
                     "--border-style": "solid",
                     "--border-top-width": "2px",
                     background:
-                      'linear-gradient(180deg, var(--token-f951c3a8-aa43-4825-aa75-915aa92c20d1, rgb(79, 26, 214)) /* {"name":"Purple"} */ 0%, rgb(128, 89, 227) 100%)',
+                      'linear-gradient(180deg, var(--token-f951c3a8-aa43-4825-aa75-915aa92c20d1, rgb(0, 110, 170)) /* {"name":"Purple"} */ 0%, rgb(0, 175, 220) 100%)',
                     borderBottomLeftRadius: 30,
                     borderBottomRightRadius: 30,
                     borderTopLeftRadius: 30,
@@ -1418,7 +1418,7 @@ var jt = { bounce: 0.2, delay: 0, duration: 0.4, type: "spring" },
                   layoutId: "u9huyaQK_",
                   style: {
                     background:
-                      'linear-gradient(90.00000000000155deg, rgba(79, 26, 214, 0) 0%, var(--token-f951c3a8-aa43-4825-aa75-915aa92c20d1, rgb(79, 26, 214)) /* {"name":"Blue"} */ 50%, rgba(0, 85, 255, 0) 100%)',
+                      'linear-gradient(90.00000000000155deg, rgba(0, 110, 170, 0) 0%, var(--token-f951c3a8-aa43-4825-aa75-915aa92c20d1, rgb(0, 110, 170)) /* {"name":"Blue"} */ 50%, rgba(0, 85, 255, 0) 100%)',
                   },
                 }),
               me() &&
@@ -1429,9 +1429,9 @@ var jt = { bounce: 0.2, delay: 0, duration: 0.4, type: "spring" },
                   layoutId: "rgcJEQNal",
                   style: {
                     background:
-                      "radial-gradient(50% 50% at 50% 50%, rgba(79, 26, 214, 0.15) 0%, rgb(15, 9, 18) 100%)",
+                      "radial-gradient(50% 50% at 50% 50%, rgba(0, 110, 170, 0.15) 0%, rgb(0, 15, 18) 100%)",
                     boxShadow:
-                      "inset 0px 10px 10px -1px rgba(79, 26, 214, 0.1)",
+                      "inset 0px 10px 10px -1px rgba(0, 110, 170, 0.1)",
                   },
                 }),
             ],
@@ -1739,9 +1739,9 @@ var ta = { bounce: 0.2, delay: 0, duration: 0.4, type: "spring" },
                   layoutId: "pcbAzB9ki",
                   style: {
                     background:
-                      "radial-gradient(43% 50% at 50% 50%, rgba(15, 9, 18, 0.15) 0%, rgb(12, 9, 18) 100%)",
+                      "radial-gradient(43% 50% at 50% 50%, rgba(0, 15, 18, 0.15) 0%, rgb(0, 15, 18) 100%)",
                     boxShadow:
-                      "inset 0px 10px 5px -1px var(--token-f5219c3a-5ee2-4639-9e23-4bdcf5509ebd, rgba(79, 26, 214, 0.15))",
+                      "inset 0px 10px 5px -1px var(--token-f5219c3a-5ee2-4639-9e23-4bdcf5509ebd, rgba(0, 110, 170, 0.15))",
                   },
                 }),
                 d(t.div, {
@@ -1769,7 +1769,7 @@ var ta = { bounce: 0.2, delay: 0, duration: 0.4, type: "spring" },
                         borderTopLeftRadius: 10,
                         borderTopRightRadius: 10,
                         boxShadow:
-                          "0px 0.3613123810646357px 1.083937143193907px -0.5px rgba(79, 26, 214, 0.08), 0px 1.3731199819460742px 4.119359945838223px -1px rgba(79, 26, 214, 0.1), 0px 6px 18px -1.5px rgba(79, 26, 214, 0.18), inset 0px 10px 5px -1px rgba(255, 255, 255, 0.08)",
+                          "0px 0.3613123810646357px 1.083937143193907px -0.5px rgba(0, 110, 170, 0.08), 0px 1.3731199819460742px 4.119359945838223px -1px rgba(0, 110, 170, 0.1), 0px 6px 18px -1.5px rgba(0, 110, 170, 0.18), inset 0px 10px 5px -1px rgba(255, 255, 255, 0.08)",
                       },
                       children: [
                         e(t.div, {
@@ -1779,9 +1779,9 @@ var ta = { bounce: 0.2, delay: 0, duration: 0.4, type: "spring" },
                           layoutId: "QOxniejb7",
                           style: {
                             background:
-                              "radial-gradient(43% 50% at 50% 50%, rgba(15, 9, 18, 0.15) 0%, rgb(12, 9, 18) 100%)",
+                              "radial-gradient(43% 50% at 50% 50%, rgba(0, 15, 18, 0.15) 0%, rgb(0, 15, 18) 100%)",
                             boxShadow:
-                              "inset 0px 10px 10px -1px var(--token-f5219c3a-5ee2-4639-9e23-4bdcf5509ebd, rgba(79, 26, 214, 0.15))",
+                              "inset 0px 10px 10px -1px var(--token-f5219c3a-5ee2-4639-9e23-4bdcf5509ebd, rgba(0, 110, 170, 0.15))",
                           },
                         }),
                         e(p, {
@@ -2337,9 +2337,9 @@ var xa = { bounce: 0.2, delay: 0, duration: 0.4, type: "spring" },
                   layoutId: "HJgblTa3v",
                   style: {
                     background:
-                      "radial-gradient(43% 50% at 50% 50%, rgba(15, 9, 18, 0.15) 0%, rgb(12, 9, 18) 100%)",
+                      "radial-gradient(43% 50% at 50% 50%, rgba(0, 15, 18, 0.15) 0%, rgb(0, 15, 18) 100%)",
                     boxShadow:
-                      "inset 0px 10px 5px -1px var(--token-f5219c3a-5ee2-4639-9e23-4bdcf5509ebd, rgba(79, 26, 214, 0.15))",
+                      "inset 0px 10px 5px -1px var(--token-f5219c3a-5ee2-4639-9e23-4bdcf5509ebd, rgba(0, 110, 170, 0.15))",
                   },
                 }),
                 d(t.div, {
@@ -2367,7 +2367,7 @@ var xa = { bounce: 0.2, delay: 0, duration: 0.4, type: "spring" },
                         borderTopLeftRadius: 10,
                         borderTopRightRadius: 10,
                         boxShadow:
-                          "0px 0.3613123810646357px 1.083937143193907px -0.5px rgba(79, 26, 214, 0.08), 0px 1.3731199819460742px 4.119359945838223px -1px rgba(79, 26, 214, 0.1), 0px 6px 18px -1.5px rgba(79, 26, 214, 0.18), inset 0px 10px 5px -1px rgba(255, 255, 255, 0.08)",
+                          "0px 0.3613123810646357px 1.083937143193907px -0.5px rgba(0, 110, 170, 0.08), 0px 1.3731199819460742px 4.119359945838223px -1px rgba(0, 110, 170, 0.1), 0px 6px 18px -1.5px rgba(0, 110, 170, 0.18), inset 0px 10px 5px -1px rgba(255, 255, 255, 0.08)",
                       },
                       children: [
                         e(t.div, {
@@ -2377,9 +2377,9 @@ var xa = { bounce: 0.2, delay: 0, duration: 0.4, type: "spring" },
                           layoutId: "OfyQXqKTh",
                           style: {
                             background:
-                              "radial-gradient(43% 50% at 50% 50%, rgba(15, 9, 18, 0.15) 0%, rgb(12, 9, 18) 100%)",
+                              "radial-gradient(43% 50% at 50% 50%, rgba(0, 15, 18, 0.15) 0%, rgb(0, 15, 18) 100%)",
                             boxShadow:
-                              "inset 0px 10px 10px -1px var(--token-f5219c3a-5ee2-4639-9e23-4bdcf5509ebd, rgba(79, 26, 214, 0.15))",
+                              "inset 0px 10px 10px -1px var(--token-f5219c3a-5ee2-4639-9e23-4bdcf5509ebd, rgba(0, 110, 170, 0.15))",
                           },
                         }),
                         e(p, {
@@ -2905,9 +2905,9 @@ var Pa = { bounce: 0.2, delay: 0, duration: 0.4, type: "spring" },
                   layoutId: "uAPFMHXgZ",
                   style: {
                     background:
-                      "radial-gradient(43% 50% at 50% 50%, rgba(15, 9, 18, 0.15) 0%, rgb(12, 9, 18) 100%)",
+                      "radial-gradient(43% 50% at 50% 50%, rgba(0, 15, 18, 0.15) 0%, rgb(0, 15, 18) 100%)",
                     boxShadow:
-                      "inset 0px 10px 5px -1px var(--token-f5219c3a-5ee2-4639-9e23-4bdcf5509ebd, rgba(79, 26, 214, 0.15))",
+                      "inset 0px 10px 5px -1px var(--token-f5219c3a-5ee2-4639-9e23-4bdcf5509ebd, rgba(0, 110, 170, 0.15))",
                   },
                 }),
                 d(t.div, {
@@ -2935,7 +2935,7 @@ var Pa = { bounce: 0.2, delay: 0, duration: 0.4, type: "spring" },
                         borderTopLeftRadius: 10,
                         borderTopRightRadius: 10,
                         boxShadow:
-                          "0px 0.3613123810646357px 1.083937143193907px -0.5px rgba(79, 26, 214, 0.08), 0px 1.3731199819460742px 4.119359945838223px -1px rgba(79, 26, 214, 0.1), 0px 6px 18px -1.5px rgba(79, 26, 214, 0.18), inset 0px 10px 5px -1px rgba(255, 255, 255, 0.08)",
+                          "0px 0.3613123810646357px 1.083937143193907px -0.5px rgba(0, 110, 170, 0.08), 0px 1.3731199819460742px 4.119359945838223px -1px rgba(0, 110, 170, 0.1), 0px 6px 18px -1.5px rgba(0, 110, 170, 0.18), inset 0px 10px 5px -1px rgba(255, 255, 255, 0.08)",
                       },
                       children: [
                         e(t.div, {
@@ -2945,9 +2945,9 @@ var Pa = { bounce: 0.2, delay: 0, duration: 0.4, type: "spring" },
                           layoutId: "kkhweBbKn",
                           style: {
                             background:
-                              "radial-gradient(43% 50% at 50% 50%, rgba(15, 9, 18, 0.15) 0%, rgb(12, 9, 18) 100%)",
+                              "radial-gradient(43% 50% at 50% 50%, rgba(0, 15, 18, 0.15) 0%, rgb(0, 15, 18) 100%)",
                             boxShadow:
-                              "inset 0px 10px 10px -1px var(--token-f5219c3a-5ee2-4639-9e23-4bdcf5509ebd, rgba(79, 26, 214, 0.15))",
+                              "inset 0px 10px 10px -1px var(--token-f5219c3a-5ee2-4639-9e23-4bdcf5509ebd, rgba(0, 110, 170, 0.15))",
                           },
                         }),
                         e(p, {
@@ -4115,7 +4115,7 @@ var yn = { bounce: 0.2, delay: 0, duration: 0.4, type: "spring" },
                         rays: 30,
                         raysColor: {
                           color:
-                            "var(--token-f951c3a8-aa43-4825-aa75-915aa92c20d1, rgb(79, 26, 214))",
+                            "var(--token-f951c3a8-aa43-4825-aa75-915aa92c20d1, rgb(0, 110, 170))",
                           color1: "rgb(255, 255, 255)",
                           color2: "rgb(255, 203, 71)",
                           mode: "single",
@@ -4929,9 +4929,9 @@ var Pn = { bounce: 0.2, delay: 0, duration: 0.4, type: "spring" },
                   layoutId: "nbBoqrFMo",
                   style: {
                     background:
-                      "radial-gradient(43% 50% at 50% 50%, rgba(15, 9, 18, 0.15) 0%, rgb(12, 9, 18) 100%)",
+                      "radial-gradient(43% 50% at 50% 50%, rgba(0, 15, 18, 0.15) 0%, rgb(0, 15, 18) 100%)",
                     boxShadow:
-                      "inset 0px 10px 5px -1px var(--token-f5219c3a-5ee2-4639-9e23-4bdcf5509ebd, rgba(79, 26, 214, 0.15))",
+                      "inset 0px 10px 5px -1px var(--token-f5219c3a-5ee2-4639-9e23-4bdcf5509ebd, rgba(0, 110, 170, 0.15))",
                   },
                 }),
                 d(t.div, {
@@ -4959,7 +4959,7 @@ var Pn = { bounce: 0.2, delay: 0, duration: 0.4, type: "spring" },
                         borderTopLeftRadius: 10,
                         borderTopRightRadius: 10,
                         boxShadow:
-                          "0px 0.3613123810646357px 1.083937143193907px -0.5px rgba(79, 26, 214, 0.08), 0px 1.3731199819460742px 4.119359945838223px -1px rgba(79, 26, 214, 0.1), 0px 6px 18px -1.5px rgba(79, 26, 214, 0.18), inset 0px 10px 5px -1px rgba(255, 255, 255, 0.08)",
+                          "0px 0.3613123810646357px 1.083937143193907px -0.5px rgba(0, 110, 170, 0.08), 0px 1.3731199819460742px 4.119359945838223px -1px rgba(0, 110, 170, 0.1), 0px 6px 18px -1.5px rgba(0, 110, 170, 0.18), inset 0px 10px 5px -1px rgba(255, 255, 255, 0.08)",
                       },
                       children: [
                         e(t.div, {
@@ -4969,9 +4969,9 @@ var Pn = { bounce: 0.2, delay: 0, duration: 0.4, type: "spring" },
                           layoutId: "eDmthDk9w",
                           style: {
                             background:
-                              "radial-gradient(43% 50% at 50% 50%, rgba(15, 9, 18, 0.15) 0%, rgb(12, 9, 18) 100%)",
+                              "radial-gradient(43% 50% at 50% 50%, rgba(0, 15, 18, 0.15) 0%, rgb(0, 15, 18) 100%)",
                             boxShadow:
-                              "inset 0px 10px 10px -1px var(--token-f5219c3a-5ee2-4639-9e23-4bdcf5509ebd, rgba(79, 26, 214, 0.15))",
+                              "inset 0px 10px 10px -1px var(--token-f5219c3a-5ee2-4639-9e23-4bdcf5509ebd, rgba(0, 110, 170, 0.15))",
                           },
                         }),
                         e(p, {
@@ -7512,7 +7512,7 @@ The true champions of Evolvian will rise here.`,
     ".framer-IAxQr.framer-1c1wts4 { align-content: center; align-items: center; background-color: var(--token-8e9f7de0-9fd7-44d3-bc3e-2dea20c4e4bd, #000000); display: flex; flex-direction: column; flex-wrap: nowrap; gap: 0px; height: min-content; justify-content: flex-start; overflow: visible; padding: 0px; position: relative; width: 1272px; }",
     ".framer-IAxQr .framer-1rsusfa { align-content: flex-start; align-items: flex-start; display: flex; flex: none; flex-direction: column; flex-wrap: nowrap; gap: 19px; height: min-content; justify-content: flex-start; max-width: 1440px; overflow: visible; padding: 0px; position: relative; width: 100%; z-index: 1; }",
     ".framer-IAxQr .framer-rphf9s { flex: none; height: 91px; overflow: hidden; position: relative; width: 100%; }",
-    ".framer-IAxQr .framer-1kga82q { align-content: center; align-items: center; background: radial-gradient(60% 88% at 50% 64.2%, var(--token-f951c3a8-aa43-4825-aa75-915aa92c20d1, #4f1ad6) 0%, rgb(114, 59, 255) 39.99155405405405%, var(--token-123b0380-d5c1-475a-b484-6e62cac5babe, rgb(25, 13, 46)) 84.93278434684684%, rgb(0, 0, 0) 100%); display: flex; flex: none; flex-direction: column; flex-wrap: nowrap; gap: 20px; height: min-content; justify-content: center; overflow: visible; padding: 0px 80px 0px 80px; position: relative; width: 100%; }",
+    ".framer-IAxQr .framer-1kga82q { align-content: center; align-items: center; background: radial-gradient(60% 88% at 50% 64.2%, var(--token-f951c3a8-aa43-4825-aa75-915aa92c20d1, #006EAA) 0%, rgb(0, 160, 210) 39.99155405405405%, var(--token-123b0380-d5c1-475a-b484-6e62cac5babe, rgb(25, 13, 46)) 84.93278434684684%, rgb(0, 0, 0) 100%); display: flex; flex: none; flex-direction: column; flex-wrap: nowrap; gap: 20px; height: min-content; justify-content: center; overflow: visible; padding: 0px 80px 0px 80px; position: relative; width: 100%; }",
     ".framer-IAxQr .framer-163cnt8 { background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgb(0, 0, 0) 100%); bottom: 0px; flex: none; height: 224px; left: calc(50.00000000000002% - 100% / 2); overflow: hidden; position: absolute; width: 100%; z-index: 1; }",
     ".framer-IAxQr .framer-zz34dl { align-content: center; align-items: center; display: flex; flex: none; flex-direction: column; flex-wrap: nowrap; gap: 10px; height: 100%; justify-content: center; left: calc(50.00000000000002% - 100% / 2); overflow: hidden; padding: 0px; position: absolute; top: calc(50.00000000000002% - 100% / 2); width: 100%; z-index: 0; }",
     ".framer-IAxQr .framer-1jt0gku { background: radial-gradient(54% 50% at 50% 57.199999999999996%, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.67) 64.51471002252252%, rgb(0, 0, 0) 100%); flex: none; height: 101%; left: calc(50.00000000000002% - 100% / 2); overflow: hidden; position: absolute; top: calc(50.00000000000002% - 101% / 2); width: 100%; z-index: 1; }",

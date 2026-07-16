@@ -1,4 +1,4 @@
-﻿import { a as Qe } from "./chunk-JPQXC4RY.mjs";
+import { a as Qe } from "./chunk-JPQXC4RY.mjs";
 import {
   a as De,
   b as Ne,
@@ -1861,7 +1861,7 @@ var Kr = { bounce: 0.2, delay: 0, duration: 0.4, type: "spring" },
               "--border-style": "solid",
               "--border-top-width": "1px",
               background:
-                "conic-gradient(from 0deg at 50% 0%, rgb(0, 0, 0) 90deg, rgba(79, 26, 214, 0.4) 181.2985641891892deg, rgb(0, 0, 0) 270deg)",
+                "conic-gradient(from 0deg at 50% 0%, rgb(0, 0, 0) 90deg, rgba(0, 130, 185, 0.4) 181.2985641891892deg, rgb(0, 0, 0) 270deg)",
               ...c,
             },
             ...ot(
@@ -2251,7 +2251,7 @@ var ma = (n) => {
                     rays: 30,
                     raysColor: {
                       color:
-                        "var(--token-f951c3a8-aa43-4825-aa75-915aa92c20d1, rgb(79, 26, 214))",
+                        "var(--token-f951c3a8-aa43-4825-aa75-915aa92c20d1, rgb(0, 110, 170))",
                       color1: "rgb(255, 255, 255)",
                       color2: "rgb(255, 203, 71)",
                       mode: "single",
