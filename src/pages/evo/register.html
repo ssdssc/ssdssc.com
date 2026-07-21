@@ -43,6 +43,7 @@
 		margin: 0;
 	}
 		body, input, textarea, select, button { font-size: 12px; font-family: sans-serif; }
+		body { background: #000; color: #fff; margin: 0; padding: 0; }
 		body {
 			--token-f951c3a8-aa43-4825-aa75-915aa92c20d1: rgb(0, 110, 170);
 			--token-ad10564e-4158-40a7-94e1-51af1b841a47: rgba(0, 110, 170, .2);
@@ -285,8 +286,9 @@
 		/* Navigation CSS */
 		.framer-nav-container {
 			position: fixed !important;
-			transition: transform 0.9s cubic-bezier(0.16, 1, 0.3, 1);
-			transition-delay: 0.3s;
+			transition: transform 0.9s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.5s ease;
+			transition-delay: 0.3s, 0s;
+			opacity: 0;
 			top: 0 !important;
 			left: 0 !important;
 			width: 100% !important;
@@ -716,7 +718,7 @@
 	<!-- ═══════════════════════════════════════════════════
 	     FOOTER MARKUP (Copied from index.html)
 	     ════════════════════════════════════════════════════ -->
-	<div class="framer-nsybx2-container">
+	<div class="framer-nsybx2-container" style="opacity: 0; pointer-events: none; transition: opacity 0.3s ease;">
 		<div class="ssr-variant hidden-bt281z hidden-j76z1o">
 			<footer class="framer-maRhO framer-z20imy framer-v-z20imy" data-border="true" data-framer-name="L" style="--border-bottom-width:0px;--border-color:var(--token-d86f1591-0c16-44cd-be10-19334dfa9293, rgba(255, 255, 255, 0.1));--border-left-width:0px;--border-right-width:0px;--border-style:solid;--border-top-width:1px;background:conic-gradient(from 0deg at 50% 0%, rgb(0, 0, 0) 90deg, rgba(0, 130, 185, 0.4) 181.2985641891892deg, rgb(0, 0, 0) 270deg);width:100%">
 				<div class="framer-g1rbiy" data-framer-name="Bottom">
@@ -1510,6 +1512,12 @@ if (typeof window !== "undefined") {
           var footer = document.querySelector('.framer-nsybx2-container');
           if (footer && footer.parentElement !== document.body) {
             document.body.appendChild(footer);
+            footer.style.opacity = '1';
+            footer.style.pointerEvents = 'auto';
+          }
+          var nav = document.querySelector('.framer-nav-container');
+          if (nav) {
+            nav.style.opacity = '1';
           }
           /* Restore canvas height to default (compacted to fit content) */
           var parent = document.querySelector('.framer-72rtr7') || document.querySelector('[data-framer-name="Form"]')?.parentElement;
@@ -1657,6 +1665,9 @@ if (typeof window !== "undefined") {
 
         var lastScrollY = window.scrollY;
         var navContainer = document.querySelector('.framer-nav-container');
+        // Fade in navbar when script runs
+        // (Moved inside attachFooter so it waits for React hydration)
+
         window.addEventListener('scroll', function() {
           if (window.scrollY > lastScrollY && window.scrollY > 50) {
             navContainer.classList.add('nav-hidden');
