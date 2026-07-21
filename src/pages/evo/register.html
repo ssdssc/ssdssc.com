@@ -5,20 +5,20 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=1906">
 	<meta name="generator" content="Framer 3f060d6">
-	<title>Register – Evolvion | SSDSSC</title>
+	<title>Register | SSDSSC | Science Society of DSSC</title>
     <meta name="description" content="Register for Evolvion — Sri Lanka's pioneering, fully tech-driven Quiz Eve, uniting schools in a battle of minds. Brought to you by SSDSSC." />
-    <link href="/evo/icons/favicon-light.png" rel="icon" media="(prefers-color-scheme: light)">
-    <link href="/evo/icons/favicon-dark.png" rel="icon" media="(prefers-color-scheme: dark)">
-    <link rel="apple-touch-icon" href="/evo/icons/touch-icon.png"/>
+    <link href="/evo/images/oSBCTu9PtJTcmCRV58viNAJ1Ug.png" rel="icon" media="(prefers-color-scheme: light)">
+    <link href="/evo/images/HV81PvMuzPmNxmMjCAYb0u8UbY.png" rel="icon" media="(prefers-color-scheme: dark)">
+    <link rel="apple-touch-icon" href="/evo/images/HV81PvMuzPmNxmMjCAYb0u8UbY.png"/>
     <link rel="canonical" href="https://ssdssc.com/evo/register">
     <!-- Open Graph -->
     <meta property="og:type" content="website">
-    <meta property="og:title" content="Register – Evolvion | SSDSSC">
+    <meta property="og:title" content="Register | SSDSSC | Science Society of DSSC">
     <meta property="og:description" content="Register for Evolvion — Sri Lanka's pioneering, fully tech-driven Quiz Eve, uniting schools in a battle of minds. Brought to you by SSDSSC.">
     <meta property="og:url" content="https://ssdssc.com/evo/register">
     <!-- X / Twitter -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Register – Evolvion | SSDSSC">
+    <meta name="twitter:title" content="Register | SSDSSC | Science Society of DSSC">
     <meta name="twitter:description" content="Register for Evolvion — Sri Lanka's pioneering, fully tech-driven Quiz Eve, uniting schools in a battle of minds. Brought to you by SSDSSC.">
 	<script type="importmap">{"imports":{"__framer-badge":"/evo/register/_framer/js/empty.js","__framer-not-found-page":"/evo/register/_framer/js/not-found-page.js","#framer/local/screen/augiA20Il/augiA20Il.js":"/evo/register/_framer/js/screen-augiA20Il.js","#framer/local/siteMetadata/siteMetadata/siteMetadata.js":"/evo/register/_framer/js/siteMetadata.js","#framer/local/snippets/snippets/snippets.js":"/evo/register/_framer/js/snippets.js","#framer/local/css/kgLnLx4vc/kgLnLx4vc.js":"/evo/register/_framer/js/kgLnLx4vc.js","#framer/local/componentPresets/componentPresets/componentPresets.js":"/evo/register/_framer/js/componentPresets.js","#framer/local/webPageMetadata/augiA20Il/augiA20Il.js":"/evo/register/_framer/js/webPageMetadata.js","framer":"/evo/register/_framer/js/framer.mjs","framer-motion":"/evo/register/_framer/js/framer-motion.mjs","react":"/evo/register/_framer/js/react.js","react-dom":"/evo/register/_framer/js/react-dom.js","react-dom/client":"/evo/register/_framer/js/react-dom-client.js","react-dom/server":"/evo/register/_framer/js/react-dom-server.js","react/jsx-runtime":"/evo/register/_framer/js/react-jsx-runtime.js","fs":"/evo/register/_framer/js/empty.js","process":"/evo/register/_framer/js/empty.js","scheduler":"/evo/register/_framer/js/scheduler.js"}}</script>
 	<script async src="/evo/register/_framer/js/es-module-shims.js" crossorigin="anonymous" data-framer-es-module-shims></script>
@@ -284,7 +284,9 @@
 
 		/* Navigation CSS */
 		.framer-nav-container {
-			position: absolute !important;
+			position: fixed !important;
+			transition: transform 0.9s cubic-bezier(0.16, 1, 0.3, 1);
+			transition-delay: 0.3s;
 			top: 0 !important;
 			left: 0 !important;
 			width: 100% !important;
@@ -293,6 +295,10 @@
 			flex-direction: column;
 			align-items: center;
 			pointer-events: none;
+		}
+		.framer-nav-container.nav-hidden {
+			transform: translateY(-100%);
+			transition-delay: 0s;
 		}
 		.framer-nav-container > .ssr-variant {
 			width: 100% !important;
@@ -1508,7 +1514,7 @@ if (typeof window !== "undefined") {
           /* Restore canvas height to default (compacted to fit content) */
           var parent = document.querySelector('.framer-72rtr7') || document.querySelector('[data-framer-name="Form"]')?.parentElement;
           if (parent) {
-            parent.style.setProperty('height', '2250px', 'important');
+            parent.style.setProperty('height', '2150px', 'important');
           }
         }
 
@@ -1648,6 +1654,17 @@ if (typeof window !== "undefined") {
           requestAnimationFrame(loop);
         }
         requestAnimationFrame(loop);
+
+        var lastScrollY = window.scrollY;
+        var navContainer = document.querySelector('.framer-nav-container');
+        window.addEventListener('scroll', function() {
+          if (window.scrollY > lastScrollY && window.scrollY > 50) {
+            navContainer.classList.add('nav-hidden');
+          } else {
+            navContainer.classList.remove('nav-hidden');
+          }
+          lastScrollY = window.scrollY;
+        });
       })();
     </script>
 </body>

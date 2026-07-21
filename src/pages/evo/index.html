@@ -8808,6 +8808,16 @@
   <!-- Start of bodyEnd -->
 
   <!-- End of bodyEnd -->
+  <script>
+    document.addEventListener('click', function(e) {
+      var link = e.target.closest('a');
+      if (link && (link.textContent.includes('Register Now') || link.textContent.includes('Register your School'))) {
+        e.preventDefault();
+        e.stopPropagation();
+        window.location.href = '/evo/register';
+      }
+    }, true);
+  </script>
 </body>
 
 </html>

@@ -5686,7 +5686,7 @@ var jn = v(We),
                                     children: e(We, {
                                       AL_NU982V: !1,
                                       dlVBgpKLv: "Register your School",
-                                      GT109pdEG: "/evo/register",
+                                      GT109pdEG: location.origin + "/evo/register",
                                       height: "100%",
                                       id: "HIAb4YD9n",
                                       layoutId: "HIAb4YD9n",

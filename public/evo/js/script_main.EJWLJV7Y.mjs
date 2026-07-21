@@ -3115,7 +3115,7 @@ var Va = { damping: 60, delay: 0, mass: 1, stiffness: 300, type: "spring" },
                     children: r(xe, {
                       AL_NU982V: !1,
                       dlVBgpKLv: "Register Now",
-                      GT109pdEG: "/evo/register",
+                      GT109pdEG: location.origin + "/evo/register",
                       height: "100%",
                       id: "Z6pvfLMtI",
                       layoutId: "Z6pvfLMtI",
