@@ -1060,16 +1060,24 @@ if (typeof window !== "undefined") {
         position: absolute;
         background: transparent;
         border: none;
+        border-right: 15px solid transparent;
         outline: none;
-        color: transparent;
+        color: rgba(255, 255, 255, 0.4);
         font-family: "DM Sans", sans-serif;
         font-size: 15px;
         z-index: 9999;
         box-sizing: border-box;
         padding: 0 21px;
-        appearance: none;
-        -webkit-appearance: none;
+        appearance: auto;
+        -webkit-appearance: auto;
         cursor: pointer;
+      }
+      .framer-14zqfq1 > *,
+      .framer-pvhbo6 > *,
+      .framer-2rx7vx > *,
+      .framer-kqct6q > * {
+        opacity: 0 !important;
+        pointer-events: none !important;
       }
       .evo-select-overlay.has-value {
         color: #fff;
@@ -1277,21 +1285,9 @@ if (typeof window !== "undefined") {
 
         function bindSelect(selectEl, boxSelector) {
           selectEl.addEventListener('change', function() {
-            var box = document.querySelector(boxSelector);
             var isSelected = (this.value !== '');
             if (isSelected) this.classList.add('has-value');
             else this.classList.remove('has-value');
-            
-            if (box) {
-              var c = isSelected ? 'transparent' : '';
-              box.style.setProperty('color', c, isSelected ? 'important' : '');
-              box.style.setProperty('-webkit-text-fill-color', c, isSelected ? 'important' : '');
-              var spans = box.querySelectorAll('*');
-              for (var i=0; i<spans.length; i++) {
-                spans[i].style.setProperty('color', c, isSelected ? 'important' : '');
-                spans[i].style.setProperty('-webkit-text-fill-color', c, isSelected ? 'important' : '');
-              }
-            }
             updateSubjectDisability();
           });
         }
@@ -1510,8 +1506,10 @@ if (typeof window !== "undefined") {
 
         function attachFooter() {
           var footer = document.querySelector('.framer-nsybx2-container');
-          if (footer && footer.parentElement !== document.body) {
-            document.body.appendChild(footer);
+          if (footer) {
+            if (footer.parentElement !== document.body) {
+              document.body.appendChild(footer);
+            }
             footer.style.opacity = '1';
             footer.style.pointerEvents = 'auto';
           }
