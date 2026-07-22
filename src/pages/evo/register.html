@@ -48,6 +48,14 @@
         font-size: 24px !important;
         padding: 15px 25px !important;
       }
+      
+      /* Hide custom cursor on mobile touch screens */
+      @media (pointer: coarse), (max-width: 1024px) {
+        #evo-cursor {
+          display: none !important;
+        }
+      }
+
 
     </style>
     <!-- End of headStart -->
