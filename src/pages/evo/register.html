@@ -35,7 +35,11 @@
       }
       
       /* Make input fields narrower but taller with bigger text */
-      input, textarea, select {
+      input[type="text"], 
+      input[type="email"], 
+      input[type="tel"], 
+      input[type="number"], 
+      textarea {
         width: 80% !important;
         max-width: 500px !important;
         margin-left: auto !important;
@@ -44,6 +48,7 @@
         font-size: 24px !important;
         padding: 15px 25px !important;
       }
+
     </style>
     <!-- End of headStart -->
 	<style data-framer-css-ssr>
