@@ -24,7 +24,16 @@
 	<script type="importmap">{"imports":{"__framer-badge":"/evo/register/_framer/js/empty.js","__framer-not-found-page":"/evo/register/_framer/js/not-found-page.js","#framer/local/screen/augiA20Il/augiA20Il.js":"/evo/register/_framer/js/screen-augiA20Il.js","#framer/local/siteMetadata/siteMetadata/siteMetadata.js":"/evo/register/_framer/js/siteMetadata.js","#framer/local/snippets/snippets/snippets.js":"/evo/register/_framer/js/snippets.js","#framer/local/css/kgLnLx4vc/kgLnLx4vc.js":"/evo/register/_framer/js/kgLnLx4vc.js","#framer/local/componentPresets/componentPresets/componentPresets.js":"/evo/register/_framer/js/componentPresets.js","#framer/local/webPageMetadata/augiA20Il/augiA20Il.js":"/evo/register/_framer/js/webPageMetadata.js","framer":"/evo/register/_framer/js/framer.mjs","framer-motion":"/evo/register/_framer/js/framer-motion.mjs","react":"/evo/register/_framer/js/react.js","react-dom":"/evo/register/_framer/js/react-dom.js","react-dom/client":"/evo/register/_framer/js/react-dom-client.js","react-dom/server":"/evo/register/_framer/js/react-dom-server.js","react/jsx-runtime":"/evo/register/_framer/js/react-jsx-runtime.js","fs":"/evo/register/_framer/js/empty.js","process":"/evo/register/_framer/js/empty.js","scheduler":"/evo/register/_framer/js/scheduler.js"}}</script>
 	<script async src="/evo/register/_framer/js/es-module-shims.js" crossorigin="anonymous" data-framer-es-module-shims></script>
 	<!-- Start of headStart -->
-    
+    <style>
+      /* Fix navbar width on mobile when forced to desktop viewport */
+      .framer-nav-container,
+      [data-framer-name="Navigation"],
+      [data-framer-name="Nav"],
+      header, nav {
+        width: 100% !important;
+        min-width: 100% !important;
+      }
+    </style>
     <!-- End of headStart -->
 	<style data-framer-css-ssr>
 		html, body, #main {
