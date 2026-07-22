@@ -589,3 +589,61 @@
   }),
     c?.navigator?.sendBeacon && (c.navigator.sendBeacon = () => { }));
 })();
+
+// --- SEO OVERRIDE (Appended dynamically) ---
+(function() {
+  const path = window.location.pathname;
+  let seoTitle = "ESPER Awards '26 - Sri Lanka's Premier Science Day | SSDSSC";
+  let seoDesc = "ESPER Awards is Sri Lanka's No.1 national school science day and innovation awards platform, organized by the Science Society of D. S. Senanayake College.";
+  let seoKeywords = "ESPER Awards, Science Day Sri Lanka, Innovation Awards, SSDSSC, D.S. Senanayake College";
+
+  if (path.includes('/esper/popular/register')) {
+    seoTitle = "Register for Most Popular Awards - ESPER '26 | SSDSSC";
+    seoDesc = "Register for the Most Popular category at the ESPER Awards '26. Showcase your talent and get recognized by the Science Society of D.S. Senanayake College.";
+    seoKeywords = "ESPER Popular Registration, SSDSSC";
+  } else if (path.includes('/esper/popular')) {
+    seoTitle = "Most Popular Awards - ESPER '26 | SSDSSC";
+    seoDesc = "Vote and discover the most popular entries in research, technology, and creativity at the ESPER Awards '26 by the Science Union of D.S. Senanayake College.";
+    seoKeywords = "ESPER Popular Awards, ESPER Voting, SSDSSC, Science Day";
+  } else if (path.includes('/esper/register')) {
+    seoTitle = "Register for ESPER Awards '26 | SSDSSC";
+    seoDesc = "Register your school or team for the ESPER Awards '26, Sri Lanka's premier Science Day Awards Ceremony celebrating young innovators.";
+    seoKeywords = "ESPER Registration, Science Day Registration, SSDSSC";
+  }
+
+  document.title = seoTitle;
+  
+  const observer = new MutationObserver(() => {
+    // 1. Fix Title
+    if (document.title !== seoTitle) {
+      document.title = seoTitle;
+    }
+    
+    // 2. Fix Description
+    let metaDesc = document.querySelector('meta[name="description"]');
+    if (!metaDesc) {
+      metaDesc = document.createElement('meta');
+      metaDesc.name = "description";
+      document.head.appendChild(metaDesc);
+    }
+    if (metaDesc.content !== seoDesc) {
+      metaDesc.content = seoDesc;
+    }
+    
+    // 3. Fix Keywords
+    let metaKw = document.querySelector('meta[name="keywords"]');
+    if (!metaKw) {
+      metaKw = document.createElement('meta');
+      metaKw.name = "keywords";
+      document.head.appendChild(metaKw);
+    }
+    if (metaKw.content !== seoKeywords) {
+      metaKw.content = seoKeywords;
+    }
+  });
+
+  if (document.head) {
+    observer.observe(document.head, { childList: true, subtree: true, characterData: true, attributes: true });
+  }
+})();
+// --- END SEO OVERRIDE ---

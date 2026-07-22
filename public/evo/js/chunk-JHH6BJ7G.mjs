@@ -2,7 +2,7 @@ function t(a, e) {
   return {
     favicon: "/evo/images/oSBCTu9PtJTcmCRV58viNAJ1Ug.png",
     robots: "max-image-preview:large",
-    title: "SSDSSC | Science Society of D.S. Senanayake College ",
+    title: "Evolvion - Sri Lanka's Premier Tech-Driven Quiz Eve | SSDSSC",
   };
 }
 export { t as a };

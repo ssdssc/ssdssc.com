@@ -5891,7 +5891,7 @@ var jn = v(We),
                                                           "left",
                                                       },
                                                       children:
-                                                        "Navigate Evolvion \u201925 with ease \u2014 your map to the ultimate tech-powered quiz showdown, from first buzz to grand finale.",
+                                                        "Navigate Evolvion \u201926 with ease \u2014 your map to the ultimate tech-powered quiz showdown, from first buzz to grand finale.",
                                                     }),
                                                   }),
                                                   className: "framer-t86one",
@@ -5965,11 +5965,10 @@ var jn = v(We),
                                                       id: "hVuN3k36H",
                                                       layoutId: "hVuN3k36H",
                                                       lpNYR5mgd:
-                                                        "Moment | Online Quiz Round",
+                                                        "THE SUMMONS — Online Quiz Round",
                                                       pgcwfQDhU: "PHASE 01",
                                                       QiBV5Bs5w: "50+ teams",
-                                                      sq6e4rlJt: `Phase One of Evolvian kicks off with Moment \u2014 a fully online inter-school battle of intellect.
-Over 30 schools connect through SSDSSC\u2019s custom-built quiz platform, competing live in real time to secure a place among the Top 10 teams.`,
+                                                      sq6e4rlJt: `The call goes out to every science society across the island. Registered schools compete in a fully online round, testing depth of theoretical knowledge and scientific understanding. Only the six strongest performances will answer the summons and advance.`,
                                                       style: { width: "100%" },
                                                       TP1crxvPO:
                                                         "powerd with quiz app",
@@ -6038,14 +6037,12 @@ Over 30 schools connect through SSDSSC\u2019s custom-built quiz platform, compet
                                                       id: "H0w49BUps",
                                                       layoutId: "H0w49BUps",
                                                       lpNYR5mgd:
-                                                        "Knockouts | On-Site Quiz Showdown",
+                                                        "THE FORGE — Practical Round",
                                                       pgcwfQDhU: "PHASE 02",
-                                                      QiBV5Bs5w: "Rapid app",
-                                                      sq6e4rlJt: `Held at our school premises, this on-ground round features the Top 10 teams from Moment, battling head-to-head in a high-stakes tech-powered setup.
-Each team is equipped with an interconnected device linked to the Evolvian network, with real-time scores flashing on video walls.
-Only the Top 4 will advance.`,
+                                                      QiBV5Bs5w: "hands-on experience",
+                                                      sq6e4rlJt: `The six qualifying schools step into the Forge, where theory meets fire. Hands-on challenges push scientific reasoning, experimental skill, and split-second application to their limit. What emerges are four teams tempered, tested, and ready for war.`,
                                                       style: { width: "100%" },
-                                                      TP1crxvPO: "10 teams",
+                                                      TP1crxvPO: "6 teams",
                                                       tuSNNK56X: "Path",
                                                       variant: "CeXTt6Kst",
                                                       width: "100%",
@@ -6111,15 +6108,13 @@ Only the Top 4 will advance.`,
                                                       id: "qFiN0aiSs",
                                                       layoutId: "qFiN0aiSs",
                                                       lpNYR5mgd:
-                                                        "Hazard | Semi-Finals",
+                                                        "THE CULLING — Semifinal",
                                                       pgcwfQDhU: "PHASE 03",
-                                                      QiBV5Bs5w: "50/50",
-                                                      sq6e4rlJt: `The tension rises in Hazzard, where 4 teams face off in intense one-on-one matchups.
-This round introduces interactive lifelines like Ask the Audience and 50:50, with the audience plugged into the Evolvian network and influencing the outcome in real time.
-Only 2 teams survive.`,
+                                                      QiBV5Bs5w: "buzzer round",
+                                                      sq6e4rlJt: `Four teams enter. Two survive. In a relentless head-to-head, speed, precision, and composure are pushed past their breaking point — there is no margin for hesitation, and no mercy for those who falter.`,
                                                       style: { width: "100%" },
                                                       TP1crxvPO:
-                                                        "Ask The Audience",
+                                                        "brainstorm",
                                                       tuSNNK56X: "Flame",
                                                       variant: "CeXTt6Kst",
                                                       width: "100%",
@@ -6185,7 +6180,7 @@ Only 2 teams survive.`,
                                                       id: "dTxGxPh5G",
                                                       layoutId: "dTxGxPh5G",
                                                       lpNYR5mgd:
-                                                        "EVO GRND | Grand Finale",
+                                                        "CROWNED — Final",
                                                       pgcwfQDhU: "FINAL PHASE",
                                                       QiBV5Bs5w:
                                                         "negative marks",
@@ -6194,7 +6189,7 @@ The Top 2 super teams collide in a fast-paced buzzer round where time and precis
 This finale features 2x golden questions and negative marking\u2014making every decision matter.
 The true champions of Evolvian will rise here.`,
                                                       style: { width: "100%" },
-                                                      TP1crxvPO: "buzzer",
+                                                      TP1crxvPO: "buzzer round",
                                                       tuSNNK56X: "Fire",
                                                       variant: "CeXTt6Kst",
                                                       width: "100%",
@@ -6345,7 +6340,7 @@ The true champions of Evolvian will rise here.`,
                                                       "var(--token-8f8054d9-8a09-4e7e-b957-8a76557c5e75, rgba(255, 255, 255, 0.6))",
                                                   },
                                                   children:
-                                                    "Navigate Evolvion \u201925 with ease \u2014 your map to the ultimate tech-powered quiz showdown, from first buzz to grand finale.",
+                                                    "Navigate Evolvion \u201926 with ease \u2014 your map to the ultimate tech-powered quiz showdown, from first buzz to grand finale.",
                                                 }),
                                               }),
                                               className: "framer-50i6x3",
@@ -6441,11 +6436,10 @@ The true champions of Evolvian will rise here.`,
                                                     id: "vwdqiK_43",
                                                     layoutId: "vwdqiK_43",
                                                     lpNYR5mgd:
-                                                      "Moment | Online Quiz Round",
+                                                      "THE SUMMONS — Online Quiz Round",
                                                     pgcwfQDhU: "PHASE 01",
                                                     QiBV5Bs5w: "30+ teams",
-                                                    sq6e4rlJt: `Phase One of Evolvian kicks off with Moment \u2014 a fully online inter-school battle of intellect.
-Over 30 schools connect through SSDSSC\u2019s custom-built quiz platform, competing live in real time to secure a place among the Top 10 teams.`,
+                                                    sq6e4rlJt: `The call goes out to every science society across the island. Registered schools compete in a fully online round, testing depth of theoretical knowledge and scientific understanding. Only the six strongest performances will answer the summons and advance.`,
                                                     style: { width: "100%" },
                                                     TP1crxvPO:
                                                       "powerd with quiz app",
@@ -6536,14 +6530,12 @@ Over 30 schools connect through SSDSSC\u2019s custom-built quiz platform, compet
                                                     id: "ciuJV2cJe",
                                                     layoutId: "ciuJV2cJe",
                                                     lpNYR5mgd:
-                                                      "Knockouts | On-Site Quiz Showdown",
+                                                      "THE FORGE — Practical Round",
                                                     pgcwfQDhU: "PHASE 02",
-                                                    QiBV5Bs5w: "Rapid app",
-                                                    sq6e4rlJt: `Held at our school premises, this on-ground round features the Top 10 teams from Moment, battling head-to-head in a high-stakes tech-powered setup.
-Each team is equipped with an interconnected device linked to the Evolvian network, with real-time scores flashing on video walls.
-Only the Top 4 will advance.`,
+                                                    QiBV5Bs5w: "hands-on experience",
+                                                    sq6e4rlJt: `The six qualifying schools step into the Forge, where theory meets fire. Hands-on challenges push scientific reasoning, experimental skill, and split-second application to their limit. What emerges are four teams tempered, tested, and ready for war.`,
                                                     style: { width: "100%" },
-                                                    TP1crxvPO: "10 teams",
+                                                    TP1crxvPO: "6 teams",
                                                     tuSNNK56X: "Path",
                                                     variant: "Ha7bHulz3",
                                                     width: "100%",
@@ -6631,15 +6623,13 @@ Only the Top 4 will advance.`,
                                                     id: "LrPwxO1vr",
                                                     layoutId: "LrPwxO1vr",
                                                     lpNYR5mgd:
-                                                      "Hazard | Semi-Finals",
+                                                      "THE CULLING — Semifinal",
                                                     pgcwfQDhU: "PHASE 03",
                                                     QiBV5Bs5w: "Discovery",
-                                                    sq6e4rlJt: `The tension rises in Hazzard, where 4 teams face off in intense one-on-one matchups.
-This round introduces interactive lifelines like Ask the Audience and 50:50, with the audience plugged into the Evolvian network and influencing the outcome in real time.
-Only 2 teams survive.`,
+                                                    sq6e4rlJt: `Four teams enter. Two survive. In a relentless head-to-head, speed, precision, and composure are pushed past their breaking point — there is no margin for hesitation, and no mercy for those who falter.`,
                                                     style: { width: "100%" },
                                                     TP1crxvPO:
-                                                      "Ask The Audience",
+                                                      "brainstorm",
                                                     tuSNNK56X: "Flame",
                                                     variant: "RzKcg4sYR",
                                                     width: "100%",
@@ -6727,7 +6717,7 @@ Only 2 teams survive.`,
                                                     id: "gJriz6Cqf",
                                                     layoutId: "gJriz6Cqf",
                                                     lpNYR5mgd:
-                                                      "EVO GRND | Grand Finale",
+                                                      "CROWNED — Final",
                                                     pgcwfQDhU: "FINAL PHASE",
                                                     QiBV5Bs5w: "negative marks",
                                                     sq6e4rlJt: `The ultimate stage.
@@ -6735,7 +6725,7 @@ The Top 2 super teams collide in a fast-paced buzzer round where time and precis
 This finale features 2x golden questions and negative marking\u2014making every decision matter.
 The true champions of Evolvian will rise here.`,
                                                     style: { width: "100%" },
-                                                    TP1crxvPO: "buzzer",
+                                                    TP1crxvPO: "buzzer round",
                                                     tuSNNK56X: "Fire",
                                                     variant: "kU0CY1NOY",
                                                     width: "100%",
@@ -6874,7 +6864,7 @@ The true champions of Evolvian will rise here.`,
                                                   "left",
                                               },
                                               children:
-                                                "Navigate Evolvion \u201925 with ease \u2014 your map to the ultimate tech-powered quiz showdown, from first buzz to grand finale.",
+                                                "Navigate Evolvion \u201926 with ease \u2014 your map to the ultimate tech-powered quiz showdown, from first buzz to grand finale.",
                                             }),
                                           }),
                                           className: "framer-zjx29n",
@@ -6953,11 +6943,10 @@ The true champions of Evolvian will rise here.`,
                                                 id: "G0k6Xbs7x",
                                                 layoutId: "G0k6Xbs7x",
                                                 lpNYR5mgd:
-                                                  "Moment | Online Quiz Round",
+                                                  "THE SUMMONS — Online Quiz Round",
                                                 pgcwfQDhU: "PHASE 01",
                                                 QiBV5Bs5w: "30+ teams",
-                                                sq6e4rlJt: `Phase One of Evolvian kicks off with Moment \u2014 a fully online inter-school battle of intellect.
-Over 30 schools connect through SSDSSC\u2019s custom-built quiz platform, competing live in real time to secure a place among the Top 10 teams.`,
+                                                sq6e4rlJt: `The call goes out to every science society across the island. Registered schools compete in a fully online round, testing depth of theoretical knowledge and scientific understanding. Only the six strongest performances will answer the summons and advance.`,
                                                 style: { width: "100%" },
                                                 TP1crxvPO:
                                                   "powerd with quiz app",
@@ -7032,14 +7021,12 @@ Over 30 schools connect through SSDSSC\u2019s custom-built quiz platform, compet
                                                 id: "IUGeXATRM",
                                                 layoutId: "IUGeXATRM",
                                                 lpNYR5mgd:
-                                                  "Knockouts | On-Site Quiz Showdown",
+                                                  "THE FORGE — Practical Round",
                                                 pgcwfQDhU: "PHASE 02",
-                                                QiBV5Bs5w: "Rapid app",
-                                                sq6e4rlJt: `Held at our school premises, this on-ground round features the Top 10 teams from Moment, battling head-to-head in a high-stakes tech-powered setup.
-Each team is equipped with an interconnected device linked to the Evolvian network, with real-time scores flashing on video walls.
-Only the Top 4 will advance.`,
+                                                QiBV5Bs5w: "hands-on experience",
+                                                sq6e4rlJt: `The six qualifying schools step into the Forge, where theory meets fire. Hands-on challenges push scientific reasoning, experimental skill, and split-second application to their limit. What emerges are four teams tempered, tested, and ready for war.`,
                                                 style: { width: "100%" },
-                                                TP1crxvPO: "10 teams",
+                                                TP1crxvPO: "6 teams",
                                                 tuSNNK56X: "Path",
                                                 variant: "CeXTt6Kst",
                                                 width: "100%",
@@ -7111,14 +7098,12 @@ Only the Top 4 will advance.`,
                                                 id: "jQBOMHDOf",
                                                 layoutId: "jQBOMHDOf",
                                                 lpNYR5mgd:
-                                                  "Hazard | Semi-Finals",
+                                                  "THE CULLING — Semifinal",
                                                 pgcwfQDhU: "PHASE 03",
-                                                QiBV5Bs5w: "50/50",
-                                                sq6e4rlJt: `The tension rises in Hazzard, where 4 teams face off in intense one-on-one matchups.
-This round introduces interactive lifelines like Ask the Audience and 50:50, with the audience plugged into the Evolvian network and influencing the outcome in real time.
-Only 2 teams survive.`,
+                                                QiBV5Bs5w: "buzzer round",
+                                                sq6e4rlJt: `Four teams enter. Two survive. In a relentless head-to-head, speed, precision, and composure are pushed past their breaking point — there is no margin for hesitation, and no mercy for those who falter.`,
                                                 style: { width: "100%" },
-                                                TP1crxvPO: "Ask The Audience",
+                                                TP1crxvPO: "brainstorm",
                                                 tuSNNK56X: "Flame",
                                                 variant: "mH3pBjkav",
                                                 width: "100%",
@@ -7190,7 +7175,7 @@ Only 2 teams survive.`,
                                                 id: "ppMmxquDq",
                                                 layoutId: "ppMmxquDq",
                                                 lpNYR5mgd:
-                                                  "EVO GRND | Grand Finale",
+                                                  "CROWNED — Final",
                                                 pgcwfQDhU: "FINAL PHASE",
                                                 QiBV5Bs5w: "negative marks",
                                                 sq6e4rlJt: `The ultimate stage.
@@ -7198,7 +7183,7 @@ The Top 2 super teams collide in a fast-paced buzzer round where time and precis
 This finale features 2x golden questions and negative marking\u2014making every decision matter.
 The true champions of Evolvian will rise here.`,
                                                 style: { width: "100%" },
-                                                TP1crxvPO: "buzzer",
+                                                TP1crxvPO: "buzzer round",
                                                 tuSNNK56X: "Fire",
                                                 variant: "mH3pBjkav",
                                                 width: "100%",

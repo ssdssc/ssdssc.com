@@ -2413,7 +2413,7 @@ var ma = (n) => {
                           children: r(xe, {
                             AL_NU982V: !1,
                             dlVBgpKLv: "Contact Us",
-                            GT109pdEG: "tel:+94722788331",
+                            GT109pdEG: "tel:+94762686254",
                             height: "100%",
                             id: "ZRpR5VODi",
                             layoutId: "ZRpR5VODi",

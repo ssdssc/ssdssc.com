@@ -1,4 +1,4 @@
-﻿import { a as de, b as me, c as fe } from "./chunk-UZ3FZ54A.mjs";
+import { a as de, b as me, c as fe } from "./chunk-UZ3FZ54A.mjs";
 import { d as pe, e as ue, f as he } from "./chunk-GP5ZN2VK.mjs";
 import {
   Aa as te,
@@ -899,7 +899,7 @@ var Qe = { bounce: 0.2, delay: 0, duration: 0.4, type: "spring" },
                     JYD7MrQlL: "When will the online round be held?",
                     layoutId: "To2sXZCjY",
                     p5Wkaih6b:
-                      "The online round will take place on September 5th.",
+                      "The online round will take place on August 28th.",
                     style: { width: "100%" },
                     variant: "WKjSY8Jw3",
                     width: "100%",
@@ -954,7 +954,7 @@ var Qe = { bounce: 0.2, delay: 0, duration: 0.4, type: "spring" },
                     JYD7MrQlL: "What happens after the online round?",
                     layoutId: "WQLzKPZ1a",
                     p5Wkaih6b:
-                      "If you qualify, you\u2019ll advance to the on-site Quiz Eve, which features the selective rounds, semi-finals, and the grand finale.",
+                      "Qualifying teams will advance to the Practical Round, where participants will be assessed through hands-on scientific and analytical challenges. Successful teams from this stage will then compete in the Semi-Final Round, with the highest-performing teams ultimately advancing to the Grand Final to compete for the championship title.",
                     style: { width: "100%" },
                     variant: "WKjSY8Jw3",
                     width: "100%",
@@ -982,7 +982,7 @@ var Qe = { bounce: 0.2, delay: 0, duration: 0.4, type: "spring" },
                       "Apart from the online round, how will the other three phases be conducted?",
                     layoutId: "KjV3VVBc3",
                     p5Wkaih6b:
-                      "All three phases \u2014 Selective Round, Semi-finals, and the Grand Finale \u2014 will take place on the same day at the Evolvion event premises, delivering the ultimate live quiz experience.",
+                      "All three phases \u2014 practical round, semi-final round and final showdown \u2014 will take place on the same day at the Evolvion event premises, delivering the ultimate live quiz experience.",
                     style: { width: "100%" },
                     variant: "WKjSY8Jw3",
                     width: "100%",

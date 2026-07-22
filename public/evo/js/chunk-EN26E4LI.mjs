@@ -10,7 +10,7 @@ function r(a, e) {
       { hash: "1u2oqt1", mediaQuery: "(max-width: 1082px)" },
     ],
     description:
-      "Evolvion \u2014 Sri Lanka\u2019s pioneering, fully tech-driven Quiz Eve, uniting schools in a battle of minds. Brought to you by SSDSSC.",
+      "Join Evolvion, Sri Lanka\u2019s pioneering, fully tech-driven Quiz Eve uniting schools in a battle of minds. Brought to you by the Science Society of DSSC.",
     elements: {
       Am5BXkLGW: "about-1",
       CIlLf4V3d: "faq",

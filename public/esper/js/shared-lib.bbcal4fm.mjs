@@ -25658,11 +25658,11 @@ void main() {
   });
 function ld(e, t) {
   return {
-    description: `ESPER Awards is Sri Lanka's No.1 national school science day and innovation awards platform, organized by the Science Society of D. S. Senanayake College (SSDSSC), bringing together students, schools and young innovators from across Sri Lanka.`,
+    description: `ESPER Awards is Sri Lanka's No.1 national school science day and innovation awards platform, organized by the Science Society of D. S. Senanayake College.`,
     favicon: `/esper/images/oegcbbhl1oso0nuozgcpgfshaus.png`,
     robots: `max-image-preview:large`,
     socialImage: `/esper/images/vkkj1t1sjcafcrep0jyx09zbh8.png`,
-    title: `ESPER Awards 26 – Sri Lanka's Premier Science Day & Innovation Awards | SSDSSC`,
+    title: `ESPER Awards '26 - Sri Lanka's Premier Science Day | SSDSSC`,
   };
 }
 var ud = e(() => {});
