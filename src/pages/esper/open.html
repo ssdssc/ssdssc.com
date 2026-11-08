@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <!-- ✨ Built with Framer • https://www.framer.com/ -->
 <html lang="en">
 
@@ -3765,6 +3765,126 @@
 
 
   <!-- Start of headEnd -->
+  <style>
+    /* Card Grid: 3 columns on desktop so 3 award categories fit cleanly in one row */
+    @media (min-width: 900px) {
+      .framer-LJlZq .framer-g159kn {
+        grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+        gap: 20px !important;
+      }
+    }
+    @media (min-width: 600px) and (max-width: 899px) {
+      .framer-LJlZq .framer-g159kn {
+        grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+        gap: 20px !important;
+      }
+    }
+    @media (max-width: 599px) {
+      .framer-LJlZq .framer-g159kn {
+        grid-template-columns: 1fr !important;
+        gap: 24px !important;
+      }
+    }
+
+    /* Fix image container height & aspect ratio to 4:5 so 1080x1350 artwork is never cropped */
+    .framer-Wwu9j .framer-9xp6kq {
+      width: 100% !important;
+      height: auto !important;
+      aspect-ratio: 4 / 5 !important;
+      max-height: none !important;
+      border-radius: 20px !important;
+      overflow: hidden !important;
+    }
+
+    .framer-Wwu9j .framer-1oeo7ga {
+      position: absolute !important;
+      top: 0 !important;
+      left: 0 !important;
+      width: 100% !important;
+      height: 100% !important;
+    }
+
+    .framer-Wwu9j .framer-1oeo7ga img,
+    .framer-9xp6kq img {
+      width: 100% !important;
+      height: 100% !important;
+      object-fit: cover !important;
+      object-position: center top !important;
+      display: block !important;
+    }
+
+    /* Flexible card heights & container overrides */
+    .framer-LJlZq .framer-61dahc-container,
+    .framer-LJlZq .framer-168vegr-container,
+    .framer-LJlZq .framer-agn45e-container,
+    .framer-61dahc-container,
+    .framer-168vegr-container,
+    .framer-agn45e-container,
+    .framer-Wwu9j.framer-1hq3fz8,
+    .framer-Wwu9j .framer-14ovzi3,
+    [data-cloned-card] {
+      height: auto !important;
+      width: 100% !important;
+      max-width: none !important;
+    }
+
+    /* Hover Effects for Cards & Buttons */
+    .framer-Wwu9j .framer-1oeo7ga {
+      transition: width 0.4s cubic-bezier(0.16, 1, 0.3, 1),
+                  height 0.4s cubic-bezier(0.16, 1, 0.3, 1),
+                  top 0.4s cubic-bezier(0.16, 1, 0.3, 1),
+                  left 0.4s cubic-bezier(0.16, 1, 0.3, 1),
+                  transform 0.4s cubic-bezier(0.16, 1, 0.3, 1) !important;
+    }
+
+    .framer-Wwu9j .framer-z9yiom {
+      transition: top 0.6s cubic-bezier(0.16, 1, 0.3, 1),
+                  left 0.6s cubic-bezier(0.16, 1, 0.3, 1) !important;
+    }
+
+    .framer-14ovzi3:hover .framer-1oeo7ga,
+    .framer-Wwu9j:hover .framer-1oeo7ga,
+    .framer-Wwu9j.hover .framer-1oeo7ga {
+      width: 115% !important;
+      height: 115% !important;
+      top: -7.5% !important;
+      left: -7.5% !important;
+    }
+
+    .framer-14ovzi3:hover .framer-z9yiom,
+    .framer-Wwu9j:hover .framer-z9yiom,
+    .framer-Wwu9j.hover .framer-z9yiom {
+      top: 480px !important;
+      left: 390px !important;
+    }
+
+    .framer-NuCN4 .framer-tb25bi,
+    .framer-NuCN4 .framer-1uv56pk {
+      transition: width 0.3s ease, height 0.3s ease !important;
+    }
+
+    .framer-NuCN4:hover .framer-tb25bi,
+    .framer-NuCN4.hover .framer-tb25bi,
+    .framer-14ovzi3:hover .framer-tb25bi {
+      width: 83px !important;
+      height: 51px !important;
+    }
+
+    .framer-NuCN4:hover .framer-1uv56pk,
+    .framer-NuCN4.hover .framer-1uv56pk,
+    .framer-14ovzi3:hover .framer-1uv56pk {
+      width: 58px !important;
+      height: 39px !important;
+    }
+
+    /* Coming Soon buttons / cards on Open Awards: default cursor */
+    .framer-Wwu9j .framer-14ovzi3,
+    .framer-Wwu9j .framer-NuCN4,
+    .framer-Wwu9j [data-framer-name="Card"],
+    .framer-Wwu9j [data-framer-name="Subscribe Button"] {
+      cursor: default !important;
+    }
+  </style>
   <!-- End of headEnd -->
 
   
@@ -4699,7 +4819,7 @@
               <div class="framer-Wwu9j framer-XmJ2D framer-RYoxI framer-KVX8B framer-1hq3fz8 framer-v-1hq3fz8"
                 data-framer-name="Desktop" style="width:100%">
                 <!--$-->
-                <a class="framer-14ovzi3 framer-y1pa43" data-framer-name="Card" href="/esper/open/register" data-href="/esper/open/register">
+                <a class="framer-14ovzi3 framer-y1pa43" data-framer-name="Card" href="javascript:void(0)" data-href="">
                   <div class="framer-9xp6kq" data-framer-name="Member Image"
                     style="border-bottom-left-radius:20px;border-bottom-right-radius:20px;border-top-left-radius:20px;border-top-right-radius:20px">
                     <div class="framer-1oeo7ga" data-framer-name="Image"
@@ -4709,8 +4829,8 @@
                         <img alt="" data-framer-original-sizes="max((min(100vw, 1160px) - 24px) / 2, 50px)"
                           decoding="async" height="1350" loading="lazy"
                           sizes="(min-width: 1200px) and (max-width: 1439.98px) max((min(100vw, 1160px) - 24px) / 2, 50px), (min-width: 810px) and (max-width: 1199.98px) max((min(100vw, 1160px) - 24px) / 2, 50px), (max-width: 809.98px) max(max((min(100vw, 1160px) - 24px) / 2, 50px), max(min(100vw, 1160px) - 32px, 50px)), (min-width: 1440px) 688px"
-                          src="/esper/images/oyj2embpf6yri7plutqsje6p2i.png"
-                          srcset="/esper/images/oyj2embpf6yri7plutqsje6p2i.png 819w,/esper/images/oyj2embpf6yri7plutqsje6p2i.png 1080w"
+                          src="/esper/images/Daedalus.png"
+                          srcset="/esper/images/Daedalus.png 1080w"
                           style="display:block;width:100%;height:100%;border-radius:inherit;object-position:center;object-fit:cover"
                           width="1080" />
                       </div>
@@ -4761,7 +4881,7 @@
 
                   <div class="framer-kccf2v-container">
                     <!--$-->
-                    <a href="/esper/open/register" data-href="/esper/open/register" class="framer-NuCN4 framer-1ew7p8v framer-v-xz6rdl framer-1x2xllv"
+                    <a href="javascript:void(0)" data-href="" class="framer-NuCN4 framer-1ew7p8v framer-v-xz6rdl framer-1x2xllv"
                       data-framer-name="Subscribe Button" data-nested-link="true" role="link"
                       style="width:100%; text-decoration: none;" tabindex="0">
                       <div class="framer-mzpatg" data-framer-name="Button"
@@ -4788,7 +4908,7 @@
                               style="--extracted-r6o4lv:rgb(255, 255, 255);--framer-link-text-color:rgb(0, 153, 255);--framer-link-text-decoration:underline;transform:none">
                               <p class="framer-text"
                                 style='--font-selector:RlI7SW50ZXJEaXNwbGF5;--framer-font-family:"Inter Display", "Inter Display Placeholder", sans-serif;--framer-font-size:18px;--framer-text-color:var(--extracted-r6o4lv, rgb(255, 255, 255))'>
-                                Register
+                                Coming Soon
                               </p>
 
 
@@ -4850,7 +4970,7 @@
               <div class="framer-Wwu9j framer-XmJ2D framer-RYoxI framer-KVX8B framer-1hq3fz8 framer-v-1hq3fz8"
                 data-framer-name="Desktop" style="height:100%;width:100%">
                 <!--$-->
-                <a class="framer-14ovzi3 framer-y1pa43" data-framer-name="Card" href="/esper/open/register" data-href="/esper/open/register">
+                <a class="framer-14ovzi3 framer-y1pa43" data-framer-name="Card" href="javascript:void(0)" data-href="">
                   <div class="framer-9xp6kq" data-framer-name="Member Image"
                     style="border-bottom-left-radius:20px;border-bottom-right-radius:20px;border-top-left-radius:20px;border-top-right-radius:20px">
                     <div class="framer-1oeo7ga" data-framer-name="Image"
@@ -4859,8 +4979,8 @@
                         style="position:absolute;border-radius:inherit;top:0;right:0;bottom:0;left:0">
                         <img alt="" data-framer-original-sizes="688px" decoding="async" height="1350" loading="lazy"
                           sizes="(min-width: 1200px) and (max-width: 1439.98px) max((min(100vw, 1160px) - 24px) / 2, 50px), (min-width: 810px) and (max-width: 1199.98px) max((min(100vw, 1160px) - 24px) / 2, 50px), (max-width: 809.98px) max(max((min(100vw, 1160px) - 24px) / 2, 50px), max(min(100vw, 1160px) - 32px, 50px)), (min-width: 1440px) 688px"
-                          src="/esper/images/oyj2embpf6yri7plutqsje6p2i.png"
-                          srcset="/esper/images/oyj2embpf6yri7plutqsje6p2i.png 819w,/esper/images/oyj2embpf6yri7plutqsje6p2i.png 1080w"
+                          src="/esper/images/Daedalus.png"
+                          srcset="/esper/images/Daedalus.png 1080w"
                           style="display:block;width:100%;height:100%;border-radius:inherit;object-position:center;object-fit:cover"
                           width="1080" />
                       </div>
@@ -4911,7 +5031,7 @@
 
                   <div class="framer-kccf2v-container">
                     <!--$-->
-                    <a href="/esper/open/register" data-href="/esper/open/register" class="framer-NuCN4 framer-1ew7p8v framer-v-xz6rdl framer-1x2xllv"
+                    <a href="javascript:void(0)" data-href="" class="framer-NuCN4 framer-1ew7p8v framer-v-xz6rdl framer-1x2xllv"
                       data-framer-name="Subscribe Button" data-nested-link="true" role="link"
                       style="width:100%; text-decoration: none;" tabindex="0">
                       <div class="framer-mzpatg" data-framer-name="Button"
@@ -4938,7 +5058,7 @@
                               style="--extracted-r6o4lv:rgb(255, 255, 255);--framer-link-text-color:rgb(0, 153, 255);--framer-link-text-decoration:underline;transform:none">
                               <p class="framer-text"
                                 style='--font-selector:RlI7SW50ZXJEaXNwbGF5;--framer-font-family:"Inter Display", "Inter Display Placeholder", sans-serif;--framer-font-size:18px;--framer-text-color:var(--extracted-r6o4lv, rgb(255, 255, 255))'>
-                                Register
+                                Coming Soon
                               </p>
 
 
@@ -5000,7 +5120,7 @@
               <div class="framer-Wwu9j framer-XmJ2D framer-RYoxI framer-KVX8B framer-1hq3fz8 framer-v-1hq3fz8"
                 data-framer-name="Desktop" style="height:100%;width:100%">
                 <!--$-->
-                <a class="framer-14ovzi3 framer-y1pa43" data-framer-name="Card" href="/esper/open/register" data-href="/esper/open/register">
+                <a class="framer-14ovzi3 framer-y1pa43" data-framer-name="Card" href="javascript:void(0)" data-href="">
                   <div class="framer-9xp6kq" data-framer-name="Member Image"
                     style="border-bottom-left-radius:20px;border-bottom-right-radius:20px;border-top-left-radius:20px;border-top-right-radius:20px">
                     <div class="framer-1oeo7ga" data-framer-name="Image"
@@ -5010,8 +5130,8 @@
                         <img alt="" data-framer-original-sizes="max((min(100vw, 1160px) - 24px) / 2, 50px)"
                           decoding="async" height="1350" loading="lazy"
                           sizes="(min-width: 1200px) and (max-width: 1439.98px) max(max((min(100vw, 1160px) - 24px) / 2, 50px), 100vw), (min-width: 1440px) max(688px, 100vw), (min-width: 810px) and (max-width: 1199.98px) max(363px, 100vw), (max-width: 809.98px) max(max(min(100vw, 1160px) - 32px, 50px), 100vw)"
-                          src="/esper/images/xxna12h46ku2jjt716wn00ab7q.png"
-                          srcset="/esper/images/xxna12h46ku2jjt716wn00ab7q.png 819w,/esper/images/xxna12h46ku2jjt716wn00ab7q.png 1080w"
+                          src="/esper/images/Daedalus.png"
+                          srcset="/esper/images/Daedalus.png 1080w"
                           style="display:block;width:100%;height:100%;border-radius:inherit;object-position:center;object-fit:cover"
                           width="1080" />
                       </div>
@@ -5062,7 +5182,7 @@
 
                   <div class="framer-kccf2v-container">
                     <!--$-->
-                    <a href="/esper/open/register" data-href="/esper/open/register" class="framer-NuCN4 framer-1ew7p8v framer-v-xz6rdl framer-1x2xllv"
+                    <a href="javascript:void(0)" data-href="" class="framer-NuCN4 framer-1ew7p8v framer-v-xz6rdl framer-1x2xllv"
                       data-framer-name="Subscribe Button" data-nested-link="true" role="link"
                       style="width:100%; text-decoration: none;" tabindex="0">
                       <div class="framer-mzpatg" data-framer-name="Button"
@@ -5089,7 +5209,7 @@
                               style="--extracted-r6o4lv:rgb(255, 255, 255);--framer-link-text-color:rgb(0, 153, 255);--framer-link-text-decoration:underline;transform:none">
                               <p class="framer-text"
                                 style='--font-selector:RlI7SW50ZXJEaXNwbGF5;--framer-font-family:"Inter Display", "Inter Display Placeholder", sans-serif;--framer-font-size:18px;--framer-text-color:var(--extracted-r6o4lv, rgb(255, 255, 255))'>
-                                Register
+                                Coming Soon
                               </p>
 
 
@@ -5151,7 +5271,7 @@
               <div class="framer-Wwu9j framer-XmJ2D framer-RYoxI framer-KVX8B framer-1hq3fz8 framer-v-a2txb7"
                 data-framer-name="Phone" style="width:100%">
                 <!--$-->
-                <a class="framer-14ovzi3 framer-y1pa43" data-framer-name="Card" href="/esper/open/register" data-href="/esper/open/register">
+                <a class="framer-14ovzi3 framer-y1pa43" data-framer-name="Card" href="javascript:void(0)" data-href="">
                   <div class="framer-9xp6kq" data-framer-name="Member Image"
                     style="border-bottom-left-radius:20px;border-bottom-right-radius:20px;border-top-left-radius:20px;border-top-right-radius:20px">
                     <div class="framer-1oeo7ga" data-framer-name="Image"
@@ -5161,8 +5281,8 @@
                         <img alt="" data-framer-original-sizes="max(min(100vw, 1160px) - 32px, 50px)" decoding="async"
                           height="1350" loading="lazy"
                           sizes="(min-width: 1200px) and (max-width: 1439.98px) max((min(100vw, 1160px) - 24px) / 2, 50px), (min-width: 810px) and (max-width: 1199.98px) max((min(100vw, 1160px) - 24px) / 2, 50px), (max-width: 809.98px) max(max((min(100vw, 1160px) - 24px) / 2, 50px), max(min(100vw, 1160px) - 32px, 50px)), (min-width: 1440px) 688px"
-                          src="/esper/images/oyj2embpf6yri7plutqsje6p2i.png"
-                          srcset="/esper/images/oyj2embpf6yri7plutqsje6p2i.png 819w,/esper/images/oyj2embpf6yri7plutqsje6p2i.png 1080w"
+                          src="/esper/images/Daedalus.png"
+                          srcset="/esper/images/Daedalus.png 1080w"
                           style="display:block;width:100%;height:100%;border-radius:inherit;object-position:center;object-fit:cover"
                           width="1080" />
                       </div>
@@ -5208,7 +5328,7 @@
 
                   <div class="framer-kccf2v-container">
                     <!--$-->
-                    <a href="/esper/open/register" data-href="/esper/open/register" class="framer-NuCN4 framer-1ew7p8v framer-v-xz6rdl framer-1x2xllv"
+                    <a href="javascript:void(0)" data-href="" class="framer-NuCN4 framer-1ew7p8v framer-v-xz6rdl framer-1x2xllv"
                       data-framer-name="Subscribe Button" data-nested-link="true" role="link"
                       style="width:100%; text-decoration: none;" tabindex="0">
                       <div class="framer-mzpatg" data-framer-name="Button"
@@ -5235,7 +5355,7 @@
                               style="--extracted-r6o4lv:rgb(255, 255, 255);--framer-link-text-color:rgb(0, 153, 255);--framer-link-text-decoration:underline;transform:none">
                               <p class="framer-text"
                                 style='--font-selector:RlI7SW50ZXJEaXNwbGF5;--framer-font-family:"Inter Display", "Inter Display Placeholder", sans-serif;--framer-font-size:18px;--framer-text-color:var(--extracted-r6o4lv, rgb(255, 255, 255))'>
-                                Register
+                                Coming Soon
                               </p>
 
 
@@ -5297,7 +5417,7 @@
               <div class="framer-Wwu9j framer-XmJ2D framer-RYoxI framer-KVX8B framer-1hq3fz8 framer-v-1hq3fz8"
                 data-framer-name="Desktop" style="height:100%;width:100%">
                 <!--$-->
-                <a class="framer-14ovzi3 framer-y1pa43" data-framer-name="Card" href="/esper/open/register" data-href="/esper/open/register">
+                <a class="framer-14ovzi3 framer-y1pa43" data-framer-name="Card" href="javascript:void(0)" data-href="">
                   <div class="framer-9xp6kq" data-framer-name="Member Image"
                     style="border-bottom-left-radius:20px;border-bottom-right-radius:20px;border-top-left-radius:20px;border-top-right-radius:20px">
                     <div class="framer-1oeo7ga" data-framer-name="Image"
@@ -5306,8 +5426,8 @@
                         style="position:absolute;border-radius:inherit;top:0;right:0;bottom:0;left:0">
                         <img alt="" data-framer-original-sizes="688px" decoding="async" height="1350" loading="lazy"
                           sizes="(min-width: 1200px) and (max-width: 1439.98px) max(max((min(100vw, 1160px) - 24px) / 2, 50px), 100vw), (min-width: 1440px) max(688px, 100vw), (min-width: 810px) and (max-width: 1199.98px) max(363px, 100vw), (max-width: 809.98px) max(max(min(100vw, 1160px) - 32px, 50px), 100vw)"
-                          src="/esper/images/xxna12h46ku2jjt716wn00ab7q.png"
-                          srcset="/esper/images/xxna12h46ku2jjt716wn00ab7q.png 819w,/esper/images/xxna12h46ku2jjt716wn00ab7q.png 1080w"
+                          src="/esper/images/Daedalus.png"
+                          srcset="/esper/images/Daedalus.png 1080w"
                           style="display:block;width:100%;height:100%;border-radius:inherit;object-position:center;object-fit:cover"
                           width="1080" />
                       </div>
@@ -5358,7 +5478,7 @@
 
                   <div class="framer-kccf2v-container">
                     <!--$-->
-                    <a href="/esper/open/register" data-href="/esper/open/register" class="framer-NuCN4 framer-1ew7p8v framer-v-xz6rdl framer-1x2xllv"
+                    <a href="javascript:void(0)" data-href="" class="framer-NuCN4 framer-1ew7p8v framer-v-xz6rdl framer-1x2xllv"
                       data-framer-name="Subscribe Button" data-nested-link="true" role="link"
                       style="width:100%; text-decoration: none;" tabindex="0">
                       <div class="framer-mzpatg" data-framer-name="Button"
@@ -5385,7 +5505,7 @@
                               style="--extracted-r6o4lv:rgb(255, 255, 255);--framer-link-text-color:rgb(0, 153, 255);--framer-link-text-decoration:underline;transform:none">
                               <p class="framer-text"
                                 style='--font-selector:RlI7SW50ZXJEaXNwbGF5;--framer-font-family:"Inter Display", "Inter Display Placeholder", sans-serif;--framer-font-size:18px;--framer-text-color:var(--extracted-r6o4lv, rgb(255, 255, 255))'>
-                                Register
+                                Coming Soon
                               </p>
 
 
@@ -5447,7 +5567,7 @@
               <div class="framer-Wwu9j framer-XmJ2D framer-RYoxI framer-KVX8B framer-1hq3fz8 framer-v-1hq3fz8"
                 data-framer-name="Desktop" style="height:100%;width:100%">
                 <!--$-->
-                <a class="framer-14ovzi3 framer-y1pa43" data-framer-name="Card" href="/esper/open/register" data-href="/esper/open/register">
+                <a class="framer-14ovzi3 framer-y1pa43" data-framer-name="Card" href="javascript:void(0)" data-href="">
                   <div class="framer-9xp6kq" data-framer-name="Member Image"
                     style="border-bottom-left-radius:20px;border-bottom-right-radius:20px;border-top-left-radius:20px;border-top-right-radius:20px">
                     <div class="framer-1oeo7ga" data-framer-name="Image"
@@ -5456,8 +5576,8 @@
                         style="position:absolute;border-radius:inherit;top:0;right:0;bottom:0;left:0">
                         <img alt="" data-framer-original-sizes="363px" decoding="async" height="1350" loading="lazy"
                           sizes="(min-width: 1200px) and (max-width: 1439.98px) max(max((min(100vw, 1160px) - 24px) / 2, 50px), 100vw), (min-width: 1440px) max(688px, 100vw), (min-width: 810px) and (max-width: 1199.98px) max(363px, 100vw), (max-width: 809.98px) max(max(min(100vw, 1160px) - 32px, 50px), 100vw)"
-                          src="/esper/images/xxna12h46ku2jjt716wn00ab7q.png"
-                          srcset="/esper/images/xxna12h46ku2jjt716wn00ab7q.png 819w,/esper/images/xxna12h46ku2jjt716wn00ab7q.png 1080w"
+                          src="/esper/images/Daedalus.png"
+                          srcset="/esper/images/Daedalus.png 1080w"
                           style="display:block;width:100%;height:100%;border-radius:inherit;object-position:center;object-fit:cover"
                           width="1080" />
                       </div>
@@ -5508,7 +5628,7 @@
 
                   <div class="framer-kccf2v-container">
                     <!--$-->
-                    <a href="/esper/open/register" data-href="/esper/open/register" class="framer-NuCN4 framer-1ew7p8v framer-v-xz6rdl framer-1x2xllv"
+                    <a href="javascript:void(0)" data-href="" class="framer-NuCN4 framer-1ew7p8v framer-v-xz6rdl framer-1x2xllv"
                       data-framer-name="Subscribe Button" data-nested-link="true" role="link"
                       style="width:100%; text-decoration: none;" tabindex="0">
                       <div class="framer-mzpatg" data-framer-name="Button"
@@ -5535,7 +5655,7 @@
                               style="--extracted-r6o4lv:rgb(255, 255, 255);--framer-link-text-color:rgb(0, 153, 255);--framer-link-text-decoration:underline;transform:none">
                               <p class="framer-text"
                                 style='--font-selector:RlI7SW50ZXJEaXNwbGF5;--framer-font-family:"Inter Display", "Inter Display Placeholder", sans-serif;--framer-font-size:18px;--framer-text-color:var(--extracted-r6o4lv, rgb(255, 255, 255))'>
-                                Register
+                                Coming Soon
                               </p>
 
 
@@ -5597,7 +5717,7 @@
               <div class="framer-Wwu9j framer-XmJ2D framer-RYoxI framer-KVX8B framer-1hq3fz8 framer-v-a2txb7"
                 data-framer-name="Phone" style="width:100%">
                 <!--$-->
-                <a class="framer-14ovzi3 framer-y1pa43" data-framer-name="Card" href="/esper/open/register" data-href="/esper/open/register">
+                <a class="framer-14ovzi3 framer-y1pa43" data-framer-name="Card" href="javascript:void(0)" data-href="">
                   <div class="framer-9xp6kq" data-framer-name="Member Image"
                     style="border-bottom-left-radius:20px;border-bottom-right-radius:20px;border-top-left-radius:20px;border-top-right-radius:20px">
                     <div class="framer-1oeo7ga" data-framer-name="Image"
@@ -5606,8 +5726,8 @@
                         style="position:absolute;border-radius:inherit;top:0;right:0;bottom:0;left:0">
                         <img alt="" data-framer-original-sizes="100vw" decoding="async" height="1350"
                           sizes="(min-width: 1200px) and (max-width: 1439.98px) max(max((min(100vw, 1160px) - 24px) / 2, 50px), 100vw), (min-width: 1440px) max(688px, 100vw), (min-width: 810px) and (max-width: 1199.98px) max(363px, 100vw), (max-width: 809.98px) max(max(min(100vw, 1160px) - 32px, 50px), 100vw)"
-                          src="/esper/images/xxna12h46ku2jjt716wn00ab7q.png"
-                          srcset="/esper/images/xxna12h46ku2jjt716wn00ab7q.png 819w,/esper/images/xxna12h46ku2jjt716wn00ab7q.png 1080w"
+                          src="/esper/images/Daedalus.png"
+                          srcset="/esper/images/Daedalus.png 1080w"
                           style="display:block;width:100%;height:100%;border-radius:inherit;object-position:center;object-fit:cover"
                           width="1080" />
                       </div>
@@ -5653,7 +5773,7 @@
 
                   <div class="framer-kccf2v-container">
                     <!--$-->
-                    <a href="/esper/open/register" data-href="/esper/open/register" class="framer-NuCN4 framer-1ew7p8v framer-v-xz6rdl framer-1x2xllv"
+                    <a href="javascript:void(0)" data-href="" class="framer-NuCN4 framer-1ew7p8v framer-v-xz6rdl framer-1x2xllv"
                       data-framer-name="Subscribe Button" data-nested-link="true" role="link"
                       style="width:100%; text-decoration: none;" tabindex="0">
                       <div class="framer-mzpatg" data-framer-name="Button"
@@ -5680,7 +5800,7 @@
                               style="--extracted-r6o4lv:rgb(255, 255, 255);--framer-link-text-color:rgb(0, 153, 255);--framer-link-text-decoration:underline;transform:none">
                               <p class="framer-text"
                                 style='--font-selector:RlI7SW50ZXJEaXNwbGF5;--framer-font-family:"Inter Display", "Inter Display Placeholder", sans-serif;--framer-font-size:18px;--framer-text-color:var(--extracted-r6o4lv, rgb(255, 255, 255))'>
-                                Register
+                                Coming Soon
                               </p>
 
 
@@ -5742,7 +5862,7 @@
               <div class="framer-Wwu9j framer-XmJ2D framer-RYoxI framer-KVX8B framer-1hq3fz8 framer-v-a2txb7"
                 data-framer-name="Phone" style="width:100%">
                 <!--$-->
-                <a class="framer-14ovzi3 framer-y1pa43" data-framer-name="Card" href="/esper/open/register" data-href="/esper/open/register">
+                <a class="framer-14ovzi3 framer-y1pa43" data-framer-name="Card" href="javascript:void(0)" data-href="">
                   <div class="framer-9xp6kq" data-framer-name="Member Image"
                     style="border-bottom-left-radius:20px;border-bottom-right-radius:20px;border-top-left-radius:20px;border-top-right-radius:20px">
                     <div class="framer-1oeo7ga" data-framer-name="Image"
@@ -5752,8 +5872,8 @@
                         <img alt="" data-framer-original-sizes="max(min(100vw, 1160px) - 32px, 50px)" decoding="async"
                           height="1350" loading="lazy"
                           sizes="(min-width: 1200px) and (max-width: 1439.98px) max(max((min(100vw, 1160px) - 24px) / 2, 50px), 100vw), (min-width: 1440px) max(688px, 100vw), (min-width: 810px) and (max-width: 1199.98px) max(363px, 100vw), (max-width: 809.98px) max(max(min(100vw, 1160px) - 32px, 50px), 100vw)"
-                          src="/esper/images/xxna12h46ku2jjt716wn00ab7q.png"
-                          srcset="/esper/images/xxna12h46ku2jjt716wn00ab7q.png 819w,/esper/images/xxna12h46ku2jjt716wn00ab7q.png 1080w"
+                          src="/esper/images/Daedalus.png"
+                          srcset="/esper/images/Daedalus.png 1080w"
                           style="display:block;width:100%;height:100%;border-radius:inherit;object-position:center;object-fit:cover"
                           width="1080" />
                       </div>
@@ -5799,7 +5919,7 @@
 
                   <div class="framer-kccf2v-container">
                     <!--$-->
-                    <a href="/esper/open/register" data-href="/esper/open/register" class="framer-NuCN4 framer-1ew7p8v framer-v-xz6rdl framer-1x2xllv"
+                    <a href="javascript:void(0)" data-href="" class="framer-NuCN4 framer-1ew7p8v framer-v-xz6rdl framer-1x2xllv"
                       data-framer-name="Subscribe Button" data-nested-link="true" role="link"
                       style="width:100%; text-decoration: none;" tabindex="0">
                       <div class="framer-mzpatg" data-framer-name="Button"
@@ -5826,7 +5946,7 @@
                               style="--extracted-r6o4lv:rgb(255, 255, 255);--framer-link-text-color:rgb(0, 153, 255);--framer-link-text-decoration:underline;transform:none">
                               <p class="framer-text"
                                 style='--font-selector:RlI7SW50ZXJEaXNwbGF5;--framer-font-family:"Inter Display", "Inter Display Placeholder", sans-serif;--framer-font-size:18px;--framer-text-color:var(--extracted-r6o4lv, rgb(255, 255, 255))'>
-                                Register
+                                Coming Soon
                               </p>
 
 
@@ -5888,7 +6008,7 @@
               <div class="framer-Wwu9j framer-XmJ2D framer-RYoxI framer-KVX8B framer-1hq3fz8 framer-v-1hq3fz8"
                 data-framer-name="Desktop" style="height:100%;width:100%">
                 <!--$-->
-                <a class="framer-14ovzi3 framer-y1pa43" data-framer-name="Card" href="/esper/open/register" data-href="/esper/open/register">
+                <a class="framer-14ovzi3 framer-y1pa43" data-framer-name="Card" href="javascript:void(0)" data-href="">
                   <div class="framer-9xp6kq" data-framer-name="Member Image"
                     style="border-bottom-left-radius:20px;border-bottom-right-radius:20px;border-top-left-radius:20px;border-top-right-radius:20px">
                     <div class="framer-1oeo7ga" data-framer-name="Image"
@@ -5897,8 +6017,8 @@
                         style="position:absolute;border-radius:inherit;top:0;right:0;bottom:0;left:0">
                         <img alt="" data-framer-original-sizes="100vw" decoding="async" height="1350"
                           sizes="(min-width: 1200px) and (max-width: 1439.98px) max(max((min(100vw, 1160px) - 24px) / 2, 50px), 100vw), (min-width: 1440px) max(688px, 100vw), (min-width: 810px) and (max-width: 1199.98px) max(363px, 100vw), (max-width: 809.98px) max(max(min(100vw, 1160px) - 32px, 50px), 100vw)"
-                          src="/esper/images/xxna12h46ku2jjt716wn00ab7q.png"
-                          srcset="/esper/images/xxna12h46ku2jjt716wn00ab7q.png 819w,/esper/images/xxna12h46ku2jjt716wn00ab7q.png 1080w"
+                          src="/esper/images/Daedalus.png"
+                          srcset="/esper/images/Daedalus.png 1080w"
                           style="display:block;width:100%;height:100%;border-radius:inherit;object-position:center;object-fit:cover"
                           width="1080" />
                       </div>
@@ -5949,7 +6069,7 @@
 
                   <div class="framer-kccf2v-container">
                     <!--$-->
-                    <a href="/esper/open/register" data-href="/esper/open/register" class="framer-NuCN4 framer-1ew7p8v framer-v-xz6rdl framer-1x2xllv"
+                    <a href="javascript:void(0)" data-href="" class="framer-NuCN4 framer-1ew7p8v framer-v-xz6rdl framer-1x2xllv"
                       data-framer-name="Subscribe Button" data-nested-link="true" role="link"
                       style="width:100%; text-decoration: none;" tabindex="0">
                       <div class="framer-mzpatg" data-framer-name="Button"
@@ -5976,7 +6096,7 @@
                               style="--extracted-r6o4lv:rgb(255, 255, 255);--framer-link-text-color:rgb(0, 153, 255);--framer-link-text-decoration:underline;transform:none">
                               <p class="framer-text"
                                 style='--font-selector:RlI7SW50ZXJEaXNwbGF5;--framer-font-family:"Inter Display", "Inter Display Placeholder", sans-serif;--framer-font-size:18px;--framer-text-color:var(--extracted-r6o4lv, rgb(255, 255, 255))'>
-                                Register
+                                Coming Soon
                               </p>
 
 
@@ -6038,7 +6158,7 @@
               <div class="framer-Wwu9j framer-XmJ2D framer-RYoxI framer-KVX8B framer-1hq3fz8 framer-v-1hq3fz8"
                 data-framer-name="Desktop" style="height:100%;width:100%">
                 <!--$-->
-                <a class="framer-14ovzi3 framer-y1pa43" data-framer-name="Card" href="/esper/open/register" data-href="/esper/open/register">
+                <a class="framer-14ovzi3 framer-y1pa43" data-framer-name="Card" href="javascript:void(0)" data-href="">
                   <div class="framer-9xp6kq" data-framer-name="Member Image"
                     style="border-bottom-left-radius:20px;border-bottom-right-radius:20px;border-top-left-radius:20px;border-top-right-radius:20px">
                     <div class="framer-1oeo7ga" data-framer-name="Image"
@@ -6047,8 +6167,8 @@
                         style="position:absolute;border-radius:inherit;top:0;right:0;bottom:0;left:0">
                         <img alt="" data-framer-original-sizes="363px" decoding="async" height="1350" loading="lazy"
                           sizes="(min-width: 1200px) and (max-width: 1439.98px) max(max((min(100vw, 1160px) - 24px) / 2, 50px), 100vw), (min-width: 1440px) max(688px, 100vw), (min-width: 810px) and (max-width: 1199.98px) max(363px, 100vw), (max-width: 809.98px) max(max(min(100vw, 1160px) - 32px, 50px), 100vw)"
-                          src="/esper/images/xxna12h46ku2jjt716wn00ab7q.png"
-                          srcset="/esper/images/xxna12h46ku2jjt716wn00ab7q.png 819w,/esper/images/xxna12h46ku2jjt716wn00ab7q.png 1080w"
+                          src="/esper/images/Daedalus.png"
+                          srcset="/esper/images/Daedalus.png 1080w"
                           style="display:block;width:100%;height:100%;border-radius:inherit;object-position:center;object-fit:cover"
                           width="1080" />
                       </div>
@@ -6099,7 +6219,7 @@
 
                   <div class="framer-kccf2v-container">
                     <!--$-->
-                    <a href="/esper/open/register" data-href="/esper/open/register" class="framer-NuCN4 framer-1ew7p8v framer-v-xz6rdl framer-1x2xllv"
+                    <a href="javascript:void(0)" data-href="" class="framer-NuCN4 framer-1ew7p8v framer-v-xz6rdl framer-1x2xllv"
                       data-framer-name="Subscribe Button" data-nested-link="true" role="link"
                       style="width:100%; text-decoration: none;" tabindex="0">
                       <div class="framer-mzpatg" data-framer-name="Button"
@@ -6126,7 +6246,7 @@
                               style="--extracted-r6o4lv:rgb(255, 255, 255);--framer-link-text-color:rgb(0, 153, 255);--framer-link-text-decoration:underline;transform:none">
                               <p class="framer-text"
                                 style='--font-selector:RlI7SW50ZXJEaXNwbGF5;--framer-font-family:"Inter Display", "Inter Display Placeholder", sans-serif;--framer-font-size:18px;--framer-text-color:var(--extracted-r6o4lv, rgb(255, 255, 255))'>
-                                Register
+                                Coming Soon
                               </p>
 
 
@@ -6626,11 +6746,21 @@
 
   <script>
     (() => {
+      // =========================================================================
+      // OPEN AWARDS REGISTRATION TOGGLE
+      // To re-open registrations for Open Awards in the future, change this to true:
+      // =========================================================================
+      const OPEN_REGISTRATION_ENABLED = false;
+
       function navigate(href, target, rel) {
         console.log("ESPER Navigation: Targeting", href);
         if (!href) return;
 
-        // Force all registrations on /esper/open to go to /esper/open/register
+        if (!OPEN_REGISTRATION_ENABLED && href.includes("/register")) {
+          return;
+        }
+
+        // Force all registrations on /esper/open to go to /esper/open/register (when open)
         if (href.includes("/register") || href === "/esper/register" || href === "/esper/popular/register") {
             href = "/esper/open/register";
         }
@@ -6675,6 +6805,15 @@
             e.stopPropagation();
             navigate('/esper', t.getAttribute("target"), t.getAttribute("rel"));
             return;
+        }
+
+        // When open registration is closed, clicking cards or coming soon buttons does nothing
+        if (!OPEN_REGISTRATION_ENABLED) {
+          if (t.closest('[data-framer-name="Card"]') || t.closest('.framer-14ovzi3') || t.closest('[data-framer-name="Subscribe Button"]') || t.closest('.framer-NuCN4') || href === '/esper/open/register' || href === 'javascript:void(0)') {
+            e.preventDefault();
+            e.stopPropagation();
+            return;
+          }
         }
 
         // Any card or register button on /esper/open MUST go to /esper/open/register
@@ -6855,9 +6994,9 @@
         grid.style.setProperty('height', 'auto', 'important');
 
         const categories = [
-          { title: "Best Build Team (Debunked)", sub: "Of The Year" },
-          { title: "Best Short Film", sub: "Of The Year" },
-          { title: "Best Scientific Photographer", sub: "Of The Year" }
+          { title: "Best Build Team (Debunked)", sub: "Of The Year", image: "/esper/images/Daedalus.png" },
+          { title: "Best Short Film", sub: "Of The Year", image: "/esper/images/Daedalus.png" },
+          { title: "Best Scientific Photographer", sub: "Of The Year", image: "/esper/images/Opticos.png" }
         ];
 
         const allCards = Array.from(grid.querySelectorAll('[data-framer-name="Card"]'));
@@ -6917,14 +7056,45 @@
             if (sub && sub.textContent.trim() !== categories[index].sub) {
               sub.textContent = categories[index].sub;
             }
-            // Ensure card and button link directly to /esper/open/register
+            if (categories[index].image) {
+              const img = wrapper.querySelector('[data-framer-name="Image"] img, .framer-1oeo7ga img, img');
+              if (img && img.getAttribute('src') !== categories[index].image) {
+                img.setAttribute('src', categories[index].image);
+                img.setAttribute('srcset', categories[index].image);
+              }
+            }
+            // Open Registration toggle: true = "Register" with link; false = "Coming Soon" with navigation disabled
+            const OPEN_REGISTRATION_ENABLED = false;
+
+            wrapper.querySelectorAll('.framer-NuCN4 p, [data-framer-name="Subscribe Button"] p').forEach(p => {
+              p.textContent = OPEN_REGISTRATION_ENABLED ? "Register" : "Coming Soon";
+            });
+
             wrapper.querySelectorAll('a').forEach(a => {
-              const h = a.getAttribute('href') || '';
-              if (h.includes('/register')) {
+              if (OPEN_REGISTRATION_ENABLED) {
                 a.setAttribute('href', '/esper/open/register');
                 a.setAttribute('data-href', '/esper/open/register');
+                a.style.cursor = 'pointer';
+              } else {
+                a.setAttribute('href', 'javascript:void(0)');
+                a.setAttribute('data-href', '');
+                a.style.cursor = 'default';
               }
             });
+            // Wire hover effect for cards so cloned card matches originals
+            if (!wrapper.dataset.hoverWired) {
+              wrapper.dataset.hoverWired = "true";
+              const cardComp = wrapper.querySelector('.framer-Wwu9j') || wrapper;
+              const btnComp = wrapper.querySelector('.framer-NuCN4');
+              wrapper.addEventListener('mouseenter', () => {
+                cardComp.classList.add('hover');
+                if (btnComp) btnComp.classList.add('hover');
+              });
+              wrapper.addEventListener('mouseleave', () => {
+                cardComp.classList.remove('hover');
+                if (btnComp) btnComp.classList.remove('hover');
+              });
+            }
           }
         });
       }

@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <!-- ✨ Built with Framer • https://www.framer.com/ -->
 <html lang="en">
 
@@ -3765,6 +3765,118 @@
 
 
   <!-- Start of headEnd -->
+  <style>
+    /* Card Grid: 2 columns on desktop so the 2 award categories sit neatly side by side */
+    @media (min-width: 900px) {
+      .framer-LJlZq .framer-g159kn {
+        grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+        gap: 32px !important;
+        max-width: 960px !important;
+        margin: 0 auto !important;
+      }
+    }
+    @media (min-width: 600px) and (max-width: 899px) {
+      .framer-LJlZq .framer-g159kn {
+        grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+        gap: 20px !important;
+        max-width: 750px !important;
+        margin: 0 auto !important;
+      }
+    }
+    @media (max-width: 599px) {
+      .framer-LJlZq .framer-g159kn {
+        grid-template-columns: 1fr !important;
+        gap: 24px !important;
+      }
+    }
+
+    /* Fix image container height & aspect ratio to 4:5 so 1080x1350 artwork is never cropped */
+    .framer-Wwu9j .framer-9xp6kq {
+      width: 100% !important;
+      height: auto !important;
+      aspect-ratio: 4 / 5 !important;
+      max-height: none !important;
+      border-radius: 20px !important;
+      overflow: hidden !important;
+    }
+
+    .framer-Wwu9j .framer-1oeo7ga {
+      position: absolute !important;
+      top: 0 !important;
+      left: 0 !important;
+      width: 100% !important;
+      height: 100% !important;
+    }
+
+    .framer-Wwu9j .framer-1oeo7ga img,
+    .framer-9xp6kq img {
+      width: 100% !important;
+      height: 100% !important;
+      object-fit: cover !important;
+      object-position: center top !important;
+      display: block !important;
+    }
+
+    /* Flexible card heights & container overrides */
+    .framer-LJlZq .framer-61dahc-container,
+    .framer-LJlZq .framer-168vegr-container,
+    .framer-LJlZq .framer-agn45e-container,
+    .framer-61dahc-container,
+    .framer-168vegr-container,
+    .framer-agn45e-container,
+    .framer-Wwu9j.framer-1hq3fz8,
+    .framer-Wwu9j .framer-14ovzi3,
+    [data-cloned-card] {
+      height: auto !important;
+      width: 100% !important;
+      max-width: none !important;
+    }
+
+    /* Hover Effects for Cards & Buttons */
+    .framer-Wwu9j .framer-1oeo7ga {
+      transition: width 0.4s cubic-bezier(0.16, 1, 0.3, 1),
+                  height 0.4s cubic-bezier(0.16, 1, 0.3, 1),
+                  top 0.4s cubic-bezier(0.16, 1, 0.3, 1),
+                  left 0.4s cubic-bezier(0.16, 1, 0.3, 1),
+                  transform 0.4s cubic-bezier(0.16, 1, 0.3, 1) !important;
+    }
+
+    .framer-Wwu9j .framer-z9yiom {
+      transition: top 0.6s cubic-bezier(0.16, 1, 0.3, 1),
+                  left 0.6s cubic-bezier(0.16, 1, 0.3, 1) !important;
+    }
+
+    .framer-14ovzi3:hover .framer-1oeo7ga,
+    .framer-Wwu9j:hover .framer-1oeo7ga,
+    .framer-Wwu9j.hover .framer-1oeo7ga {
+      width: 115% !important;
+      height: 115% !important;
+      top: -7.5% !important;
+      left: -7.5% !important;
+    }
+
+    .framer-14ovzi3:hover .framer-z9yiom,
+    .framer-Wwu9j:hover .framer-z9yiom,
+    .framer-Wwu9j.hover .framer-z9yiom {
+      top: 480px !important;
+      left: 390px !important;
+    }
+
+    .framer-NuCN4 .framer-tb25bi,
+    .framer-NuCN4 .framer-1uv56pk {
+      transition: width 0.3s ease, height 0.3s ease !important;
+    }
+
+    .framer-NuCN4:hover .framer-tb25bi,
+    .framer-NuCN4.hover .framer-tb25bi {
+      width: 130px !important;
+    }
+
+    .framer-NuCN4:hover .framer-1uv56pk,
+    .framer-NuCN4.hover .framer-1uv56pk {
+      width: 154px !important;
+    }
+  </style>
   <!-- End of headEnd -->
 </head>
 
@@ -4684,8 +4796,8 @@
                         <img alt="" data-framer-original-sizes="max((min(100vw, 1160px) - 24px) / 2, 50px)"
                           decoding="async" height="1350" loading="lazy"
                           sizes="(min-width: 1200px) and (max-width: 1439.98px) max((min(100vw, 1160px) - 24px) / 2, 50px), (min-width: 810px) and (max-width: 1199.98px) max((min(100vw, 1160px) - 24px) / 2, 50px), (max-width: 809.98px) max(max((min(100vw, 1160px) - 24px) / 2, 50px), max(min(100vw, 1160px) - 32px, 50px)), (min-width: 1440px) 688px"
-                          src="/esper/images/oyj2embpf6yri7plutqsje6p2i.png"
-                          srcset="/esper/images/oyj2embpf6yri7plutqsje6p2i.png 819w,/esper/images/oyj2embpf6yri7plutqsje6p2i.png 1080w"
+                          src="/esper/images/Daedalus.png"
+                          srcset="/esper/images/Daedalus.png 1080w"
                           style="display:block;width:100%;height:100%;border-radius:inherit;object-position:center;object-fit:cover"
                           width="1080" />
                       </div>
@@ -4834,8 +4946,8 @@
                         style="position:absolute;border-radius:inherit;top:0;right:0;bottom:0;left:0">
                         <img alt="" data-framer-original-sizes="688px" decoding="async" height="1350" loading="lazy"
                           sizes="(min-width: 1200px) and (max-width: 1439.98px) max((min(100vw, 1160px) - 24px) / 2, 50px), (min-width: 810px) and (max-width: 1199.98px) max((min(100vw, 1160px) - 24px) / 2, 50px), (max-width: 809.98px) max(max((min(100vw, 1160px) - 24px) / 2, 50px), max(min(100vw, 1160px) - 32px, 50px)), (min-width: 1440px) 688px"
-                          src="/esper/images/oyj2embpf6yri7plutqsje6p2i.png"
-                          srcset="/esper/images/oyj2embpf6yri7plutqsje6p2i.png 819w,/esper/images/oyj2embpf6yri7plutqsje6p2i.png 1080w"
+                          src="/esper/images/Daedalus.png"
+                          srcset="/esper/images/Daedalus.png 1080w"
                           style="display:block;width:100%;height:100%;border-radius:inherit;object-position:center;object-fit:cover"
                           width="1080" />
                       </div>
@@ -4985,8 +5097,8 @@
                         <img alt="" data-framer-original-sizes="max((min(100vw, 1160px) - 24px) / 2, 50px)"
                           decoding="async" height="1350" loading="lazy"
                           sizes="(min-width: 1200px) and (max-width: 1439.98px) max(max((min(100vw, 1160px) - 24px) / 2, 50px), 100vw), (min-width: 1440px) max(688px, 100vw), (min-width: 810px) and (max-width: 1199.98px) max(363px, 100vw), (max-width: 809.98px) max(max(min(100vw, 1160px) - 32px, 50px), 100vw)"
-                          src="/esper/images/xxna12h46ku2jjt716wn00ab7q.png"
-                          srcset="/esper/images/xxna12h46ku2jjt716wn00ab7q.png 819w,/esper/images/xxna12h46ku2jjt716wn00ab7q.png 1080w"
+                          src="/esper/images/Daedalus.png"
+                          srcset="/esper/images/Daedalus.png 1080w"
                           style="display:block;width:100%;height:100%;border-radius:inherit;object-position:center;object-fit:cover"
                           width="1080" />
                       </div>
@@ -5136,8 +5248,8 @@
                         <img alt="" data-framer-original-sizes="max(min(100vw, 1160px) - 32px, 50px)" decoding="async"
                           height="1350" loading="lazy"
                           sizes="(min-width: 1200px) and (max-width: 1439.98px) max((min(100vw, 1160px) - 24px) / 2, 50px), (min-width: 810px) and (max-width: 1199.98px) max((min(100vw, 1160px) - 24px) / 2, 50px), (max-width: 809.98px) max(max((min(100vw, 1160px) - 24px) / 2, 50px), max(min(100vw, 1160px) - 32px, 50px)), (min-width: 1440px) 688px"
-                          src="/esper/images/oyj2embpf6yri7plutqsje6p2i.png"
-                          srcset="/esper/images/oyj2embpf6yri7plutqsje6p2i.png 819w,/esper/images/oyj2embpf6yri7plutqsje6p2i.png 1080w"
+                          src="/esper/images/Daedalus.png"
+                          srcset="/esper/images/Daedalus.png 1080w"
                           style="display:block;width:100%;height:100%;border-radius:inherit;object-position:center;object-fit:cover"
                           width="1080" />
                       </div>
@@ -5281,8 +5393,8 @@
                         style="position:absolute;border-radius:inherit;top:0;right:0;bottom:0;left:0">
                         <img alt="" data-framer-original-sizes="688px" decoding="async" height="1350" loading="lazy"
                           sizes="(min-width: 1200px) and (max-width: 1439.98px) max(max((min(100vw, 1160px) - 24px) / 2, 50px), 100vw), (min-width: 1440px) max(688px, 100vw), (min-width: 810px) and (max-width: 1199.98px) max(363px, 100vw), (max-width: 809.98px) max(max(min(100vw, 1160px) - 32px, 50px), 100vw)"
-                          src="/esper/images/xxna12h46ku2jjt716wn00ab7q.png"
-                          srcset="/esper/images/xxna12h46ku2jjt716wn00ab7q.png 819w,/esper/images/xxna12h46ku2jjt716wn00ab7q.png 1080w"
+                          src="/esper/images/Daedalus.png"
+                          srcset="/esper/images/Daedalus.png 1080w"
                           style="display:block;width:100%;height:100%;border-radius:inherit;object-position:center;object-fit:cover"
                           width="1080" />
                       </div>
@@ -5431,8 +5543,8 @@
                         style="position:absolute;border-radius:inherit;top:0;right:0;bottom:0;left:0">
                         <img alt="" data-framer-original-sizes="363px" decoding="async" height="1350" loading="lazy"
                           sizes="(min-width: 1200px) and (max-width: 1439.98px) max(max((min(100vw, 1160px) - 24px) / 2, 50px), 100vw), (min-width: 1440px) max(688px, 100vw), (min-width: 810px) and (max-width: 1199.98px) max(363px, 100vw), (max-width: 809.98px) max(max(min(100vw, 1160px) - 32px, 50px), 100vw)"
-                          src="/esper/images/xxna12h46ku2jjt716wn00ab7q.png"
-                          srcset="/esper/images/xxna12h46ku2jjt716wn00ab7q.png 819w,/esper/images/xxna12h46ku2jjt716wn00ab7q.png 1080w"
+                          src="/esper/images/Daedalus.png"
+                          srcset="/esper/images/Daedalus.png 1080w"
                           style="display:block;width:100%;height:100%;border-radius:inherit;object-position:center;object-fit:cover"
                           width="1080" />
                       </div>
@@ -5581,8 +5693,8 @@
                         style="position:absolute;border-radius:inherit;top:0;right:0;bottom:0;left:0">
                         <img alt="" data-framer-original-sizes="100vw" decoding="async" height="1350"
                           sizes="(min-width: 1200px) and (max-width: 1439.98px) max(max((min(100vw, 1160px) - 24px) / 2, 50px), 100vw), (min-width: 1440px) max(688px, 100vw), (min-width: 810px) and (max-width: 1199.98px) max(363px, 100vw), (max-width: 809.98px) max(max(min(100vw, 1160px) - 32px, 50px), 100vw)"
-                          src="/esper/images/xxna12h46ku2jjt716wn00ab7q.png"
-                          srcset="/esper/images/xxna12h46ku2jjt716wn00ab7q.png 819w,/esper/images/xxna12h46ku2jjt716wn00ab7q.png 1080w"
+                          src="/esper/images/Daedalus.png"
+                          srcset="/esper/images/Daedalus.png 1080w"
                           style="display:block;width:100%;height:100%;border-radius:inherit;object-position:center;object-fit:cover"
                           width="1080" />
                       </div>
@@ -5727,8 +5839,8 @@
                         <img alt="" data-framer-original-sizes="max(min(100vw, 1160px) - 32px, 50px)" decoding="async"
                           height="1350" loading="lazy"
                           sizes="(min-width: 1200px) and (max-width: 1439.98px) max(max((min(100vw, 1160px) - 24px) / 2, 50px), 100vw), (min-width: 1440px) max(688px, 100vw), (min-width: 810px) and (max-width: 1199.98px) max(363px, 100vw), (max-width: 809.98px) max(max(min(100vw, 1160px) - 32px, 50px), 100vw)"
-                          src="/esper/images/xxna12h46ku2jjt716wn00ab7q.png"
-                          srcset="/esper/images/xxna12h46ku2jjt716wn00ab7q.png 819w,/esper/images/xxna12h46ku2jjt716wn00ab7q.png 1080w"
+                          src="/esper/images/Daedalus.png"
+                          srcset="/esper/images/Daedalus.png 1080w"
                           style="display:block;width:100%;height:100%;border-radius:inherit;object-position:center;object-fit:cover"
                           width="1080" />
                       </div>
@@ -5872,8 +5984,8 @@
                         style="position:absolute;border-radius:inherit;top:0;right:0;bottom:0;left:0">
                         <img alt="" data-framer-original-sizes="100vw" decoding="async" height="1350"
                           sizes="(min-width: 1200px) and (max-width: 1439.98px) max(max((min(100vw, 1160px) - 24px) / 2, 50px), 100vw), (min-width: 1440px) max(688px, 100vw), (min-width: 810px) and (max-width: 1199.98px) max(363px, 100vw), (max-width: 809.98px) max(max(min(100vw, 1160px) - 32px, 50px), 100vw)"
-                          src="/esper/images/xxna12h46ku2jjt716wn00ab7q.png"
-                          srcset="/esper/images/xxna12h46ku2jjt716wn00ab7q.png 819w,/esper/images/xxna12h46ku2jjt716wn00ab7q.png 1080w"
+                          src="/esper/images/Daedalus.png"
+                          srcset="/esper/images/Daedalus.png 1080w"
                           style="display:block;width:100%;height:100%;border-radius:inherit;object-position:center;object-fit:cover"
                           width="1080" />
                       </div>
@@ -6022,8 +6134,8 @@
                         style="position:absolute;border-radius:inherit;top:0;right:0;bottom:0;left:0">
                         <img alt="" data-framer-original-sizes="363px" decoding="async" height="1350" loading="lazy"
                           sizes="(min-width: 1200px) and (max-width: 1439.98px) max(max((min(100vw, 1160px) - 24px) / 2, 50px), 100vw), (min-width: 1440px) max(688px, 100vw), (min-width: 810px) and (max-width: 1199.98px) max(363px, 100vw), (max-width: 809.98px) max(max(min(100vw, 1160px) - 32px, 50px), 100vw)"
-                          src="/esper/images/xxna12h46ku2jjt716wn00ab7q.png"
-                          srcset="/esper/images/xxna12h46ku2jjt716wn00ab7q.png 819w,/esper/images/xxna12h46ku2jjt716wn00ab7q.png 1080w"
+                          src="/esper/images/Daedalus.png"
+                          srcset="/esper/images/Daedalus.png 1080w"
                           style="display:block;width:100%;height:100%;border-radius:inherit;object-position:center;object-fit:cover"
                           width="1080" />
                       </div>
@@ -6828,6 +6940,27 @@
             h3.textContent = 'Best Young Inventor';
           } else if (text.includes('Quiz Team')) {
             h3.textContent = 'Best Article Writer';
+          }
+        });
+        document.querySelectorAll('[data-framer-name="Card"]').forEach(card => {
+          const img = card.querySelector('[data-framer-name="Image"] img, .framer-1oeo7ga img, img');
+          if (img && img.getAttribute('src') !== '/esper/images/Daedalus.png') {
+            img.setAttribute('src', '/esper/images/Daedalus.png');
+            img.setAttribute('srcset', '/esper/images/Daedalus.png 1080w');
+          }
+          let wrapper = card.closest('.ssr-variant') || card.closest('.framer-61dahc-container, .framer-168vegr-container') || card;
+          if (!wrapper.dataset.hoverWired) {
+            wrapper.dataset.hoverWired = "true";
+            const cardComp = wrapper.querySelector('.framer-Wwu9j') || wrapper;
+            const btnComp = wrapper.querySelector('.framer-NuCN4');
+            wrapper.addEventListener('mouseenter', () => {
+              cardComp.classList.add('hover');
+              if (btnComp) btnComp.classList.add('hover');
+            });
+            wrapper.addEventListener('mouseleave', () => {
+              cardComp.classList.remove('hover');
+              if (btnComp) btnComp.classList.remove('hover');
+            });
           }
         });
       }

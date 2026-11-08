@@ -6,7 +6,7 @@ if (referer.includes('/inter')) {
 } else if (referer.includes('/intra')) {
   return Astro.redirect('/esper/intra/register', 302);
 } else if (referer.includes('/open') || referer.includes('/popular')) {
-  return Astro.redirect('/esper/open/register', 302);
+  return Astro.redirect('/esper/open', 302);
 }
-return Astro.redirect('/esper/open/register', 302);
+return Astro.redirect('/esper/open', 302);
 ---

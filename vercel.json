@@ -31,6 +31,16 @@
       "source": "/esper/",
       "destination": "/esper",
       "permanent": true
+    },
+    {
+      "source": "/esper/open/register",
+      "destination": "/esper/open",
+      "permanent": false
+    },
+    {
+      "source": "/esper/open/register/(.*)",
+      "destination": "/esper/open",
+      "permanent": false
     }
   ]
 }
