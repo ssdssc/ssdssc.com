@@ -1,5 +1,12 @@
 ---
-// Redirect /esper/register to /esper/popular/register
-return Astro.redirect('/esper/popular/register', 301);
+// Redirect /esper/register based on referer
+const referer = Astro.request.headers.get('referer') || '';
+if (referer.includes('/inter')) {
+  return Astro.redirect('/esper/inter/register', 302);
+} else if (referer.includes('/intra')) {
+  return Astro.redirect('/esper/intra/register', 302);
+} else if (referer.includes('/open') || referer.includes('/popular')) {
+  return Astro.redirect('/esper/open/register', 302);
+}
+return Astro.redirect('/esper/open/register', 302);
 ---
-

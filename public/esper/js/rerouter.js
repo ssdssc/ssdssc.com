@@ -609,7 +609,7 @@
     seoTitle = "Register for Most Popular Awards - ESPER '26 | SSDSSC";
     seoDesc = "Register for the Most Popular category at the ESPER Awards '26. Showcase your talent and get recognized by the Science Society of D.S. Senanayake College.";
     seoKeywords = "ESPER Popular Registration, SSDSSC";
-  } else if (path.includes('/esper/popular')) {
+  } else if (path.includes('/esper/open') || path.includes('/esper/popular')) {
     seoTitle = "Most Popular Awards - ESPER '26 | SSDSSC";
     seoDesc = "Vote and discover the most popular entries in research, technology, and creativity at the ESPER Awards '26 by the Science Union of D.S. Senanayake College.";
     seoKeywords = "ESPER Popular Awards, ESPER Voting, SSDSSC, Science Day";
@@ -671,12 +671,29 @@
         if (a.getAttribute("target") === "_blank") {
           a.removeAttribute("target");
         }
-      } else if (text.includes("school popular awards") || text === "popular awards" || href === "/popular" || href.endsWith("/popular") || href.includes("ssdssc.com/popular")) {
-        if (a.getAttribute("href") !== "/esper/popular") {
-          a.setAttribute("href", "/esper/popular");
+      } else if (
+        text.includes("school popular awards") ||
+        text === "popular awards" ||
+        text.includes("open awards") ||
+        href === "/popular" ||
+        href.endsWith("/popular") ||
+        href.includes("ssdssc.com/popular") ||
+        href === "/esper/open" ||
+        href === "/esper/popular"
+      ) {
+        if (a.getAttribute("href") !== "/esper/open" && !href.includes("/register")) {
+          a.setAttribute("href", "/esper/open");
         }
         if (a.getAttribute("target") === "_blank") {
           a.removeAttribute("target");
+        }
+        if ((text.includes("popular") || text.includes("school popular")) && !href.includes("/register")) {
+          const p = a.querySelector("p");
+          if (p) {
+            p.textContent = "Open Awards";
+          } else {
+            a.textContent = "Open Awards";
+          }
         }
       }
     });
@@ -690,12 +707,45 @@
   window.addEventListener("load", fixAllLinks);
   setTimeout(fixAllLinks, 800);
 
+  let fixCount = 0;
+  const fixTimer = setInterval(() => {
+    fixAllLinks();
+    if (++fixCount > 25) clearInterval(fixTimer);
+  }, 100);
+
   // Catch any clicks globally in capturing phase to guarantee instant correct navigation without DOM mutation loops
   window.addEventListener("click", (e) => {
-    const a = e.target.closest("a");
+    const a = e.target.closest("a, [data-framer-name='Card'], [data-framer-name='Subscribe Button']");
     if (!a) return;
+    const href = a.getAttribute("href") || a.getAttribute("data-href") || "";
     const text = a.textContent.trim().toLowerCase();
-    const href = a.getAttribute("href") || "";
+    const name = (a.getAttribute('data-framer-name') || '').toLowerCase();
+
+    // On /esper/inter, always route card/register clicks to /esper/inter/register
+    if (window.location.pathname.includes("/inter") && (href.includes("/register") || text.includes("register") || name === 'subscribe button' || name === 'card')) {
+      e.preventDefault();
+      e.stopPropagation();
+      window.location.assign("/esper/inter/register");
+      return;
+    }
+
+    // On /esper/intra, always route card/register clicks to /esper/intra/register
+    if (window.location.pathname.includes("/intra") && (href.includes("/register") || text.includes("register") || name === 'subscribe button' || name === 'card')) {
+      e.preventDefault();
+      e.stopPropagation();
+      window.location.assign("/esper/intra/register");
+      return;
+    }
+
+    // On /esper/open, always route card/register clicks to /esper/open/register
+    if ((window.location.pathname.includes("/open") || window.location.pathname.includes("/popular")) && (href.includes("/register") || text.includes("register") || name === 'subscribe button' || name === 'card')) {
+      e.preventDefault();
+      e.stopPropagation();
+      window.location.assign("/esper/open/register");
+      return;
+    }
+
+    if (href.includes("/register")) return; // Do not intercept other registration links
 
     if (text.includes("inter school") || href === "/inter" || href.endsWith("/inter") || href.includes("ssdssc.com/inter")) {
       e.preventDefault();
@@ -705,10 +755,21 @@
       e.preventDefault();
       e.stopPropagation();
       window.location.assign("/esper/intra");
-    } else if (text.includes("school popular awards") || text === "popular awards" || href === "/popular" || href.endsWith("/popular") || href.includes("ssdssc.com/popular")) {
-      e.preventDefault();
-      e.stopPropagation();
-      window.location.assign("/esper/popular");
+    } else if (
+      text.includes("school popular awards") ||
+      text === "popular awards" ||
+      text.includes("open awards") ||
+      href === "/popular" ||
+      href.endsWith("/popular") ||
+      href.includes("ssdssc.com/popular") ||
+      href === "/esper/open" ||
+      href === "/esper/popular"
+    ) {
+      if (!href.includes("/register")) {
+        e.preventDefault();
+        e.stopPropagation();
+        window.location.assign("/esper/open");
+      }
     }
   }, true);
 })();
