@@ -6632,12 +6632,20 @@
       }
 
       function handle(e) {
-        let t = e.target.closest("[data-nested-link], [data-href], a[href], [role='link'], [data-framer-name='Subscribe Button'], [data-framer-name='Card']");
+        let t = e.target.closest("[data-nested-link], [data-href], a[href], [role='link'], [data-framer-name='Subscribe Button'], [data-framer-name='Card'], [data-framer-name='Logo']");
         if (!t) return;
         
         let href = t.getAttribute("href") || t.getAttribute("data-href");
         let text = t.textContent.trim().toLowerCase();
         let name = (t.getAttribute('data-framer-name') || '').toLowerCase();
+
+        // Logo or index.html clicks must go to /esper
+        if (name === 'logo' || t.closest("[data-framer-name='Logo']") || href === 'index.html' || href === '/index.html' || (href && href.endsWith('/index.html'))) {
+            e.preventDefault();
+            e.stopPropagation();
+            navigate('/esper', t.getAttribute("target"), t.getAttribute("rel"));
+            return;
+        }
 
         // Any card or register button on /esper/inter MUST go to /esper/inter/register
         if (!href || href.includes("/register") || text.includes("register") || name === 'subscribe button' || name === 'card' || href.includes('/sci-union')) {

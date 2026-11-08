@@ -23,6 +23,11 @@
       "permanent": true
     },
     {
+      "source": "/index.html",
+      "destination": "/esper",
+      "permanent": true
+    },
+    {
       "source": "/esper/",
       "destination": "/esper",
       "permanent": true

@@ -55,8 +55,12 @@
         "undefined" != typeof window ? window : self),
     m =
       ((c.exflowUrlmapping = {
-        "https://orchid-themes-501884.framer.app/": "index.html",
-        "https://orchid-themes-501884.framer.app/popular": "/esper/popular",
+        "https://orchid-themes-501884.framer.app/": "/esper",
+        "https://orchid-themes-501884.framer.app": "/esper",
+        "https://orchid-themes-501884.framer.app/index.html": "/esper",
+        "index.html": "/esper",
+        "/index.html": "/esper",
+        "https://orchid-themes-501884.framer.app/popular": "/esper/open",
         "/inter": "/esper/inter",
         "/intra": "/esper/intra",
         "https://ssdssc.com/inter": "/esper/inter",
@@ -657,7 +661,22 @@
     document.querySelectorAll("a").forEach(a => {
       const text = a.textContent.trim().toLowerCase();
       const href = a.getAttribute("href") || "";
-      if (text.includes("inter school") || href === "/inter" || href.endsWith("/inter") || href.includes("ssdssc.com/inter")) {
+      const name = (a.getAttribute("data-framer-name") || "").toLowerCase();
+
+      // Route Logo and index.html to /esper
+      if (
+        name === "logo" ||
+        href === "index.html" ||
+        href === "/index.html" ||
+        href.endsWith("/index.html") ||
+        href === "/" ||
+        href.includes("orchid-themes-501884.framer.app")
+      ) {
+        a.setAttribute("href", "/esper");
+        if (a.getAttribute("target") === "_blank") {
+          a.removeAttribute("target");
+        }
+      } else if (text.includes("inter school") || href === "/inter" || href.endsWith("/inter") || href.includes("ssdssc.com/inter")) {
         if (a.getAttribute("href") !== "/esper/inter") {
           a.setAttribute("href", "/esper/inter");
         }
@@ -715,11 +734,26 @@
 
   // Catch any clicks globally in capturing phase to guarantee instant correct navigation without DOM mutation loops
   window.addEventListener("click", (e) => {
-    const a = e.target.closest("a, [data-framer-name='Card'], [data-framer-name='Subscribe Button']");
+    const a = e.target.closest("a, [data-framer-name='Card'], [data-framer-name='Subscribe Button'], [data-framer-name='Logo']");
     if (!a) return;
     const href = a.getAttribute("href") || a.getAttribute("data-href") || "";
     const text = a.textContent.trim().toLowerCase();
     const name = (a.getAttribute('data-framer-name') || '').toLowerCase();
+
+    // Always route Logo and index.html clicks to /esper
+    if (
+      name === "logo" ||
+      href === "index.html" ||
+      href === "/index.html" ||
+      href.endsWith("/index.html") ||
+      href === "/" ||
+      a.closest("[data-framer-name='Logo']")
+    ) {
+      e.preventDefault();
+      e.stopPropagation();
+      window.location.assign("/esper");
+      return;
+    }
 
     // On /esper/inter, always route card/register clicks to /esper/inter/register
     if (window.location.pathname.includes("/inter") && (href.includes("/register") || text.includes("register") || name === 'subscribe button' || name === 'card')) {
