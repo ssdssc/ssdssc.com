@@ -797,10 +797,10 @@
 	<script data-framer-appear-animation="no-preference"></script>
 	<script>typeof document<"u"&&(window.process={...window.process,env:{...window.process?.env,NODE_ENV:"production"}});</script>
 	<script type="module" async data-framer-bundle="main">
-		import * as Framer from "framer";
-import * as React from "react";
-import { createPortal } from "react-dom";
-import * as ReactDOM from "react-dom/client";
+		import * as Framer from "/evo/register/_framer/js/framer.mjs";
+import * as React from "/evo/register/_framer/js/react.js";
+import { createPortal } from "/evo/register/_framer/js/react-dom.js";
+import * as ReactDOM from "/evo/register/_framer/js/react-dom-client.js";
 
 		const routes = {augiA20Il: {elements: {}, page: Framer.lazy(() => import("/evo/register/_framer/js/screen-augiA20Il.js")), path: "/"}}
 
@@ -827,7 +827,7 @@ import * as ReactDOM from "react-dom/client";
 					routes,
 					collectionUtils,
 					framerSiteId,
-					notFoundPage: Framer.lazy(() => import("__framer-not-found-page")),
+					notFoundPage: Framer.lazy(() => import("/evo/register/_framer/js/not-found-page.js")),
 					isReducedMotion: undefined,
 					localeId,
 					locales,

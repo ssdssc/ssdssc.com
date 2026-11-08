@@ -57,6 +57,14 @@
       ((c.exflowUrlmapping = {
         "https://orchid-themes-501884.framer.app/": "index.html",
         "https://orchid-themes-501884.framer.app/popular": "/esper/popular",
+        "/inter": "/esper/inter",
+        "/intra": "/esper/intra",
+        "https://ssdssc.com/inter": "/esper/inter",
+        "https://ssdssc.com/intra": "/esper/intra",
+        "https://ssdssc.com/popular": "/esper/popular",
+        "https://www.ssdssc.com/inter": "/esper/inter",
+        "https://www.ssdssc.com/intra": "/esper/intra",
+        "https://www.ssdssc.com/popular": "/esper/popular",
         "/popular": "/esper/popular",
         "/sci-union": "/esper/register",
         "https://ssdssc.com/sci-union": "/esper/register",
@@ -605,45 +613,103 @@
     seoTitle = "Most Popular Awards - ESPER '26 | SSDSSC";
     seoDesc = "Vote and discover the most popular entries in research, technology, and creativity at the ESPER Awards '26 by the Science Union of D.S. Senanayake College.";
     seoKeywords = "ESPER Popular Awards, ESPER Voting, SSDSSC, Science Day";
+  } else if (path.includes('/esper/inter')) {
+    seoTitle = "Inter School Awards - ESPER '26 | SSDSSC";
+    seoDesc = "Explore and register for the Inter School Awards categories at ESPER '26, organized by the Science Society of D.S. Senanayake College.";
+    seoKeywords = "Inter School Awards, ESPER Awards, Science Day Sri Lanka, SSDSSC";
+  } else if (path.includes('/esper/intra')) {
+    seoTitle = "Intra School Awards - ESPER '26 | SSDSSC";
+    seoDesc = "Explore and register for the Intra School Awards categories at ESPER '26, organized by the Science Society of D.S. Senanayake College.";
+    seoKeywords = "Intra School Awards, ESPER Awards, Science Day Sri Lanka, SSDSSC";
   } else if (path.includes('/esper/register')) {
     seoTitle = "Register for ESPER Awards '26 | SSDSSC";
     seoDesc = "Register your school or team for the ESPER Awards '26, Sri Lanka's premier Science Day Awards Ceremony celebrating young innovators.";
     seoKeywords = "ESPER Registration, Science Day Registration, SSDSSC";
   }
 
-  document.title = seoTitle;
-  
-  const observer = new MutationObserver(() => {
-    // 1. Fix Title
+  function applySeo() {
     if (document.title !== seoTitle) {
       document.title = seoTitle;
     }
-    
-    // 2. Fix Description
     let metaDesc = document.querySelector('meta[name="description"]');
-    if (!metaDesc) {
-      metaDesc = document.createElement('meta');
-      metaDesc.name = "description";
-      document.head.appendChild(metaDesc);
-    }
-    if (metaDesc.content !== seoDesc) {
+    if (metaDesc && metaDesc.content !== seoDesc) {
       metaDesc.content = seoDesc;
     }
-    
-    // 3. Fix Keywords
     let metaKw = document.querySelector('meta[name="keywords"]');
-    if (!metaKw) {
-      metaKw = document.createElement('meta');
-      metaKw.name = "keywords";
-      document.head.appendChild(metaKw);
-    }
-    if (metaKw.content !== seoKeywords) {
+    if (metaKw && metaKw.content !== seoKeywords) {
       metaKw.content = seoKeywords;
     }
-  });
-
-  if (document.head) {
-    observer.observe(document.head, { childList: true, subtree: true, characterData: true, attributes: true });
   }
+
+  applySeo();
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', applySeo);
+  }
+  window.addEventListener('load', applySeo);
+  setTimeout(applySeo, 500);
+  setTimeout(applySeo, 1500);
 })();
 // --- END SEO OVERRIDE ---
+
+// --- UNIVERSAL ESPER NAVIGATION HANDLER ---
+(function() {
+  function fixAllLinks() {
+    document.querySelectorAll("a").forEach(a => {
+      const text = a.textContent.trim().toLowerCase();
+      const href = a.getAttribute("href") || "";
+      if (text.includes("inter school") || href === "/inter" || href.endsWith("/inter") || href.includes("ssdssc.com/inter")) {
+        if (a.getAttribute("href") !== "/esper/inter") {
+          a.setAttribute("href", "/esper/inter");
+        }
+        if (a.getAttribute("target") === "_blank") {
+          a.removeAttribute("target");
+        }
+      } else if (text.includes("intra school") || href === "/intra" || href.endsWith("/intra") || href.includes("ssdssc.com/intra")) {
+        if (a.getAttribute("href") !== "/esper/intra") {
+          a.setAttribute("href", "/esper/intra");
+        }
+        if (a.getAttribute("target") === "_blank") {
+          a.removeAttribute("target");
+        }
+      } else if (text.includes("school popular awards") || text === "popular awards" || href === "/popular" || href.endsWith("/popular") || href.includes("ssdssc.com/popular")) {
+        if (a.getAttribute("href") !== "/esper/popular") {
+          a.setAttribute("href", "/esper/popular");
+        }
+        if (a.getAttribute("target") === "_blank") {
+          a.removeAttribute("target");
+        }
+      }
+    });
+  }
+
+  if (document.readyState === "loading") {
+    document.addEventListener("DOMContentLoaded", fixAllLinks);
+  } else {
+    fixAllLinks();
+  }
+  window.addEventListener("load", fixAllLinks);
+  setTimeout(fixAllLinks, 800);
+
+  // Catch any clicks globally in capturing phase to guarantee instant correct navigation without DOM mutation loops
+  window.addEventListener("click", (e) => {
+    const a = e.target.closest("a");
+    if (!a) return;
+    const text = a.textContent.trim().toLowerCase();
+    const href = a.getAttribute("href") || "";
+
+    if (text.includes("inter school") || href === "/inter" || href.endsWith("/inter") || href.includes("ssdssc.com/inter")) {
+      e.preventDefault();
+      e.stopPropagation();
+      window.location.assign("/esper/inter");
+    } else if (text.includes("intra school") || href === "/intra" || href.endsWith("/intra") || href.includes("ssdssc.com/intra")) {
+      e.preventDefault();
+      e.stopPropagation();
+      window.location.assign("/esper/intra");
+    } else if (text.includes("school popular awards") || text === "popular awards" || href === "/popular" || href.endsWith("/popular") || href.includes("ssdssc.com/popular")) {
+      e.preventDefault();
+      e.stopPropagation();
+      window.location.assign("/esper/popular");
+    }
+  }, true);
+})();
+// --- END UNIVERSAL ESPER NAVIGATION HANDLER ---
