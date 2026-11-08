@@ -9,21 +9,22 @@ export const POST = async ({ request }) => {
   // in Vercel at build time it becomes the string "undefined" (truthy!),
   // which bypasses the || fallback, crashes createClient synchronously, and
   // causes Astro to emit an empty 500 body (hence: Unexpected end of JSON input).
-  const rawUrl = process.env.SUPABASE_URL;
+  const rawUrl = process.env.ESPER_SUPABASE_URL || process.env.SUPABASE_URL;
   const supabaseUrl = (rawUrl && rawUrl.startsWith('http'))
     ? rawUrl
-    : 'https://dzzblbrmdaryttwplfrb.supabase.co'; // fallback — URL is not secret
+    : 'https://fdvjeotonmwizfgakeiq.supabase.co'; // fallback — URL is not secret
 
-  const supabaseKey = process.env.SUPABASE_SERVICE_ROLE_KEY;
+  const supabaseKey = process.env.ESPER_SUPABASE_SERVICE_ROLE_KEY || process.env.SUPABASE_SERVICE_ROLE_KEY;
 
   // Diagnose missing env vars
   console.log('[esper/register] env check:', {
     supabaseUrl,
     hasKey: !!supabaseKey,
+    isDedicatedEsper: !!process.env.ESPER_SUPABASE_SERVICE_ROLE_KEY,
   });
 
   if (!supabaseKey) {
-    console.error('[esper/register] SUPABASE_SERVICE_ROLE_KEY is not set in Vercel env vars');
+    console.error('[esper/register] ESPER_SUPABASE_SERVICE_ROLE_KEY is not set in Vercel env vars');
     return new Response(
       JSON.stringify({ error: 'Server misconfiguration: database key missing. Contact admin.' }),
       { status: 500, headers: { 'Content-Type': 'application/json' } }
@@ -35,7 +36,11 @@ export const POST = async ({ request }) => {
     const data = await request.json();
 
     // 1. Basic Validation
-    if (!data.schoolName || !data.emailAddress || !data.contactNumber || !data.awardCategory) {
+    const contactRaw = (data.contactNumber || data.applicantPhone || '').trim();
+    const email = (data.emailAddress || '').trim();
+    const category = (data.awardCategory || '').trim();
+
+    if (!email || !contactRaw || !category) {
       return new Response(
         JSON.stringify({ error: 'Missing required fields' }),
         { status: 400, headers: { 'Content-Type': 'application/json' } }
@@ -43,7 +48,7 @@ export const POST = async ({ request }) => {
     }
 
     // 2. Format Contact Number (Ensure +94 prefix)
-    let contactNumber = data.contactNumber.trim();
+    let contactNumber = contactRaw;
     if (!contactNumber.startsWith('+94')) {
       // Remove leading zero if present
       if (contactNumber.startsWith('0')) {
@@ -52,19 +57,68 @@ export const POST = async ({ request }) => {
       contactNumber = '+94' + contactNumber;
     }
 
-    // 2. Insert into Supabase
-    const { error } = await supabase
-      .from('esper_registrations')
-      .insert([
-        {
-          school_name: data.schoolName,
-          president_name: data.presidentName,
-          contact_number: contactNumber,
-          email: data.emailAddress,
-          award_category: data.awardCategory,
-          confirmed: data.confirmation === true || data.confirmation === 'on',
-        },
-      ]);
+    // 3. Determine target table & record structure
+    const isIntra = ['young-inventor', 'article-writer'].includes(category) || data.registrationType === 'intra';
+    const isOpen = ['build-team', 'short-film', 'photographer'].includes(category) || data.registrationType === 'open';
+
+    let targetTable = 'esper_inter_registrations';
+    let record = {};
+
+    if (isIntra) {
+      targetTable = 'esper_intra_registrations';
+      record = {
+        applicant_name: (data.applicantName || '').trim(),
+        grade: (data.grade || '').trim(),
+        contact_number: contactNumber,
+        email: email,
+        award_category: category,
+        drive_link: (data.inventorDriveLink || data.articleDocLink || '').trim(),
+        confirmed: data.confirmation === true || data.confirmation === 'on',
+        submission_data: data,
+      };
+    } else if (isOpen) {
+      targetTable = 'esper_open_registrations';
+      record = {
+        applicant_name: (data.applicantName || '').trim(),
+        age: data.age ? parseInt(data.age, 10) : null,
+        contact_number: contactNumber,
+        email: email,
+        award_category: category,
+        drive_link: (data.buildTeamDriveLink || data.shortFilmDriveLink || '').trim(),
+        description: (data.photoDescription || '').trim(),
+        confirmed: data.confirmation === true || data.confirmation === 'on',
+        submission_data: data,
+      };
+    } else {
+      targetTable = 'esper_inter_registrations';
+      record = {
+        school_name: (data.schoolName || '').trim(),
+        president_name: (data.presidentName || '').trim(),
+        contact_number: contactNumber,
+        email: email,
+        award_category: category,
+        confirmed: data.confirmation === true || data.confirmation === 'on',
+        submission_data: data,
+      };
+    }
+
+    // 4. Insert into Supabase (with fallback if 3 separate tables aren't created yet)
+    let { error } = await supabase.from(targetTable).insert([record]);
+
+    // PostgreSQL error 42P01 = table does not exist
+    if (error && error.code === '42P01') {
+      console.warn(`[esper/register] Table ${targetTable} does not exist, falling back to esper_registrations`);
+      const fallbackRecord = {
+        school_name: record.school_name || (isIntra ? 'D. S. Senanayake College' : record.applicant_name) || 'Open Category',
+        president_name: record.president_name || (record.applicant_name ? (record.grade ? `${record.applicant_name} (${record.grade})` : record.applicant_name) : ''),
+        contact_number: contactNumber,
+        email: email,
+        award_category: category,
+        confirmed: record.confirmed,
+      };
+      const fallbackRes = await supabase.from('esper_registrations').insert([fallbackRecord]);
+      error = fallbackRes.error;
+    }
 
     if (error) {
       console.error('Supabase Error:', error);

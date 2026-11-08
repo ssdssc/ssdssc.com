@@ -3871,27 +3871,42 @@
         /* Form Design */
         .registration-form {
             width: 100%;
-            max-width: 650px;
+            max-width: 1040px;
             display: flex;
             flex-direction: column;
             gap: 24px;
+        }
+
+        .form-columns {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 36px;
+            width: 100%;
+            align-items: start;
+        }
+
+        .form-column {
+            display: flex;
+            flex-direction: column;
+            gap: 22px;
+            width: 100%;
         }
 
         .form-row {
             display: grid;
             grid-template-columns: 1fr;
             align-items: flex-start;
-            gap: 12px;
+            gap: 10px;
         }
 
-        @media (max-width: 768px) {
+        @media (max-width: 860px) {
             .page-container {
                 color: #ffffff;
                 margin: 40px auto;
             }
 
             .hero-section {
-                margin-bottom: 60px;
+                margin-bottom: 40px;
             }
 
             .hero-section h1 {
@@ -3905,12 +3920,13 @@
                 font-size: 16px;
             }
 
-            .form-row {
+            .form-columns {
                 grid-template-columns: 1fr;
-                gap: 8px;
+                gap: 22px;
             }
 
             .registration-form {
+                max-width: 580px;
                 gap: 20px;
             }
 
@@ -3968,6 +3984,13 @@
             box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.1);
         }
 
+        textarea.form-control {
+            height: auto;
+            min-height: 90px;
+            padding: 14px 20px;
+            resize: vertical;
+        }
+
         select.form-control {
             appearance: none;
             background-image: url("data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2224%22%20height%3D%2224%22%20viewBox%3D%220%200%2024%2024%22%20fill%3D%22none%22%20stroke%3D%22rgba(255,255,255,0.5)%22%20stroke-width%3D%222%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%3E%3Cpolyline%20points%3D%226%209%2012%2015%2018%209%22%3E%3C%2Fpolyline%3E%3C%2Fsvg%3E");
@@ -3983,12 +4006,27 @@
             padding: 10px;
         }
 
+        /* Number Input Styling (remove spinners) */
+        input[type="number"]::-webkit-outer-spin-button,
+        input[type="number"]::-webkit-inner-spin-button {
+            -webkit-appearance: none;
+            margin: 0;
+        }
+
+        input[type="number"] {
+            -moz-appearance: textfield;
+        }
+
         /* Checkbox Styling */
         .checkbox-row {
             display: flex;
             align-items: center;
+            justify-content: center;
             gap: 12px;
-            margin: 20px 0;
+            margin: 20px auto;
+            max-width: 880px;
+            width: 100%;
+            box-sizing: border-box;
             cursor: pointer;
         }
 
@@ -4015,7 +4053,10 @@
             position: relative;
             padding: 20px 20px 20px 24px;
             border-radius: 8px 12px 12px 8px;
-            margin: 20px 0 10px;
+            margin: 20px auto 10px auto;
+            max-width: 880px;
+            width: 100%;
+            box-sizing: border-box;
             overflow: hidden;
         }
 
@@ -4079,6 +4120,134 @@
 
         .helpline a:hover {
             text-decoration: underline;
+        }
+    
+        /* School Logo File Upload */
+        .file-upload-box {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            width: 100%;
+            min-height: 64px;
+            padding: 12px 20px;
+            background: rgba(255, 255, 255, 0.04);
+            border: 1.5px dashed rgba(255, 255, 255, 0.18);
+            border-radius: 12px;
+            cursor: pointer;
+            transition: all 0.25s ease;
+            box-sizing: border-box;
+            position: relative;
+        }
+
+        .file-upload-box:hover {
+            background: rgba(255, 255, 255, 0.08);
+            border-color: rgba(255, 255, 255, 0.35);
+        }
+
+        .file-upload-box.has-file {
+            background: rgba(255, 255, 255, 0.07);
+            border-style: solid;
+            border-color: rgba(255, 255, 255, 0.3);
+        }
+
+        .file-upload-icon {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            border-radius: 10px;
+            background: rgba(255, 255, 255, 0.06);
+            color: rgba(255, 255, 255, 0.8);
+            flex-shrink: 0;
+            transition: all 0.2s ease;
+        }
+
+        .file-upload-box:hover .file-upload-icon {
+            background: rgba(255, 255, 255, 0.12);
+            color: #ffffff;
+            transform: scale(1.03);
+        }
+
+        .file-upload-text {
+            display: flex;
+            flex-direction: column;
+            gap: 3px;
+            overflow: hidden;
+        }
+
+        .file-upload-title {
+            font-size: 14px;
+            font-weight: 500;
+            color: #fff;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
+        .file-upload-hint {
+            font-size: 12px;
+            color: rgba(255, 255, 255, 0.5);
+        }
+
+        .file-input-hidden {
+            position: absolute;
+            width: 0;
+            height: 0;
+            opacity: 0;
+            pointer-events: none;
+        }
+
+        /* Competition Guidelines PDF Download */
+        .pdf-download-box {
+            text-decoration: none;
+            justify-content: flex-start;
+        }
+
+        .file-download-arrow {
+            margin-left: auto;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 34px;
+            height: 34px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.05);
+            color: rgba(255, 255, 255, 0.8);
+            flex-shrink: 0;
+            transition: background 0.2s ease, color 0.2s ease;
+        }
+
+        .pdf-download-box:hover .file-download-arrow {
+            background: rgba(255, 255, 255, 0.12);
+            color: #ffffff;
+        }
+
+        /* Dynamic Category Fields */
+        .category-fields-group {
+            display: flex;
+            flex-direction: column;
+            gap: 22px;
+            width: 100%;
+            animation: fadeInCategory 0.3s ease;
+        }
+
+        @keyframes fadeInCategory {
+            from {
+                opacity: 0;
+                transform: translateY(6px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .field-subtext {
+            font-size: 12px;
+            color: rgba(255, 255, 255, 0.5);
+            margin-top: 4px;
+            line-height: 1.4;
         }
     </style>
 </head>
@@ -7171,43 +7340,115 @@
             </section>
             <form class="registration-form" id="esper-registration-form"
                 onsubmit="window.handleEsperFormSubmit(event)">
-                <div class="form-row">
-                    <label for="award-category">Award Category</label>
-                    <div class="input-wrapper">
-                        <select class="form-control" id="award-category" name="awardCategory" required="">
-                            <option disabled="" selected="" value="">Select an award category...</option>
-                            <option value="young-inventor">Best Young Inventor of the Year</option>
-                            <option value="article-writer">Best Article Writer of the Year</option>
-                        </select>
+                <input name="registrationType" type="hidden" value="intra" />
+                <div class="form-columns">
+                    <div class="form-column" id="column-applicant-details">
+                        <div class="form-row">
+                            <label for="applicant-name">Name</label>
+                            <div class="input-wrapper">
+                                <input class="form-control" id="applicant-name" name="applicantName"
+                                    placeholder="Full name" required="" type="text" />
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <label for="applicant-grade">Grade</label>
+                            <div class="input-wrapper">
+                                <select class="form-control" id="applicant-grade" name="grade" required="">
+                                    <option disabled="" selected="" value="">Select Grade...</option>
+                                    <option value="Grade 1">Grade 1</option>
+                                    <option value="Grade 2">Grade 2</option>
+                                    <option value="Grade 3">Grade 3</option>
+                                    <option value="Grade 4">Grade 4</option>
+                                    <option value="Grade 5">Grade 5</option>
+                                    <option value="Grade 6">Grade 6</option>
+                                    <option value="Grade 7">Grade 7</option>
+                                    <option value="Grade 8">Grade 8</option>
+                                    <option value="Grade 9">Grade 9</option>
+                                    <option value="Grade 10">Grade 10</option>
+                                    <option value="Grade 11">Grade 11</option>
+                                    <option value="Grade 12">Grade 12</option>
+                                    <option value="Grade 13">Grade 13</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <label for="contact-number">Phone Number</label>
+                            <div class="input-wrapper phone-input">
+                                <span class="country-code">+94</span>
+                                <input class="form-control" id="contact-number" name="contactNumber" placeholder="XX XXX XXXX"
+                                    required="" type="tel" />
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <label for="email-address">Email Address</label>
+                            <div class="input-wrapper">
+                                <input class="form-control" id="email-address" name="emailAddress"
+                                    placeholder="yourname@gmail.com" required="" type="email" />
+                            </div>
+                        </div>
                     </div>
-                </div>
-                <div class="form-row">
-                    <label for="school-name">School Name</label>
-                    <div class="input-wrapper">
-                        <input class="form-control" id="school-name" name="schoolName"
-                            placeholder="e.g., D. S. Senanayake College" required="" type="text" />
-                    </div>
-                </div>
-                <div class="form-row">
-                    <label for="president-name">President Name</label>
-                    <div class="input-wrapper">
-                        <input class="form-control" id="president-name" name="presidentName"
-                            placeholder="Science Union / Society President" required="" type="text" />
-                    </div>
-                </div>
-                <div class="form-row">
-                    <label for="contact-number">Contact Number</label>
-                    <div class="input-wrapper phone-input">
-                        <span class="country-code">+94</span>
-                        <input class="form-control" id="contact-number" name="contactNumber" placeholder="XX XXX XXXX"
-                            required="" type="tel" />
-                    </div>
-                </div>
-                <div class="form-row">
-                    <label for="email-address">Email Address</label>
-                    <div class="input-wrapper">
-                        <input class="form-control" id="email-address" name="emailAddress"
-                            placeholder="official@schoolunion.com" required="" type="email" />
+                    <div class="form-column" id="column-submission-details">
+                        <div class="form-row">
+                            <label for="award-category">Award Category</label>
+                            <div class="input-wrapper">
+                                <select class="form-control" id="award-category" name="awardCategory" required="" onchange="window.handleAwardCategoryChange(this)">
+                                    <option disabled="" selected="" value="">Select an award category...</option>
+                                    <option value="young-inventor">Best Young Inventor of the Year</option>
+                                    <option value="article-writer">Best Article Writer of the Year</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <label>Competition Guidelines</label>
+                            <div class="input-wrapper">
+                                <a class="file-upload-box pdf-download-box" href="/esper/Esper_Intra_School_Awards_Rules.pdf" download="Esper_Intra_School_Awards_Rules.pdf" target="_blank" rel="noopener noreferrer">
+                                    <div class="file-upload-icon">
+                                        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                            <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                                            <polyline points="14 2 14 8 20 8"></polyline>
+                                            <line x1="16" y1="13" x2="8" y2="13"></line>
+                                            <line x1="16" y1="17" x2="8" y2="17"></line>
+                                            <polyline points="10 9 9 9 8 9"></polyline>
+                                        </svg>
+                                    </div>
+                                    <div class="file-upload-text">
+                                        <span class="file-upload-title">Click to download Rules &amp; Regulations</span>
+                                        <span class="file-upload-hint">PDF Document (Official Competition Rulebook)</span>
+                                    </div>
+                                    <div class="file-download-arrow">
+                                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                                            <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                                            <polyline points="7 10 12 15 17 10"></polyline>
+                                            <line x1="12" y1="15" x2="12" y2="3"></line>
+                                        </svg>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                        <!-- Dynamic Submission Fields for Intra Awards -->
+                        <!-- Best Young Inventor of the Year -->
+                        <div class="category-fields-group" id="fields-young-inventor" style="display: none;">
+                            <div class="form-row">
+                                <label for="inventor-drive-link">Google Drive Link</label>
+                                <div class="input-wrapper">
+                                    <input class="form-control" id="inventor-drive-link" name="inventorDriveLink"
+                                        placeholder="https://drive.google.com/drive/folders/..." type="url" />
+                                </div>
+                                <span class="field-subtext">Please ensure the Google Drive link sharing setting is set to &ldquo;Anyone with the link can view&rdquo;.</span>
+                            </div>
+                        </div>
+
+                        <!-- Best Article Writer of the Year -->
+                        <div class="category-fields-group" id="fields-article-writer" style="display: none;">
+                            <div class="form-row">
+                                <label for="article-doc-link">Google Docs Link</label>
+                                <div class="input-wrapper">
+                                    <input class="form-control" id="article-doc-link" name="articleDocLink"
+                                        placeholder="https://docs.google.com/document/d/..." type="url" />
+                                </div>
+                                <span class="field-subtext">Please ensure the Google Doc link sharing setting is set to &ldquo;Anyone with the link can view&rdquo;.</span>
+                            </div>
+                        </div>
                     </div>
                 </div>
                 <div class="registration-note">
@@ -7226,12 +7467,48 @@
             </form>
             <div class="helpline">
                 Need help with registration?<br>
-                <a href="tel:+94762686254">Helpline: +94 76 268 6254</a>
+                <a href="tel:+94707670676">Helpline: +94 70 767 0676</a>
             </div>
         </main>
     </template>
 
     <script>
+        window.handleSchoolLogoChange = function(input) {
+            const filenameEl = document.getElementById('school-logo-filename');
+            const uploadBox = input.closest('.file-upload-box');
+            if (input.files && input.files.length > 0) {
+                const file = input.files[0];
+                const sizeKB = (file.size / 1024).toFixed(1);
+                if (filenameEl) filenameEl.textContent = `${file.name} (${sizeKB} KB)`;
+                if (uploadBox) uploadBox.classList.add('has-file');
+            } else {
+                if (filenameEl) filenameEl.textContent = filenameEl.dataset.defaultText || 'Click or drag & drop to upload school logo';
+                if (uploadBox) uploadBox.classList.remove('has-file');
+            }
+        };
+
+        window.handleAwardCategoryChange = function(selectEl) {
+            const selected = selectEl.value;
+            const form = selectEl.closest('form');
+            if (!form) return;
+            const categoryGroups = form.querySelectorAll('.category-fields-group');
+            categoryGroups.forEach(group => {
+                const isMatch = group.id === `fields-${selected}`;
+                group.style.display = isMatch ? 'flex' : 'none';
+                const inputs = group.querySelectorAll('input, select, textarea');
+                inputs.forEach(input => {
+                    if (isMatch) {
+                        if (!input.hasAttribute('data-optional')) {
+                            input.setAttribute('required', '');
+                        }
+                    } else {
+                        input.removeAttribute('required');
+                        input.value = '';
+                    }
+                });
+            });
+        };
+
         window.handleEsperFormSubmit = async function(event) {
             event.preventDefault();
             const form = event.target;
@@ -7262,6 +7539,18 @@
                     msgBox.style.border = '1px solid #c3e6cb';
                     msgBox.innerText = 'Registration submitted successfully!';
                     form.reset();
+                    const logoText = form.querySelector('#school-logo-filename');
+                    if (logoText) logoText.textContent = logoText.dataset.defaultText || 'Click or drag & drop to upload school logo';
+                    const logoBox = form.querySelector('.file-upload-box');
+                    if (logoBox) logoBox.classList.remove('has-file');
+                    const categoryGroups = form.querySelectorAll('.category-fields-group');
+                    categoryGroups.forEach(group => {
+                        group.style.display = 'none';
+                        group.querySelectorAll('input, select, textarea').forEach(input => {
+                            input.removeAttribute('required');
+                            input.value = '';
+                        });
+                    });
                 } else {
                     msgBox.style.backgroundColor = '#f8d7da';
                     msgBox.style.color = '#721c24';
