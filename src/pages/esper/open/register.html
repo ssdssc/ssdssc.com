@@ -4161,6 +4161,16 @@
             color: rgba(255, 255, 255, 0.8);
             flex-shrink: 0;
             transition: all 0.2s ease;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .file-upload-icon img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+            border-radius: 8px;
+            display: block;
         }
 
         .file-upload-box:hover .file-upload-icon {
@@ -7509,14 +7519,29 @@
         window.handleFileUploadChange = function(input, labelId, defaultText) {
             const filenameEl = document.getElementById(labelId);
             const uploadBox = input.closest('.file-upload-box');
+            const iconEl = uploadBox ? uploadBox.querySelector('.file-upload-icon') : null;
+            if (iconEl && !iconEl.dataset.defaultHtml) {
+                iconEl.dataset.defaultHtml = iconEl.innerHTML;
+            }
             if (input.files && input.files.length > 0) {
                 const file = input.files[0];
                 const sizeKB = (file.size / 1024).toFixed(1);
                 if (filenameEl) filenameEl.textContent = `${file.name} (${sizeKB} KB)`;
                 if (uploadBox) uploadBox.classList.add('has-file');
+
+                if (file.type.startsWith('image/') && iconEl) {
+                    const reader = new FileReader();
+                    reader.onload = function(e) {
+                        iconEl.innerHTML = `<img src="${e.target.result}" alt="Preview" />`;
+                    };
+                    reader.readAsDataURL(file);
+                }
             } else {
                 if (filenameEl) filenameEl.textContent = defaultText || 'Click or drag & drop to upload file';
                 if (uploadBox) uploadBox.classList.remove('has-file');
+                if (iconEl && iconEl.dataset.defaultHtml) {
+                    iconEl.innerHTML = iconEl.dataset.defaultHtml;
+                }
             }
         };
 
@@ -7544,6 +7569,10 @@
                                 const titleEl = uploadBox.querySelector('.file-upload-title');
                                 if (titleEl && titleEl.dataset.defaultText) {
                                     titleEl.textContent = titleEl.dataset.defaultText;
+                                }
+                                const iconEl = uploadBox.querySelector('.file-upload-icon');
+                                if (iconEl && iconEl.dataset.defaultHtml) {
+                                    iconEl.innerHTML = iconEl.dataset.defaultHtml;
                                 }
                             }
                         }
@@ -7586,6 +7615,10 @@
                         const titleEl = box.querySelector('.file-upload-title');
                         if (titleEl && titleEl.dataset.defaultText) {
                             titleEl.textContent = titleEl.dataset.defaultText;
+                        }
+                        const iconEl = box.querySelector('.file-upload-icon');
+                        if (iconEl && iconEl.dataset.defaultHtml) {
+                            iconEl.innerHTML = iconEl.dataset.defaultHtml;
                         }
                     });
                     const categoryGroups = form.querySelectorAll('.category-fields-group');
