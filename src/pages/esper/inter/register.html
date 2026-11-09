@@ -7294,6 +7294,11 @@
         let t = e.target.closest("[data-nested-link], [data-href], a[href], [role='link'], [data-framer-name='Subscribe Button'], [data-framer-name='Card']");
         if (!t) return;
         
+        // Skip file downloads / PDF download buttons so they download directly without navigating!
+        if (t.classList.contains("pdf-download-box") || t.hasAttribute("download") || (t.getAttribute("href") && t.getAttribute("href").toLowerCase().endsWith(".pdf"))) {
+          return;
+        }
+        
         let href = t.getAttribute("href") || t.getAttribute("data-href");
         
         if (!href) {
@@ -7528,7 +7533,7 @@
                         <div class="form-row">
                             <label>Competition Guidelines</label>
                             <div class="input-wrapper">
-                                <a class="file-upload-box pdf-download-box" href="/esper/Esper_Inter_School_Awards_Rules.pdf" download="Esper_Inter_School_Awards_Rules.pdf" target="_blank" rel="noopener noreferrer">
+                                <a class="file-upload-box pdf-download-box" href="/esper/Esper_Inter_School_Awards_Rules.pdf" download="Esper_Inter_School_Awards_Rules.pdf" onclick="window.directDownloadFile(event, this)">
                                     <div class="file-upload-icon">
                                         <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                                             <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
@@ -7650,6 +7655,53 @@
     </template>
 
     <script>
+        window.directDownloadFile = async function(event, anchorEl) {
+            if (event) {
+                event.preventDefault();
+                event.stopPropagation();
+            }
+            const el = anchorEl || (event ? event.currentTarget : null);
+            if (!el) return;
+            const url = el.getAttribute('href') || el.dataset.href;
+            const filename = el.getAttribute('download') || el.dataset.filename || (url ? url.split('/').pop() : 'Rulebook.pdf');
+            if (!url) return;
+
+            const titleEl = el.querySelector('.file-upload-title');
+            const originalText = titleEl ? titleEl.textContent : '';
+            if (titleEl) titleEl.textContent = 'Downloading Rulebook...';
+            el.style.pointerEvents = 'none';
+
+            try {
+                const response = await fetch(url);
+                if (!response.ok) throw new Error('Download failed: ' + response.statusText);
+                const blob = await response.blob();
+                const blobUrl = window.URL.createObjectURL(blob);
+                const tempLink = document.createElement('a');
+                tempLink.style.display = 'none';
+                tempLink.href = blobUrl;
+                tempLink.download = filename;
+                document.body.appendChild(tempLink);
+                tempLink.click();
+                document.body.removeChild(tempLink);
+                setTimeout(() => window.URL.revokeObjectURL(blobUrl), 2000);
+            } catch (err) {
+                console.error('Direct download error, using iframe fallback:', err);
+                let iframe = document.getElementById('hidden-download-frame');
+                if (!iframe) {
+                    iframe = document.createElement('iframe');
+                    iframe.id = 'hidden-download-frame';
+                    iframe.style.display = 'none';
+                    document.body.appendChild(iframe);
+                }
+                iframe.src = url;
+            } finally {
+                setTimeout(() => {
+                    if (titleEl) titleEl.textContent = originalText;
+                    el.style.pointerEvents = '';
+                }, 1200);
+            }
+        };
+
         window.clearFileUpload = function(event, btn) {
             if (event) {
                 event.preventDefault();

@@ -1,4 +1,15 @@
 {
+  "headers": [
+    {
+      "source": "/esper/(.*\\.pdf)",
+      "headers": [
+        {
+          "key": "Content-Disposition",
+          "value": "attachment"
+        }
+      ]
+    }
+  ],
   "redirects": [
     {
       "source": "/",

@@ -5097,8 +5097,8 @@
                         <img alt="" data-framer-original-sizes="max((min(100vw, 1160px) - 24px) / 2, 50px)"
                           decoding="async" height="1350" loading="lazy"
                           sizes="(min-width: 1200px) and (max-width: 1439.98px) max(max((min(100vw, 1160px) - 24px) / 2, 50px), 100vw), (min-width: 1440px) max(688px, 100vw), (min-width: 810px) and (max-width: 1199.98px) max(363px, 100vw), (max-width: 809.98px) max(max(min(100vw, 1160px) - 32px, 50px), 100vw)"
-                          src="/esper/images/Daedalus.png"
-                          srcset="/esper/images/Daedalus.png 1080w"
+                          src="/esper/images/Eureka.png"
+                          srcset="/esper/images/Eureka.png 1080w"
                           style="display:block;width:100%;height:100%;border-radius:inherit;object-position:center;object-fit:cover"
                           width="1080" />
                       </div>
@@ -5393,8 +5393,8 @@
                         style="position:absolute;border-radius:inherit;top:0;right:0;bottom:0;left:0">
                         <img alt="" data-framer-original-sizes="688px" decoding="async" height="1350" loading="lazy"
                           sizes="(min-width: 1200px) and (max-width: 1439.98px) max(max((min(100vw, 1160px) - 24px) / 2, 50px), 100vw), (min-width: 1440px) max(688px, 100vw), (min-width: 810px) and (max-width: 1199.98px) max(363px, 100vw), (max-width: 809.98px) max(max(min(100vw, 1160px) - 32px, 50px), 100vw)"
-                          src="/esper/images/Daedalus.png"
-                          srcset="/esper/images/Daedalus.png 1080w"
+                          src="/esper/images/Eureka.png"
+                          srcset="/esper/images/Eureka.png 1080w"
                           style="display:block;width:100%;height:100%;border-radius:inherit;object-position:center;object-fit:cover"
                           width="1080" />
                       </div>
@@ -5543,8 +5543,8 @@
                         style="position:absolute;border-radius:inherit;top:0;right:0;bottom:0;left:0">
                         <img alt="" data-framer-original-sizes="363px" decoding="async" height="1350" loading="lazy"
                           sizes="(min-width: 1200px) and (max-width: 1439.98px) max(max((min(100vw, 1160px) - 24px) / 2, 50px), 100vw), (min-width: 1440px) max(688px, 100vw), (min-width: 810px) and (max-width: 1199.98px) max(363px, 100vw), (max-width: 809.98px) max(max(min(100vw, 1160px) - 32px, 50px), 100vw)"
-                          src="/esper/images/Daedalus.png"
-                          srcset="/esper/images/Daedalus.png 1080w"
+                          src="/esper/images/Eureka.png"
+                          srcset="/esper/images/Eureka.png 1080w"
                           style="display:block;width:100%;height:100%;border-radius:inherit;object-position:center;object-fit:cover"
                           width="1080" />
                       </div>
@@ -5693,8 +5693,8 @@
                         style="position:absolute;border-radius:inherit;top:0;right:0;bottom:0;left:0">
                         <img alt="" data-framer-original-sizes="100vw" decoding="async" height="1350"
                           sizes="(min-width: 1200px) and (max-width: 1439.98px) max(max((min(100vw, 1160px) - 24px) / 2, 50px), 100vw), (min-width: 1440px) max(688px, 100vw), (min-width: 810px) and (max-width: 1199.98px) max(363px, 100vw), (max-width: 809.98px) max(max(min(100vw, 1160px) - 32px, 50px), 100vw)"
-                          src="/esper/images/Daedalus.png"
-                          srcset="/esper/images/Daedalus.png 1080w"
+                          src="/esper/images/Eureka.png"
+                          srcset="/esper/images/Eureka.png 1080w"
                           style="display:block;width:100%;height:100%;border-radius:inherit;object-position:center;object-fit:cover"
                           width="1080" />
                       </div>
@@ -5839,8 +5839,8 @@
                         <img alt="" data-framer-original-sizes="max(min(100vw, 1160px) - 32px, 50px)" decoding="async"
                           height="1350" loading="lazy"
                           sizes="(min-width: 1200px) and (max-width: 1439.98px) max(max((min(100vw, 1160px) - 24px) / 2, 50px), 100vw), (min-width: 1440px) max(688px, 100vw), (min-width: 810px) and (max-width: 1199.98px) max(363px, 100vw), (max-width: 809.98px) max(max(min(100vw, 1160px) - 32px, 50px), 100vw)"
-                          src="/esper/images/Daedalus.png"
-                          srcset="/esper/images/Daedalus.png 1080w"
+                          src="/esper/images/Eureka.png"
+                          srcset="/esper/images/Eureka.png 1080w"
                           style="display:block;width:100%;height:100%;border-radius:inherit;object-position:center;object-fit:cover"
                           width="1080" />
                       </div>
@@ -6934,19 +6934,21 @@
         if (introDesc && !introDesc.textContent.includes('Senanayakian')) {
           introDesc.innerHTML = '<strong class="framer-text"><a href="/esper/intra" style="text-decoration: none; color: inherit;">Intra School Awards</a></strong> — Honouring the exceptional scientific excellence, creativity, and innovative talent within D. S. Senanayake College, recognising the young Senanayakian innovators whose passion and dedication drive science forward.';
         }
-        document.querySelectorAll('h3').forEach(h3 => {
-          const text = h3.textContent.trim();
+        document.querySelectorAll('h3, h4').forEach(h => {
+          const text = h.textContent.trim();
           if (text.includes('Science Union')) {
-            h3.textContent = 'Best Young Inventor';
+            h.textContent = 'Best Young Inventor';
           } else if (text.includes('Quiz Team')) {
-            h3.textContent = 'Best Article Writer';
+            h.textContent = 'Best Article Writer';
           }
         });
         document.querySelectorAll('[data-framer-name="Card"]').forEach(card => {
           const img = card.querySelector('[data-framer-name="Image"] img, .framer-1oeo7ga img, img');
-          if (img && img.getAttribute('src') !== '/esper/images/Daedalus.png') {
-            img.setAttribute('src', '/esper/images/Daedalus.png');
-            img.setAttribute('srcset', '/esper/images/Daedalus.png 1080w');
+          const title = (card.querySelector('h3, h4')?.textContent || card.textContent || '').trim();
+          const targetImg = (title.includes('Article Writer') || title.includes('Quiz Team')) ? '/esper/images/Eureka.png' : '/esper/images/Daedalus.png';
+          if (img && img.getAttribute('src') !== targetImg) {
+            img.setAttribute('src', targetImg);
+            img.setAttribute('srcset', `${targetImg} 1080w`);
           }
           let wrapper = card.closest('.ssr-variant') || card.closest('.framer-61dahc-container, .framer-168vegr-container') || card;
           if (!wrapper.dataset.hoverWired) {

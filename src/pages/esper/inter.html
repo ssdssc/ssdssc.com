@@ -3766,11 +3766,29 @@
 
   <!-- Start of headEnd -->
   <style>
-    /* Card Grid: 3 columns on desktop so 6 award categories fit into two balanced rows of 3 */
+    /* Card Grid: 3 columns on desktop, with 1st featured card centered on its own row */
     @media (min-width: 900px) {
       .framer-LJlZq .framer-g159kn {
         grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
         gap: 20px !important;
+      }
+      .framer-LJlZq .framer-g159kn > [data-featured-first="true"],
+      .framer-g159kn > [data-featured-first="true"] {
+        grid-column: 1 / -1 !important;
+        justify-self: center !important;
+        place-self: center !important;
+        margin-left: auto !important;
+        margin-right: auto !important;
+        width: 100% !important;
+        max-width: calc((100% - 40px) / 3) !important;
+        margin-bottom: 12px !important;
+      }
+      .framer-LJlZq .framer-g159kn > [data-featured-first="true"] > div,
+      .framer-g159kn > [data-featured-first="true"] > div,
+      .framer-LJlZq .framer-g159kn > [data-featured-first="true"] .framer-61dahc-container,
+      .framer-g159kn > [data-featured-first="true"] .framer-61dahc-container {
+        width: 100% !important;
+        max-width: 100% !important;
       }
     }
     @media (min-width: 600px) and (max-width: 899px) {
@@ -3778,11 +3796,35 @@
         grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
         gap: 20px !important;
       }
+      .framer-LJlZq .framer-g159kn > [data-featured-first="true"],
+      .framer-g159kn > [data-featured-first="true"] {
+        grid-column: 1 / -1 !important;
+        justify-self: center !important;
+        place-self: center !important;
+        margin-left: auto !important;
+        margin-right: auto !important;
+        width: 100% !important;
+        max-width: calc((100% - 20px) / 2) !important;
+        margin-bottom: 12px !important;
+      }
+      .framer-LJlZq .framer-g159kn > [data-featured-first="true"] > div,
+      .framer-g159kn > [data-featured-first="true"] > div,
+      .framer-LJlZq .framer-g159kn > [data-featured-first="true"] .framer-61dahc-container,
+      .framer-g159kn > [data-featured-first="true"] .framer-61dahc-container {
+        width: 100% !important;
+        max-width: 100% !important;
+      }
     }
     @media (max-width: 599px) {
       .framer-LJlZq .framer-g159kn {
         grid-template-columns: 1fr !important;
         gap: 24px !important;
+      }
+      .framer-LJlZq .framer-g159kn > [data-featured-first="true"],
+      .framer-g159kn > [data-featured-first="true"] {
+        grid-column: 1 / -1 !important;
+        width: 100% !important;
+        max-width: 100% !important;
       }
     }
 
@@ -4772,7 +4814,7 @@
 
 
         <div class="framer-g159kn" data-framer-name="Team Collection">
-          <div class="ssr-variant hidden-193nlgj">
+          <div class="ssr-variant hidden-193nlgj" data-featured-first="true">
             <div class="framer-61dahc-container hidden-ebiaht hidden-9w4hrp">
               <div class="framer-Wwu9j framer-XmJ2D framer-RYoxI framer-KVX8B framer-1hq3fz8 framer-v-1hq3fz8"
                 data-framer-name="Desktop" style="width:100%">
@@ -4787,8 +4829,8 @@
                         <img alt="" data-framer-original-sizes="max((min(100vw, 1160px) - 24px) / 2, 50px)"
                           decoding="async" height="1350" loading="lazy"
                           sizes="(min-width: 1200px) and (max-width: 1439.98px) max((min(100vw, 1160px) - 24px) / 2, 50px), (min-width: 810px) and (max-width: 1199.98px) max((min(100vw, 1160px) - 24px) / 2, 50px), (max-width: 809.98px) max(max((min(100vw, 1160px) - 24px) / 2, 50px), max(min(100vw, 1160px) - 32px, 50px)), (min-width: 1440px) 688px"
-                          src="/esper/images/Daedalus.png"
-                          srcset="/esper/images/Daedalus.png 1080w"
+                          src="/esper/images/most%20popular%20science%20union.png"
+                          srcset="/esper/images/most%20popular%20science%20union.png 1080w"
                           style="display:block;width:100%;height:100%;border-radius:inherit;object-position:center;object-fit:cover"
                           width="1080" />
                       </div>
@@ -4812,7 +4854,7 @@
                         style="--extracted-a0htzi:var(--token-c05d7eb5-3b85-4d38-a5b8-65cb0e0a1652, rgb(255, 255, 255));--framer-paragraph-spacing:0px;transform:none">
                         <h3 class="framer-text framer-styles-preset-13p7sgr" data-styles-preset="JUBZ8oPFx"
                           style="--framer-text-alignment:left;--framer-text-color:var(--extracted-a0htzi, var(--token-c05d7eb5-3b85-4d38-a5b8-65cb0e0a1652, rgb(255, 255, 255)))">
-                          Best Article Writer
+                          Most Popular Science Union
                         </h3>
 
 
@@ -4923,7 +4965,7 @@
           </div>
 
 
-          <div class="ssr-variant hidden-9w4hrp hidden-ebiaht hidden-72rtr7">
+          <div class="ssr-variant hidden-9w4hrp hidden-ebiaht hidden-72rtr7" data-featured-first="true">
             <div class="framer-61dahc-container hidden-ebiaht hidden-9w4hrp">
               <div class="framer-Wwu9j framer-XmJ2D framer-RYoxI framer-KVX8B framer-1hq3fz8 framer-v-1hq3fz8"
                 data-framer-name="Desktop" style="height:100%;width:100%">
@@ -4937,8 +4979,8 @@
                         style="position:absolute;border-radius:inherit;top:0;right:0;bottom:0;left:0">
                         <img alt="" data-framer-original-sizes="688px" decoding="async" height="1350" loading="lazy"
                           sizes="(min-width: 1200px) and (max-width: 1439.98px) max((min(100vw, 1160px) - 24px) / 2, 50px), (min-width: 810px) and (max-width: 1199.98px) max((min(100vw, 1160px) - 24px) / 2, 50px), (max-width: 809.98px) max(max((min(100vw, 1160px) - 24px) / 2, 50px), max(min(100vw, 1160px) - 32px, 50px)), (min-width: 1440px) 688px"
-                          src="/esper/images/Daedalus.png"
-                          srcset="/esper/images/Daedalus.png 1080w"
+                          src="/esper/images/most%20popular%20science%20union.png"
+                          srcset="/esper/images/most%20popular%20science%20union.png 1080w"
                           style="display:block;width:100%;height:100%;border-radius:inherit;object-position:center;object-fit:cover"
                           width="1080" />
                       </div>
@@ -4962,7 +5004,7 @@
                         style="--extracted-a0htzi:var(--token-c05d7eb5-3b85-4d38-a5b8-65cb0e0a1652, rgb(255, 255, 255));--framer-paragraph-spacing:0px;transform:none">
                         <h3 class="framer-text framer-styles-preset-13p7sgr" data-styles-preset="JUBZ8oPFx"
                           style="--framer-text-alignment:left;--framer-text-color:var(--extracted-a0htzi, var(--token-c05d7eb5-3b85-4d38-a5b8-65cb0e0a1652, rgb(255, 255, 255)))">
-                          Best Article Writer
+                          Most Popular Science Union
                         </h3>
 
 
@@ -5088,8 +5130,8 @@
                         <img alt="" data-framer-original-sizes="max((min(100vw, 1160px) - 24px) / 2, 50px)"
                           decoding="async" height="1350" loading="lazy"
                           sizes="(min-width: 1200px) and (max-width: 1439.98px) max(max((min(100vw, 1160px) - 24px) / 2, 50px), 100vw), (min-width: 1440px) max(688px, 100vw), (min-width: 810px) and (max-width: 1199.98px) max(363px, 100vw), (max-width: 809.98px) max(max(min(100vw, 1160px) - 32px, 50px), 100vw)"
-                          src="/esper/images/Daedalus.png"
-                          srcset="/esper/images/Daedalus.png 1080w"
+                          src="/esper/images/Eureka.png"
+                          srcset="/esper/images/Eureka.png 1080w"
                           style="display:block;width:100%;height:100%;border-radius:inherit;object-position:center;object-fit:cover"
                           width="1080" />
                       </div>
@@ -5113,7 +5155,7 @@
                         style="--extracted-a0htzi:var(--token-c05d7eb5-3b85-4d38-a5b8-65cb0e0a1652, rgb(255, 255, 255));--framer-paragraph-spacing:0px;transform:none">
                         <h3 class="framer-text framer-styles-preset-13p7sgr" data-styles-preset="JUBZ8oPFx"
                           style="--framer-text-alignment:left;--framer-text-color:var(--extracted-a0htzi, var(--token-c05d7eb5-3b85-4d38-a5b8-65cb0e0a1652, rgb(255, 255, 255)))">
-                          Best Research Team
+                          Best Article Writer
                         </h3>
 
 
@@ -5224,7 +5266,7 @@
           </div>
 
 
-          <div class="ssr-variant hidden-193nlgj hidden-ebiaht hidden-72rtr7">
+          <div class="ssr-variant hidden-193nlgj hidden-ebiaht hidden-72rtr7" data-featured-first="true">
             <div class="framer-168vegr-container">
               <div class="framer-Wwu9j framer-XmJ2D framer-RYoxI framer-KVX8B framer-1hq3fz8 framer-v-a2txb7"
                 data-framer-name="Phone" style="width:100%">
@@ -5239,8 +5281,8 @@
                         <img alt="" data-framer-original-sizes="max(min(100vw, 1160px) - 32px, 50px)" decoding="async"
                           height="1350" loading="lazy"
                           sizes="(min-width: 1200px) and (max-width: 1439.98px) max((min(100vw, 1160px) - 24px) / 2, 50px), (min-width: 810px) and (max-width: 1199.98px) max((min(100vw, 1160px) - 24px) / 2, 50px), (max-width: 809.98px) max(max((min(100vw, 1160px) - 24px) / 2, 50px), max(min(100vw, 1160px) - 32px, 50px)), (min-width: 1440px) 688px"
-                          src="/esper/images/Daedalus.png"
-                          srcset="/esper/images/Daedalus.png 1080w"
+                          src="/esper/images/most%20popular%20science%20union.png"
+                          srcset="/esper/images/most%20popular%20science%20union.png 1080w"
                           style="display:block;width:100%;height:100%;border-radius:inherit;object-position:center;object-fit:cover"
                           width="1080" />
                       </div>
@@ -5259,7 +5301,7 @@
                         style="--extracted-a0htzi:var(--token-c05d7eb5-3b85-4d38-a5b8-65cb0e0a1652, rgb(255, 255, 255));--framer-paragraph-spacing:0px;--extracted-1eung3n:var(--token-c05d7eb5-3b85-4d38-a5b8-65cb0e0a1652, rgb(255, 255, 255));transform:none">
                         <h4 class="framer-text framer-styles-preset-xc8e4b" data-styles-preset="kplr9XhmC"
                           style="--framer-text-alignment:left;--framer-text-color:var(--extracted-1eung3n, var(--token-c05d7eb5-3b85-4d38-a5b8-65cb0e0a1652, rgb(255, 255, 255)))">
-                          Best Article Writer
+                          Most Popular Science Union
                         </h4>
 
 
@@ -5384,8 +5426,8 @@
                         style="position:absolute;border-radius:inherit;top:0;right:0;bottom:0;left:0">
                         <img alt="" data-framer-original-sizes="688px" decoding="async" height="1350" loading="lazy"
                           sizes="(min-width: 1200px) and (max-width: 1439.98px) max(max((min(100vw, 1160px) - 24px) / 2, 50px), 100vw), (min-width: 1440px) max(688px, 100vw), (min-width: 810px) and (max-width: 1199.98px) max(363px, 100vw), (max-width: 809.98px) max(max(min(100vw, 1160px) - 32px, 50px), 100vw)"
-                          src="/esper/images/Daedalus.png"
-                          srcset="/esper/images/Daedalus.png 1080w"
+                          src="/esper/images/Eureka.png"
+                          srcset="/esper/images/Eureka.png 1080w"
                           style="display:block;width:100%;height:100%;border-radius:inherit;object-position:center;object-fit:cover"
                           width="1080" />
                       </div>
@@ -5409,7 +5451,7 @@
                         style="--extracted-a0htzi:var(--token-c05d7eb5-3b85-4d38-a5b8-65cb0e0a1652, rgb(255, 255, 255));--framer-paragraph-spacing:0px;transform:none">
                         <h3 class="framer-text framer-styles-preset-13p7sgr" data-styles-preset="JUBZ8oPFx"
                           style="--framer-text-alignment:left;--framer-text-color:var(--extracted-a0htzi, var(--token-c05d7eb5-3b85-4d38-a5b8-65cb0e0a1652, rgb(255, 255, 255)))">
-                          Best Research Team
+                          Best Article Writer
                         </h3>
 
 
@@ -5534,8 +5576,8 @@
                         style="position:absolute;border-radius:inherit;top:0;right:0;bottom:0;left:0">
                         <img alt="" data-framer-original-sizes="363px" decoding="async" height="1350" loading="lazy"
                           sizes="(min-width: 1200px) and (max-width: 1439.98px) max(max((min(100vw, 1160px) - 24px) / 2, 50px), 100vw), (min-width: 1440px) max(688px, 100vw), (min-width: 810px) and (max-width: 1199.98px) max(363px, 100vw), (max-width: 809.98px) max(max(min(100vw, 1160px) - 32px, 50px), 100vw)"
-                          src="/esper/images/Daedalus.png"
-                          srcset="/esper/images/Daedalus.png 1080w"
+                          src="/esper/images/Eureka.png"
+                          srcset="/esper/images/Eureka.png 1080w"
                           style="display:block;width:100%;height:100%;border-radius:inherit;object-position:center;object-fit:cover"
                           width="1080" />
                       </div>
@@ -5559,7 +5601,7 @@
                         style="--extracted-a0htzi:var(--token-c05d7eb5-3b85-4d38-a5b8-65cb0e0a1652, rgb(255, 255, 255));--framer-paragraph-spacing:0px;transform:none">
                         <h3 class="framer-text framer-styles-preset-13p7sgr" data-styles-preset="JUBZ8oPFx"
                           style="--framer-text-alignment:left;--framer-text-color:var(--extracted-a0htzi, var(--token-c05d7eb5-3b85-4d38-a5b8-65cb0e0a1652, rgb(255, 255, 255)))">
-                          Best Research Team
+                          Best Article Writer
                         </h3>
 
 
@@ -5684,8 +5726,8 @@
                         style="position:absolute;border-radius:inherit;top:0;right:0;bottom:0;left:0">
                         <img alt="" data-framer-original-sizes="100vw" decoding="async" height="1350"
                           sizes="(min-width: 1200px) and (max-width: 1439.98px) max(max((min(100vw, 1160px) - 24px) / 2, 50px), 100vw), (min-width: 1440px) max(688px, 100vw), (min-width: 810px) and (max-width: 1199.98px) max(363px, 100vw), (max-width: 809.98px) max(max(min(100vw, 1160px) - 32px, 50px), 100vw)"
-                          src="/esper/images/Daedalus.png"
-                          srcset="/esper/images/Daedalus.png 1080w"
+                          src="/esper/images/Eureka.png"
+                          srcset="/esper/images/Eureka.png 1080w"
                           style="display:block;width:100%;height:100%;border-radius:inherit;object-position:center;object-fit:cover"
                           width="1080" />
                       </div>
@@ -5704,7 +5746,7 @@
                         style="--extracted-a0htzi:var(--token-c05d7eb5-3b85-4d38-a5b8-65cb0e0a1652, rgb(255, 255, 255));--framer-paragraph-spacing:0px;--extracted-1eung3n:var(--token-c05d7eb5-3b85-4d38-a5b8-65cb0e0a1652, rgb(255, 255, 255));transform:none">
                         <h4 class="framer-text framer-styles-preset-xc8e4b" data-styles-preset="kplr9XhmC"
                           style="--framer-text-alignment:left;--framer-text-color:var(--extracted-1eung3n, var(--token-c05d7eb5-3b85-4d38-a5b8-65cb0e0a1652, rgb(255, 255, 255)))">
-                          Best Research Team
+                          Best Article Writer
                         </h4>
 
 
@@ -5830,8 +5872,8 @@
                         <img alt="" data-framer-original-sizes="max(min(100vw, 1160px) - 32px, 50px)" decoding="async"
                           height="1350" loading="lazy"
                           sizes="(min-width: 1200px) and (max-width: 1439.98px) max(max((min(100vw, 1160px) - 24px) / 2, 50px), 100vw), (min-width: 1440px) max(688px, 100vw), (min-width: 810px) and (max-width: 1199.98px) max(363px, 100vw), (max-width: 809.98px) max(max(min(100vw, 1160px) - 32px, 50px), 100vw)"
-                          src="/esper/images/Daedalus.png"
-                          srcset="/esper/images/Daedalus.png 1080w"
+                          src="/esper/images/Eureka.png"
+                          srcset="/esper/images/Eureka.png 1080w"
                           style="display:block;width:100%;height:100%;border-radius:inherit;object-position:center;object-fit:cover"
                           width="1080" />
                       </div>
@@ -5850,7 +5892,7 @@
                         style="--extracted-a0htzi:var(--token-c05d7eb5-3b85-4d38-a5b8-65cb0e0a1652, rgb(255, 255, 255));--framer-paragraph-spacing:0px;--extracted-1eung3n:var(--token-c05d7eb5-3b85-4d38-a5b8-65cb0e0a1652, rgb(255, 255, 255));transform:none">
                         <h4 class="framer-text framer-styles-preset-xc8e4b" data-styles-preset="kplr9XhmC"
                           style="--framer-text-alignment:left;--framer-text-color:var(--extracted-1eung3n, var(--token-c05d7eb5-3b85-4d38-a5b8-65cb0e0a1652, rgb(255, 255, 255)))">
-                          Best Research Team
+                          Best Article Writer
                         </h4>
 
 
@@ -5961,7 +6003,7 @@
           </div>
 
 
-          <div class="ssr-variant hidden-ebiaht">
+          <div class="ssr-variant hidden-ebiaht" data-featured-first="true">
             <div class="framer-agn45e-container hidden-72rtr7 hidden-9w4hrp hidden-193nlgj">
               <div class="framer-Wwu9j framer-XmJ2D framer-RYoxI framer-KVX8B framer-1hq3fz8 framer-v-1hq3fz8"
                 data-framer-name="Desktop" style="height:100%;width:100%">
@@ -5975,8 +6017,8 @@
                         style="position:absolute;border-radius:inherit;top:0;right:0;bottom:0;left:0">
                         <img alt="" data-framer-original-sizes="100vw" decoding="async" height="1350"
                           sizes="(min-width: 1200px) and (max-width: 1439.98px) max(max((min(100vw, 1160px) - 24px) / 2, 50px), 100vw), (min-width: 1440px) max(688px, 100vw), (min-width: 810px) and (max-width: 1199.98px) max(363px, 100vw), (max-width: 809.98px) max(max(min(100vw, 1160px) - 32px, 50px), 100vw)"
-                          src="/esper/images/Daedalus.png"
-                          srcset="/esper/images/Daedalus.png 1080w"
+                          src="/esper/images/most%20popular%20science%20union.png"
+                          srcset="/esper/images/most%20popular%20science%20union.png 1080w"
                           style="display:block;width:100%;height:100%;border-radius:inherit;object-position:center;object-fit:cover"
                           width="1080" />
                       </div>
@@ -6000,7 +6042,7 @@
                         style="--extracted-a0htzi:var(--token-c05d7eb5-3b85-4d38-a5b8-65cb0e0a1652, rgb(255, 255, 255));--framer-paragraph-spacing:0px;transform:none">
                         <h3 class="framer-text framer-styles-preset-13p7sgr" data-styles-preset="JUBZ8oPFx"
                           style="--framer-text-alignment:left;--framer-text-color:var(--extracted-a0htzi, var(--token-c05d7eb5-3b85-4d38-a5b8-65cb0e0a1652, rgb(255, 255, 255)))">
-                          Best Article Writer
+                          Most Popular Science Union
                         </h3>
 
 
@@ -6111,7 +6153,7 @@
           </div>
 
 
-          <div class="ssr-variant hidden-9w4hrp hidden-193nlgj hidden-72rtr7">
+          <div class="ssr-variant hidden-9w4hrp hidden-193nlgj hidden-72rtr7" data-featured-first="true">
             <div class="framer-agn45e-container hidden-72rtr7 hidden-9w4hrp hidden-193nlgj">
               <div class="framer-Wwu9j framer-XmJ2D framer-RYoxI framer-KVX8B framer-1hq3fz8 framer-v-1hq3fz8"
                 data-framer-name="Desktop" style="height:100%;width:100%">
@@ -6125,8 +6167,8 @@
                         style="position:absolute;border-radius:inherit;top:0;right:0;bottom:0;left:0">
                         <img alt="" data-framer-original-sizes="363px" decoding="async" height="1350" loading="lazy"
                           sizes="(min-width: 1200px) and (max-width: 1439.98px) max(max((min(100vw, 1160px) - 24px) / 2, 50px), 100vw), (min-width: 1440px) max(688px, 100vw), (min-width: 810px) and (max-width: 1199.98px) max(363px, 100vw), (max-width: 809.98px) max(max(min(100vw, 1160px) - 32px, 50px), 100vw)"
-                          src="/esper/images/Daedalus.png"
-                          srcset="/esper/images/Daedalus.png 1080w"
+                          src="/esper/images/most%20popular%20science%20union.png"
+                          srcset="/esper/images/most%20popular%20science%20union.png 1080w"
                           style="display:block;width:100%;height:100%;border-radius:inherit;object-position:center;object-fit:cover"
                           width="1080" />
                       </div>
@@ -6150,7 +6192,7 @@
                         style="--extracted-a0htzi:var(--token-c05d7eb5-3b85-4d38-a5b8-65cb0e0a1652, rgb(255, 255, 255));--framer-paragraph-spacing:0px;transform:none">
                         <h3 class="framer-text framer-styles-preset-13p7sgr" data-styles-preset="JUBZ8oPFx"
                           style="--framer-text-alignment:left;--framer-text-color:var(--extracted-a0htzi, var(--token-c05d7eb5-3b85-4d38-a5b8-65cb0e0a1652, rgb(255, 255, 255)))">
-                          Best Article Writer
+                          Most Popular Science Union
                         </h3>
 
 
@@ -6926,12 +6968,12 @@
         grid.style.setProperty('height', 'auto', 'important');
 
         const categories = [
-          { title: "Best Article Writer", sub: "Of The Year Award", image: "/esper/images/Daedalus.png" },
-          { title: "Best Research Team", sub: "Of The Year", image: "/esper/images/Daedalus.png" },
+          { title: "Most Popular Science Union", sub: "Of The Year", image: "/esper/images/most%20popular%20science%20union.png" },
+          { title: "Best Article Writer", sub: "Of The Year Award", image: "/esper/images/Eureka.png" },
+          { title: "Best Research Team", sub: "Of The Year", image: "/esper/images/Agora.png" },
           { title: "Graphic Designer", sub: "Of The Year", image: "/esper/images/Aesthetikos.png" },
-          { title: "EDU Coder", sub: "Of The Year", image: "/esper/images/Algorithms.png" },
-          { title: "Best Young Inventor", sub: "Of The Year", image: "/esper/images/Daedalus.png" },
-          { title: "Most Popular Science Union", sub: "Of The Year", image: "/esper/images/Daedalus.png" }
+          { title: "EDU Coder", sub: "Of The Year", image: "/esper/images/Algorithmos.png" },
+          { title: "Best Young Inventor", sub: "Of The Year", image: "/esper/images/Daedalus.png" }
         ];
 
         const allCards = Array.from(grid.querySelectorAll('[data-framer-name="Card"]'));
@@ -6982,6 +7024,11 @@
         });
 
         allVisibleCards.forEach((wrapper, index) => {
+          if (index === 0) {
+            wrapper.setAttribute('data-featured-first', 'true');
+          } else {
+            wrapper.removeAttribute('data-featured-first');
+          }
           if (index < categories.length) {
             const titleEl = wrapper.querySelector('h3, h4');
             if (titleEl && titleEl.textContent.trim() !== categories[index].title) {
@@ -6993,9 +7040,12 @@
             }
             if (categories[index].image) {
               const img = wrapper.querySelector('[data-framer-name="Image"] img, .framer-1oeo7ga img, img');
-              if (img && img.getAttribute('src') !== categories[index].image) {
-                img.setAttribute('src', categories[index].image);
-                img.setAttribute('srcset', categories[index].image);
+              if (img) {
+                const targetSrc = categories[index].image;
+                if (img.getAttribute('src') !== targetSrc) {
+                  img.setAttribute('src', targetSrc);
+                }
+                img.setAttribute('srcset', `${targetSrc} 1080w`);
               }
             }
             // Ensure card and button link directly to /esper/inter/register
