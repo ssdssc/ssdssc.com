@@ -3910,39 +3910,208 @@
         }
 
         @media (max-width: 860px) {
+            html, body, #main {
+                overflow-x: hidden !important;
+                max-width: 100vw !important;
+                width: 100% !important;
+                box-sizing: border-box !important;
+            }
+
+            .framer-LJlZq,
+            .framer-LJlZq.framer-72rtr7,
+            .framer-LJlZq.framer-193nlgj,
+            .framer-LJlZq.framer-ebiaht,
+            .framer-LJlZq.framer-9w4hrp,
+            div[data-framer-root] {
+                width: 100% !important;
+                max-width: 100vw !important;
+                box-sizing: border-box !important;
+                margin-left: auto !important;
+                margin-right: auto !important;
+                overflow-x: hidden !important;
+            }
+
+            .framer-fanaa3-container,
+            .framer-nqkdlu {
+                width: 100% !important;
+                max-width: 100vw !important;
+                box-sizing: border-box !important;
+            }
+
+            .framer-lhng8p,
+            .framer-LJlZq .framer-lhng8p {
+                box-sizing: border-box !important;
+                width: 100% !important;
+                max-width: 100vw !important;
+                padding-left: 16px !important;
+                padding-right: 16px !important;
+                margin-left: auto !important;
+                margin-right: auto !important;
+                display: flex !important;
+                flex-direction: column !important;
+                align-items: center !important;
+                overflow: visible !important;
+            }
+
+            #injected-esper-form {
+                width: 100% !important;
+                max-width: 100% !important;
+                box-sizing: border-box !important;
+                display: flex !important;
+                justify-content: center !important;
+                align-items: center !important;
+                margin: 0 auto !important;
+                padding: 0 !important;
+            }
+
             .page-container {
                 color: #ffffff;
-                margin: 40px auto;
+                width: 100% !important;
+                max-width: 100% !important;
+                margin: 20px auto 40px auto !important;
+                padding: 0 !important;
+                box-sizing: border-box !important;
+                display: flex !important;
+                flex-direction: column !important;
+                align-items: center !important;
             }
 
             .hero-section {
-                margin-bottom: 40px;
+                width: 100% !important;
+                max-width: 100% !important;
+                box-sizing: border-box !important;
+                margin-bottom: 28px !important;
+                padding: 0 4px !important;
+                text-align: center !important;
             }
 
             .hero-section h1 {
-                color: #ffffff;
-                font-size: 42px;
-                letter-spacing: -1px;
+                font-size: clamp(28px, 7.5vw, 40px) !important;
+                line-height: 1.15 !important;
+                word-break: break-word !important;
+                overflow-wrap: break-word !important;
+                letter-spacing: -1px !important;
+                margin: 10px 0 !important;
+                max-width: 100% !important;
             }
 
             .hero-section p {
-                color: #ffffff;
-                font-size: 16px;
-            }
-
-            .form-columns {
-                grid-template-columns: 1fr;
-                gap: 22px;
+                font-size: 15px !important;
+                line-height: 1.5 !important;
+                word-break: break-word !important;
+                overflow-wrap: break-word !important;
+                max-width: 100% !important;
+                padding: 0 4px !important;
             }
 
             .registration-form {
-                max-width: 580px;
-                gap: 20px;
+                width: 100% !important;
+                max-width: 100% !important;
+                box-sizing: border-box !important;
+                margin: 0 auto !important;
+                gap: 20px !important;
+            }
+
+            .form-columns {
+                display: flex !important;
+                flex-direction: column !important;
+                width: 100% !important;
+                max-width: 100% !important;
+                box-sizing: border-box !important;
+                gap: 20px !important;
+            }
+
+            .form-column {
+                width: 100% !important;
+                max-width: 100% !important;
+                box-sizing: border-box !important;
+                gap: 18px !important;
+            }
+
+            .form-row {
+                grid-template-columns: 1fr !important;
+                width: 100% !important;
+                max-width: 100% !important;
+                box-sizing: border-box !important;
+                gap: 8px !important;
+            }
+
+            .input-wrapper {
+                width: 100% !important;
+                max-width: 100% !important;
+                box-sizing: border-box !important;
+            }
+
+            .form-control {
+                width: 100% !important;
+                max-width: 100% !important;
+                box-sizing: border-box !important;
+                font-size: 15px !important;
+            }
+
+            .file-upload-box {
+                width: 100% !important;
+                max-width: 100% !important;
+                box-sizing: border-box !important;
+                padding: 12px 14px !important;
+            }
+
+            .registration-note {
+                width: 100% !important;
+                max-width: 100% !important;
+                box-sizing: border-box !important;
+                margin: 16px 0 !important;
+                padding: 16px !important;
+            }
+
+            .checkbox-row {
+                width: 100% !important;
+                max-width: 100% !important;
+                box-sizing: border-box !important;
+                margin: 16px 0 !important;
+                align-items: flex-start !important;
+            }
+
+            .checkbox-row input {
+                margin-top: 3px !important;
+                flex-shrink: 0 !important;
+            }
+
+            .action-section {
+                width: 100% !important;
+                max-width: 100% !important;
+                box-sizing: border-box !important;
+                display: flex !important;
+                justify-content: center !important;
+                margin-top: 24px !important;
             }
 
             .submit-btn {
-                width: auto;
-                min-width: 200px;
+                width: 100% !important;
+                max-width: 320px !important;
+                box-sizing: border-box !important;
+                text-align: center !important;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .framer-lhng8p,
+            .framer-LJlZq .framer-lhng8p {
+                padding-left: 12px !important;
+                padding-right: 12px !important;
+            }
+
+            .file-upload-box {
+                padding: 10px 12px !important;
+                gap: 10px !important;
+            }
+
+            .file-upload-title {
+                font-size: 13px !important;
+            }
+
+            .file-upload-hint {
+                font-size: 11px !important;
             }
         }
 
@@ -7225,6 +7394,11 @@
       }
 
       function handle(e) {
+        // Do NOT intercept clicks on mobile navigation hamburger / close icon button
+        if (e.target.closest("[data-framer-name='Icon'], .framer-z2h1x2")) {
+          return;
+        }
+
         let t = e.target.closest("[data-nested-link], [data-href], a[href], [role='link'], [data-framer-name='Subscribe Button'], [data-framer-name='Card']");
         if (!t) return;
         
@@ -7646,6 +7820,8 @@
                 const wrapper = document.createElement('div');
                 wrapper.id = "injected-esper-form";
                 wrapper.style.width = "100%";
+                wrapper.style.maxWidth = "100%";
+                wrapper.style.boxSizing = "border-box";
                 wrapper.style.display = "flex";
                 wrapper.style.justifyContent = "center";
                 wrapper.style.position = "relative";

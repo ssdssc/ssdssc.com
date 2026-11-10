@@ -734,21 +734,32 @@
 
   // Catch any clicks globally in capturing phase to guarantee instant correct navigation without DOM mutation loops
   window.addEventListener("click", (e) => {
+    // CRITICAL: Do NOT intercept clicks on mobile navigation hamburger / close icon button
+    if (e.target.closest("[data-framer-name='Icon'], .framer-z2h1x2")) {
+      return;
+    }
+
     const a = e.target.closest("a, [data-framer-name='Card'], [data-framer-name='Subscribe Button'], [data-framer-name='Logo']");
     if (!a) return;
     const href = a.getAttribute("href") || a.getAttribute("data-href") || "";
     const text = a.textContent.trim().toLowerCase();
     const name = (a.getAttribute('data-framer-name') || '').toLowerCase();
 
-    // Always route Logo and index.html clicks to /esper
-    if (
-      name === "logo" ||
+    // If 'a' is a non-link container (e.g. framer-11xv1j7), check if an actual anchor link was clicked
+    if (a.tagName.toLowerCase() !== "a" && !a.hasAttribute("href") && !a.hasAttribute("data-href") && !a.hasAttribute("data-nested-link") && name !== "card" && name !== "subscribe button") {
+      const anchor = e.target.closest("a");
+      if (!anchor) return;
+    }
+
+    // Always route Logo link and index.html clicks to /esper (only when clicking actual logo link)
+    const isLogoClick = (name === "logo" && (a.tagName.toLowerCase() === "a" || e.target.closest("a.framer-1ozvw4i, [data-framer-name='Logo'] a, a[href='/esper']"))) ||
+      (e.target.closest("a.framer-1ozvw4i, a[href='/esper']")) ||
       href === "index.html" ||
       href === "/index.html" ||
       href.endsWith("/index.html") ||
-      href === "/" ||
-      a.closest("[data-framer-name='Logo']")
-    ) {
+      href === "/";
+
+    if (isLogoClick) {
       e.preventDefault();
       e.stopPropagation();
       window.location.assign("/esper");
@@ -806,5 +817,145 @@
       }
     }
   }, true);
+
+  // Mobile navigation hamburger toggle & styles
+  (function initMobileNav() {
+    function injectStyles() {
+      if (!document.getElementById("esper-mobile-nav-style")) {
+        const style = document.createElement("style");
+        style.id = "esper-mobile-nav-style";
+        style.textContent = `
+          .framer-z2h1x2 {
+            cursor: pointer !important;
+            pointer-events: auto !important;
+          }
+          .framer-z2h1x2 * {
+            pointer-events: none !important;
+          }
+          .framer-v-w7utna .framer-ralyy7 {
+            top: calc(50% - 1px) !important;
+            transform: rotate(45deg) !important;
+          }
+          .framer-v-w7utna .framer-120i7ew {
+            top: calc(50% - 1px) !important;
+            transform: rotate(-45deg) !important;
+          }
+          .framer-ralyy7, .framer-120i7ew {
+            transition: transform 0.25s ease, top 0.25s ease !important;
+          }
+
+          /* Mobile form responsive alignment fix */
+          @media (max-width: 860px) {
+            html, body, #main {
+              overflow-x: hidden !important;
+              max-width: 100vw !important;
+              width: 100% !important;
+              box-sizing: border-box !important;
+            }
+            .framer-LJlZq,
+            .framer-LJlZq.framer-72rtr7,
+            .framer-LJlZq.framer-193nlgj,
+            .framer-LJlZq.framer-ebiaht,
+            .framer-LJlZq.framer-9w4hrp,
+            div[data-framer-root] {
+              width: 100% !important;
+              max-width: 100vw !important;
+              box-sizing: border-box !important;
+              margin-left: auto !important;
+              margin-right: auto !important;
+              overflow-x: hidden !important;
+            }
+            .framer-lhng8p,
+            .framer-LJlZq .framer-lhng8p {
+              box-sizing: border-box !important;
+              width: 100% !important;
+              max-width: 100vw !important;
+              padding-left: 16px !important;
+              padding-right: 16px !important;
+              margin-left: auto !important;
+              margin-right: auto !important;
+              display: flex !important;
+              flex-direction: column !important;
+              align-items: center !important;
+            }
+            #injected-esper-form {
+              width: 100% !important;
+              max-width: 100% !important;
+              box-sizing: border-box !important;
+              display: flex !important;
+              justify-content: center !important;
+              align-items: center !important;
+              margin: 0 auto !important;
+              padding: 0 !important;
+            }
+            .page-container {
+              width: 100% !important;
+              max-width: 100% !important;
+              box-sizing: border-box !important;
+              margin: 20px auto 40px auto !important;
+              padding: 0 !important;
+            }
+            .registration-form,
+            .form-columns,
+            .form-column,
+            .form-row,
+            .input-wrapper,
+            .form-control,
+            .file-upload-box,
+            .registration-note,
+            .checkbox-row,
+            .action-section {
+              width: 100% !important;
+              max-width: 100% !important;
+              box-sizing: border-box !important;
+            }
+          }
+        `;
+        document.head.appendChild(style);
+      }
+    }
+
+    if (document.readyState === "loading") {
+      document.addEventListener("DOMContentLoaded", injectStyles);
+    } else {
+      injectStyles();
+    }
+
+    // Fallback toggle for mobile navigation if React is not actively managing it
+    document.addEventListener("click", (e) => {
+      const icon = e.target.closest("[data-framer-name='Icon'], .framer-z2h1x2");
+      if (!icon) return;
+
+      const header = icon.closest("header");
+      if (!header) return;
+
+      const wasOpen = header.classList.contains("framer-v-w7utna");
+
+      setTimeout(() => {
+        const isNowOpen = header.classList.contains("framer-v-w7utna");
+        // If React handled the state change, do nothing
+        if (isNowOpen !== wasOpen) return;
+
+        // Fallback manual toggle
+        if (!wasOpen) {
+          header.classList.remove("framer-v-19y430h");
+          header.classList.add("framer-v-w7utna");
+
+          // Ensure nav links exist inside .framer-bu79ji
+          const logoNav = header.querySelector(".framer-bu79ji");
+          if (logoNav && !logoNav.querySelector(".framer-1qupc9b")) {
+            const existingNav = document.querySelector(".framer-1qupc9b");
+            if (existingNav) {
+              const clone = existingNav.cloneNode(true);
+              logoNav.appendChild(clone);
+            }
+          }
+        } else {
+          header.classList.remove("framer-v-w7utna");
+          header.classList.add("framer-v-19y430h");
+        }
+      }, 35);
+    });
+  })();
 })();
 // --- END UNIVERSAL ESPER NAVIGATION HANDLER ---

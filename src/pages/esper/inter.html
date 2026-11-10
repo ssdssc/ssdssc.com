@@ -3790,6 +3790,12 @@
         width: 100% !important;
         max-width: 100% !important;
       }
+      /* Center the last two cards (EDU Coder & Best Young Inventor) in the 3-column desktop grid */
+      .framer-LJlZq .framer-g159kn > [data-last-pair="true"],
+      .framer-g159kn > [data-last-pair="true"] {
+        position: relative !important;
+        left: calc(50% + 10px) !important;
+      }
     }
     @media (min-width: 600px) and (max-width: 899px) {
       .framer-LJlZq .framer-g159kn {
@@ -3814,6 +3820,21 @@
         width: 100% !important;
         max-width: 100% !important;
       }
+      .framer-LJlZq .framer-g159kn > [data-last-pair="true"],
+      .framer-g159kn > [data-last-pair="true"] {
+        position: static !important;
+        left: auto !important;
+      }
+      .framer-LJlZq .framer-g159kn > [data-single-last="true"],
+      .framer-g159kn > [data-single-last="true"] {
+        grid-column: 1 / -1 !important;
+        justify-self: center !important;
+        place-self: center !important;
+        margin-left: auto !important;
+        margin-right: auto !important;
+        width: 100% !important;
+        max-width: calc((100% - 20px) / 2) !important;
+      }
     }
     @media (max-width: 599px) {
       .framer-LJlZq .framer-g159kn {
@@ -3825,6 +3846,11 @@
         grid-column: 1 / -1 !important;
         width: 100% !important;
         max-width: 100% !important;
+      }
+      .framer-LJlZq .framer-g159kn > [data-last-pair="true"],
+      .framer-g159kn > [data-last-pair="true"] {
+        position: static !important;
+        left: auto !important;
       }
     }
 
@@ -6782,15 +6808,29 @@
       }
 
       function handle(e) {
+        // Do NOT intercept clicks on mobile navigation hamburger / close icon button
+        if (e.target.closest("[data-framer-name='Icon'], .framer-z2h1x2")) {
+          return;
+        }
+
         let t = e.target.closest("[data-nested-link], [data-href], a[href], [role='link'], [data-framer-name='Subscribe Button'], [data-framer-name='Card'], [data-framer-name='Logo']");
         if (!t) return;
         
+        // If 't' is a non-link container (e.g. framer-11xv1j7), check if an actual anchor link was clicked
+        let name = (t.getAttribute('data-framer-name') || '').toLowerCase();
+        if (t.tagName.toLowerCase() !== "a" && !t.hasAttribute("href") && !t.hasAttribute("data-href") && !t.hasAttribute("data-nested-link") && name !== "card" && name !== "subscribe button") {
+          if (!e.target.closest("a")) return;
+        }
+
         let href = t.getAttribute("href") || t.getAttribute("data-href");
         let text = t.textContent.trim().toLowerCase();
-        let name = (t.getAttribute('data-framer-name') || '').toLowerCase();
 
-        // Logo or index.html clicks must go to /esper
-        if (name === 'logo' || t.closest("[data-framer-name='Logo']") || href === 'index.html' || href === '/index.html' || (href && href.endsWith('/index.html'))) {
+        // Logo or index.html clicks must go to /esper (only when clicking actual logo link)
+        const isLogoClick = (name === 'logo' && (t.tagName.toLowerCase() === 'a' || e.target.closest("a.framer-1ozvw4i, [data-framer-name='Logo'] a, a[href='/esper']"))) ||
+          (e.target.closest("a.framer-1ozvw4i, a[href='/esper']")) ||
+          href === 'index.html' || href === '/index.html' || (href && href.endsWith('/index.html'));
+
+        if (isLogoClick) {
             e.preventDefault();
             e.stopPropagation();
             navigate('/esper', t.getAttribute("target"), t.getAttribute("rel"));
@@ -7028,6 +7068,16 @@
             wrapper.setAttribute('data-featured-first', 'true');
           } else {
             wrapper.removeAttribute('data-featured-first');
+          }
+          if (index === 4 || index === 5) {
+            wrapper.setAttribute('data-last-pair', 'true');
+          } else {
+            wrapper.removeAttribute('data-last-pair');
+          }
+          if (index === 5) {
+            wrapper.setAttribute('data-single-last', 'true');
+          } else {
+            wrapper.removeAttribute('data-single-last');
           }
           if (index < categories.length) {
             const titleEl = wrapper.querySelector('h3, h4');

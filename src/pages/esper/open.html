@@ -6792,15 +6792,29 @@
       }
 
       function handle(e) {
+        // Do NOT intercept clicks on mobile navigation hamburger / close icon button
+        if (e.target.closest("[data-framer-name='Icon'], .framer-z2h1x2")) {
+          return;
+        }
+
         let t = e.target.closest("[data-nested-link], [data-href], a[href], [role='link'], [data-framer-name='Subscribe Button'], [data-framer-name='Card'], [data-framer-name='Logo']");
         if (!t) return;
         
+        // If 't' is a non-link container (e.g. framer-11xv1j7), check if an actual anchor link was clicked
+        let name = (t.getAttribute('data-framer-name') || '').toLowerCase();
+        if (t.tagName.toLowerCase() !== "a" && !t.hasAttribute("href") && !t.hasAttribute("data-href") && !t.hasAttribute("data-nested-link") && name !== "card" && name !== "subscribe button") {
+          if (!e.target.closest("a")) return;
+        }
+
         let href = t.getAttribute("href") || t.getAttribute("data-href");
         let text = t.textContent.trim().toLowerCase();
-        let name = (t.getAttribute('data-framer-name') || '').toLowerCase();
 
-        // Logo or index.html clicks must go to /esper
-        if (name === 'logo' || t.closest("[data-framer-name='Logo']") || href === 'index.html' || href === '/index.html' || (href && href.endsWith('/index.html'))) {
+        // Logo or index.html clicks must go to /esper (only when clicking actual logo link)
+        const isLogoClick = (name === 'logo' && (t.tagName.toLowerCase() === 'a' || e.target.closest("a.framer-1ozvw4i, [data-framer-name='Logo'] a, a[href='/esper']"))) ||
+          (e.target.closest("a.framer-1ozvw4i, a[href='/esper']")) ||
+          href === 'index.html' || href === '/index.html' || (href && href.endsWith('/index.html'));
+
+        if (isLogoClick) {
             e.preventDefault();
             e.stopPropagation();
             navigate('/esper', t.getAttribute("target"), t.getAttribute("rel"));
