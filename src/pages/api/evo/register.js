@@ -7,24 +7,24 @@ export const prerender = false;
 // ── Subject normalisation ────────────────────────────────────────────────────
 // The form sends display labels; the quiz DB uses lowercase slugs
 const SUBJECT_MAP = {
-  'Physics':        'physics',
-  'Chemistry':      'chemistry',
-  'Biology':        'biology',
+  'Physics': 'physics',
+  'Chemistry': 'chemistry',
+  'Biology': 'biology',
   'Combined Maths': 'maths',
 };
 
 const SUBJECT_SHORT = {
-  physics:   'PHY',
+  physics: 'PHY',
   chemistry: 'CHE',
-  biology:   'BIO',
-  maths:     'MAT',
+  biology: 'BIO',
+  maths: 'MAT',
 };
 
 const SUBJECT_LABEL = {
-  physics:   'Physics',
+  physics: 'Physics',
   chemistry: 'Chemistry',
-  biology:   'Biology',
-  maths:     'Combined Maths',
+  biology: 'Biology',
+  maths: 'Combined Maths',
 };
 
 // ── Access-code generator ────────────────────────────────────────────────────
@@ -119,7 +119,7 @@ function buildEmailHtml({ schoolName, members, quizUrl }) {
           <!-- Header -->
           <tr>
             <td class="email-header" style="background:#111;padding:28px 40px;text-align:center;border-bottom:3px solid #60a5fa;">
-              <p class="email-label" style="margin:0;font-size:11px;letter-spacing:3px;color:#888;text-transform:uppercase;">Evolvion '26 &nbsp;·&nbsp; Phase 01</p>
+              <p class="email-label" style="margin:0;font-size:11px;letter-spacing:3px;color:#888;text-transform:uppercase;">Evolvion '27 &nbsp;·&nbsp; Phase 01</p>
               <h1 style="margin:8px 0 0;font-size:22px;font-weight:700;letter-spacing:4px;color:#ffffff;">THE SUMMONS</h1>
             </td>
           </tr>
@@ -169,7 +169,7 @@ function buildEmailHtml({ schoolName, members, quizUrl }) {
           <!-- Footer -->
           <tr class="email-footer">
             <td style="padding:20px 40px;border-top:1px solid #f0f0f0;text-align:center;">
-              <p class="email-footer" style="margin:0;font-size:12px;color:#bbb;">D.S. Senanayake College Science Society &nbsp;·&nbsp; Evolvion '26</p>
+              <p class="email-footer" style="margin:0;font-size:12px;color:#bbb;">D.S. Senanayake College Science Society &nbsp;·&nbsp; Evolvion '27</p>
             </td>
           </tr>
 
@@ -194,7 +194,7 @@ export const POST = async ({ request }) => {
     : 'https://dzzblbrmdaryttwplfrb.supabase.co'; // fallback — URL is not secret
 
   const supabaseKey = process.env.SUPABASE_SERVICE_ROLE_KEY || import.meta.env.SUPABASE_SERVICE_ROLE_KEY;
-  const resendKey   = process.env.RESEND_API_KEY || import.meta.env.RESEND_API_KEY;
+  const resendKey = process.env.RESEND_API_KEY || import.meta.env.RESEND_API_KEY;
 
   // Diagnose missing env vars
   console.log('[register] env check:', {
@@ -209,7 +209,7 @@ export const POST = async ({ request }) => {
   }
 
   const supabase = createClient(supabaseUrl, supabaseKey);
-  const resend   = resendKey && resendKey !== 're_YOUR_API_KEY_HERE'
+  const resend = resendKey && resendKey !== 're_YOUR_API_KEY_HERE'
     ? new Resend(resendKey)
     : null;
 
@@ -219,10 +219,10 @@ export const POST = async ({ request }) => {
 
     // ── 1. Validation ────────────────────────────────────────────────────────
     if (
-      !data.schoolName    ||
+      !data.schoolName ||
       !data.presidentName ||
       !data.presidentContact ||
-      !data.captainName   ||
+      !data.captainName ||
       !data.captainContact ||
       !data.captainSubject ||
       !data.emailAddress
@@ -237,10 +237,10 @@ export const POST = async ({ request }) => {
     // ── 2. Collect members ───────────────────────────────────────────────────
     // Each entry: { name, subjectSlug, isCaptain }
     const rawMembers = [
-      { name: data.captainName,  subject: data.captainSubject,  isCaptain: true  },
-      { name: data.member1Name,  subject: data.member1Subject,  isCaptain: false },
-      { name: data.member2Name,  subject: data.member2Subject,  isCaptain: false },
-      { name: data.member3Name,  subject: data.member3Subject,  isCaptain: false },
+      { name: data.captainName, subject: data.captainSubject, isCaptain: true },
+      { name: data.member1Name, subject: data.member1Subject, isCaptain: false },
+      { name: data.member2Name, subject: data.member2Subject, isCaptain: false },
+      { name: data.member3Name, subject: data.member3Subject, isCaptain: false },
     ].filter(m => m.name && m.name.trim() && m.subject);
 
     if (rawMembers.length === 0) {
@@ -262,7 +262,7 @@ export const POST = async ({ request }) => {
 
     // ── 2b. Duplicate registration checks ───────────────────────────────────
     const presidentPhone = formatPhone(data.presidentContact);
-    const captainPhone   = formatPhone(data.captainContact);
+    const captainPhone = formatPhone(data.captainContact);
 
     // Check: same email already registered
     const { data: emailDupe } = await supabase
@@ -310,22 +310,22 @@ export const POST = async ({ request }) => {
 
     // ── 3. Save to evo_registrations (the marketing DB table) ────────────────
     const { error: evoErr } = await supabase.from('evo_registrations').insert([{
-      school_name:       data.schoolName,
-      president_name:    data.presidentName,
+      school_name: data.schoolName,
+      president_name: data.presidentName,
       president_contact: formatPhone(data.presidentContact),
-      mic_name:          data.micName   || null,
-      mic_contact:       formatPhone(data.micContact),
-      captain_name:      data.captainName,
-      captain_contact:   formatPhone(data.captainContact),
-      captain_subject:   data.captainSubject,
-      member1_name:      data.member1Name    || null,
-      member1_subject:   data.member1Subject || null,
-      member2_name:      data.member2Name    || null,
-      member2_subject:   data.member2Subject || null,
-      member3_name:      data.member3Name    || null,
-      member3_subject:   data.member3Subject || null,
-      email:             data.emailAddress,
-      confirmed:         data.confirmation === true || data.confirmation === 'on',
+      mic_name: data.micName || null,
+      mic_contact: formatPhone(data.micContact),
+      captain_name: data.captainName,
+      captain_contact: formatPhone(data.captainContact),
+      captain_subject: data.captainSubject,
+      member1_name: data.member1Name || null,
+      member1_subject: data.member1Subject || null,
+      member2_name: data.member2Name || null,
+      member2_subject: data.member2Subject || null,
+      member3_name: data.member3Name || null,
+      member3_subject: data.member3Subject || null,
+      email: data.emailAddress,
+      confirmed: data.confirmation === true || data.confirmation === 'on',
     }]);
 
     if (evoErr) {
@@ -337,9 +337,9 @@ export const POST = async ({ request }) => {
     const { data: regRow, error: regErr } = await supabase
       .from('registrations')
       .insert([{
-        school_name:   data.schoolName,
+        school_name: data.schoolName,
         contact_email: data.emailAddress,
-        status:        'active',
+        status: 'active',
       }])
       .select('id')
       .single();
@@ -359,10 +359,10 @@ export const POST = async ({ request }) => {
       const accessCode = await generateUniqueCode(supabase, m.subjectSlug);
       const { error: mErr } = await supabase.from('members').insert([{
         registration_id: registrationId,
-        name:            m.name,
-        subject:         m.subjectSlug,
-        is_captain:      m.isCaptain,
-        access_code:     accessCode,
+        name: m.name,
+        subject: m.subjectSlug,
+        is_captain: m.isCaptain,
+        access_code: accessCode,
       }]);
 
       if (mErr) {
@@ -380,17 +380,17 @@ export const POST = async ({ request }) => {
       const html = buildEmailHtml({
         schoolName: data.schoolName,
         members: membersWithCodes.map(m => ({
-          name:       m.name,
-          subject:    m.subjectSlug,
+          name: m.name,
+          subject: m.subjectSlug,
           accessCode: m.accessCode,
-          isCaptain:  m.isCaptain,
+          isCaptain: m.isCaptain,
         })),
         quizUrl,
       });
 
       const { error: emailErr } = await resend.emails.send({
-        from:    'Evolvion\'26 <evolvion@ssdssc.com>',
-        to:      [data.emailAddress],
+        from: 'Evolvion\'27 <evolvion@ssdssc.com>',
+        to: [data.emailAddress],
         subject: `THE SUMMONS — Your Access Codes | ${data.schoolName}`,
         html,
       });
@@ -410,10 +410,10 @@ export const POST = async ({ request }) => {
         message: 'Registration submitted successfully! Check your email for access codes.',
         // Only include codes in response during development — remove in prod if desired
         members: membersWithCodes.map(m => ({
-          name:       m.name,
-          subject:    SUBJECT_LABEL[m.subjectSlug] ?? m.subjectSlug,
+          name: m.name,
+          subject: SUBJECT_LABEL[m.subjectSlug] ?? m.subjectSlug,
           accessCode: m.accessCode,
-          isCaptain:  m.isCaptain,
+          isCaptain: m.isCaptain,
         })),
       }),
       { status: 200, headers: { 'Content-Type': 'application/json' } }

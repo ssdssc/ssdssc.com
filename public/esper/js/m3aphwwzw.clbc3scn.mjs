@@ -62,7 +62,7 @@ var ne,
               })(e, t, 1 - Math.exp(-n * r));
             })(this.value, this.to, 60 * this.lerp, e)),
               Math.round(this.value) === this.to &&
-                ((this.value = this.to), (t = !0)));
+              ((this.value = this.to), (t = !0)));
           else {
             this.currentTime += e;
             let n = z(0, this.currentTime / this.duration, 1);
@@ -107,22 +107,22 @@ var ne,
           ((this.wrapper = e),
             (this.content = t),
             n &&
-              ((this.debouncedResize = (function (e, t) {
-                let n;
-                return function () {
-                  let r = arguments,
-                    i = this;
-                  (clearTimeout(n),
-                    (n = setTimeout(function () {
-                      e.apply(i, r);
-                    }, t)));
-                };
-              })(this.resize, r)),
+            ((this.debouncedResize = (function (e, t) {
+              let n;
+              return function () {
+                let r = arguments,
+                  i = this;
+                (clearTimeout(n),
+                  (n = setTimeout(function () {
+                    e.apply(i, r);
+                  }, t)));
+              };
+            })(this.resize, r)),
               this.wrapper === o
                 ? o.addEventListener(`resize`, this.debouncedResize, !1)
                 : ((this.wrapperResizeObserver = new ResizeObserver(
-                    this.debouncedResize,
-                  )),
+                  this.debouncedResize,
+                )),
                   this.wrapperResizeObserver.observe(this.wrapper)),
               (this.contentResizeObserver = new ResizeObserver(
                 this.debouncedResize,
@@ -234,8 +234,8 @@ var ne,
         };
         onTouchMove = (e) => {
           let { clientX: t, clientY: n } = e.targetTouches
-              ? e.targetTouches[0]
-              : e,
+            ? e.targetTouches[0]
+            : e,
             r = -(t - this.touchStart.x) * this.touchMultiplier,
             i = -(n - this.touchStart.y) * this.touchMultiplier;
           ((this.touchStart.x = t),
@@ -295,7 +295,7 @@ var ne,
               if (
                 ((this.isTouching =
                   n.type === `touchstart` || n.type === `touchmove`),
-                this.options.syncTouch &&
+                  this.options.syncTouch &&
                   r &&
                   n.type === `touchstart` &&
                   !this.isStopped &&
@@ -351,18 +351,18 @@ var ne,
                     u
                       ? { lerp: d ? this.options.syncTouchLerp : 1 }
                       : {
-                          lerp: this.options.lerp,
-                          duration: this.options.duration,
-                          easing: this.options.easing,
-                        },
+                        lerp: this.options.lerp,
+                        duration: this.options.duration,
+                        easing: this.options.easing,
+                      },
                   ),
                 ));
             }),
             (this.onNativeScroll = () => {
               if (
                 (clearTimeout(this.__resetVelocityTimeout),
-                delete this.__resetVelocityTimeout,
-                this.__preventNextNativeScrollEvent)
+                  delete this.__resetVelocityTimeout,
+                  this.__preventNextNativeScrollEvent)
               )
                 delete this.__preventNextNativeScrollEvent;
               else if (
@@ -377,12 +377,12 @@ var ne,
                   (this.isScrolling = `native`),
                   this.emit(),
                   this.velocity !== 0 &&
-                    (this.__resetVelocityTimeout = setTimeout(() => {
-                      ((this.lastVelocity = this.velocity),
-                        (this.velocity = 0),
-                        (this.isScrolling = !1),
-                        this.emit());
-                    }, 400)));
+                  (this.__resetVelocityTimeout = setTimeout(() => {
+                    ((this.lastVelocity = this.velocity),
+                      (this.velocity = 0),
+                      (this.isScrolling = !1),
+                      this.emit());
+                  }, 400)));
               }
             }),
             (o.lenisVersion = `1.1.2`),
@@ -507,7 +507,7 @@ var ne,
                 (typeof e == `string`
                   ? (n = document.querySelector(e))
                   : e != null && e.nodeType && (n = e),
-                n)
+                  n)
               ) {
                 if (this.options.wrapper !== o) {
                   let e = this.options.wrapper.getBoundingClientRect();
@@ -520,11 +520,11 @@ var ne,
             if (typeof e == `number`) {
               if (
                 ((e += t),
-                (e = Math.round(e)),
-                this.options.infinite
-                  ? d && (this.targetScroll = this.animatedScroll = this.scroll)
-                  : (e = z(0, e, this.limit)),
-                n)
+                  (e = Math.round(e)),
+                  this.options.infinite
+                    ? d && (this.targetScroll = this.animatedScroll = this.scroll)
+                    : (e = z(0, e, this.limit)),
+                  n)
               )
                 return (
                   (this.animatedScroll = this.targetScroll = e),
@@ -534,31 +534,31 @@ var ne,
                 );
               e !== this.targetScroll &&
                 (d || (this.targetScroll = e),
-                this.animate.fromTo(this.animatedScroll, e, {
-                  duration: i,
-                  easing: a,
-                  lerp: s,
-                  onStart: () => {
-                    (r && (this.isLocked = !0),
-                      (this.isScrolling = `smooth`),
-                      c?.(this));
-                  },
-                  onUpdate: (e, t) => {
-                    ((this.isScrolling = `smooth`),
-                      (this.lastVelocity = this.velocity),
-                      (this.velocity = e - this.animatedScroll),
-                      (this.direction = Math.sign(this.velocity)),
-                      (this.animatedScroll = e),
-                      this.setScroll(this.scroll),
-                      d && (this.targetScroll = e),
-                      t || this.emit({ userData: f }),
-                      t &&
+                  this.animate.fromTo(this.animatedScroll, e, {
+                    duration: i,
+                    easing: a,
+                    lerp: s,
+                    onStart: () => {
+                      (r && (this.isLocked = !0),
+                        (this.isScrolling = `smooth`),
+                        c?.(this));
+                    },
+                    onUpdate: (e, t) => {
+                      ((this.isScrolling = `smooth`),
+                        (this.lastVelocity = this.velocity),
+                        (this.velocity = e - this.animatedScroll),
+                        (this.direction = Math.sign(this.velocity)),
+                        (this.animatedScroll = e),
+                        this.setScroll(this.scroll),
+                        d && (this.targetScroll = e),
+                        t || this.emit({ userData: f }),
+                        t &&
                         (this.reset(),
-                        this.emit({ userData: f }),
-                        l?.(this),
-                        (this.__preventNextNativeScrollEvent = !0)));
-                  },
-                }));
+                          this.emit({ userData: f }),
+                          l?.(this),
+                          (this.__preventNextNativeScrollEvent = !0)));
+                    },
+                  }));
             }
           }
         }
@@ -585,8 +585,8 @@ var ne,
         get scroll() {
           return this.options.infinite
             ? (function (e, t) {
-                return ((e % t) + t) % t;
-              })(this.animatedScroll, this.limit)
+              return ((e % t) + t) % t;
+            })(this.animatedScroll, this.limit)
             : this.animatedScroll;
         }
         get progress() {
@@ -667,13 +667,13 @@ function ie(e) {
         ((t = new MutationObserver(e)),
           (n = new MutationObserver(e)),
           document &&
-            document.documentElement &&
-            (t.observe(document.documentElement, {
-              childList: !0,
-              subtree: !0,
-              attributes: !0,
-              attributeFilter: [`data-frameruni-stop-scroll`],
-            }),
+          document.documentElement &&
+          (t.observe(document.documentElement, {
+            childList: !0,
+            subtree: !0,
+            attributes: !0,
+            attributeFilter: [`data-frameruni-stop-scroll`],
+          }),
             n.observe(document.documentElement, {
               attributes: !0,
               attributeFilter: [`style`],
@@ -717,13 +717,13 @@ function ie(e) {
         }
         r.current = new W({ duration: (t || 10) / 10 });
         let e = (t) => {
-            if (r.current)
-              try {
-                (r.current.raf(t), requestAnimationFrame(e));
-              } catch (e) {
-                console.error(`Error in animation frame:`, e);
-              }
-          },
+          if (r.current)
+            try {
+              (r.current.raf(t), requestAnimationFrame(e));
+            } catch (e) {
+              console.error(`Error in animation frame:`, e);
+            }
+        },
           n = requestAnimationFrame(e);
         return () => {
           if ((cancelAnimationFrame(n), r.current))
@@ -734,47 +734,47 @@ function ie(e) {
             }
         };
       } catch (e) {
-        return (console.error(`Error initializing Lenis:`, e), () => {});
+        return (console.error(`Error initializing Lenis:`, e), () => { });
       }
     }, [t]),
     l(() => {
       try {
         if (!document || !r.current) return;
         let e = Array.from(document.querySelectorAll(`a[href]`) || [])
-            .filter((e) => {
-              if (!e) return !1;
-              let t = e;
-              if (!t.href) return !1;
-              let n =
-                  t.href.startsWith(o.location.origin) ||
-                  t.href.startsWith(`./`) ||
-                  t.href.startsWith(`/`),
-                r = t.href.includes(`#`);
-              return n && r;
-            })
-            .map((e) => {
+          .filter((e) => {
+            if (!e) return !1;
+            let t = e;
+            if (!t.href) return !1;
+            let n =
+              t.href.startsWith(o.location.origin) ||
+              t.href.startsWith(`./`) ||
+              t.href.startsWith(`/`),
+              r = t.href.includes(`#`);
+            return n && r;
+          })
+          .map((e) => {
+            try {
+              let t = e,
+                n = t.href.includes(`#`) ? `#${t.href.split(`#`).pop()}` : ``,
+                r = n ? decodeURIComponent(n) : ``,
+                i = 0;
               try {
-                let t = e,
-                  n = t.href.includes(`#`) ? `#${t.href.split(`#`).pop()}` : ``,
-                  r = n ? decodeURIComponent(n) : ``,
-                  i = 0;
-                try {
-                  if (r) {
-                    let e = document.querySelector(r);
-                    if (e) {
-                      let t = o.getComputedStyle(e).scrollMarginTop;
-                      i = (t && parseInt(t)) || 0;
-                    }
+                if (r) {
+                  let e = document.querySelector(r);
+                  if (e) {
+                    let t = o.getComputedStyle(e).scrollMarginTop;
+                    i = (t && parseInt(t)) || 0;
                   }
-                } catch (e) {
-                  console.error(`Error finding target element:`, e);
                 }
-                return { href: n, scrollMargin: i, anchorElement: t };
               } catch (e) {
-                return (console.error(`Error processing anchor:`, e), null);
+                console.error(`Error finding target element:`, e);
               }
-            })
-            .filter(Boolean),
+              return { href: n, scrollMargin: i, anchorElement: t };
+            } catch (e) {
+              return (console.error(`Error processing anchor:`, e), null);
+            }
+          })
+          .filter(Boolean),
           t = (e, t, n) => {
             try {
               (e && e.preventDefault && e.preventDefault(),
@@ -799,7 +799,7 @@ function ie(e) {
           }
         );
       } catch (e) {
-        return (console.error(`Error setting up anchor links:`, e), () => {});
+        return (console.error(`Error setting up anchor links:`, e), () => { });
       }
     }, [r]),
     s(`div`, { style: e.style })
@@ -1775,11 +1775,11 @@ var Ce,
                                     fit: `fill`,
                                     loading: y(
                                       (l?.y || 0) +
-                                        (32 +
-                                          ((l?.height || 172) - 64 - 108) / 2) +
-                                        0 +
-                                        10 +
-                                        0,
+                                      (32 +
+                                        ((l?.height || 172) - 64 - 108) / 2) +
+                                      0 +
+                                      10 +
+                                      0,
                                     ),
                                     pixelHeight: 500,
                                     pixelWidth: 500,
@@ -1797,15 +1797,15 @@ var Ce,
                                           fit: `fill`,
                                           loading: y(
                                             (l?.y || 0) +
-                                              16 +
-                                              (((l?.height || 200) - 32 - 205) /
-                                                2 +
-                                                0 +
-                                                0) +
+                                            16 +
+                                            (((l?.height || 200) - 32 - 205) /
+                                              2 +
                                               0 +
-                                              0 +
-                                              12 +
-                                              0,
+                                              0) +
+                                            0 +
+                                            0 +
+                                            12 +
+                                            0,
                                           ),
                                           pixelHeight: 500,
                                           pixelWidth: 500,
@@ -1819,15 +1819,15 @@ var Ce,
                                           fit: `fill`,
                                           loading: y(
                                             (l?.y || 0) +
-                                              16 +
-                                              (((l?.height || 110) - 32 - 78) /
-                                                2 +
-                                                0 +
-                                                0) +
+                                            16 +
+                                            (((l?.height || 110) - 32 - 78) /
+                                              2 +
                                               0 +
-                                              0 +
-                                              12 +
-                                              0,
+                                              0) +
+                                            0 +
+                                            0 +
+                                            12 +
+                                            0,
                                           ),
                                           pixelHeight: 500,
                                           pixelWidth: 500,
@@ -1843,226 +1843,226 @@ var Ce,
                               }),
                             }),
                             U() &&
-                              d(m.div, {
-                                className: `framer-z2h1x2`,
-                                "data-framer-name": `Icon`,
-                                layoutDependency: R,
-                                layoutId: `kjczbpafY`,
-                                children: [
-                                  s(m.div, {
-                                    className: `framer-ralyy7`,
-                                    "data-framer-name": `Bottom`,
-                                    layoutDependency: R,
-                                    layoutId: `K11BWMsW7`,
-                                    style: {
-                                      backgroundColor: `rgb(153, 153, 153)`,
-                                      borderBottomLeftRadius: 10,
-                                      borderBottomRightRadius: 10,
-                                      borderTopLeftRadius: 10,
-                                      borderTopRightRadius: 10,
-                                      rotate: 0,
+                            d(m.div, {
+                              className: `framer-z2h1x2`,
+                              "data-framer-name": `Icon`,
+                              layoutDependency: R,
+                              layoutId: `kjczbpafY`,
+                              children: [
+                                s(m.div, {
+                                  className: `framer-ralyy7`,
+                                  "data-framer-name": `Bottom`,
+                                  layoutDependency: R,
+                                  layoutId: `K11BWMsW7`,
+                                  style: {
+                                    backgroundColor: `rgb(153, 153, 153)`,
+                                    borderBottomLeftRadius: 10,
+                                    borderBottomRightRadius: 10,
+                                    borderTopLeftRadius: 10,
+                                    borderTopRightRadius: 10,
+                                    rotate: 0,
+                                  },
+                                  variants: {
+                                    dp88vwYhi: {
+                                      backgroundColor: `var(--token-5da70c05-3645-4701-94ef-a193737059cd, rgb(136, 136, 136))`,
+                                      rotate: -45,
                                     },
-                                    variants: {
-                                      dp88vwYhi: {
-                                        backgroundColor: `var(--token-5da70c05-3645-4701-94ef-a193737059cd, rgb(136, 136, 136))`,
-                                        rotate: -45,
-                                      },
-                                      H2UUL1GY2: {
-                                        backgroundColor: `rgb(255, 255, 255)`,
-                                      },
+                                    H2UUL1GY2: {
+                                      backgroundColor: `rgb(255, 255, 255)`,
                                     },
-                                  }),
-                                  s(m.div, {
-                                    className: `framer-120i7ew`,
-                                    "data-framer-name": `Top`,
-                                    layoutDependency: R,
-                                    layoutId: `rFJM0ebNv`,
-                                    style: {
-                                      backgroundColor: `rgb(153, 153, 153)`,
-                                      borderBottomLeftRadius: 10,
-                                      borderBottomRightRadius: 10,
-                                      borderTopLeftRadius: 10,
-                                      borderTopRightRadius: 10,
-                                      rotate: 0,
+                                  },
+                                }),
+                                s(m.div, {
+                                  className: `framer-120i7ew`,
+                                  "data-framer-name": `Top`,
+                                  layoutDependency: R,
+                                  layoutId: `rFJM0ebNv`,
+                                  style: {
+                                    backgroundColor: `rgb(153, 153, 153)`,
+                                    borderBottomLeftRadius: 10,
+                                    borderBottomRightRadius: 10,
+                                    borderTopLeftRadius: 10,
+                                    borderTopRightRadius: 10,
+                                    rotate: 0,
+                                  },
+                                  variants: {
+                                    dp88vwYhi: {
+                                      backgroundColor: `var(--token-5da70c05-3645-4701-94ef-a193737059cd, rgb(136, 136, 136))`,
+                                      rotate: 45,
                                     },
-                                    variants: {
-                                      dp88vwYhi: {
-                                        backgroundColor: `var(--token-5da70c05-3645-4701-94ef-a193737059cd, rgb(136, 136, 136))`,
-                                        rotate: 45,
-                                      },
-                                      H2UUL1GY2: {
-                                        backgroundColor: `rgb(255, 255, 255)`,
-                                      },
+                                    H2UUL1GY2: {
+                                      backgroundColor: `rgb(255, 255, 255)`,
                                     },
-                                  }),
-                                ],
-                              }),
+                                  },
+                                }),
+                              ],
+                            }),
                           ],
                         }),
                         W() &&
-                          d(m.nav, {
-                            className: `framer-1qupc9b`,
-                            "data-framer-name": `Nav`,
-                            layoutDependency: R,
-                            layoutId: `jnZCZa26Q`,
-                            children: [
-                              s(te, {
-                                links: [
-                                  {
-                                    href: {
-                                      hash: `:gfH_8JeJY`,
-                                      webPageId: `augiA20Il`,
-                                    },
-                                    implicitPathVariables: void 0,
+                        d(m.nav, {
+                          className: `framer-1qupc9b`,
+                          "data-framer-name": `Nav`,
+                          layoutDependency: R,
+                          layoutId: `jnZCZa26Q`,
+                          children: [
+                            s(te, {
+                              links: [
+                                {
+                                  href: {
+                                    hash: `:gfH_8JeJY`,
+                                    webPageId: `augiA20Il`,
                                   },
-                                  {
-                                    href: {
-                                      hash: `:gfH_8JeJY`,
-                                      webPageId: `augiA20Il`,
-                                    },
-                                    implicitPathVariables: void 0,
+                                  implicitPathVariables: void 0,
+                                },
+                                {
+                                  href: {
+                                    hash: `:gfH_8JeJY`,
+                                    webPageId: `augiA20Il`,
                                   },
-                                ],
-                                children: (e) =>
-                                  s(D, {
-                                    height: 16,
-                                    y:
-                                      (l?.y || 0) +
-                                      (32 +
-                                        ((l?.height || 172) - 64 - 108) / 2) +
-                                      46 +
-                                      0,
-                                    ...X(
-                                      {
-                                        dp88vwYhi: {
-                                          y:
-                                            (l?.y || 0) +
-                                            16 +
-                                            (((l?.height || 200) - 32 - 205) /
-                                              2 +
-                                              0 +
-                                              0) +
+                                  implicitPathVariables: void 0,
+                                },
+                              ],
+                              children: (e) =>
+                                s(D, {
+                                  height: 16,
+                                  y:
+                                    (l?.y || 0) +
+                                    (32 +
+                                      ((l?.height || 172) - 64 - 108) / 2) +
+                                    46 +
+                                    0,
+                                  ...X(
+                                    {
+                                      dp88vwYhi: {
+                                        y:
+                                          (l?.y || 0) +
+                                          16 +
+                                          (((l?.height || 200) - 32 - 205) /
+                                            2 +
                                             0 +
-                                            93 +
-                                            0 +
-                                            0,
-                                        },
+                                            0) +
+                                          0 +
+                                          93 +
+                                          0 +
+                                          0,
                                       },
-                                      x,
-                                      T,
-                                    ),
-                                    children: s(I, {
-                                      className: `framer-7ldhga-container`,
-                                      layoutDependency: R,
-                                      layoutId: `Gjl48vuGI-container`,
-                                      nodeId: `Gjl48vuGI`,
-                                      rendersWithMotion: !0,
-                                      scopeId: `eOJIt156j`,
-                                      children: s(Y, {
-                                        h6FpGpKZO: `/esper/inter`,
-                                        height: `100%`,
-                                        id: `Gjl48vuGI`,
-                                        layoutId: `Gjl48vuGI`,
-                                        style: { height: `100%` },
-                                        width: `100%`,
-                                        XkLXUXcp4: `Inter School Awards`,
-                                        ...X(
-                                          { dp88vwYhi: { h6FpGpKZO: `/esper/inter` } },
-                                          x,
-                                          T,
-                                        ),
-                                      }),
+                                    },
+                                    x,
+                                    T,
+                                  ),
+                                  children: s(I, {
+                                    className: `framer-7ldhga-container`,
+                                    layoutDependency: R,
+                                    layoutId: `Gjl48vuGI-container`,
+                                    nodeId: `Gjl48vuGI`,
+                                    rendersWithMotion: !0,
+                                    scopeId: `eOJIt156j`,
+                                    children: s(Y, {
+                                      h6FpGpKZO: `/esper/inter`,
+                                      height: `100%`,
+                                      id: `Gjl48vuGI`,
+                                      layoutId: `Gjl48vuGI`,
+                                      style: { height: `100%` },
+                                      width: `100%`,
+                                      XkLXUXcp4: `Inter School Awards`,
+                                      ...X(
+                                        { dp88vwYhi: { h6FpGpKZO: `/esper/inter` } },
+                                        x,
+                                        T,
+                                      ),
                                     }),
                                   }),
-                              }),
-                              s(D, {
-                                height: 16,
-                                y:
-                                  (l?.y || 0) +
-                                  (32 + ((l?.height || 172) - 64 - 108) / 2) +
-                                  46 +
-                                  0,
-                                ...X(
-                                  {
-                                    dp88vwYhi: {
-                                      y:
-                                        (l?.y || 0) +
-                                        16 +
-                                        (((l?.height || 200) - 32 - 205) / 2 +
-                                          0 +
-                                          0) +
+                                }),
+                            }),
+                            s(D, {
+                              height: 16,
+                              y:
+                                (l?.y || 0) +
+                                (32 + ((l?.height || 172) - 64 - 108) / 2) +
+                                46 +
+                                0,
+                              ...X(
+                                {
+                                  dp88vwYhi: {
+                                    y:
+                                      (l?.y || 0) +
+                                      16 +
+                                      (((l?.height || 200) - 32 - 205) / 2 +
                                         0 +
-                                        93 +
-                                        0 +
-                                        40,
-                                    },
+                                        0) +
+                                      0 +
+                                      93 +
+                                      0 +
+                                      40,
                                   },
-                                  x,
-                                  T,
-                                ),
-                                children: s(I, {
-                                  className: `framer-132ym2t-container`,
-                                  layoutDependency: R,
-                                  layoutId: `KZGJODgbx-container`,
-                                  nodeId: `KZGJODgbx`,
-                                  rendersWithMotion: !0,
-                                  scopeId: `eOJIt156j`,
-                                  children: s(Y, {
-                                    h6FpGpKZO: `/esper/intra`,
-                                    height: `100%`,
-                                    id: `KZGJODgbx`,
-                                    layoutId: `KZGJODgbx`,
-                                    style: { height: `100%` },
-                                    width: `100%`,
-                                    XkLXUXcp4: `Intra School Awards`,
-                                  }),
+                                },
+                                x,
+                                T,
+                              ),
+                              children: s(I, {
+                                className: `framer-132ym2t-container`,
+                                layoutDependency: R,
+                                layoutId: `KZGJODgbx-container`,
+                                nodeId: `KZGJODgbx`,
+                                rendersWithMotion: !0,
+                                scopeId: `eOJIt156j`,
+                                children: s(Y, {
+                                  h6FpGpKZO: `/esper/intra`,
+                                  height: `100%`,
+                                  id: `KZGJODgbx`,
+                                  layoutId: `KZGJODgbx`,
+                                  style: { height: `100%` },
+                                  width: `100%`,
+                                  XkLXUXcp4: `Intra School Awards`,
                                 }),
                               }),
-                              s(D, {
-                                height: 16,
-                                y:
-                                  (l?.y || 0) +
-                                  (32 + ((l?.height || 172) - 64 - 108) / 2) +
-                                  46 +
-                                  0,
-                                ...X(
-                                  {
-                                    dp88vwYhi: {
-                                      y:
-                                        (l?.y || 0) +
-                                        16 +
-                                        (((l?.height || 200) - 32 - 205) / 2 +
-                                          0 +
-                                          0) +
+                            }),
+                            s(D, {
+                              height: 16,
+                              y:
+                                (l?.y || 0) +
+                                (32 + ((l?.height || 172) - 64 - 108) / 2) +
+                                46 +
+                                0,
+                              ...X(
+                                {
+                                  dp88vwYhi: {
+                                    y:
+                                      (l?.y || 0) +
+                                      16 +
+                                      (((l?.height || 200) - 32 - 205) / 2 +
                                         0 +
-                                        93 +
-                                        0 +
-                                        80,
-                                    },
+                                        0) +
+                                      0 +
+                                      93 +
+                                      0 +
+                                      80,
                                   },
-                                  x,
-                                  T,
-                                ),
-                                children: s(I, {
-                                  className: `framer-1lcz1wz-container`,
-                                  layoutDependency: R,
-                                  layoutId: `qpueSOo_N-container`,
-                                  nodeId: `qpueSOo_N`,
-                                  rendersWithMotion: !0,
-                                  scopeId: `eOJIt156j`,
-                                  children: s(Y, {
-                                    h6FpGpKZO: `/esper/popular`,
-                                    height: `100%`,
-                                    id: `qpueSOo_N`,
-                                    layoutId: `qpueSOo_N`,
-                                    style: { height: `100%` },
-                                    width: `100%`,
-                                    XkLXUXcp4: `School Popular Awards`,
-                                  }),
+                                },
+                                x,
+                                T,
+                              ),
+                              children: s(I, {
+                                className: `framer-1lcz1wz-container`,
+                                layoutDependency: R,
+                                layoutId: `qpueSOo_N-container`,
+                                nodeId: `qpueSOo_N`,
+                                rendersWithMotion: !0,
+                                scopeId: `eOJIt156j`,
+                                children: s(Y, {
+                                  h6FpGpKZO: `/esper/open`,
+                                  height: `100%`,
+                                  id: `qpueSOo_N`,
+                                  layoutId: `qpueSOo_N`,
+                                  style: { height: `100%` },
+                                  width: `100%`,
+                                  XkLXUXcp4: `Open Awards`,
                                 }),
                               }),
-                            ],
-                          }),
+                            }),
+                          ],
+                        }),
                       ],
                     }),
                   }),
@@ -2525,7 +2525,7 @@ var Ze,
                               style: {
                                 "--framer-text-color": `var(--extracted-r6o4lv, rgb(255, 255, 255))`,
                               },
-                              children: `Esper Awards 26'`,
+                              children: `Esper Awards '27`,
                             }),
                           }),
                           className: `framer-nqg1oi`,

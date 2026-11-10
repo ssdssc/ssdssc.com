@@ -111,38 +111,38 @@ import {
 import { n as qe, r as Je } from "./augia20il.kexl8cpf.mjs";
 function Ye(e) {
   let {
-      images: t = [
-        { src: `/esper/images/gfgkadagm4keibnciiruwlfrr0.jpg`, alt: `Image 1` },
-        { src: `/esper/images/ansat3jcvt4zglbwcuofe33q.jpg`, alt: `Image 2` },
-        {
-          src: `/esper/images/bynxev1zjyb9bhwh1iwbz1zos60.jpg`,
-          alt: `Image 3`,
-        },
-        { src: `/esper/images/2utnej5atl2k3njaefwmbnra.jpg`, alt: `Image 4` },
-      ],
-      gridColumns: n = 2,
-      gridRows: r = 2,
-      gap: i = 8,
-      borderRadius: a = 24,
-      borderWidth: o = 0,
-      borderColor: c = `#000000`,
-      backgroundColor: d = `#FFFFFF`,
-      opacity: p = 1,
-      overlayColor: m = `#000000`,
-      overlayOpacity: v = 0.2,
-      showOverlay: y = !1,
-      enableLightbox: b = !1,
-      animationDuration: x = 0.3,
-      lightboxBackgroundColor: S = `#000000`,
-      lightboxOpacity: C = 0.9,
-      enableSpanning: w = !1,
-      spanConfig: T = [
-        { imageIndex: 0, colSpan: 2, rowSpan: 1 },
-        { imageIndex: 2, colSpan: 1, rowSpan: 2 },
-      ],
-      grayscaleOnHover: E = !1,
-      style: D,
-    } = e,
+    images: t = [
+      { src: `/esper/images/gfgkadagm4keibnciiruwlfrr0.jpg`, alt: `Image 1` },
+      { src: `/esper/images/ansat3jcvt4zglbwcuofe33q.jpg`, alt: `Image 2` },
+      {
+        src: `/esper/images/bynxev1zjyb9bhwh1iwbz1zos60.jpg`,
+        alt: `Image 3`,
+      },
+      { src: `/esper/images/2utnej5atl2k3njaefwmbnra.jpg`, alt: `Image 4` },
+    ],
+    gridColumns: n = 2,
+    gridRows: r = 2,
+    gap: i = 8,
+    borderRadius: a = 24,
+    borderWidth: o = 0,
+    borderColor: c = `#000000`,
+    backgroundColor: d = `#FFFFFF`,
+    opacity: p = 1,
+    overlayColor: m = `#000000`,
+    overlayOpacity: v = 0.2,
+    showOverlay: y = !1,
+    enableLightbox: b = !1,
+    animationDuration: x = 0.3,
+    lightboxBackgroundColor: S = `#000000`,
+    lightboxOpacity: C = 0.9,
+    enableSpanning: w = !1,
+    spanConfig: T = [
+      { imageIndex: 0, colSpan: 2, rowSpan: 1 },
+      { imageIndex: 2, colSpan: 1, rowSpan: 2 },
+    ],
+    grayscaleOnHover: E = !1,
+    style: D,
+  } = e,
     O = g(() => {
       if (!w) {
         let e = n * r;
@@ -156,8 +156,8 @@ function Ye(e) {
         }));
       }
       let e = Array(r)
-          .fill(null)
-          .map(() => Array(n).fill(!1)),
+        .fill(null)
+        .map(() => Array(n).fill(!1)),
         i = [],
         a = new Set();
       T.forEach((o) => {
@@ -193,7 +193,7 @@ function Ye(e) {
       for (let s = 0; s < r; s++)
         for (let r = 0; r < n; r++)
           if (!e[s][r]) {
-            for (; o < t.length && a.has(o); ) o++;
+            for (; o < t.length && a.has(o);) o++;
             let e = o < t.length ? o : null;
             (i.push({
               imageIndex: e,
@@ -218,8 +218,8 @@ function Ye(e) {
         };
       if (b) {
         let e =
-            (typeof r == `object` && r && r.src) ||
-            `/esper/images/gfgkadagm4keibnciiruwlfrr0.jpg`,
+          (typeof r == `object` && r && r.src) ||
+          `/esper/images/gfgkadagm4keibnciiruwlfrr0.jpg`,
           t = (typeof r == `object` && r && r.alt) || `Image`;
         u(() => {
           (j({ src: e, alt: t }), N(n), k(!0));
@@ -311,23 +311,23 @@ function Ye(e) {
             let r = O[n].imageIndex;
             if (r === null) return null;
             let s = [
-                {
-                  src: `/esper/images/gfgkadagm4keibnciiruwlfrr0.jpg`,
-                  alt: `Image 1`,
-                },
-                {
-                  src: `/esper/images/ansat3jcvt4zglbwcuofe33q.jpg`,
-                  alt: `Image 2`,
-                },
-                {
-                  src: `/esper/images/bynxev1zjyb9bhwh1iwbz1zos60.jpg`,
-                  alt: `Image 3`,
-                },
-                {
-                  src: `/esper/images/2utnej5atl2k3njaefwmbnra.jpg`,
-                  alt: `Image 4`,
-                },
-              ],
+              {
+                src: `/esper/images/gfgkadagm4keibnciiruwlfrr0.jpg`,
+                alt: `Image 1`,
+              },
+              {
+                src: `/esper/images/ansat3jcvt4zglbwcuofe33q.jpg`,
+                alt: `Image 2`,
+              },
+              {
+                src: `/esper/images/bynxev1zjyb9bhwh1iwbz1zos60.jpg`,
+                alt: `Image 3`,
+              },
+              {
+                src: `/esper/images/2utnej5atl2k3njaefwmbnra.jpg`,
+                alt: `Image 4`,
+              },
+            ],
               l = (t && t.length > 0 && t[r]) || s[r] || s[0],
               u = (typeof l == `object` && l && l.src) || s[0].src,
               d = (typeof l == `object` && l && l.alt) || `Image`,
@@ -395,19 +395,19 @@ function Ye(e) {
                       },
                     }),
                     y &&
-                      f(`div`, {
-                        style: {
-                          position: `absolute`,
-                          top: 0,
-                          left: 0,
-                          width: `100%`,
-                          height: `100%`,
-                          backgroundColor: m,
-                          opacity: v,
-                          transition: `opacity ${x}s ease-in-out`,
-                          zIndex: 1,
-                        },
-                      }),
+                    f(`div`, {
+                      style: {
+                        position: `absolute`,
+                        top: 0,
+                        left: 0,
+                        width: `100%`,
+                        height: `100%`,
+                        backgroundColor: m,
+                        opacity: v,
+                        transition: `opacity ${x}s ease-in-out`,
+                        zIndex: 1,
+                      },
+                    }),
                   ],
                 }),
               },
@@ -416,98 +416,98 @@ function Ye(e) {
           }),
         }),
         ee &&
-          A &&
-          _(`div`, {
-            style: {
-              position: `fixed`,
-              top: 0,
-              left: 0,
-              width: `100vw`,
-              height: `100vh`,
-              backgroundColor: S,
-              opacity: C,
-              display: `flex`,
-              justifyContent: `center`,
-              alignItems: `center`,
-              zIndex: 1e3,
-              cursor: `pointer`,
-              animation: `fadeIn ${x}s ease-in-out`,
-            },
-            onClick: L,
-            children: [
-              f(`img`, {
-                src: A.src,
-                alt: A.alt,
-                style: {
-                  width: `60vh`,
-                  height: `80vh`,
-                  objectFit: `cover`,
-                  borderRadius: a,
-                  boxShadow: `0 20px 60px rgba(0, 0, 0, 0.5)`,
-                  animation: `scaleIn ${x}s ease-in-out`,
-                },
-                onClick: (e) => e.stopPropagation(),
-                className: `lightbox-image`,
+        A &&
+        _(`div`, {
+          style: {
+            position: `fixed`,
+            top: 0,
+            left: 0,
+            width: `100vw`,
+            height: `100vh`,
+            backgroundColor: S,
+            opacity: C,
+            display: `flex`,
+            justifyContent: `center`,
+            alignItems: `center`,
+            zIndex: 1e3,
+            cursor: `pointer`,
+            animation: `fadeIn ${x}s ease-in-out`,
+          },
+          onClick: L,
+          children: [
+            f(`img`, {
+              src: A.src,
+              alt: A.alt,
+              style: {
+                width: `60vh`,
+                height: `80vh`,
+                objectFit: `cover`,
+                borderRadius: a,
+                boxShadow: `0 20px 60px rgba(0, 0, 0, 0.5)`,
+                animation: `scaleIn ${x}s ease-in-out`,
+              },
+              onClick: (e) => e.stopPropagation(),
+              className: `lightbox-image`,
+            }),
+            f(`button`, {
+              onClick: L,
+              style: {
+                position: `absolute`,
+                top: `20px`,
+                right: `20px`,
+                width: `40px`,
+                height: `40px`,
+                borderRadius: `50%`,
+                border: `none`,
+                backgroundColor: `rgba(255, 255, 255, 0.9)`,
+                color: `#000`,
+                fontSize: `20px`,
+                cursor: `pointer`,
+                display: `flex`,
+                justifyContent: `center`,
+                alignItems: `center`,
+                transition: `all ${x}s ease-in-out`,
+                padding: 0,
+              },
+              onMouseEnter: (e) => {
+                ((e.currentTarget.style.backgroundColor = `rgba(255, 255, 255, 1)`),
+                  (e.currentTarget.style.transform = `scale(1.1)`));
+              },
+              onMouseLeave: (e) => {
+                ((e.currentTarget.style.backgroundColor = `rgba(255, 255, 255, 0.9)`),
+                  (e.currentTarget.style.transform = `scale(1)`));
+              },
+              children: _(`svg`, {
+                width: `20`,
+                height: `20`,
+                viewBox: `0 0 20 20`,
+                fill: `none`,
+                xmlns: `http://www.w3.org/2000/svg`,
+                style: { display: `block` },
+                children: [
+                  f(`line`, {
+                    x1: `5`,
+                    y1: `5`,
+                    x2: `15`,
+                    y2: `15`,
+                    stroke: `#000`,
+                    strokeWidth: `2`,
+                    strokeLinecap: `round`,
+                  }),
+                  f(`line`, {
+                    x1: `15`,
+                    y1: `5`,
+                    x2: `5`,
+                    y2: `15`,
+                    stroke: `#000`,
+                    strokeWidth: `2`,
+                    strokeLinecap: `round`,
+                  }),
+                ],
               }),
-              f(`button`, {
-                onClick: L,
-                style: {
-                  position: `absolute`,
-                  top: `20px`,
-                  right: `20px`,
-                  width: `40px`,
-                  height: `40px`,
-                  borderRadius: `50%`,
-                  border: `none`,
-                  backgroundColor: `rgba(255, 255, 255, 0.9)`,
-                  color: `#000`,
-                  fontSize: `20px`,
-                  cursor: `pointer`,
-                  display: `flex`,
-                  justifyContent: `center`,
-                  alignItems: `center`,
-                  transition: `all ${x}s ease-in-out`,
-                  padding: 0,
-                },
-                onMouseEnter: (e) => {
-                  ((e.currentTarget.style.backgroundColor = `rgba(255, 255, 255, 1)`),
-                    (e.currentTarget.style.transform = `scale(1.1)`));
-                },
-                onMouseLeave: (e) => {
-                  ((e.currentTarget.style.backgroundColor = `rgba(255, 255, 255, 0.9)`),
-                    (e.currentTarget.style.transform = `scale(1)`));
-                },
-                children: _(`svg`, {
-                  width: `20`,
-                  height: `20`,
-                  viewBox: `0 0 20 20`,
-                  fill: `none`,
-                  xmlns: `http://www.w3.org/2000/svg`,
-                  style: { display: `block` },
-                  children: [
-                    f(`line`, {
-                      x1: `5`,
-                      y1: `5`,
-                      x2: `15`,
-                      y2: `15`,
-                      stroke: `#000`,
-                      strokeWidth: `2`,
-                      strokeLinecap: `round`,
-                    }),
-                    f(`line`, {
-                      x1: `15`,
-                      y1: `5`,
-                      x2: `5`,
-                      y2: `15`,
-                      stroke: `#000`,
-                      strokeWidth: `2`,
-                      strokeLinecap: `round`,
-                    }),
-                  ],
-                }),
-              }),
-            ],
-          }),
+            }),
+          ],
+        }),
         f(`style`, {
           children: `
                 @keyframes fadeIn {
@@ -762,16 +762,16 @@ function Ze(e) {
       m.current = e.animation;
     }, [e.animation]));
   let [_, v] = g(() => {
-      if (t.mode === `random`) {
-        let e = Math.random() * 360,
-          t = 60 + Math.random() * 40;
-        return [tt(e, t, 50), tt(e, t, 65)];
-      } else
-        return [
-          [1, 1, 1],
-          [1, 1, 1],
-        ];
-    }, [t]),
+    if (t.mode === `random`) {
+      let e = Math.random() * 360,
+        t = 60 + Math.random() * 40;
+      return [tt(e, t, 50), tt(e, t, 65)];
+    } else
+      return [
+        [1, 1, 1],
+        [1, 1, 1],
+      ];
+  }, [t]),
     [y, b, x] = g(() => {
       if (t.mode === `random`) return [_, v, 1];
       {
@@ -852,8 +852,8 @@ function Ze(e) {
           let n = e - g;
           ((g = e),
             h.material instanceof _e &&
-              t.animate &&
-              (h.material.uniforms.u_time.value += (n * t.speed) / 1e3 / 10),
+            t.animate &&
+            (h.material.uniforms.u_time.value += (n * t.speed) / 1e3 / 10),
             u.render(i, s),
             (l.current = requestAnimationFrame(_)));
         };
@@ -1085,7 +1085,7 @@ var rt,
                   (n = parseInt(a.slice(2, 4), 16) / 255),
                   (r = parseInt(a.slice(4, 6), 16) / 255))
                 : a.length === 8 &&
-                  ((t = parseInt(a.slice(0, 2), 16) / 255),
+                ((t = parseInt(a.slice(0, 2), 16) / 255),
                   (n = parseInt(a.slice(2, 4), 16) / 255),
                   (r = parseInt(a.slice(4, 6), 16) / 255),
                   (i = parseInt(a.slice(6, 8), 16) / 255));
@@ -1665,11 +1665,11 @@ var mt,
         variant: Ct[u.variant] ?? u.variant ?? `knV6KwmH_`,
         VhfJsbfeu: t ??
           u.VhfJsbfeu ?? {
-            alt: ``,
-            pixelHeight: 25,
-            pixelWidth: 25,
-            src: `/esper/images/48e7uwhy3tyughzcs7vxsdba.svg`,
-          },
+          alt: ``,
+          pixelHeight: 25,
+          pixelWidth: 25,
+          src: `/esper/images/48e7uwhy3tyughzcs7vxsdba.svg`,
+        },
         WBHDxVlAg: o ?? u.WBHDxVlAg ?? `16px 24px 16px 24px`,
         wjO8MQqIi: c ?? u.wjO8MQqIi ?? `Start Your Project Today`,
         yRT8xCm66: i ?? u.yRT8xCm66,
@@ -1684,19 +1684,19 @@ var mt,
             { activeLocale: s, setLocale: c } = J();
           ue();
           let {
-              style: l,
-              className: u,
-              layoutId: d,
-              variant: p,
-              yRT8xCm66: m,
-              dnbs0gLnU: h,
-              wjO8MQqIi: g,
-              AyWRicLnL: v,
-              O2s5dHJnY: b,
-              VhfJsbfeu: x,
-              WBHDxVlAg: S,
-              ...C
-            } = wt(e),
+            style: l,
+            className: u,
+            layoutId: d,
+            variant: p,
+            yRT8xCm66: m,
+            dnbs0gLnU: h,
+            wjO8MQqIi: g,
+            AyWRicLnL: v,
+            O2s5dHJnY: b,
+            VhfJsbfeu: x,
+            WBHDxVlAg: S,
+            ...C
+          } = wt(e),
             {
               baseVariant: w,
               classNames: E,
@@ -1772,20 +1772,20 @@ var mt,
                     ),
                     children: [
                       v &&
-                        f(q, {
-                          background: {
-                            alt: ``,
-                            fit: `fill`,
-                            pixelHeight: 25,
-                            pixelWidth: 25,
-                            sizes: `24px`,
-                            ...bt(x),
-                          },
-                          className: `framer-1pg750a`,
-                          "data-framer-name": `Left Icon`,
-                          layoutDependency: F,
-                          layoutId: `GiZqqS4mR`,
-                        }),
+                      f(q, {
+                        background: {
+                          alt: ``,
+                          fit: `fill`,
+                          pixelHeight: 25,
+                          pixelWidth: 25,
+                          sizes: `24px`,
+                          ...bt(x),
+                        },
+                        className: `framer-1pg750a`,
+                        "data-framer-name": `Left Icon`,
+                        layoutDependency: F,
+                        layoutId: `GiZqqS4mR`,
+                      }),
                       f(R, {
                         __fromCanvasComponent: !0,
                         children: f(o, {
@@ -1806,20 +1806,20 @@ var mt,
                         withExternalLayout: !0,
                       }),
                       b &&
-                        f(q, {
-                          background: {
-                            alt: ``,
-                            fit: `fill`,
-                            pixelHeight: 18,
-                            pixelWidth: 18,
-                            sizes: `18px`,
-                            ...bt(x),
-                          },
-                          className: `framer-r9aeca`,
-                          "data-framer-name": `Right Icon`,
-                          layoutDependency: F,
-                          layoutId: `gpUVku80W`,
-                        }),
+                      f(q, {
+                        background: {
+                          alt: ``,
+                          fit: `fill`,
+                          pixelHeight: 18,
+                          pixelWidth: 18,
+                          sizes: `18px`,
+                          ...bt(x),
+                        },
+                        className: `framer-r9aeca`,
+                        "data-framer-name": `Right Icon`,
+                        layoutDependency: F,
+                        layoutId: `gpUVku80W`,
+                      }),
                     ],
                   }),
                 }),
@@ -2258,10 +2258,10 @@ var Pt,
         variant: Ht[s.variant] ?? s.variant ?? `AvHcalqs8`,
         WiQAc6QPE: n ??
           s.WiQAc6QPE ?? {
-            pixelHeight: 500,
-            pixelWidth: 400,
-            src: `/esper/images/oelospppndlbkx4lchlitv9qh5k.jpg?width=400&height=500`,
-          },
+          pixelHeight: 500,
+          pixelWidth: 400,
+          src: `/esper/images/oelospppndlbkx4lchlitv9qh5k.jpg?width=400&height=500`,
+        },
         x4R5Mb5Jq: i ?? s.x4R5Mb5Jq ?? `Alex Johnson`,
       })),
       (Wt = (e, t) =>
@@ -2409,18 +2409,18 @@ var Pt,
                               ),
                             }),
                             I() &&
-                              f(T.div, {
-                                className: `framer-z9yiom`,
-                                "data-framer-name": `Light Effect`,
-                                layoutDependency: P,
-                                layoutId: `qM7pB_8UlitcqZJ9rK`,
-                                style: {
-                                  background: `radial-gradient(40.2% 99.24161073825503% at 50% 50%, rgba(222, 222, 222, 0.2) 0%, rgba(68, 68, 68, 0) 100%)`,
-                                  filter: `blur(15px)`,
-                                  rotate: 45,
-                                  WebkitFilter: `blur(15px)`,
-                                },
-                              }),
+                            f(T.div, {
+                              className: `framer-z9yiom`,
+                              "data-framer-name": `Light Effect`,
+                              layoutDependency: P,
+                              layoutId: `qM7pB_8UlitcqZJ9rK`,
+                              style: {
+                                background: `radial-gradient(40.2% 99.24161073825503% at 50% 50%, rgba(222, 222, 222, 0.2) 0%, rgba(68, 68, 68, 0) 100%)`,
+                                filter: `blur(15px)`,
+                                rotate: 45,
+                                WebkitFilter: `blur(15px)`,
+                              },
+                            }),
                           ],
                         }),
                         f(T.div, {
@@ -2676,11 +2676,11 @@ var Jt,
         ...c,
         bLduUHqqh: n ??
           c.bLduUHqqh ?? {
-            pixelHeight: 960,
-            pixelWidth: 1200,
-            src: `/esper/images/deiz6cefu4bl5ijxfjwwp2oh4.png?width=1200&height=960`,
-            srcSet: `/esper/images/deiz6cefu4bl5ijxfjwwp2oh4.png?scale-down-to=512&width=1200&height=960 512w,/esper/images/deiz6cefu4bl5ijxfjwwp2oh4.png?scale-down-to=1024&width=1200&height=960 1024w,/esper/images/deiz6cefu4bl5ijxfjwwp2oh4.png?width=1200&height=960 1200w`,
-          },
+          pixelHeight: 960,
+          pixelWidth: 1200,
+          src: `/esper/images/deiz6cefu4bl5ijxfjwwp2oh4.png?width=1200&height=960`,
+          srcSet: `/esper/images/deiz6cefu4bl5ijxfjwwp2oh4.png?scale-down-to=512&width=1200&height=960 512w,/esper/images/deiz6cefu4bl5ijxfjwwp2oh4.png?scale-down-to=1024&width=1200&height=960 1024w,/esper/images/deiz6cefu4bl5ijxfjwwp2oh4.png?width=1200&height=960 1200w`,
+        },
         l9LjRaJjB: i ?? c.l9LjRaJjB,
         mClhBAXgo: a ?? c.mClhBAXgo ?? `DIY Step`,
         oLF3cLudd: r ?? c.oLF3cLudd,
@@ -2802,8 +2802,8 @@ var Jt,
                           fit: `fill`,
                           loading: M(
                             (l?.y || 0) +
-                              ((l?.height || 481) * 0.5016611295681065 -
-                                ((l?.height || 481) * 1) / 2),
+                            ((l?.height || 481) * 0.5016611295681065 -
+                              ((l?.height || 481) * 1) / 2),
                           ),
                           pixelHeight: 3425,
                           pixelWidth: 5071,
@@ -2829,8 +2829,8 @@ var Jt,
                                 fit: `fill`,
                                 loading: M(
                                   (l?.y || 0) +
-                                    ((l?.height || 200) * 0.5016611295681065 -
-                                      ((l?.height || 200) * 1) / 2),
+                                  ((l?.height || 200) * 0.5016611295681065 -
+                                    ((l?.height || 200) * 1) / 2),
                                 ),
                                 pixelHeight: 3425,
                                 pixelWidth: 5071,
@@ -3079,11 +3079,11 @@ var cn,
         bz2SOKPAC: i ?? o.bz2SOKPAC ?? `Monarch Imperial`,
         FKARN3Cfk: r ??
           o.FKARN3Cfk ?? {
-            pixelHeight: 1220,
-            pixelWidth: 1080,
-            src: `/esper/images/aqlcwcbd3o1mr54ln2stvoqpi0.png?width=1080&height=1220`,
-            srcSet: `/esper/images/aqlcwcbd3o1mr54ln2stvoqpi0.png?scale-down-to=1024&width=1080&height=1220 906w,/esper/images/aqlcwcbd3o1mr54ln2stvoqpi0.png?width=1080&height=1220 1080w`,
-          },
+          pixelHeight: 1220,
+          pixelWidth: 1080,
+          src: `/esper/images/aqlcwcbd3o1mr54ln2stvoqpi0.png?width=1080&height=1220`,
+          srcSet: `/esper/images/aqlcwcbd3o1mr54ln2stvoqpi0.png?scale-down-to=1024&width=1080&height=1220 906w,/esper/images/aqlcwcbd3o1mr54ln2stvoqpi0.png?width=1080&height=1220 1080w`,
+        },
         LKJDuHAih: e ?? o.LKJDuHAih ?? `It Ignites Here`,
       })),
       (gn = (e, t) =>
@@ -3158,8 +3158,8 @@ var cn,
                         fit: `fill`,
                         loading: M(
                           (l?.y || 0) +
-                            ((l?.height || 500) * 0.5000000000000002 -
-                              (((l?.height || 500) - 0) * 1) / 2),
+                          ((l?.height || 500) * 0.5000000000000002 -
+                            (((l?.height || 500) - 0) * 1) / 2),
                         ),
                         pixelHeight: 1220,
                         pixelWidth: 1080,
@@ -3178,8 +3178,8 @@ var cn,
                               fit: `fill`,
                               loading: M(
                                 (l?.y || 0) +
-                                  ((l?.height || 500) * 0.5000000000000002 -
-                                    (((l?.height || 500) - 0) * 1.15) / 2),
+                                ((l?.height || 500) * 0.5000000000000002 -
+                                  (((l?.height || 500) - 0) * 1.15) / 2),
                               ),
                               pixelHeight: 1220,
                               pixelWidth: 1080,
@@ -3537,11 +3537,11 @@ var xn,
         ...c,
         bLduUHqqh: n ??
           c.bLduUHqqh ?? {
-            pixelHeight: 960,
-            pixelWidth: 1200,
-            src: `/esper/images/deiz6cefu4bl5ijxfjwwp2oh4.png?width=1200&height=960`,
-            srcSet: `/esper/images/deiz6cefu4bl5ijxfjwwp2oh4.png?scale-down-to=512&width=1200&height=960 512w,/esper/images/deiz6cefu4bl5ijxfjwwp2oh4.png?scale-down-to=1024&width=1200&height=960 1024w,/esper/images/deiz6cefu4bl5ijxfjwwp2oh4.png?width=1200&height=960 1200w`,
-          },
+          pixelHeight: 960,
+          pixelWidth: 1200,
+          src: `/esper/images/deiz6cefu4bl5ijxfjwwp2oh4.png?width=1200&height=960`,
+          srcSet: `/esper/images/deiz6cefu4bl5ijxfjwwp2oh4.png?scale-down-to=512&width=1200&height=960 512w,/esper/images/deiz6cefu4bl5ijxfjwwp2oh4.png?scale-down-to=1024&width=1200&height=960 1024w,/esper/images/deiz6cefu4bl5ijxfjwwp2oh4.png?width=1200&height=960 1200w`,
+        },
         l9LjRaJjB: i ?? c.l9LjRaJjB,
         mClhBAXgo: a ?? c.mClhBAXgo ?? `DIY Step`,
         oLF3cLudd: r ?? c.oLF3cLudd,
@@ -3663,8 +3663,8 @@ var xn,
                           fit: `fill`,
                           loading: M(
                             (l?.y || 0) +
-                              ((l?.height || 481) * 0.5016611295681065 -
-                                ((l?.height || 481) * 1) / 2),
+                            ((l?.height || 481) * 0.5016611295681065 -
+                              ((l?.height || 481) * 1) / 2),
                           ),
                           pixelHeight: 3425,
                           pixelWidth: 5071,
@@ -3690,8 +3690,8 @@ var xn,
                                 fit: `fill`,
                                 loading: M(
                                   (l?.y || 0) +
-                                    ((l?.height || 471) * 0.5016611295681065 -
-                                      ((l?.height || 471) * 1) / 2),
+                                  ((l?.height || 471) * 0.5016611295681065 -
+                                    ((l?.height || 471) * 1) / 2),
                                 ),
                                 pixelHeight: 3425,
                                 pixelWidth: 5071,
@@ -3915,13 +3915,13 @@ function Ln(e, t) {
   }
   return n;
 }
-var Rn = e(() => {}),
+var Rn = e(() => { }),
   zn,
   Bn = e(() => {
     ((zn = {}),
       Object.defineProperty(zn, `__esModule`, { value: !0 }),
-      (zn.warning = function () {}),
-      (zn.invariant = function () {}),
+      (zn.warning = function () { }),
+      (zn.invariant = function () { }),
       zn.__esModule,
       zn.warning,
       zn.invariant);
@@ -3940,7 +3940,7 @@ function Hn(e, t) {
   );
 }
 function Un(e, t, { root: n, margin: r, amount: i = `any` } = {}) {
-  if (typeof IntersectionObserver > `u`) return () => {};
+  if (typeof IntersectionObserver > `u`) return () => { };
   let a = Hn(e),
     o = new WeakMap(),
     s = new IntersectionObserver(
@@ -4051,55 +4051,55 @@ var er,
   vr,
   yr = e(() => {
     for (let e in (a(),
-    Pn(),
-    In(),
-    Rn(),
-    Bn(),
-    Vn(),
-    (er = [``, `X`, `Y`, `Z`]),
-    (tr = [`translate`, `scale`, `rotate`, `skew`]),
-    (nr = {
-      syntax: `<angle>`,
-      initialValue: `0deg`,
-      toDefaultUnit: (e) => e + `deg`,
-    }),
-    (rr = {
-      translate: {
-        syntax: `<length-percentage>`,
-        initialValue: `0px`,
-        toDefaultUnit: (e) => e + `px`,
-      },
-      rotate: nr,
-      scale: { syntax: `<number>`, initialValue: 1, toDefaultUnit: Nn },
-      skew: nr,
-    }),
-    (ir = new Map()),
-    (ar = (e) => `--motion-${e}`),
-    (or = [`x`, `y`, `z`]),
-    tr.forEach((e) => {
-      er.forEach((t) => {
-        (or.push(e + t), ir.set(ar(e + t), rr[e]));
-      });
-    }),
-    new Set(or),
-    (sr = (e) => document.createElement(`div`).animate(e, { duration: 0.001 })),
-    (cr = {
-      cssRegisterProperty: () =>
-        typeof CSS < `u` && Object.hasOwnProperty.call(CSS, `registerProperty`),
-      waapi: () => Object.hasOwnProperty.call(Element.prototype, `animate`),
-      partialKeyframes: () => {
-        try {
-          sr({ opacity: [1] });
-        } catch {
-          return !1;
-        }
-        return !0;
-      },
-      finished: () => !!sr({ opacity: [0, 1] }).finished,
-    }),
-    (lr = {}),
-    (ur = {}),
-    cr))
+      Pn(),
+      In(),
+      Rn(),
+      Bn(),
+      Vn(),
+      (er = [``, `X`, `Y`, `Z`]),
+      (tr = [`translate`, `scale`, `rotate`, `skew`]),
+      (nr = {
+        syntax: `<angle>`,
+        initialValue: `0deg`,
+        toDefaultUnit: (e) => e + `deg`,
+      }),
+      (rr = {
+        translate: {
+          syntax: `<length-percentage>`,
+          initialValue: `0px`,
+          toDefaultUnit: (e) => e + `px`,
+        },
+        rotate: nr,
+        scale: { syntax: `<number>`, initialValue: 1, toDefaultUnit: Nn },
+        skew: nr,
+      }),
+      (ir = new Map()),
+      (ar = (e) => `--motion-${e}`),
+      (or = [`x`, `y`, `z`]),
+      tr.forEach((e) => {
+        er.forEach((t) => {
+          (or.push(e + t), ir.set(ar(e + t), rr[e]));
+        });
+      }),
+      new Set(or),
+      (sr = (e) => document.createElement(`div`).animate(e, { duration: 0.001 })),
+      (cr = {
+        cssRegisterProperty: () =>
+          typeof CSS < `u` && Object.hasOwnProperty.call(CSS, `registerProperty`),
+        waapi: () => Object.hasOwnProperty.call(Element.prototype, `animate`),
+        partialKeyframes: () => {
+          try {
+            sr({ opacity: [1] });
+          } catch {
+            return !1;
+          }
+          return !0;
+        },
+        finished: () => !!sr({ opacity: [0, 1] }).finished,
+      }),
+      (lr = {}),
+      (ur = {}),
+      cr))
       ur[e] = () => (lr[e] === void 0 && (lr[e] = cr[e]()), lr[e]);
     ((dr = { any: 0, all: 1 }),
       (fr = new WeakMap()),
@@ -4148,10 +4148,10 @@ var er,
           isActive: (e) => !!e.press,
           subscribe: (e, { enable: t, disable: n }) => {
             let r = (t) => {
-                (n(),
-                  Qn(e, `pressend`, t),
-                  l.removeEventListener(`pointerup`, r));
-              },
+              (n(),
+                Qn(e, `pressend`, t),
+                l.removeEventListener(`pointerup`, r));
+            },
               i = (n) => {
                 (t(),
                   Qn(e, `pressstart`, n),
@@ -4171,22 +4171,22 @@ var er,
   });
 function br(e) {
   let {
-      slots: n = [],
-      gap: a,
-      padding: o,
-      paddingPerSide: c,
-      paddingTop: l,
-      paddingRight: u,
-      paddingBottom: d,
-      paddingLeft: p,
-      speed: m,
-      hoverFactor: v,
-      direction: y,
-      alignment: D,
-      sizingOptions: O,
-      fadeOptions: A,
-      style: j,
-    } = e,
+    slots: n = [],
+    gap: a,
+    padding: o,
+    paddingPerSide: c,
+    paddingTop: l,
+    paddingRight: u,
+    paddingBottom: d,
+    paddingLeft: p,
+    speed: m,
+    hoverFactor: v,
+    direction: y,
+    alignment: D,
+    sizingOptions: O,
+    fadeOptions: A,
+    style: j,
+  } = e,
     {
       fadeContent: M,
       overflow: N,
@@ -4215,32 +4215,32 @@ function br(e) {
     ue = 0;
   (B && ((le = ie ? Math.floor(10 / ie) : 0), (ue = 1)),
     !B &&
-      ae &&
-      oe.parent &&
-      ((le = Math.round((oe.parent / oe.children) * 2) + 1),
+    ae &&
+    oe.parent &&
+    ((le = Math.round((oe.parent / oe.children) * 2) + 1),
       (le = Math.min(le, xr)),
       (ue = 1)));
   let de = t(() => {
-      if (ae && W.current) {
-        let e = V ? W.current.offsetWidth : W.current.offsetHeight,
-          t = G[0].current
+    if (ae && W.current) {
+      let e = V ? W.current.offsetWidth : W.current.offsetHeight,
+        t = G[0].current
+          ? V
+            ? G[0].current.offsetLeft
+            : G[0].current.offsetTop
+          : 0;
+      K({
+        parent: e,
+        children:
+          (G[1].current
             ? V
-              ? G[0].current.offsetLeft
-              : G[0].current.offsetTop
-            : 0;
-        K({
-          parent: e,
-          children:
-            (G[1].current
-              ? V
-                ? G[1].current.offsetLeft + G[1].current.offsetWidth
-                : G[1].current.offsetTop + G[1].current.offsetHeight
-              : 0) -
-            t +
-            a,
-        });
-      }
-    }, []),
+              ? G[1].current.offsetLeft + G[1].current.offsetWidth
+              : G[1].current.offsetTop + G[1].current.offsetHeight
+            : 0) -
+          t +
+          a,
+      });
+    }
+  }, []),
     q = B ? { contentVisibility: `auto` } : {};
   if (ae) {
     if (!B) {
@@ -4372,49 +4372,49 @@ function br(e) {
     ve = `linear-gradient(${he}, rgba(0, 0, 0, ${I}) ${Or(F, 0, ge)}%, rgba(0, 0, 0, 1) ${ge}%, rgba(0, 0, 0, 1) ${_e}%, rgba(0, 0, 0, ${I}) ${100 - F}%)`;
   return ae
     ? f(`section`, {
+      style: {
+        ...Cr,
+        opacity: ue,
+        WebkitMaskImage: M ? ve : void 0,
+        maskImage: M ? ve : void 0,
+        overflow: N ? `visible` : `hidden`,
+        padding: z,
+      },
+      ref: W,
+      children: _(T.ul, {
+        ref: me,
         style: {
           ...Cr,
-          opacity: ue,
-          WebkitMaskImage: M ? ve : void 0,
-          maskImage: M ? ve : void 0,
-          overflow: N ? `visible` : `hidden`,
-          padding: z,
+          gap: a,
+          top: y === `bottom` && kr(Y) ? -Y : void 0,
+          left: y === `right` && kr(Y) ? -Y : void 0,
+          placeItems: D,
+          position: `relative`,
+          flexDirection: V ? `row` : `column`,
+          ...j,
+          willChange: B || !J ? `auto` : `transform`,
+          transform: U(0),
         },
-        ref: W,
-        children: _(T.ul, {
-          ref: me,
-          style: {
-            ...Cr,
-            gap: a,
-            top: y === `bottom` && kr(Y) ? -Y : void 0,
-            left: y === `right` && kr(Y) ? -Y : void 0,
-            placeItems: D,
-            position: `relative`,
-            flexDirection: V ? `row` : `column`,
-            ...j,
-            willChange: B || !J ? `auto` : `transform`,
-            transform: U(0),
-          },
-          onMouseEnter: () => {
-            ((fe.current = !0), X.current && (X.current.playbackRate = v));
-          },
-          onMouseLeave: () => {
-            ((fe.current = !1), X.current && (X.current.playbackRate = 1));
-          },
-          children: [se, ce],
-        }),
-      })
+        onMouseEnter: () => {
+          ((fe.current = !0), X.current && (X.current.playbackRate = v));
+        },
+        onMouseLeave: () => {
+          ((fe.current = !1), X.current && (X.current.playbackRate = 1));
+        },
+        children: [se, ce],
+      }),
+    })
     : _(`section`, {
-        style: wr,
-        children: [
-          f(`div`, { style: Tr, children: `✨` }),
-          f(`p`, { style: Er, children: `Connect to Content` }),
-          f(`p`, {
-            style: Dr,
-            children: `Add layers or components to infinitely loop on your page.`,
-          }),
-        ],
-      });
+      style: wr,
+      children: [
+        f(`div`, { style: Tr, children: `✨` }),
+        f(`p`, { style: Er, children: `Connect to Content` }),
+        f(`p`, {
+          style: Dr,
+          children: `Add layers or components to infinitely loop on your page.`,
+        }),
+      ],
+    });
 }
 var xr,
   Sr,
@@ -5130,7 +5130,7 @@ var Kr,
                             fit: `fill`,
                             loading: M(
                               (E?.y || 0) +
-                                (12 + ((E?.height || 50) - 24 - 26) / 2),
+                              (12 + ((E?.height || 50) - 24 - 26) / 2),
                             ),
                             pixelHeight: 24,
                             pixelWidth: 24,
@@ -5203,22 +5203,22 @@ function oi(e) {
       let t = e.current;
       t &&
         ((t.preload = `auto`),
-        !(
-          t.currentTime > 0 &&
-          t.onplaying &&
-          !t.paused &&
-          !t.ended &&
-          t.readyState >= t.HAVE_CURRENT_DATA
-        ) &&
+          !(
+            t.currentTime > 0 &&
+            t.onplaying &&
+            !t.paused &&
+            !t.ended &&
+            t.readyState >= t.HAVE_CURRENT_DATA
+          ) &&
           t &&
           !r.current &&
           n &&
           ((r.current = !0),
-          (a.current = !0),
-          t
-            .play()
-            .catch((e) => {})
-            .finally(() => (r.current = !1))));
+            (a.current = !0),
+            t
+              .play()
+              .catch((e) => { })
+              .finally(() => (r.current = !1))));
     }, []),
     pause: t(() => {
       !e.current || r.current || (e.current.pause(), (a.current = !1));
@@ -5273,34 +5273,34 @@ var ui,
       (fi = `/esper/images/mlwpbw1duqawjlhhun3dbwpgjak.mp4`),
       (pi = m(function (e) {
         let {
-            srcType: t = `URL`,
-            srcUrl: n,
-            srcFile: r = ``,
-            posterEnabled: a = !1,
-            controls: o = !1,
-            playing: s = !0,
-            loop: c = !0,
-            muted: l = !0,
-            playsinline: u = !0,
-            restartOnEnter: d = !1,
-            objectFit: p = `cover`,
-            backgroundColor: m = `rgba(0,0,0,0)`,
-            radius: _ = 0,
-            volume: v = 25,
-            startTime: y = 0,
-            poster: b,
-            playing: x,
-            progress: S,
-            onSeeked: w,
-            onPause: T,
-            onPlay: E,
-            onEnd: D,
-            onClick: ee,
-            onMouseEnter: k,
-            onMouseLeave: A,
-            onMouseDown: j,
-            onMouseUp: M,
-          } = e,
+          srcType: t = `URL`,
+          srcUrl: n,
+          srcFile: r = ``,
+          posterEnabled: a = !1,
+          controls: o = !1,
+          playing: s = !0,
+          loop: c = !0,
+          muted: l = !0,
+          playsinline: u = !0,
+          restartOnEnter: d = !1,
+          objectFit: p = `cover`,
+          backgroundColor: m = `rgba(0,0,0,0)`,
+          radius: _ = 0,
+          volume: v = 25,
+          startTime: y = 0,
+          poster: b,
+          playing: x,
+          progress: S,
+          onSeeked: w,
+          onPause: T,
+          onPlay: E,
+          onEnd: D,
+          onClick: ee,
+          onMouseEnter: k,
+          onMouseLeave: A,
+          onMouseDown: j,
+          onMouseUp: M,
+        } = e,
           N = i(),
           P = Ke(),
           F = i(null),
@@ -5312,12 +5312,12 @@ var ui,
           B = z
             ? `no-autoplay`
             : si({
-                playingProp: x,
-                muted: l,
-                loop: c,
-                playsinline: u,
-                controls: o,
-              }),
+              playingProp: x,
+              muted: l,
+              loop: c,
+              playsinline: u,
+              controls: o,
+            }),
           re = z ? !0 : C(N),
           ie = z ? !1 : C(N, { margin: `10%`, once: !0 }),
           ae = y === 100 ? 99.9 : y,
@@ -5328,7 +5328,7 @@ var ui,
           h(() => {
             z ||
               (re && x && B !== `no-autoplay` && V(),
-              B === `on-viewport` && H());
+                B === `on-viewport` && H());
           }, [B, re, x]),
           h(() => {
             !L || b || a || ae || !N.current || (N.current.currentTime = 0.01);
@@ -5350,8 +5350,8 @@ var ui,
           ze(() => {
             N.current &&
               ((I.current = N.current.ended),
-              (F.current = N.current.paused),
-              H());
+                (F.current = N.current.paused),
+                H());
           }));
         let oe = g(() => {
           if (t === `URL`) return n + ``;
@@ -5396,9 +5396,9 @@ var ui,
               let e = N.current;
               e &&
                 (e.currentTime < 0.3 && ae > 0 && U((ae ?? 0) * 0.01),
-                (W.current ||
-                  B === `on-mount` ||
-                  (x && B === `on-viewport` && re)) &&
+                  (W.current ||
+                    B === `on-mount` ||
+                    (x && B === `on-viewport` && re)) &&
                   V());
             },
             controls: o,
@@ -5622,11 +5622,11 @@ var _i,
           s ?? l.kiPAjtbyV ?? `/esper/images/eufx58khoofipla8j9ir0em8.mp4`,
         NC0UEvmcb: o ??
           l.NC0UEvmcb ?? {
-            pixelHeight: 3e3,
-            pixelWidth: 6222,
-            src: `/esper/images/0i9dmvasjeyfaetgstpeh5kfpgo.webp?width=6222&height=3000`,
-            srcSet: `/esper/images/0i9dmvasjeyfaetgstpeh5kfpgo.webp?scale-down-to=512&width=6222&height=3000 512w,/esper/images/0i9dmvasjeyfaetgstpeh5kfpgo.webp?scale-down-to=1024&width=6222&height=3000 1024w,/esper/images/0i9dmvasjeyfaetgstpeh5kfpgo.webp?scale-down-to=2048&width=6222&height=3000 2048w,/esper/images/0i9dmvasjeyfaetgstpeh5kfpgo.webp?scale-down-to=4096&width=6222&height=3000 4096w,/esper/images/0i9dmvasjeyfaetgstpeh5kfpgo.webp?width=6222&height=3000 6222w`,
-          },
+          pixelHeight: 3e3,
+          pixelWidth: 6222,
+          src: `/esper/images/0i9dmvasjeyfaetgstpeh5kfpgo.webp?width=6222&height=3000`,
+          srcSet: `/esper/images/0i9dmvasjeyfaetgstpeh5kfpgo.webp?scale-down-to=512&width=6222&height=3000 512w,/esper/images/0i9dmvasjeyfaetgstpeh5kfpgo.webp?scale-down-to=1024&width=6222&height=3000 1024w,/esper/images/0i9dmvasjeyfaetgstpeh5kfpgo.webp?scale-down-to=2048&width=6222&height=3000 2048w,/esper/images/0i9dmvasjeyfaetgstpeh5kfpgo.webp?scale-down-to=4096&width=6222&height=3000 4096w,/esper/images/0i9dmvasjeyfaetgstpeh5kfpgo.webp?width=6222&height=3000 6222w`,
+        },
         PigqzeBO6: i ?? l.PigqzeBO6,
         variant: Mi[l.variant] ?? l.variant ?? `w6i92mI6q`,
         ymOYwie1O: a ?? l.ymOYwie1O ?? `Upload`,
@@ -5780,7 +5780,7 @@ var _i,
                         fit: `fill`,
                         loading: M(
                           (c?.y || 0) +
-                            ((c?.height || 521) * 0.5011086474501111 - 40),
+                          ((c?.height || 521) * 0.5011086474501111 - 40),
                         ),
                         pixelHeight: 80,
                         pixelWidth: 80,
@@ -6438,9 +6438,9 @@ e(() => {
       G()
         ? null
         : f(`style`, {
-            dangerouslySetInnerHTML: { __html: e },
-            "data-framer-html-style": ``,
-          })),
+          dangerouslySetInnerHTML: { __html: e },
+          "data-framer-html-style": ``,
+        })),
     (Oa = ({ height: e, id: t, width: n, ...r }) => ({
       ...r,
       variant: Ea[r.variant] ?? r.variant ?? `WQLkyLRf1`,
@@ -6534,291 +6534,291 @@ e(() => {
                           }),
                         }),
                         E() &&
-                          f(`div`, {
-                            className: `framer-1np4c7y hidden-72rtr7 hidden-ebiaht hidden-193nlgj`,
-                            "data-framer-name": `Spacer`,
-                          }),
+                        f(`div`, {
+                          className: `framer-1np4c7y hidden-72rtr7 hidden-ebiaht hidden-193nlgj`,
+                          "data-framer-name": `Spacer`,
+                        }),
                         O() &&
-                          f(`div`, {
-                            className: `framer-1bv71pv hidden-9w4hrp`,
-                            "data-framer-name": `Spacer`,
-                          }),
+                        f(`div`, {
+                          className: `framer-1bv71pv hidden-9w4hrp`,
+                          "data-framer-name": `Spacer`,
+                        }),
                         ee() &&
-                          _(`main`, {
-                            className: `framer-1xskp1a hidden-72rtr7 hidden-9w4hrp hidden-193nlgj`,
-                            "data-framer-name": `Main`,
-                            children: [
-                              f(Y, {
-                                breakpoint: b,
-                                overrides: {
-                                  nmuyZviuC: {
-                                    background: {
-                                      alt: ``,
-                                      fit: `fill`,
-                                      loading: M(
-                                        (u?.y || 0) + 0 + 0 + 0 + 570 + 0 + 0,
-                                      ),
-                                      pixelHeight: 349,
-                                      pixelWidth: 942,
-                                      sizes: `565px`,
-                                      src: `/esper/images/1axaeepaiboo6au7fywunhesdak.png?width=942&height=349`,
-                                      srcSet: `/esper/images/1axaeepaiboo6au7fywunhesdak.png?scale-down-to=512&width=942&height=349 512w,/esper/images/1axaeepaiboo6au7fywunhesdak.png?width=942&height=349 942w`,
-                                    },
-                                  },
-                                },
-                                children: f(q, {
+                        _(`main`, {
+                          className: `framer-1xskp1a hidden-72rtr7 hidden-9w4hrp hidden-193nlgj`,
+                          "data-framer-name": `Main`,
+                          children: [
+                            f(Y, {
+                              breakpoint: b,
+                              overrides: {
+                                nmuyZviuC: {
                                   background: {
                                     alt: ``,
                                     fit: `fill`,
+                                    loading: M(
+                                      (u?.y || 0) + 0 + 0 + 0 + 570 + 0 + 0,
+                                    ),
                                     pixelHeight: 349,
                                     pixelWidth: 942,
                                     sizes: `565px`,
                                     src: `/esper/images/1axaeepaiboo6au7fywunhesdak.png?width=942&height=349`,
                                     srcSet: `/esper/images/1axaeepaiboo6au7fywunhesdak.png?scale-down-to=512&width=942&height=349 512w,/esper/images/1axaeepaiboo6au7fywunhesdak.png?width=942&height=349 942w`,
                                   },
-                                  className: `framer-1coyxf9`,
-                                }),
-                              }),
-                              f(`div`, {
-                                className: `framer-2dssc1`,
-                                "data-framer-name": `Top`,
-                                children: f(`div`, {
-                                  className: `framer-1iownmg`,
-                                  "data-framer-name": `H1+Body`,
-                                  children: f(Ui, {
-                                    __fromCanvasComponent: !0,
-                                    animate: pa,
-                                    children: f(o, {
-                                      children: f(`p`, {
-                                        className: `framer-styles-preset-1nu4r2j`,
-                                        "data-styles-preset": `vtMx1ujdK`,
-                                        style: {
-                                          "--framer-text-alignment": `center`,
-                                        },
-                                        children: `SRILANKA'S PREMIER SCIENCE DAY AND AWARDS CERAMONY BROUGHT TO YOU BY THE SCIENCE SOCIETY OF D.S. SENANAYAKE COLLEGE`,
-                                      }),
-                                    }),
-                                    className: `framer-fwpjb1`,
-                                    "data-framer-appear-id": `fwpjb1`,
-                                    "data-framer-name": `Our team of creative experts delivers stunning, high-quality designs tailored to your needs, ensuring your brand stands out in a crowded market.`,
-                                    fonts: [`Inter`],
-                                    initial: ma,
-                                    optimized: !0,
-                                    verticalAlignment: `top`,
-                                    withExternalLayout: !0,
-                                  }),
-                                }),
-                              }),
-                            ],
-                          }),
-                        E() &&
-                          _(`main`, {
-                            className: `framer-1fnvbas hidden-72rtr7 hidden-ebiaht hidden-193nlgj`,
-                            "data-framer-name": `Main`,
-                            children: [
-                              f(Y, {
-                                breakpoint: b,
-                                overrides: {
-                                  AV4qGqEC9: {
-                                    background: {
-                                      alt: ``,
-                                      fit: `fill`,
-                                      loading: M(
-                                        (u?.y || 0) + 0 + 0 + 140 + 349 + 0 + 0,
-                                      ),
-                                      pixelHeight: 349,
-                                      pixelWidth: 942,
-                                      sizes: `274px`,
-                                      src: `/esper/images/1axaeepaiboo6au7fywunhesdak.png?width=942&height=349`,
-                                      srcSet: `/esper/images/1axaeepaiboo6au7fywunhesdak.png?scale-down-to=512&width=942&height=349 512w,/esper/images/1axaeepaiboo6au7fywunhesdak.png?width=942&height=349 942w`,
-                                    },
-                                  },
                                 },
-                                children: f(q, {
+                              },
+                              children: f(q, {
+                                background: {
+                                  alt: ``,
+                                  fit: `fill`,
+                                  pixelHeight: 349,
+                                  pixelWidth: 942,
+                                  sizes: `565px`,
+                                  src: `/esper/images/1axaeepaiboo6au7fywunhesdak.png?width=942&height=349`,
+                                  srcSet: `/esper/images/1axaeepaiboo6au7fywunhesdak.png?scale-down-to=512&width=942&height=349 512w,/esper/images/1axaeepaiboo6au7fywunhesdak.png?width=942&height=349 942w`,
+                                },
+                                className: `framer-1coyxf9`,
+                              }),
+                            }),
+                            f(`div`, {
+                              className: `framer-2dssc1`,
+                              "data-framer-name": `Top`,
+                              children: f(`div`, {
+                                className: `framer-1iownmg`,
+                                "data-framer-name": `H1+Body`,
+                                children: f(Ui, {
+                                  __fromCanvasComponent: !0,
+                                  animate: pa,
+                                  children: f(o, {
+                                    children: f(`p`, {
+                                      className: `framer-styles-preset-1nu4r2j`,
+                                      "data-styles-preset": `vtMx1ujdK`,
+                                      style: {
+                                        "--framer-text-alignment": `center`,
+                                      },
+                                      children: `SRILANKA'S PREMIER SCIENCE DAY AND AWARDS CERAMONY BROUGHT TO YOU BY THE SCIENCE SOCIETY OF D.S. SENANAYAKE COLLEGE`,
+                                    }),
+                                  }),
+                                  className: `framer-fwpjb1`,
+                                  "data-framer-appear-id": `fwpjb1`,
+                                  "data-framer-name": `Our team of creative experts delivers stunning, high-quality designs tailored to your needs, ensuring your brand stands out in a crowded market.`,
+                                  fonts: [`Inter`],
+                                  initial: ma,
+                                  optimized: !0,
+                                  verticalAlignment: `top`,
+                                  withExternalLayout: !0,
+                                }),
+                              }),
+                            }),
+                          ],
+                        }),
+                        E() &&
+                        _(`main`, {
+                          className: `framer-1fnvbas hidden-72rtr7 hidden-ebiaht hidden-193nlgj`,
+                          "data-framer-name": `Main`,
+                          children: [
+                            f(Y, {
+                              breakpoint: b,
+                              overrides: {
+                                AV4qGqEC9: {
                                   background: {
                                     alt: ``,
                                     fit: `fill`,
+                                    loading: M(
+                                      (u?.y || 0) + 0 + 0 + 140 + 349 + 0 + 0,
+                                    ),
                                     pixelHeight: 349,
                                     pixelWidth: 942,
                                     sizes: `274px`,
                                     src: `/esper/images/1axaeepaiboo6au7fywunhesdak.png?width=942&height=349`,
                                     srcSet: `/esper/images/1axaeepaiboo6au7fywunhesdak.png?scale-down-to=512&width=942&height=349 512w,/esper/images/1axaeepaiboo6au7fywunhesdak.png?width=942&height=349 942w`,
                                   },
-                                  className: `framer-1jj0gun`,
-                                }),
+                                },
+                              },
+                              children: f(q, {
+                                background: {
+                                  alt: ``,
+                                  fit: `fill`,
+                                  pixelHeight: 349,
+                                  pixelWidth: 942,
+                                  sizes: `274px`,
+                                  src: `/esper/images/1axaeepaiboo6au7fywunhesdak.png?width=942&height=349`,
+                                  srcSet: `/esper/images/1axaeepaiboo6au7fywunhesdak.png?scale-down-to=512&width=942&height=349 512w,/esper/images/1axaeepaiboo6au7fywunhesdak.png?width=942&height=349 942w`,
+                                },
+                                className: `framer-1jj0gun`,
                               }),
-                              f(`div`, {
-                                className: `framer-wmsjic`,
-                                "data-framer-name": `Top`,
-                                children: f(`div`, {
-                                  className: `framer-1vdtq3r`,
-                                  "data-framer-name": `H1+Body`,
-                                  children: f(Ui, {
-                                    __fromCanvasComponent: !0,
-                                    animate: pa,
-                                    children: f(o, {
-                                      children: f(`p`, {
-                                        className: `framer-styles-preset-18k3ehq`,
-                                        "data-styles-preset": `A6tNITizW`,
-                                        style: {
-                                          "--framer-text-alignment": `center`,
-                                          "--framer-text-color": `rgb(255, 255, 255)`,
-                                        },
-                                        children: `SRILANKA'S PREMIER SCIENCE DAY AND AWARDS CERAMONY BROUGHT TO YOU BY THE SCIENCE SOCIETY OF D.S. SENANAYAKE COLLEGE`,
-                                      }),
+                            }),
+                            f(`div`, {
+                              className: `framer-wmsjic`,
+                              "data-framer-name": `Top`,
+                              children: f(`div`, {
+                                className: `framer-1vdtq3r`,
+                                "data-framer-name": `H1+Body`,
+                                children: f(Ui, {
+                                  __fromCanvasComponent: !0,
+                                  animate: pa,
+                                  children: f(o, {
+                                    children: f(`p`, {
+                                      className: `framer-styles-preset-18k3ehq`,
+                                      "data-styles-preset": `A6tNITizW`,
+                                      style: {
+                                        "--framer-text-alignment": `center`,
+                                        "--framer-text-color": `rgb(255, 255, 255)`,
+                                      },
+                                      children: `SRILANKA'S PREMIER SCIENCE DAY AND AWARDS CERAMONY BROUGHT TO YOU BY THE SCIENCE SOCIETY OF D.S. SENANAYAKE COLLEGE`,
                                     }),
-                                    className: `framer-a37a8b`,
-                                    "data-framer-appear-id": `a37a8b`,
-                                    "data-framer-name": `Our team of creative experts delivers stunning, high-quality designs tailored to your needs, ensuring your brand stands out in a crowded market.`,
-                                    fonts: [`Inter`],
-                                    initial: ma,
-                                    optimized: !0,
-                                    verticalAlignment: `top`,
-                                    withExternalLayout: !0,
                                   }),
+                                  className: `framer-a37a8b`,
+                                  "data-framer-appear-id": `a37a8b`,
+                                  "data-framer-name": `Our team of creative experts delivers stunning, high-quality designs tailored to your needs, ensuring your brand stands out in a crowded market.`,
+                                  fonts: [`Inter`],
+                                  initial: ma,
+                                  optimized: !0,
+                                  verticalAlignment: `top`,
+                                  withExternalLayout: !0,
                                 }),
                               }),
-                            ],
-                          }),
+                            }),
+                          ],
+                        }),
                       ],
                     }),
                     E() &&
-                      f(Y, {
-                        breakpoint: b,
-                        overrides: {
-                          AV4qGqEC9: {
-                            height: 40,
-                            width: `385px`,
-                            y: (u?.y || 0) + 0 + 749,
-                          },
+                    f(Y, {
+                      breakpoint: b,
+                      overrides: {
+                        AV4qGqEC9: {
+                          height: 40,
+                          width: `385px`,
+                          y: (u?.y || 0) + 0 + 749,
                         },
-                        children: f(U, {
-                          children: f(B, {
-                            className: `framer-spzwq1-container hidden-72rtr7 hidden-ebiaht hidden-193nlgj`,
-                            "data-framer-name": `Brands`,
-                            layout: w,
+                      },
+                      children: f(U, {
+                        children: f(B, {
+                          className: `framer-spzwq1-container hidden-72rtr7 hidden-ebiaht hidden-193nlgj`,
+                          "data-framer-name": `Brands`,
+                          layout: w,
+                          name: `Brands`,
+                          nodeId: `fR0VCCfAL`,
+                          scopeId: `augiA20Il`,
+                          children: f(Ur, {
+                            height: `100%`,
+                            id: `fR0VCCfAL`,
+                            layoutId: `fR0VCCfAL`,
                             name: `Brands`,
-                            nodeId: `fR0VCCfAL`,
-                            scopeId: `augiA20Il`,
-                            children: f(Ur, {
-                              height: `100%`,
-                              id: `fR0VCCfAL`,
-                              layoutId: `fR0VCCfAL`,
-                              name: `Brands`,
-                              style: { width: `100%` },
-                              variant: Q(`iVF8K2Gs6`),
-                              width: `100%`,
-                            }),
+                            style: { width: `100%` },
+                            variant: Q(`iVF8K2Gs6`),
+                            width: `100%`,
                           }),
                         }),
                       }),
+                    }),
                     O() &&
-                      _(T.div, {
-                        className: `framer-w3gto7 hidden-9w4hrp`,
-                        "data-framer-name": `Plasma`,
-                        layout: w,
-                        children: [
-                          f(Y, {
-                            breakpoint: b,
-                            overrides: {
-                              binYOdBcM: {
-                                background: {
-                                  alt: ``,
-                                  fit: `fill`,
-                                  loading: M((u?.y || 0) + 0 + -1.51),
-                                  pixelHeight: 1080,
-                                  pixelWidth: 1920,
-                                  sizes: u?.width || `100vw`,
-                                  src: `/esper/images/9bs090cscytfdacmrr7jlvndqfc.png?width=1920&height=1080`,
-                                  srcSet: `/esper/images/9bs090cscytfdacmrr7jlvndqfc.png?scale-down-to=512&width=1920&height=1080 512w,/esper/images/9bs090cscytfdacmrr7jlvndqfc.png?scale-down-to=1024&width=1920&height=1080 1024w,/esper/images/9bs090cscytfdacmrr7jlvndqfc.png?width=1920&height=1080 1920w`,
-                                },
-                              },
-                              nmuyZviuC: {
-                                background: {
-                                  alt: ``,
-                                  fit: `fill`,
-                                  loading: M((u?.y || 0) + 0 + -1.4923),
-                                  pixelHeight: 1080,
-                                  pixelWidth: 1920,
-                                  sizes: `calc(${u?.width || `100vw`} * 1.0012)`,
-                                  src: `/esper/images/uinxiuqfy89scr4h14ee0fbc.png?width=1920&height=1080`,
-                                  srcSet: `/esper/images/uinxiuqfy89scr4h14ee0fbc.png?scale-down-to=512&width=1920&height=1080 512w,/esper/images/uinxiuqfy89scr4h14ee0fbc.png?scale-down-to=1024&width=1920&height=1080 1024w,/esper/images/uinxiuqfy89scr4h14ee0fbc.png?width=1920&height=1080 1920w`,
-                                },
-                              },
-                            },
-                            children: f(q, {
+                    _(T.div, {
+                      className: `framer-w3gto7 hidden-9w4hrp`,
+                      "data-framer-name": `Plasma`,
+                      layout: w,
+                      children: [
+                        f(Y, {
+                          breakpoint: b,
+                          overrides: {
+                            binYOdBcM: {
                               background: {
                                 alt: ``,
                                 fit: `fill`,
-                                loading: M((u?.y || 0) + 0 + -0.99),
+                                loading: M((u?.y || 0) + 0 + -1.51),
                                 pixelHeight: 1080,
                                 pixelWidth: 1920,
                                 sizes: u?.width || `100vw`,
                                 src: `/esper/images/9bs090cscytfdacmrr7jlvndqfc.png?width=1920&height=1080`,
                                 srcSet: `/esper/images/9bs090cscytfdacmrr7jlvndqfc.png?scale-down-to=512&width=1920&height=1080 512w,/esper/images/9bs090cscytfdacmrr7jlvndqfc.png?scale-down-to=1024&width=1920&height=1080 1024w,/esper/images/9bs090cscytfdacmrr7jlvndqfc.png?width=1920&height=1080 1920w`,
                               },
-                              className: `framer-1wdis9r`,
-                            }),
+                            },
+                            nmuyZviuC: {
+                              background: {
+                                alt: ``,
+                                fit: `fill`,
+                                loading: M((u?.y || 0) + 0 + -1.4923),
+                                pixelHeight: 1080,
+                                pixelWidth: 1920,
+                                sizes: `calc(${u?.width || `100vw`} * 1.0012)`,
+                                src: `/esper/images/uinxiuqfy89scr4h14ee0fbc.png?width=1920&height=1080`,
+                                srcSet: `/esper/images/uinxiuqfy89scr4h14ee0fbc.png?scale-down-to=512&width=1920&height=1080 512w,/esper/images/uinxiuqfy89scr4h14ee0fbc.png?scale-down-to=1024&width=1920&height=1080 1024w,/esper/images/uinxiuqfy89scr4h14ee0fbc.png?width=1920&height=1080 1920w`,
+                              },
+                            },
+                          },
+                          children: f(q, {
+                            background: {
+                              alt: ``,
+                              fit: `fill`,
+                              loading: M((u?.y || 0) + 0 + -0.99),
+                              pixelHeight: 1080,
+                              pixelWidth: 1920,
+                              sizes: u?.width || `100vw`,
+                              src: `/esper/images/9bs090cscytfdacmrr7jlvndqfc.png?width=1920&height=1080`,
+                              srcSet: `/esper/images/9bs090cscytfdacmrr7jlvndqfc.png?scale-down-to=512&width=1920&height=1080 512w,/esper/images/9bs090cscytfdacmrr7jlvndqfc.png?scale-down-to=1024&width=1920&height=1080 1024w,/esper/images/9bs090cscytfdacmrr7jlvndqfc.png?width=1920&height=1080 1920w`,
+                            },
+                            className: `framer-1wdis9r`,
                           }),
-                          f(`div`, {
-                            className: `framer-17jcdvw`,
-                            "data-framer-name": `Overlay`,
-                          }),
-                          f(U, {
-                            children: f(B, {
-                              className: `framer-1opuij9-container`,
-                              isAuthoredByUser: !0,
-                              isModuleExternal: !0,
-                              nodeId: `uPmz212cS`,
-                              scopeId: `augiA20Il`,
-                              children: f(Y, {
-                                breakpoint: b,
-                                overrides: { nmuyZviuC: { reach: 30 } },
-                                children: f(Ze, {
-                                  animation: { animate: !0, speed: 10 },
-                                  height: `100%`,
-                                  id: `uPmz212cS`,
-                                  intensity: 31,
-                                  layoutId: `uPmz212cS`,
-                                  position: 0,
-                                  radius: `0px`,
-                                  rays: 36,
-                                  raysColor: {
-                                    color: `rgb(255, 191, 102)`,
-                                    color1: `rgb(255, 255, 255)`,
-                                    color2: `rgb(255, 203, 71)`,
-                                    mode: `single`,
-                                  },
-                                  reach: 31,
-                                  style: { height: `100%`, width: `100%` },
-                                  width: `100%`,
-                                }),
+                        }),
+                        f(`div`, {
+                          className: `framer-17jcdvw`,
+                          "data-framer-name": `Overlay`,
+                        }),
+                        f(U, {
+                          children: f(B, {
+                            className: `framer-1opuij9-container`,
+                            isAuthoredByUser: !0,
+                            isModuleExternal: !0,
+                            nodeId: `uPmz212cS`,
+                            scopeId: `augiA20Il`,
+                            children: f(Y, {
+                              breakpoint: b,
+                              overrides: { nmuyZviuC: { reach: 30 } },
+                              children: f(Ze, {
+                                animation: { animate: !0, speed: 10 },
+                                height: `100%`,
+                                id: `uPmz212cS`,
+                                intensity: 31,
+                                layoutId: `uPmz212cS`,
+                                position: 0,
+                                radius: `0px`,
+                                rays: 36,
+                                raysColor: {
+                                  color: `rgb(255, 191, 102)`,
+                                  color1: `rgb(255, 255, 255)`,
+                                  color2: `rgb(255, 203, 71)`,
+                                  mode: `single`,
+                                },
+                                reach: 31,
+                                style: { height: `100%`, width: `100%` },
+                                width: `100%`,
                               }),
                             }),
                           }),
-                        ],
-                      }),
+                        }),
+                      ],
+                    }),
                     O() &&
-                      f(U, {
-                        children: f(B, {
-                          className: `framer-xwq82o-container hidden-9w4hrp`,
-                          "data-framer-name": `Smooth-Scroll`,
-                          isAuthoredByUser: !0,
-                          isModuleExternal: !0,
-                          layout: w,
+                    f(U, {
+                      children: f(B, {
+                        className: `framer-xwq82o-container hidden-9w4hrp`,
+                        "data-framer-name": `Smooth-Scroll`,
+                        isAuthoredByUser: !0,
+                        isModuleExternal: !0,
+                        layout: w,
+                        name: `Smooth-Scroll`,
+                        nodeId: `LICuQH4yD`,
+                        scopeId: `augiA20Il`,
+                        children: f(De, {
+                          height: `100%`,
+                          id: `LICuQH4yD`,
+                          intensity: 12,
+                          layoutId: `LICuQH4yD`,
                           name: `Smooth-Scroll`,
-                          nodeId: `LICuQH4yD`,
-                          scopeId: `augiA20Il`,
-                          children: f(De, {
-                            height: `100%`,
-                            id: `LICuQH4yD`,
-                            intensity: 12,
-                            layoutId: `LICuQH4yD`,
-                            name: `Smooth-Scroll`,
-                            width: `100%`,
-                          }),
+                          width: `100%`,
                         }),
                       }),
+                    }),
                     _(Ji, {
                       __framer__animate: { transition: ga },
                       __framer__animateOnce: !0,
@@ -6835,34 +6835,34 @@ e(() => {
                       ref: N,
                       children: [
                         O() &&
-                          f(Y, {
-                            breakpoint: b,
-                            overrides: {
-                              binYOdBcM: { y: (u?.y || 0) + 0 + 775 + 0 + 0 },
-                              nmuyZviuC: { y: (u?.y || 0) + 0 + 905 + 9 + 0 },
-                            },
-                            children: f(U, {
-                              height: 40,
-                              width: `905px`,
-                              y: (u?.y || 0) + 0 + 710 + 0 + 0,
-                              children: f(B, {
-                                className: `framer-3ubug2-container hidden-9w4hrp`,
-                                "data-framer-name": `Brands`,
+                        f(Y, {
+                          breakpoint: b,
+                          overrides: {
+                            binYOdBcM: { y: (u?.y || 0) + 0 + 775 + 0 + 0 },
+                            nmuyZviuC: { y: (u?.y || 0) + 0 + 905 + 9 + 0 },
+                          },
+                          children: f(U, {
+                            height: 40,
+                            width: `905px`,
+                            y: (u?.y || 0) + 0 + 710 + 0 + 0,
+                            children: f(B, {
+                              className: `framer-3ubug2-container hidden-9w4hrp`,
+                              "data-framer-name": `Brands`,
+                              name: `Brands`,
+                              nodeId: `YJnSTU1FQ`,
+                              scopeId: `augiA20Il`,
+                              children: f(Ur, {
+                                height: `100%`,
+                                id: `YJnSTU1FQ`,
+                                layoutId: `YJnSTU1FQ`,
                                 name: `Brands`,
-                                nodeId: `YJnSTU1FQ`,
-                                scopeId: `augiA20Il`,
-                                children: f(Ur, {
-                                  height: `100%`,
-                                  id: `YJnSTU1FQ`,
-                                  layoutId: `YJnSTU1FQ`,
-                                  name: `Brands`,
-                                  style: { width: `100%` },
-                                  variant: Q(`hGPGrY1F2`),
-                                  width: `100%`,
-                                }),
+                                style: { width: `100%` },
+                                variant: Q(`hGPGrY1F2`),
+                                width: `100%`,
                               }),
                             }),
                           }),
+                        }),
                         _(Ji, {
                           __framer__animate: { transition: ya },
                           __framer__animateOnce: !0,
@@ -6930,115 +6930,94 @@ e(() => {
                           ],
                         }),
                         E() &&
-                          f(Y, {
-                            breakpoint: b,
-                            overrides: {
-                              AV4qGqEC9: {
-                                height: 56,
-                                y: (u?.y || 0) + 0 + 829 + 0 + 267,
-                              },
-                            },
-                            children: f(U, {
-                              children: f(Xi, {
-                                __framer__animate: { transition: ba },
-                                __framer__animateOnce: !0,
-                                __framer__enter: va,
-                                __framer__styleAppearEffectEnabled: !0,
-                                __framer__threshold: 0,
-                                __perspectiveFX: !1,
-                                __targetOpacity: 1,
-                                className: `framer-uiizrd-container hidden-72rtr7 hidden-ebiaht hidden-193nlgj`,
-                                isModuleExternal: !0,
-                                nodeId: `ELuSjcyCX`,
-                                rendersWithMotion: !0,
-                                scopeId: `augiA20Il`,
-                                children: f(Dt, {
-                                  AyWRicLnL: !1,
-                                  dnbs0gLnU: !1,
-                                  height: `100%`,
-                                  id: `ELuSjcyCX`,
-                                  layoutId: `ELuSjcyCX`,
-                                  O2s5dHJnY: !1,
-                                  variant: Q(`knV6KwmH_`),
-                                  WBHDxVlAg: `16px 24px 16px 24px`,
-                                  width: `100%`,
-                                  wjO8MQqIi: `Watch The Full Episode`,
-                                  yRT8xCm66: `https://www.youtube.com/watch?v=LCd2KkoUOTw`,
-                                }),
-                              }),
-                            }),
-                          }),
-                        O() &&
-                          f(Y, {
-                            breakpoint: b,
-                            overrides: {
-                              binYOdBcM: { y: (u?.y || 0) + 0 + 775 + 692 },
-                              nmuyZviuC: { y: (u?.y || 0) + 0 + 905 + 502 },
-                            },
-                            children: f(U, {
+                        f(Y, {
+                          breakpoint: b,
+                          overrides: {
+                            AV4qGqEC9: {
                               height: 56,
-                              y: (u?.y || 0) + 0 + 710 + 674,
-                              children: f(Xi, {
-                                __framer__animate: { transition: ba },
-                                __framer__animateOnce: !0,
-                                __framer__enter: va,
-                                __framer__styleAppearEffectEnabled: !0,
-                                __framer__threshold: 0,
-                                __perspectiveFX: !1,
-                                __targetOpacity: 1,
-                                className: `framer-13kfmgi-container hidden-9w4hrp`,
-                                isModuleExternal: !0,
-                                nodeId: `Rp3KH3j8c`,
-                                rendersWithMotion: !0,
-                                scopeId: `augiA20Il`,
-                                children: f(Dt, {
-                                  AyWRicLnL: !1,
-                                  dnbs0gLnU: !1,
-                                  height: `100%`,
-                                  id: `Rp3KH3j8c`,
-                                  layoutId: `Rp3KH3j8c`,
-                                  O2s5dHJnY: !1,
-                                  variant: Q(`knV6KwmH_`),
-                                  WBHDxVlAg: `16px 24px 16px 24px`,
-                                  width: `100%`,
-                                  wjO8MQqIi: `Watch The Full Episode`,
-                                  yRT8xCm66: `https://www.youtube.com/watch?v=LCd2KkoUOTw`,
-                                }),
+                              y: (u?.y || 0) + 0 + 829 + 0 + 267,
+                            },
+                          },
+                          children: f(U, {
+                            children: f(Xi, {
+                              __framer__animate: { transition: ba },
+                              __framer__animateOnce: !0,
+                              __framer__enter: va,
+                              __framer__styleAppearEffectEnabled: !0,
+                              __framer__threshold: 0,
+                              __perspectiveFX: !1,
+                              __targetOpacity: 1,
+                              className: `framer-uiizrd-container hidden-72rtr7 hidden-ebiaht hidden-193nlgj`,
+                              isModuleExternal: !0,
+                              nodeId: `ELuSjcyCX`,
+                              rendersWithMotion: !0,
+                              scopeId: `augiA20Il`,
+                              children: f(Dt, {
+                                AyWRicLnL: !1,
+                                dnbs0gLnU: !1,
+                                height: `100%`,
+                                id: `ELuSjcyCX`,
+                                layoutId: `ELuSjcyCX`,
+                                O2s5dHJnY: !1,
+                                variant: Q(`knV6KwmH_`),
+                                WBHDxVlAg: `16px 24px 16px 24px`,
+                                width: `100%`,
+                                wjO8MQqIi: `Watch The Full Episode`,
+                                yRT8xCm66: `https://www.youtube.com/watch?v=LCd2KkoUOTw`,
                               }),
                             }),
                           }),
+                        }),
+                        O() &&
+                        f(Y, {
+                          breakpoint: b,
+                          overrides: {
+                            binYOdBcM: { y: (u?.y || 0) + 0 + 775 + 692 },
+                            nmuyZviuC: { y: (u?.y || 0) + 0 + 905 + 502 },
+                          },
+                          children: f(U, {
+                            height: 56,
+                            y: (u?.y || 0) + 0 + 710 + 674,
+                            children: f(Xi, {
+                              __framer__animate: { transition: ba },
+                              __framer__animateOnce: !0,
+                              __framer__enter: va,
+                              __framer__styleAppearEffectEnabled: !0,
+                              __framer__threshold: 0,
+                              __perspectiveFX: !1,
+                              __targetOpacity: 1,
+                              className: `framer-13kfmgi-container hidden-9w4hrp`,
+                              isModuleExternal: !0,
+                              nodeId: `Rp3KH3j8c`,
+                              rendersWithMotion: !0,
+                              scopeId: `augiA20Il`,
+                              children: f(Dt, {
+                                AyWRicLnL: !1,
+                                dnbs0gLnU: !1,
+                                height: `100%`,
+                                id: `Rp3KH3j8c`,
+                                layoutId: `Rp3KH3j8c`,
+                                O2s5dHJnY: !1,
+                                variant: Q(`knV6KwmH_`),
+                                WBHDxVlAg: `16px 24px 16px 24px`,
+                                width: `100%`,
+                                wjO8MQqIi: `Watch The Full Episode`,
+                                yRT8xCm66: `https://www.youtube.com/watch?v=LCd2KkoUOTw`,
+                              }),
+                            }),
+                          }),
+                        }),
                         _(`div`, {
                           className: `framer-1ylbk1b`,
                           "data-framer-name": `H2+Body`,
                           children: [
                             O() &&
-                              f(Y, {
-                                breakpoint: b,
-                                overrides: {
-                                  binYOdBcM: {
-                                    children: f(o, {
-                                      children: f(`h2`, {
-                                        style: {
-                                          "--font-selector": `R0Y7UGxheWZhaXIgRGlzcGxheS02MDBpdGFsaWM=`,
-                                          "--framer-font-family": `"Playfair Display", "Playfair Display Placeholder", serif`,
-                                          "--framer-font-size": `52px`,
-                                          "--framer-font-style": `italic`,
-                                          "--framer-font-weight": `600`,
-                                          "--framer-line-height": `40%`,
-                                          "--framer-text-alignment": `center`,
-                                          "--framer-text-color": `var(--token-c05d7eb5-3b85-4d38-a5b8-65cb0e0a1652, rgb(255, 255, 255))`,
-                                          "--framer-text-transform": `capitalize`,
-                                        },
-                                        children: `successfully concluded ! `,
-                                      }),
-                                    }),
-                                  },
-                                },
-                                children: f(R, {
-                                  __fromCanvasComponent: !0,
+                            f(Y, {
+                              breakpoint: b,
+                              overrides: {
+                                binYOdBcM: {
                                   children: f(o, {
                                     children: f(`h2`, {
-                                      dir: `auto`,
                                       style: {
                                         "--font-selector": `R0Y7UGxheWZhaXIgRGlzcGxheS02MDBpdGFsaWM=`,
                                         "--framer-font-family": `"Playfair Display", "Playfair Display Placeholder", serif`,
@@ -7053,95 +7032,116 @@ e(() => {
                                       children: `successfully concluded ! `,
                                     }),
                                   }),
-                                  className: `framer-jctzf6 hidden-9w4hrp`,
-                                  "data-framer-name": `Meet Your Dream Team`,
-                                  fonts: [`GF;Playfair Display-600italic`],
-                                  verticalAlignment: `top`,
-                                  withExternalLayout: !0,
-                                }),
-                              }),
-                            O() &&
-                              f(Y, {
-                                breakpoint: b,
-                                overrides: {
-                                  binYOdBcM: {
-                                    height: 561.8,
-                                    y: (u?.y || 0) + 0 + 775 + 0 + 657 + 692,
-                                  },
-                                  nmuyZviuC: {
-                                    height: 846.8,
-                                    width: `calc(min(${u?.width || `100vw`}, 1160px) - 34px)`,
-                                    y: (u?.y || 0) + 0 + 905 + 9 + 743 + 502,
-                                  },
                                 },
-                                children: f(U, {
-                                  height: 56,
-                                  y:
-                                    (u?.y || 0) +
-                                    0 +
-                                    710 +
-                                    0 +
-                                    657 +
-                                    1199.8 -
-                                    2,
-                                  children: f(Xi, {
-                                    __framer__animate: { transition: ba },
-                                    __framer__animateOnce: !0,
-                                    __framer__enter: va,
-                                    __framer__styleAppearEffectEnabled: !0,
-                                    __framer__threshold: 0,
-                                    __perspectiveFX: !1,
-                                    __targetOpacity: 1,
-                                    className: `framer-1dbp5on-container hidden-9w4hrp`,
-                                    isModuleExternal: !0,
-                                    nodeId: `ETP7tGh6k`,
-                                    rendersWithMotion: !0,
-                                    scopeId: `augiA20Il`,
-                                    children: f(Dt, {
-                                      AyWRicLnL: !1,
-                                      dnbs0gLnU: !1,
-                                      height: `100%`,
-                                      id: `ETP7tGh6k`,
-                                      layoutId: `ETP7tGh6k`,
-                                      O2s5dHJnY: !1,
-                                      variant: Q(`knV6KwmH_`),
-                                      WBHDxVlAg: `16px 24px 16px 24px`,
-                                      width: `100%`,
-                                      wjO8MQqIi: `Visir Full Album Here`,
-                                      yRT8xCm66: `https://www.facebook.com/share/p/1Cfd1XF45A/?mibextid=wwXIfr`,
-                                    }),
-                                  }),
-                                }),
-                              }),
-                            O() &&
-                              f(R, {
+                              },
+                              children: f(R, {
                                 __fromCanvasComponent: !0,
                                 children: f(o, {
-                                  children: f(`p`, {
+                                  children: f(`h2`, {
                                     dir: `auto`,
                                     style: {
-                                      "--font-selector": `RlI7SW50ZXJEaXNwbGF5LUxpZ2h0`,
-                                      "--framer-font-family": `"Inter Display", "Inter Display Placeholder", sans-serif`,
-                                      "--framer-font-size": `18px`,
-                                      "--framer-font-weight": `300`,
-                                      "--framer-line-height": `140%`,
+                                      "--font-selector": `R0Y7UGxheWZhaXIgRGlzcGxheS02MDBpdGFsaWM=`,
+                                      "--framer-font-family": `"Playfair Display", "Playfair Display Placeholder", serif`,
+                                      "--framer-font-size": `52px`,
+                                      "--framer-font-style": `italic`,
+                                      "--framer-font-weight": `600`,
+                                      "--framer-line-height": `40%`,
                                       "--framer-text-alignment": `center`,
-                                      "--framer-text-color": `var(--token-3ecf9004-c795-4969-8dc2-46e9a5f93615, rgb(214, 214, 214))`,
+                                      "--framer-text-color": `var(--token-c05d7eb5-3b85-4d38-a5b8-65cb0e0a1652, rgb(255, 255, 255))`,
+                                      "--framer-text-transform": `capitalize`,
                                     },
-                                    children: f(`strong`, {
-                                      children: `The Pinnacle of School Science Excellence — ESPER Awards ’26 — has been successfully concluded at Monarch Imperial, Colombo, on 17th March 2026.`,
-                                    }),
+                                    children: `successfully concluded ! `,
                                   }),
                                 }),
-                                className: `framer-94gx0i hidden-9w4hrp`,
-                                "data-framer-name": `Our dedicated team blends diverse expertise, innovative thinking, and a passion for excellence to turn your vision into reality.`,
-                                fonts: [
-                                  `FR;InterDisplay-Light`,
-                                  `FR;InterDisplay`,
-                                ],
+                                className: `framer-jctzf6 hidden-9w4hrp`,
+                                "data-framer-name": `Meet Your Dream Team`,
+                                fonts: [`GF;Playfair Display-600italic`],
                                 verticalAlignment: `top`,
                                 withExternalLayout: !0,
                               }),
+                            }),
+                            O() &&
+                            f(Y, {
+                              breakpoint: b,
+                              overrides: {
+                                binYOdBcM: {
+                                  height: 561.8,
+                                  y: (u?.y || 0) + 0 + 775 + 0 + 657 + 692,
+                                },
+                                nmuyZviuC: {
+                                  height: 846.8,
+                                  width: `calc(min(${u?.width || `100vw`}, 1160px) - 34px)`,
+                                  y: (u?.y || 0) + 0 + 905 + 9 + 743 + 502,
+                                },
+                              },
+                              children: f(U, {
+                                height: 56,
+                                y:
+                                  (u?.y || 0) +
+                                  0 +
+                                  710 +
+                                  0 +
+                                  657 +
+                                  1199.8 -
+                                  2,
+                                children: f(Xi, {
+                                  __framer__animate: { transition: ba },
+                                  __framer__animateOnce: !0,
+                                  __framer__enter: va,
+                                  __framer__styleAppearEffectEnabled: !0,
+                                  __framer__threshold: 0,
+                                  __perspectiveFX: !1,
+                                  __targetOpacity: 1,
+                                  className: `framer-1dbp5on-container hidden-9w4hrp`,
+                                  isModuleExternal: !0,
+                                  nodeId: `ETP7tGh6k`,
+                                  rendersWithMotion: !0,
+                                  scopeId: `augiA20Il`,
+                                  children: f(Dt, {
+                                    AyWRicLnL: !1,
+                                    dnbs0gLnU: !1,
+                                    height: `100%`,
+                                    id: `ETP7tGh6k`,
+                                    layoutId: `ETP7tGh6k`,
+                                    O2s5dHJnY: !1,
+                                    variant: Q(`knV6KwmH_`),
+                                    WBHDxVlAg: `16px 24px 16px 24px`,
+                                    width: `100%`,
+                                    wjO8MQqIi: `Visit Full Album Here`,
+                                    yRT8xCm66: `https://www.facebook.com/share/p/1Cfd1XF45A/?mibextid=wwXIfr`,
+                                  }),
+                                }),
+                              }),
+                            }),
+                            O() &&
+                            f(R, {
+                              __fromCanvasComponent: !0,
+                              children: f(o, {
+                                children: f(`p`, {
+                                  dir: `auto`,
+                                  style: {
+                                    "--font-selector": `RlI7SW50ZXJEaXNwbGF5LUxpZ2h0`,
+                                    "--framer-font-family": `"Inter Display", "Inter Display Placeholder", sans-serif`,
+                                    "--framer-font-size": `18px`,
+                                    "--framer-font-weight": `300`,
+                                    "--framer-line-height": `140%`,
+                                    "--framer-text-alignment": `center`,
+                                    "--framer-text-color": `var(--token-3ecf9004-c795-4969-8dc2-46e9a5f93615, rgb(214, 214, 214))`,
+                                  },
+                                  children: f(`strong`, {
+                                    children: `The Pinnacle of School Science Excellence — ESPER Awards ’26 — has been successfully concluded at Monarch Imperial, Colombo, on 17th March 2026.`,
+                                  }),
+                                }),
+                              }),
+                              className: `framer-94gx0i hidden-9w4hrp`,
+                              "data-framer-name": `Our dedicated team blends diverse expertise, innovative thinking, and a passion for excellence to turn your vision into reality.`,
+                              fonts: [
+                                `FR;InterDisplay-Light`,
+                                `FR;InterDisplay`,
+                              ],
+                              verticalAlignment: `top`,
+                              withExternalLayout: !0,
+                            }),
                             f(U, {
                               children: f(B, {
                                 className: `framer-ig4vtf-container`,
@@ -7305,262 +7305,237 @@ e(() => {
                               }),
                             }),
                             E() &&
-                              f(R, {
-                                __fromCanvasComponent: !0,
-                                children: f(o, {
-                                  children: f(`p`, {
-                                    dir: `auto`,
-                                    style: {
-                                      "--font-selector": `RlI7SW50ZXJEaXNwbGF5LUxpZ2h0`,
-                                      "--framer-font-family": `"Inter Display", "Inter Display Placeholder", sans-serif`,
-                                      "--framer-font-size": `18px`,
-                                      "--framer-font-weight": `300`,
-                                      "--framer-line-height": `140%`,
-                                      "--framer-text-alignment": `center`,
-                                      "--framer-text-color": `var(--token-3ecf9004-c795-4969-8dc2-46e9a5f93615, rgb(214, 214, 214))`,
-                                    },
-                                    children: f(`strong`, {
-                                      children: `The Pinnacle of School Science Excellence — ESPER Awards ’26 — has been successfully concluded at Monarch Imperial, Colombo, on 17th March 2026.`,
-                                    }),
-                                  }),
-                                }),
-                                className: `framer-uj38uk hidden-72rtr7 hidden-ebiaht hidden-193nlgj`,
-                                "data-framer-name": `Our dedicated team blends diverse expertise, innovative thinking, and a passion for excellence to turn your vision into reality.`,
-                                fonts: [
-                                  `FR;InterDisplay-Light`,
-                                  `FR;InterDisplay`,
-                                ],
-                                verticalAlignment: `top`,
-                                withExternalLayout: !0,
-                              }),
-                            E() &&
-                              f(R, {
-                                __fromCanvasComponent: !0,
-                                children: f(o, {
-                                  children: f(`h2`, {
-                                    dir: `auto`,
-                                    style: {
-                                      "--font-selector": `R0Y7UGxheWZhaXIgRGlzcGxheS02MDBpdGFsaWM=`,
-                                      "--framer-font-family": `"Playfair Display", "Playfair Display Placeholder", serif`,
-                                      "--framer-font-size": `33px`,
-                                      "--framer-font-style": `italic`,
-                                      "--framer-font-weight": `600`,
-                                      "--framer-line-height": `110%`,
-                                      "--framer-text-alignment": `center`,
-                                      "--framer-text-color": `var(--token-c05d7eb5-3b85-4d38-a5b8-65cb0e0a1652, rgb(255, 255, 255))`,
-                                      "--framer-text-transform": `capitalize`,
-                                    },
-                                    children: `successfully concluded ! `,
-                                  }),
-                                }),
-                                className: `framer-1bbxm6c hidden-72rtr7 hidden-ebiaht hidden-193nlgj`,
-                                "data-framer-name": `Meet Your Dream Team`,
-                                fonts: [`GF;Playfair Display-600italic`],
-                                verticalAlignment: `top`,
-                                withExternalLayout: !0,
-                              }),
-                            E() &&
-                              f(Y, {
-                                breakpoint: b,
-                                overrides: {
-                                  AV4qGqEC9: {
-                                    height: 56,
-                                    y:
-                                      (u?.y || 0) +
-                                      0 +
-                                      829 +
-                                      0 +
-                                      358 +
-                                      30 +
-                                      1143.3,
+                            f(R, {
+                              __fromCanvasComponent: !0,
+                              children: f(o, {
+                                children: f(`p`, {
+                                  dir: `auto`,
+                                  style: {
+                                    "--font-selector": `RlI7SW50ZXJEaXNwbGF5LUxpZ2h0`,
+                                    "--framer-font-family": `"Inter Display", "Inter Display Placeholder", sans-serif`,
+                                    "--framer-font-size": `18px`,
+                                    "--framer-font-weight": `300`,
+                                    "--framer-line-height": `140%`,
+                                    "--framer-text-alignment": `center`,
+                                    "--framer-text-color": `var(--token-3ecf9004-c795-4969-8dc2-46e9a5f93615, rgb(214, 214, 214))`,
                                   },
-                                },
-                                children: f(U, {
-                                  children: f(Xi, {
-                                    __framer__animate: { transition: ba },
-                                    __framer__animateOnce: !0,
-                                    __framer__enter: va,
-                                    __framer__styleAppearEffectEnabled: !0,
-                                    __framer__threshold: 0,
-                                    __perspectiveFX: !1,
-                                    __targetOpacity: 1,
-                                    className: `framer-fe31eb-container hidden-72rtr7 hidden-ebiaht hidden-193nlgj`,
-                                    isModuleExternal: !0,
-                                    nodeId: `SkEa1VzwQ`,
-                                    rendersWithMotion: !0,
-                                    scopeId: `augiA20Il`,
-                                    children: f(Dt, {
-                                      AyWRicLnL: !1,
-                                      dnbs0gLnU: !1,
-                                      height: `100%`,
-                                      id: `SkEa1VzwQ`,
-                                      layoutId: `SkEa1VzwQ`,
-                                      O2s5dHJnY: !1,
-                                      variant: Q(`knV6KwmH_`),
-                                      WBHDxVlAg: `16px 24px 16px 24px`,
-                                      width: `100%`,
-                                      wjO8MQqIi: `Visit Full Album Here`,
-                                      yRT8xCm66: `https://www.facebook.com/share/p/1Cfd1XF45A/?mibextid=wwXIfr`,
-                                    }),
+                                  children: f(`strong`, {
+                                    children: `The Pinnacle of School Science Excellence — ESPER Awards ’26 — has been successfully concluded at Monarch Imperial, Colombo, on 17th March 2026.`,
                                   }),
                                 }),
                               }),
+                              className: `framer-uj38uk hidden-72rtr7 hidden-ebiaht hidden-193nlgj`,
+                              "data-framer-name": `Our dedicated team blends diverse expertise, innovative thinking, and a passion for excellence to turn your vision into reality.`,
+                              fonts: [
+                                `FR;InterDisplay-Light`,
+                                `FR;InterDisplay`,
+                              ],
+                              verticalAlignment: `top`,
+                              withExternalLayout: !0,
+                            }),
+                            E() &&
+                            f(R, {
+                              __fromCanvasComponent: !0,
+                              children: f(o, {
+                                children: f(`h2`, {
+                                  dir: `auto`,
+                                  style: {
+                                    "--font-selector": `R0Y7UGxheWZhaXIgRGlzcGxheS02MDBpdGFsaWM=`,
+                                    "--framer-font-family": `"Playfair Display", "Playfair Display Placeholder", serif`,
+                                    "--framer-font-size": `33px`,
+                                    "--framer-font-style": `italic`,
+                                    "--framer-font-weight": `600`,
+                                    "--framer-line-height": `110%`,
+                                    "--framer-text-alignment": `center`,
+                                    "--framer-text-color": `var(--token-c05d7eb5-3b85-4d38-a5b8-65cb0e0a1652, rgb(255, 255, 255))`,
+                                    "--framer-text-transform": `capitalize`,
+                                  },
+                                  children: `successfully concluded ! `,
+                                }),
+                              }),
+                              className: `framer-1bbxm6c hidden-72rtr7 hidden-ebiaht hidden-193nlgj`,
+                              "data-framer-name": `Meet Your Dream Team`,
+                              fonts: [`GF;Playfair Display-600italic`],
+                              verticalAlignment: `top`,
+                              withExternalLayout: !0,
+                            }),
+                            E() &&
+                            f(Y, {
+                              breakpoint: b,
+                              overrides: {
+                                AV4qGqEC9: {
+                                  height: 56,
+                                  y:
+                                    (u?.y || 0) +
+                                    0 +
+                                    829 +
+                                    0 +
+                                    358 +
+                                    30 +
+                                    1143.3,
+                                },
+                              },
+                              children: f(U, {
+                                children: f(Xi, {
+                                  __framer__animate: { transition: ba },
+                                  __framer__animateOnce: !0,
+                                  __framer__enter: va,
+                                  __framer__styleAppearEffectEnabled: !0,
+                                  __framer__threshold: 0,
+                                  __perspectiveFX: !1,
+                                  __targetOpacity: 1,
+                                  className: `framer-fe31eb-container hidden-72rtr7 hidden-ebiaht hidden-193nlgj`,
+                                  isModuleExternal: !0,
+                                  nodeId: `SkEa1VzwQ`,
+                                  rendersWithMotion: !0,
+                                  scopeId: `augiA20Il`,
+                                  children: f(Dt, {
+                                    AyWRicLnL: !1,
+                                    dnbs0gLnU: !1,
+                                    height: `100%`,
+                                    id: `SkEa1VzwQ`,
+                                    layoutId: `SkEa1VzwQ`,
+                                    O2s5dHJnY: !1,
+                                    variant: Q(`knV6KwmH_`),
+                                    WBHDxVlAg: `16px 24px 16px 24px`,
+                                    width: `100%`,
+                                    wjO8MQqIi: `Visit Full Album Here`,
+                                    yRT8xCm66: `https://www.facebook.com/share/p/1Cfd1XF45A/?mibextid=wwXIfr`,
+                                  }),
+                                }),
+                              }),
+                            }),
                             ee() &&
-                              f(Y, {
-                                breakpoint: b,
-                                overrides: {
-                                  nmuyZviuC: {
-                                    height: 56,
-                                    y:
-                                      (u?.y || 0) +
-                                      0 +
-                                      905 +
-                                      9 +
-                                      743 +
-                                      30 +
-                                      1178.8,
-                                  },
+                            f(Y, {
+                              breakpoint: b,
+                              overrides: {
+                                nmuyZviuC: {
+                                  height: 56,
+                                  y:
+                                    (u?.y || 0) +
+                                    0 +
+                                    905 +
+                                    9 +
+                                    743 +
+                                    30 +
+                                    1178.8,
                                 },
-                                children: f(U, {
-                                  children: f(Xi, {
-                                    __framer__animate: { transition: ba },
-                                    __framer__animateOnce: !0,
-                                    __framer__enter: va,
-                                    __framer__styleAppearEffectEnabled: !0,
-                                    __framer__threshold: 0,
-                                    __perspectiveFX: !1,
-                                    __targetOpacity: 1,
-                                    className: `framer-a7x7db-container hidden-72rtr7 hidden-9w4hrp hidden-193nlgj`,
-                                    isModuleExternal: !0,
-                                    nodeId: `zrqtp0vLv`,
-                                    rendersWithMotion: !0,
-                                    scopeId: `augiA20Il`,
-                                    children: f(Dt, {
-                                      AyWRicLnL: !1,
-                                      dnbs0gLnU: !1,
-                                      height: `100%`,
-                                      id: `zrqtp0vLv`,
-                                      layoutId: `zrqtp0vLv`,
-                                      O2s5dHJnY: !1,
-                                      variant: Q(`knV6KwmH_`),
-                                      WBHDxVlAg: `16px 24px 16px 24px`,
-                                      width: `100%`,
-                                      wjO8MQqIi: `Visit Full Album `,
-                                      yRT8xCm66: `https://www.facebook.com/share/p/1Cfd1XF45A/?mibextid=wwXIfr`,
-                                    }),
+                              },
+                              children: f(U, {
+                                children: f(Xi, {
+                                  __framer__animate: { transition: ba },
+                                  __framer__animateOnce: !0,
+                                  __framer__enter: va,
+                                  __framer__styleAppearEffectEnabled: !0,
+                                  __framer__threshold: 0,
+                                  __perspectiveFX: !1,
+                                  __targetOpacity: 1,
+                                  className: `framer-a7x7db-container hidden-72rtr7 hidden-9w4hrp hidden-193nlgj`,
+                                  isModuleExternal: !0,
+                                  nodeId: `zrqtp0vLv`,
+                                  rendersWithMotion: !0,
+                                  scopeId: `augiA20Il`,
+                                  children: f(Dt, {
+                                    AyWRicLnL: !1,
+                                    dnbs0gLnU: !1,
+                                    height: `100%`,
+                                    id: `zrqtp0vLv`,
+                                    layoutId: `zrqtp0vLv`,
+                                    O2s5dHJnY: !1,
+                                    variant: Q(`knV6KwmH_`),
+                                    WBHDxVlAg: `16px 24px 16px 24px`,
+                                    width: `100%`,
+                                    wjO8MQqIi: `Visit Full Album `,
+                                    yRT8xCm66: `https://www.facebook.com/share/p/1Cfd1XF45A/?mibextid=wwXIfr`,
                                   }),
                                 }),
                               }),
+                            }),
                             P() &&
-                              f(Y, {
-                                breakpoint: b,
-                                overrides: {
-                                  binYOdBcM: {
-                                    height: 54,
-                                    y:
-                                      (u?.y || 0) +
-                                      0 +
-                                      775 +
-                                      0 +
-                                      657 +
-                                      1199.8 -
-                                      0,
-                                  },
+                            f(Y, {
+                              breakpoint: b,
+                              overrides: {
+                                binYOdBcM: {
+                                  height: 54,
+                                  y:
+                                    (u?.y || 0) +
+                                    0 +
+                                    775 +
+                                    0 +
+                                    657 +
+                                    1199.8 -
+                                    0,
                                 },
-                                children: f(U, {
-                                  children: f(Xi, {
-                                    __framer__animate: { transition: ba },
-                                    __framer__animateOnce: !0,
-                                    __framer__enter: va,
-                                    __framer__styleAppearEffectEnabled: !0,
-                                    __framer__threshold: 0,
-                                    __perspectiveFX: !1,
-                                    __targetOpacity: 1,
-                                    className: `framer-s59ln5-container hidden-72rtr7 hidden-ebiaht hidden-9w4hrp`,
-                                    isModuleExternal: !0,
-                                    nodeId: `YLPmlNxmZ`,
-                                    rendersWithMotion: !0,
-                                    scopeId: `augiA20Il`,
-                                    children: f(Dt, {
-                                      AyWRicLnL: !1,
-                                      dnbs0gLnU: !1,
-                                      height: `100%`,
-                                      id: `YLPmlNxmZ`,
-                                      layoutId: `YLPmlNxmZ`,
-                                      O2s5dHJnY: !1,
-                                      style: { height: `100%` },
-                                      variant: Q(`knV6KwmH_`),
-                                      WBHDxVlAg: `16px 24px 16px 24px`,
-                                      width: `100%`,
-                                      wjO8MQqIi: `Visir Full Album Here`,
-                                      yRT8xCm66: `https://www.facebook.com/share/p/1Cfd1XF45A/?mibextid=wwXIfr`,
-                                    }),
+                              },
+                              children: f(U, {
+                                children: f(Xi, {
+                                  __framer__animate: { transition: ba },
+                                  __framer__animateOnce: !0,
+                                  __framer__enter: va,
+                                  __framer__styleAppearEffectEnabled: !0,
+                                  __framer__threshold: 0,
+                                  __perspectiveFX: !1,
+                                  __targetOpacity: 1,
+                                  className: `framer-s59ln5-container hidden-72rtr7 hidden-ebiaht hidden-9w4hrp`,
+                                  isModuleExternal: !0,
+                                  nodeId: `YLPmlNxmZ`,
+                                  rendersWithMotion: !0,
+                                  scopeId: `augiA20Il`,
+                                  children: f(Dt, {
+                                    AyWRicLnL: !1,
+                                    dnbs0gLnU: !1,
+                                    height: `100%`,
+                                    id: `YLPmlNxmZ`,
+                                    layoutId: `YLPmlNxmZ`,
+                                    O2s5dHJnY: !1,
+                                    style: { height: `100%` },
+                                    variant: Q(`knV6KwmH_`),
+                                    WBHDxVlAg: `16px 24px 16px 24px`,
+                                    width: `100%`,
+                                    wjO8MQqIi: `Visit Full Album Here`,
+                                    yRT8xCm66: `https://www.facebook.com/share/p/1Cfd1XF45A/?mibextid=wwXIfr`,
                                   }),
                                 }),
                               }),
+                            }),
                           ],
                         }),
                         O() &&
-                          _(`div`, {
-                            className: `framer-1kihxcd hidden-9w4hrp`,
-                            "data-framer-name": `H2+Body`,
-                            children: [
-                              f(R, {
-                                __fromCanvasComponent: !0,
-                                children: f(o, {
-                                  children: f(`h2`, {
-                                    dir: `auto`,
-                                    style: {
-                                      "--font-selector": `R0Y7UGxheWZhaXIgRGlzcGxheS02MDBpdGFsaWM=`,
-                                      "--framer-font-family": `"Playfair Display", "Playfair Display Placeholder", serif`,
-                                      "--framer-font-size": `52px`,
-                                      "--framer-font-style": `italic`,
-                                      "--framer-font-weight": `600`,
-                                      "--framer-line-height": `40%`,
-                                      "--framer-text-alignment": `center`,
-                                      "--framer-text-color": `var(--token-c05d7eb5-3b85-4d38-a5b8-65cb0e0a1652, rgb(255, 255, 255))`,
-                                      "--framer-text-transform": `capitalize`,
-                                    },
-                                    children: `our Judges`,
-                                  }),
-                                }),
-                                className: `framer-1djpwv1`,
-                                "data-framer-name": `Meet Your Dream Team`,
-                                fonts: [`GF;Playfair Display-600italic`],
-                                verticalAlignment: `top`,
-                                withExternalLayout: !0,
-                              }),
-                              f(Y, {
-                                breakpoint: b,
-                                overrides: {
-                                  binYOdBcM: {
-                                    children: f(o, {
-                                      children: f(`p`, {
-                                        dir: `auto`,
-                                        style: {
-                                          "--font-selector": `RlI7SW50ZXJEaXNwbGF5LUxpZ2h0`,
-                                          "--framer-font-family": `"Inter Display", "Inter Display Placeholder", sans-serif`,
-                                          "--framer-font-size": `18px`,
-                                          "--framer-font-weight": `300`,
-                                          "--framer-line-height": `140%`,
-                                          "--framer-text-alignment": `center`,
-                                          "--framer-text-color": `var(--token-3ecf9004-c795-4969-8dc2-46e9a5f93615, rgb(214, 214, 214))`,
-                                        },
-                                        children: f(`strong`, {
-                                          children: `Our esteemed, nationally and internationally recognized judges for ESPER Awards ’26—upholding fairness, integrity, and thoughtful evaluation.`,
-                                        }),
-                                      }),
-                                    }),
-                                    fonts: [
-                                      `FR;InterDisplay-Light`,
-                                      `FR;InterDisplay`,
-                                    ],
+                        _(`div`, {
+                          className: `framer-1kihxcd hidden-9w4hrp`,
+                          "data-framer-name": `H2+Body`,
+                          children: [
+                            f(R, {
+                              __fromCanvasComponent: !0,
+                              children: f(o, {
+                                children: f(`h2`, {
+                                  dir: `auto`,
+                                  style: {
+                                    "--font-selector": `R0Y7UGxheWZhaXIgRGlzcGxheS02MDBpdGFsaWM=`,
+                                    "--framer-font-family": `"Playfair Display", "Playfair Display Placeholder", serif`,
+                                    "--framer-font-size": `52px`,
+                                    "--framer-font-style": `italic`,
+                                    "--framer-font-weight": `600`,
+                                    "--framer-line-height": `40%`,
+                                    "--framer-text-alignment": `center`,
+                                    "--framer-text-color": `var(--token-c05d7eb5-3b85-4d38-a5b8-65cb0e0a1652, rgb(255, 255, 255))`,
+                                    "--framer-text-transform": `capitalize`,
                                   },
-                                },
-                                children: f(R, {
-                                  __fromCanvasComponent: !0,
+                                  children: `our Judges`,
+                                }),
+                              }),
+                              className: `framer-1djpwv1`,
+                              "data-framer-name": `Meet Your Dream Team`,
+                              fonts: [`GF;Playfair Display-600italic`],
+                              verticalAlignment: `top`,
+                              withExternalLayout: !0,
+                            }),
+                            f(Y, {
+                              breakpoint: b,
+                              overrides: {
+                                binYOdBcM: {
                                   children: f(o, {
-                                    children: _(`p`, {
+                                    children: f(`p`, {
                                       dir: `auto`,
                                       style: {
                                         "--font-selector": `RlI7SW50ZXJEaXNwbGF5LUxpZ2h0`,
@@ -7571,65 +7546,306 @@ e(() => {
                                         "--framer-text-alignment": `center`,
                                         "--framer-text-color": `var(--token-3ecf9004-c795-4969-8dc2-46e9a5f93615, rgb(214, 214, 214))`,
                                       },
-                                      children: [
-                                        f(`strong`, {
-                                          children: `Our esteemed, `,
-                                        }),
-                                        f(`span`, {
-                                          style: {
-                                            "--font-selector": `RlI7SW50ZXJEaXNwbGF5`,
-                                            "--framer-font-weight": `400`,
-                                          },
-                                          children: f(`strong`, {
-                                            children: `nationally and internationally`,
-                                          }),
-                                        }),
-                                        f(`strong`, {
-                                          children: ` recognized judges for ESPER Awards ’26—upholding fairness, integrity, and thoughtful evaluation.`,
-                                        }),
-                                      ],
+                                      children: f(`strong`, {
+                                        children: `Our esteemed, nationally and internationally recognized judges for ESPER Awards ’26—upholding fairness, integrity, and thoughtful evaluation.`,
+                                      }),
                                     }),
                                   }),
-                                  className: `framer-ucidsy`,
-                                  "data-framer-name": `Our dedicated team blends diverse expertise, innovative thinking, and a passion for excellence to turn your vision into reality.`,
                                   fonts: [
                                     `FR;InterDisplay-Light`,
                                     `FR;InterDisplay`,
-                                    `FR;InterDisplay-Bold`,
                                   ],
-                                  verticalAlignment: `top`,
-                                  withExternalLayout: !0,
+                                },
+                              },
+                              children: f(R, {
+                                __fromCanvasComponent: !0,
+                                children: f(o, {
+                                  children: _(`p`, {
+                                    dir: `auto`,
+                                    style: {
+                                      "--font-selector": `RlI7SW50ZXJEaXNwbGF5LUxpZ2h0`,
+                                      "--framer-font-family": `"Inter Display", "Inter Display Placeholder", sans-serif`,
+                                      "--framer-font-size": `18px`,
+                                      "--framer-font-weight": `300`,
+                                      "--framer-line-height": `140%`,
+                                      "--framer-text-alignment": `center`,
+                                      "--framer-text-color": `var(--token-3ecf9004-c795-4969-8dc2-46e9a5f93615, rgb(214, 214, 214))`,
+                                    },
+                                    children: [
+                                      f(`strong`, {
+                                        children: `Our esteemed, `,
+                                      }),
+                                      f(`span`, {
+                                        style: {
+                                          "--font-selector": `RlI7SW50ZXJEaXNwbGF5`,
+                                          "--framer-font-weight": `400`,
+                                        },
+                                        children: f(`strong`, {
+                                          children: `nationally and internationally`,
+                                        }),
+                                      }),
+                                      f(`strong`, {
+                                        children: ` recognized judges for ESPER Awards ’26—upholding fairness, integrity, and thoughtful evaluation.`,
+                                      }),
+                                    ],
+                                  }),
+                                }),
+                                className: `framer-ucidsy`,
+                                "data-framer-name": `Our dedicated team blends diverse expertise, innovative thinking, and a passion for excellence to turn your vision into reality.`,
+                                fonts: [
+                                  `FR;InterDisplay-Light`,
+                                  `FR;InterDisplay`,
+                                  `FR;InterDisplay-Bold`,
+                                ],
+                                verticalAlignment: `top`,
+                                withExternalLayout: !0,
+                              }),
+                            }),
+                          ],
+                        }),
+                        E() &&
+                        _(`div`, {
+                          className: `framer-1ovidn8 hidden-72rtr7 hidden-ebiaht hidden-193nlgj`,
+                          "data-framer-name": `Services Cards`,
+                          children: [
+                            f(Y, {
+                              breakpoint: b,
+                              overrides: {
+                                AV4qGqEC9: {
+                                  width: `min(min(${u?.width || `100vw`}, 1160px) - 32px, 1160px)`,
+                                  y:
+                                    (u?.y || 0) +
+                                    0 +
+                                    829 +
+                                    0 +
+                                    1914.8 +
+                                    0 +
+                                    0,
+                                },
+                              },
+                              children: f(U, {
+                                height: 521,
+                                children: f(B, {
+                                  className: `framer-11tazn-container`,
+                                  nodeId: `xfCKA4aaq`,
+                                  scopeId: `augiA20Il`,
+                                  children: f(jn, {
+                                    bLduUHqqh: $(
+                                      {
+                                        pixelHeight: 1080,
+                                        pixelWidth: 1080,
+                                        src: `/esper/images/tes9nouyvfibtcargbei3i4si.png?width=1080&height=1080`,
+                                        srcSet: `/esper/images/tes9nouyvfibtcargbei3i4si.png?scale-down-to=512&width=1080&height=1080 512w,/esper/images/tes9nouyvfibtcargbei3i4si.png?scale-down-to=1024&width=1080&height=1080 1024w,/esper/images/tes9nouyvfibtcargbei3i4si.png?width=1080&height=1080 1080w`,
+                                      },
+                                      `Villa`,
+                                    ),
+                                    height: `100%`,
+                                    id: `xfCKA4aaq`,
+                                    l9LjRaJjB: !0,
+                                    layoutId: `xfCKA4aaq`,
+                                    mClhBAXgo: `an award-winning Sri Lankan wildlife 
+photographer,`,
+                                    style: { height: `100%`, width: `100%` },
+                                    T9gmcBtzV: `Lakshitha Karunarathna`,
+                                    width: `100%`,
+                                  }),
                                 }),
                               }),
-                            ],
-                          }),
-                        E() &&
-                          _(`div`, {
-                            className: `framer-1ovidn8 hidden-72rtr7 hidden-ebiaht hidden-193nlgj`,
-                            "data-framer-name": `Services Cards`,
-                            children: [
-                              f(Y, {
-                                breakpoint: b,
-                                overrides: {
-                                  AV4qGqEC9: {
-                                    width: `min(min(${u?.width || `100vw`}, 1160px) - 32px, 1160px)`,
-                                    y:
-                                      (u?.y || 0) +
-                                      0 +
-                                      829 +
-                                      0 +
-                                      1914.8 +
-                                      0 +
-                                      0,
-                                  },
+                            }),
+                            f(Y, {
+                              breakpoint: b,
+                              overrides: {
+                                AV4qGqEC9: {
+                                  width: `min(min(${u?.width || `100vw`}, 1160px) - 32px, 1160px)`,
+                                  y:
+                                    (u?.y || 0) +
+                                    0 +
+                                    829 +
+                                    0 +
+                                    1914.8 +
+                                    0 +
+                                    545,
                                 },
-                                children: f(U, {
-                                  height: 521,
-                                  children: f(B, {
-                                    className: `framer-11tazn-container`,
-                                    nodeId: `xfCKA4aaq`,
-                                    scopeId: `augiA20Il`,
-                                    children: f(jn, {
+                              },
+                              children: f(U, {
+                                height: 517,
+                                children: f(B, {
+                                  className: `framer-91aqzp-container`,
+                                  nodeId: `uzLpzVkAT`,
+                                  scopeId: `augiA20Il`,
+                                  children: f(jn, {
+                                    bLduUHqqh: $(
+                                      {
+                                        pixelHeight: 1080,
+                                        pixelWidth: 1080,
+                                        src: `/esper/images/y74cdxoqe2s2d02h6k23kxdkvd0.png?width=1080&height=1080`,
+                                        srcSet: `/esper/images/y74cdxoqe2s2d02h6k23kxdkvd0.png?scale-down-to=512&width=1080&height=1080 512w,/esper/images/y74cdxoqe2s2d02h6k23kxdkvd0.png?scale-down-to=1024&width=1080&height=1080 1024w,/esper/images/y74cdxoqe2s2d02h6k23kxdkvd0.png?width=1080&height=1080 1080w`,
+                                      },
+                                      `Car`,
+                                    ),
+                                    height: `100%`,
+                                    id: `uzLpzVkAT`,
+                                    l9LjRaJjB: !0,
+                                    layoutId: `uzLpzVkAT`,
+                                    mClhBAXgo: `Internationaly recognized Sri Lankan visual director`,
+                                    style: { height: `100%`, width: `100%` },
+                                    T9gmcBtzV: `Randy Chriz Perera`,
+                                    width: `100%`,
+                                  }),
+                                }),
+                              }),
+                            }),
+                            f(Y, {
+                              breakpoint: b,
+                              overrides: {
+                                AV4qGqEC9: {
+                                  width: `min(min(${u?.width || `100vw`}, 1160px) - 32px, 1160px)`,
+                                  y:
+                                    (u?.y || 0) +
+                                    0 +
+                                    829 +
+                                    0 +
+                                    1914.8 +
+                                    0 +
+                                    1086,
+                                },
+                              },
+                              children: f(U, {
+                                height: 509,
+                                children: f(B, {
+                                  className: `framer-j29ilj-container`,
+                                  nodeId: `cC1jwKuAC`,
+                                  scopeId: `augiA20Il`,
+                                  children: f(jn, {
+                                    bLduUHqqh: $(
+                                      {
+                                        pixelHeight: 1080,
+                                        pixelWidth: 1080,
+                                        src: `/esper/images/j5g4kfbwy38as4gp6ttkvhgplg.png?width=1080&height=1080`,
+                                        srcSet: `/esper/images/j5g4kfbwy38as4gp6ttkvhgplg.png?scale-down-to=512&width=1080&height=1080 512w,/esper/images/j5g4kfbwy38as4gp6ttkvhgplg.png?scale-down-to=1024&width=1080&height=1080 1024w,/esper/images/j5g4kfbwy38as4gp6ttkvhgplg.png?width=1080&height=1080 1080w`,
+                                      },
+                                      `Paper Floating`,
+                                    ),
+                                    height: `100%`,
+                                    id: `cC1jwKuAC`,
+                                    l9LjRaJjB: !0,
+                                    layoutId: `cC1jwKuAC`,
+                                    mClhBAXgo: `Sri Lankan Computer Science researcher undergraduate at (UCSC)`,
+                                    style: { height: `100%`, width: `100%` },
+                                    T9gmcBtzV: `Viduanga Landers`,
+                                    width: `100%`,
+                                  }),
+                                }),
+                              }),
+                            }),
+                          ],
+                        }),
+                        O() &&
+                        _(`div`, {
+                          className: `framer-1nvqr6w hidden-9w4hrp`,
+                          "data-framer-name": `Services Cards`,
+                          children: [
+                            f(Y, {
+                              breakpoint: b,
+                              overrides: {
+                                binYOdBcM: {
+                                  y:
+                                    (u?.y || 0) +
+                                    0 +
+                                    775 +
+                                    0 +
+                                    2227.6 +
+                                    0 +
+                                    0,
+                                },
+                                nmuyZviuC: {
+                                  width: `max((min(min(${u?.width || `100vw`}, 1160px) * 0.95, 1160px) - 48px) / 3, 50px)`,
+                                  y:
+                                    (u?.y || 0) +
+                                    0 +
+                                    905 +
+                                    9 +
+                                    2382.6 +
+                                    0 +
+                                    0,
+                                },
+                              },
+                              children: f(U, {
+                                height: 481,
+                                width: `max((min(${u?.width || `100vw`}, 1160px) - 48px) / 3, 50px)`,
+                                y: (u?.y || 0) + 0 + 710 + 0 + 2227.6 + 0 + 0,
+                                children: f(B, {
+                                  className: `framer-1t3wuux-container`,
+                                  nodeId: `J3PE1O_jw`,
+                                  scopeId: `augiA20Il`,
+                                  children: f(an, {
+                                    bLduUHqqh: $(
+                                      {
+                                        pixelHeight: 1080,
+                                        pixelWidth: 1080,
+                                        src: `https://framerusercontent.com/images/nouTXxe4ueCNOyRy5T8ScZLFa8.png?width=1080&height=1080`,
+                                        srcSet: `https://framerusercontent.com/images/nouTXxe4ueCNOyRy5T8ScZLFa8.png?scale-down-to=512&width=1080&height=1080 512w,https://framerusercontent.com/images/nouTXxe4ueCNOyRy5T8ScZLFa8.png?scale-down-to=1024&width=1080&height=1080 1024w,https://framerusercontent.com/images/nouTXxe4ueCNOyRy5T8ScZLFa8.png?width=1080&height=1080 1080w`,
+                                      },
+                                      `Paper Floating`,
+                                    ),
+                                    height: `100%`,
+                                    id: `J3PE1O_jw`,
+                                    l9LjRaJjB: !0,
+                                    layoutId: `J3PE1O_jw`,
+                                    mClhBAXgo: `Sri Lankan Computer 
+Science researcher
+undergraduate at
+(UCSC)`,
+                                    style: { height: `100%`, width: `100%` },
+                                    T9gmcBtzV: `Viduanga Landers`,
+                                    width: `100%`,
+                                  }),
+                                }),
+                              }),
+                            }),
+                            f(Y, {
+                              breakpoint: b,
+                              overrides: {
+                                binYOdBcM: {
+                                  y:
+                                    (u?.y || 0) +
+                                    0 +
+                                    775 +
+                                    0 +
+                                    2227.6 +
+                                    0 +
+                                    0,
+                                },
+                                nmuyZviuC: {
+                                  width: `max((min(min(${u?.width || `100vw`}, 1160px) * 0.95, 1160px) - 48px) / 3, 50px)`,
+                                  y:
+                                    (u?.y || 0) +
+                                    0 +
+                                    905 +
+                                    9 +
+                                    2382.6 +
+                                    0 +
+                                    0,
+                                },
+                              },
+                              children: f(U, {
+                                height: 481,
+                                width: `max((min(${u?.width || `100vw`}, 1160px) - 48px) / 3, 50px)`,
+                                y: (u?.y || 0) + 0 + 710 + 0 + 2227.6 + 0 + 0,
+                                children: f(B, {
+                                  className: `framer-zrzgsf-container`,
+                                  nodeId: `PppVst0vb`,
+                                  scopeId: `augiA20Il`,
+                                  children: f(Y, {
+                                    breakpoint: b,
+                                    overrides: {
+                                      nmuyZviuC: {
+                                        mClhBAXgo: `an award-winning 
+Sri Lankan wildlife 
+photographer,`,
+                                      },
+                                    },
+                                    children: f(an, {
                                       bLduUHqqh: $(
                                         {
                                           pixelHeight: 1080,
@@ -7637,354 +7853,100 @@ e(() => {
                                           src: `/esper/images/tes9nouyvfibtcargbei3i4si.png?width=1080&height=1080`,
                                           srcSet: `/esper/images/tes9nouyvfibtcargbei3i4si.png?scale-down-to=512&width=1080&height=1080 512w,/esper/images/tes9nouyvfibtcargbei3i4si.png?scale-down-to=1024&width=1080&height=1080 1024w,/esper/images/tes9nouyvfibtcargbei3i4si.png?width=1080&height=1080 1080w`,
                                         },
-                                        `Villa`,
+                                        `Car`,
                                       ),
                                       height: `100%`,
-                                      id: `xfCKA4aaq`,
+                                      id: `PppVst0vb`,
                                       l9LjRaJjB: !0,
-                                      layoutId: `xfCKA4aaq`,
-                                      mClhBAXgo: `an award-winning Sri Lankan wildlife 
+                                      layoutId: `PppVst0vb`,
+                                      mClhBAXgo: `an award-winning 
+Sri Lankan 
+wildlife 
 photographer,`,
-                                      style: { height: `100%`, width: `100%` },
+                                      style: {
+                                        height: `100%`,
+                                        width: `100%`,
+                                      },
                                       T9gmcBtzV: `Lakshitha Karunarathna`,
                                       width: `100%`,
                                     }),
                                   }),
                                 }),
                               }),
-                              f(Y, {
-                                breakpoint: b,
-                                overrides: {
-                                  AV4qGqEC9: {
-                                    width: `min(min(${u?.width || `100vw`}, 1160px) - 32px, 1160px)`,
-                                    y:
-                                      (u?.y || 0) +
-                                      0 +
-                                      829 +
-                                      0 +
-                                      1914.8 +
-                                      0 +
-                                      545,
-                                  },
+                            }),
+                            f(Y, {
+                              breakpoint: b,
+                              overrides: {
+                                binYOdBcM: {
+                                  y:
+                                    (u?.y || 0) +
+                                    0 +
+                                    775 +
+                                    0 +
+                                    2227.6 +
+                                    0 +
+                                    0,
                                 },
-                                children: f(U, {
-                                  height: 517,
-                                  children: f(B, {
-                                    className: `framer-91aqzp-container`,
-                                    nodeId: `uzLpzVkAT`,
-                                    scopeId: `augiA20Il`,
-                                    children: f(jn, {
-                                      bLduUHqqh: $(
-                                        {
-                                          pixelHeight: 1080,
-                                          pixelWidth: 1080,
-                                          src: `/esper/images/y74cdxoqe2s2d02h6k23kxdkvd0.png?width=1080&height=1080`,
-                                          srcSet: `/esper/images/y74cdxoqe2s2d02h6k23kxdkvd0.png?scale-down-to=512&width=1080&height=1080 512w,/esper/images/y74cdxoqe2s2d02h6k23kxdkvd0.png?scale-down-to=1024&width=1080&height=1080 1024w,/esper/images/y74cdxoqe2s2d02h6k23kxdkvd0.png?width=1080&height=1080 1080w`,
-                                        },
-                                        `Car`,
-                                      ),
-                                      height: `100%`,
-                                      id: `uzLpzVkAT`,
-                                      l9LjRaJjB: !0,
-                                      layoutId: `uzLpzVkAT`,
-                                      mClhBAXgo: `Internationaly recognized Sri Lankan visual director`,
-                                      style: { height: `100%`, width: `100%` },
-                                      T9gmcBtzV: `Randy Chriz Perera`,
-                                      width: `100%`,
-                                    }),
-                                  }),
-                                }),
-                              }),
-                              f(Y, {
-                                breakpoint: b,
-                                overrides: {
-                                  AV4qGqEC9: {
-                                    width: `min(min(${u?.width || `100vw`}, 1160px) - 32px, 1160px)`,
-                                    y:
-                                      (u?.y || 0) +
-                                      0 +
-                                      829 +
-                                      0 +
-                                      1914.8 +
-                                      0 +
-                                      1086,
-                                  },
+                                nmuyZviuC: {
+                                  width: `max((min(min(${u?.width || `100vw`}, 1160px) * 0.95, 1160px) - 48px) / 3, 50px)`,
+                                  y:
+                                    (u?.y || 0) +
+                                    0 +
+                                    905 +
+                                    9 +
+                                    2382.6 +
+                                    0 +
+                                    0,
                                 },
-                                children: f(U, {
-                                  height: 509,
-                                  children: f(B, {
-                                    className: `framer-j29ilj-container`,
-                                    nodeId: `cC1jwKuAC`,
-                                    scopeId: `augiA20Il`,
-                                    children: f(jn, {
-                                      bLduUHqqh: $(
-                                        {
-                                          pixelHeight: 1080,
-                                          pixelWidth: 1080,
-                                          src: `/esper/images/j5g4kfbwy38as4gp6ttkvhgplg.png?width=1080&height=1080`,
-                                          srcSet: `/esper/images/j5g4kfbwy38as4gp6ttkvhgplg.png?scale-down-to=512&width=1080&height=1080 512w,/esper/images/j5g4kfbwy38as4gp6ttkvhgplg.png?scale-down-to=1024&width=1080&height=1080 1024w,/esper/images/j5g4kfbwy38as4gp6ttkvhgplg.png?width=1080&height=1080 1080w`,
-                                        },
-                                        `Paper Floating`,
-                                      ),
-                                      height: `100%`,
-                                      id: `cC1jwKuAC`,
-                                      l9LjRaJjB: !0,
-                                      layoutId: `cC1jwKuAC`,
-                                      mClhBAXgo: `Sri Lankan Computer Science researcher undergraduate at (UCSC)`,
-                                      style: { height: `100%`, width: `100%` },
-                                      T9gmcBtzV: `Viduanga Landers`,
-                                      width: `100%`,
-                                    }),
-                                  }),
-                                }),
-                              }),
-                            ],
-                          }),
-                        O() &&
-                          _(`div`, {
-                            className: `framer-1nvqr6w hidden-9w4hrp`,
-                            "data-framer-name": `Services Cards`,
-                            children: [
-                              f(Y, {
-                                breakpoint: b,
-                                overrides: {
-                                  binYOdBcM: {
-                                    y:
-                                      (u?.y || 0) +
-                                      0 +
-                                      775 +
-                                      0 +
-                                      2227.6 +
-                                      0 +
-                                      0,
-                                  },
-                                  nmuyZviuC: {
-                                    width: `max((min(min(${u?.width || `100vw`}, 1160px) * 0.95, 1160px) - 48px) / 3, 50px)`,
-                                    y:
-                                      (u?.y || 0) +
-                                      0 +
-                                      905 +
-                                      9 +
-                                      2382.6 +
-                                      0 +
-                                      0,
-                                  },
-                                },
-                                children: f(U, {
-                                  height: 481,
-                                  width: `max((min(${u?.width || `100vw`}, 1160px) - 48px) / 3, 50px)`,
-                                  y: (u?.y || 0) + 0 + 710 + 0 + 2227.6 + 0 + 0,
-                                  children: f(B, {
-                                    className: `framer-1t3wuux-container`,
-                                    nodeId: `J3PE1O_jw`,
-                                    scopeId: `augiA20Il`,
-                                    children: f(an, {
-                                      bLduUHqqh: $(
-                                        {
-                                          pixelHeight: 1080,
-                                          pixelWidth: 1080,
-                                          src: `https://framerusercontent.com/images/nouTXxe4ueCNOyRy5T8ScZLFa8.png?width=1080&height=1080`,
-                                          srcSet: `https://framerusercontent.com/images/nouTXxe4ueCNOyRy5T8ScZLFa8.png?scale-down-to=512&width=1080&height=1080 512w,https://framerusercontent.com/images/nouTXxe4ueCNOyRy5T8ScZLFa8.png?scale-down-to=1024&width=1080&height=1080 1024w,https://framerusercontent.com/images/nouTXxe4ueCNOyRy5T8ScZLFa8.png?width=1080&height=1080 1080w`,
-                                        },
-                                        `Paper Floating`,
-                                      ),
-                                      height: `100%`,
-                                      id: `J3PE1O_jw`,
-                                      l9LjRaJjB: !0,
-                                      layoutId: `J3PE1O_jw`,
-                                      mClhBAXgo: `Sri Lankan Computer 
-Science researcher
-undergraduate at
-(UCSC)`,
-                                      style: { height: `100%`, width: `100%` },
-                                      T9gmcBtzV: `Viduanga Landers`,
-                                      width: `100%`,
-                                    }),
-                                  }),
-                                }),
-                              }),
-                              f(Y, {
-                                breakpoint: b,
-                                overrides: {
-                                  binYOdBcM: {
-                                    y:
-                                      (u?.y || 0) +
-                                      0 +
-                                      775 +
-                                      0 +
-                                      2227.6 +
-                                      0 +
-                                      0,
-                                  },
-                                  nmuyZviuC: {
-                                    width: `max((min(min(${u?.width || `100vw`}, 1160px) * 0.95, 1160px) - 48px) / 3, 50px)`,
-                                    y:
-                                      (u?.y || 0) +
-                                      0 +
-                                      905 +
-                                      9 +
-                                      2382.6 +
-                                      0 +
-                                      0,
-                                  },
-                                },
-                                children: f(U, {
-                                  height: 481,
-                                  width: `max((min(${u?.width || `100vw`}, 1160px) - 48px) / 3, 50px)`,
-                                  y: (u?.y || 0) + 0 + 710 + 0 + 2227.6 + 0 + 0,
-                                  children: f(B, {
-                                    className: `framer-zrzgsf-container`,
-                                    nodeId: `PppVst0vb`,
-                                    scopeId: `augiA20Il`,
-                                    children: f(Y, {
-                                      breakpoint: b,
-                                      overrides: {
-                                        nmuyZviuC: {
-                                          mClhBAXgo: `an award-winning 
-Sri Lankan wildlife 
-photographer,`,
-                                        },
+                              },
+                              children: f(U, {
+                                height: 481,
+                                width: `max((min(${u?.width || `100vw`}, 1160px) - 48px) / 3, 50px)`,
+                                y: (u?.y || 0) + 0 + 710 + 0 + 2227.6 + 0 + 0,
+                                children: f(B, {
+                                  className: `framer-vxixd6-container`,
+                                  nodeId: `RdoAvDkWR`,
+                                  scopeId: `augiA20Il`,
+                                  children: f(an, {
+                                    bLduUHqqh: $(
+                                      {
+                                        pixelHeight: 1080,
+                                        pixelWidth: 1080,
+                                        src: `/esper/images/y74cdxoqe2s2d02h6k23kxdkvd0.png?width=1080&height=1080`,
+                                        srcSet: `/esper/images/y74cdxoqe2s2d02h6k23kxdkvd0.png?scale-down-to=512&width=1080&height=1080 512w,/esper/images/y74cdxoqe2s2d02h6k23kxdkvd0.png?scale-down-to=1024&width=1080&height=1080 1024w,/esper/images/y74cdxoqe2s2d02h6k23kxdkvd0.png?width=1080&height=1080 1080w`,
                                       },
-                                      children: f(an, {
-                                        bLduUHqqh: $(
-                                          {
-                                            pixelHeight: 1080,
-                                            pixelWidth: 1080,
-                                            src: `/esper/images/tes9nouyvfibtcargbei3i4si.png?width=1080&height=1080`,
-                                            srcSet: `/esper/images/tes9nouyvfibtcargbei3i4si.png?scale-down-to=512&width=1080&height=1080 512w,/esper/images/tes9nouyvfibtcargbei3i4si.png?scale-down-to=1024&width=1080&height=1080 1024w,/esper/images/tes9nouyvfibtcargbei3i4si.png?width=1080&height=1080 1080w`,
-                                          },
-                                          `Car`,
-                                        ),
-                                        height: `100%`,
-                                        id: `PppVst0vb`,
-                                        l9LjRaJjB: !0,
-                                        layoutId: `PppVst0vb`,
-                                        mClhBAXgo: `an award-winning 
-Sri Lankan 
-wildlife 
-photographer,`,
-                                        style: {
-                                          height: `100%`,
-                                          width: `100%`,
-                                        },
-                                        T9gmcBtzV: `Lakshitha Karunarathna`,
-                                        width: `100%`,
-                                      }),
-                                    }),
-                                  }),
-                                }),
-                              }),
-                              f(Y, {
-                                breakpoint: b,
-                                overrides: {
-                                  binYOdBcM: {
-                                    y:
-                                      (u?.y || 0) +
-                                      0 +
-                                      775 +
-                                      0 +
-                                      2227.6 +
-                                      0 +
-                                      0,
-                                  },
-                                  nmuyZviuC: {
-                                    width: `max((min(min(${u?.width || `100vw`}, 1160px) * 0.95, 1160px) - 48px) / 3, 50px)`,
-                                    y:
-                                      (u?.y || 0) +
-                                      0 +
-                                      905 +
-                                      9 +
-                                      2382.6 +
-                                      0 +
-                                      0,
-                                  },
-                                },
-                                children: f(U, {
-                                  height: 481,
-                                  width: `max((min(${u?.width || `100vw`}, 1160px) - 48px) / 3, 50px)`,
-                                  y: (u?.y || 0) + 0 + 710 + 0 + 2227.6 + 0 + 0,
-                                  children: f(B, {
-                                    className: `framer-vxixd6-container`,
-                                    nodeId: `RdoAvDkWR`,
-                                    scopeId: `augiA20Il`,
-                                    children: f(an, {
-                                      bLduUHqqh: $(
-                                        {
-                                          pixelHeight: 1080,
-                                          pixelWidth: 1080,
-                                          src: `/esper/images/y74cdxoqe2s2d02h6k23kxdkvd0.png?width=1080&height=1080`,
-                                          srcSet: `/esper/images/y74cdxoqe2s2d02h6k23kxdkvd0.png?scale-down-to=512&width=1080&height=1080 512w,/esper/images/y74cdxoqe2s2d02h6k23kxdkvd0.png?scale-down-to=1024&width=1080&height=1080 1024w,/esper/images/y74cdxoqe2s2d02h6k23kxdkvd0.png?width=1080&height=1080 1080w`,
-                                        },
-                                        `Villa`,
-                                      ),
-                                      height: `100%`,
-                                      id: `RdoAvDkWR`,
-                                      l9LjRaJjB: !0,
-                                      layoutId: `RdoAvDkWR`,
-                                      mClhBAXgo: `Internationaly
+                                      `Villa`,
+                                    ),
+                                    height: `100%`,
+                                    id: `RdoAvDkWR`,
+                                    l9LjRaJjB: !0,
+                                    layoutId: `RdoAvDkWR`,
+                                    mClhBAXgo: `Internationaly
 recognized
 Sri Lankan 
 visual director`,
-                                      style: { height: `100%`, width: `100%` },
-                                      T9gmcBtzV: `Randy Chriz Perera`,
-                                      width: `100%`,
-                                    }),
+                                    style: { height: `100%`, width: `100%` },
+                                    T9gmcBtzV: `Randy Chriz Perera`,
+                                    width: `100%`,
                                   }),
                                 }),
                               }),
-                            ],
-                          }),
+                            }),
+                          ],
+                        }),
                         O() &&
-                          _(`div`, {
-                            className: `framer-wt6gb8 hidden-9w4hrp`,
-                            "data-framer-name": `Content Container`,
-                            children: [
-                              _(`div`, {
-                                className: `framer-46ipdk`,
-                                "data-framer-name": `Title`,
-                                children: [
-                                  f(Y, {
-                                    breakpoint: b,
-                                    overrides: {
-                                      nmuyZviuC: {
-                                        children: _(o, {
-                                          children: [
-                                            _(`h2`, {
-                                              style: {
-                                                "--font-selector": `R0Y7UGxheWZhaXIgRGlzcGxheS02MDBpdGFsaWM=`,
-                                                "--framer-font-family": `"Playfair Display", "Playfair Display Placeholder", serif`,
-                                                "--framer-font-size": `64px`,
-                                                "--framer-font-style": `italic`,
-                                                "--framer-font-weight": `600`,
-                                                "--framer-letter-spacing": `-3px`,
-                                                "--framer-line-height": `110%`,
-                                                "--framer-text-alignment": `left`,
-                                                "--framer-text-color": `rgb(255, 255, 255)`,
-                                              },
-                                              children: [
-                                                `Monarch Imperial `,
-                                                f(`span`, {
-                                                  style: {
-                                                    "--font-selector": `RlI7SW50ZXJEaXNwbGF5LU1lZGl1bQ==`,
-                                                    "--framer-font-family": `"Inter Display", "Inter Display Placeholder", sans-serif`,
-                                                    "--framer-font-style": `normal`,
-                                                    "--framer-font-weight": `500`,
-                                                  },
-                                                  children: `.`,
-                                                }),
-                                              ],
-                                            }),
-                                            f(`p`, {
-                                              children: f(`br`, {
-                                                className: `trailing-break`,
-                                              }),
-                                            }),
-                                          ],
-                                        }),
-                                      },
-                                    },
-                                    children: f(R, {
-                                      __fromCanvasComponent: !0,
+                        _(`div`, {
+                          className: `framer-wt6gb8 hidden-9w4hrp`,
+                          "data-framer-name": `Content Container`,
+                          children: [
+                            _(`div`, {
+                              className: `framer-46ipdk`,
+                              "data-framer-name": `Title`,
+                              children: [
+                                f(Y, {
+                                  breakpoint: b,
+                                  overrides: {
+                                    nmuyZviuC: {
                                       children: _(o, {
                                         children: [
                                           _(`h2`, {
@@ -8000,16 +7962,6 @@ visual director`,
                                               "--framer-text-color": `rgb(255, 255, 255)`,
                                             },
                                             children: [
-                                              f(`span`, {
-                                                style: {
-                                                  "--font-selector": `RlI7SW50ZXJEaXNwbGF5LU1lZGl1bQ==`,
-                                                  "--framer-font-family": `"Inter Display", "Inter Display Placeholder", sans-serif`,
-                                                  "--framer-font-style": `normal`,
-                                                  "--framer-font-weight": `500`,
-                                                  "--framer-text-color": `var(--token-a6d02d7b-c62e-4bdd-a986-baa8bce5578c, rgb(0, 2, 2))`,
-                                                },
-                                                children: `It Embarks At `,
-                                              }),
                                               `Monarch Imperial `,
                                               f(`span`, {
                                                 style: {
@@ -8029,78 +7981,97 @@ visual director`,
                                           }),
                                         ],
                                       }),
-                                      className: `framer-m71xm8`,
-                                      "data-framer-name": `Main Title`,
-                                      effect: xa,
-                                      fonts: [
-                                        `GF;Playfair Display-600italic`,
-                                        `FR;InterDisplay-Medium`,
-                                      ],
-                                      verticalAlignment: `top`,
-                                      withExternalLayout: !0,
-                                    }),
-                                  }),
-                                  f(R, {
+                                    },
+                                  },
+                                  children: f(R, {
                                     __fromCanvasComponent: !0,
-                                    children: f(o, {
-                                      children: f(`p`, {
-                                        style: {
-                                          "--font-selector": `RlI7SW50ZXJEaXNwbGF5`,
-                                          "--framer-font-family": `"Inter Display", "Inter Display Placeholder", sans-serif`,
-                                          "--framer-font-size": `18px`,
-                                          "--framer-line-height": `27.6px`,
-                                          "--framer-text-color": `var(--token-a6d02d7b-c62e-4bdd-a986-baa8bce5578c, rgb(0, 2, 2))`,
-                                        },
-                                        children: `Carrying pride with elegance — embarking in true Senanayakian colours.`,
-                                      }),
+                                    children: _(o, {
+                                      children: [
+                                        _(`h2`, {
+                                          style: {
+                                            "--font-selector": `R0Y7UGxheWZhaXIgRGlzcGxheS02MDBpdGFsaWM=`,
+                                            "--framer-font-family": `"Playfair Display", "Playfair Display Placeholder", serif`,
+                                            "--framer-font-size": `64px`,
+                                            "--framer-font-style": `italic`,
+                                            "--framer-font-weight": `600`,
+                                            "--framer-letter-spacing": `-3px`,
+                                            "--framer-line-height": `110%`,
+                                            "--framer-text-alignment": `left`,
+                                            "--framer-text-color": `rgb(255, 255, 255)`,
+                                          },
+                                          children: [
+                                            f(`span`, {
+                                              style: {
+                                                "--font-selector": `RlI7SW50ZXJEaXNwbGF5LU1lZGl1bQ==`,
+                                                "--framer-font-family": `"Inter Display", "Inter Display Placeholder", sans-serif`,
+                                                "--framer-font-style": `normal`,
+                                                "--framer-font-weight": `500`,
+                                                "--framer-text-color": `var(--token-a6d02d7b-c62e-4bdd-a986-baa8bce5578c, rgb(0, 2, 2))`,
+                                              },
+                                              children: `It Embarked At `,
+                                            }),
+                                            `Monarch Imperial `,
+                                            f(`span`, {
+                                              style: {
+                                                "--font-selector": `RlI7SW50ZXJEaXNwbGF5LU1lZGl1bQ==`,
+                                                "--framer-font-family": `"Inter Display", "Inter Display Placeholder", sans-serif`,
+                                                "--framer-font-style": `normal`,
+                                                "--framer-font-weight": `500`,
+                                              },
+                                              children: `.`,
+                                            }),
+                                          ],
+                                        }),
+                                        f(`p`, {
+                                          children: f(`br`, {
+                                            className: `trailing-break`,
+                                          }),
+                                        }),
+                                      ],
                                     }),
-                                    className: `framer-1srbmyl`,
-                                    "data-framer-name": `Subtitle`,
-                                    effect: Sa,
-                                    fonts: [`FR;InterDisplay`],
+                                    className: `framer-m71xm8`,
+                                    "data-framer-name": `Main Title`,
+                                    effect: xa,
+                                    fonts: [
+                                      `GF;Playfair Display-600italic`,
+                                      `FR;InterDisplay-Medium`,
+                                    ],
                                     verticalAlignment: `top`,
                                     withExternalLayout: !0,
                                   }),
-                                ],
-                              }),
-                              f(Y, {
-                                breakpoint: b,
-                                overrides: {
-                                  binYOdBcM: {
-                                    background: {
-                                      alt: ``,
-                                      fit: `fill`,
-                                      loading: M(
-                                        (u?.y || 0) + 0 + 775 + 0 + 2768.6 + 40,
-                                      ),
-                                      pixelHeight: 1221,
-                                      pixelWidth: 1080,
-                                      sizes: `508px`,
-                                      src: `https://framerusercontent.com/images/1OYuC5sakLW3J5Zga7uDk3wNzAI.png?width=1080&height=1221`,
-                                      srcSet: `https://framerusercontent.com/images/1OYuC5sakLW3J5Zga7uDk3wNzAI.png?scale-down-to=1024&width=1080&height=1221 905w,https://framerusercontent.com/images/1OYuC5sakLW3J5Zga7uDk3wNzAI.png?width=1080&height=1221 1080w`,
-                                    },
-                                  },
-                                  nmuyZviuC: {
-                                    background: {
-                                      alt: ``,
-                                      fit: `fill`,
-                                      loading: M(
-                                        (u?.y || 0) + 0 + 905 + 9 + 2970.6 + 40,
-                                      ),
-                                      pixelHeight: 1221,
-                                      pixelWidth: 1080,
-                                      sizes: `432px`,
-                                      src: `https://framerusercontent.com/images/1OYuC5sakLW3J5Zga7uDk3wNzAI.png?width=1080&height=1221`,
-                                      srcSet: `https://framerusercontent.com/images/1OYuC5sakLW3J5Zga7uDk3wNzAI.png?scale-down-to=1024&width=1080&height=1221 905w,https://framerusercontent.com/images/1OYuC5sakLW3J5Zga7uDk3wNzAI.png?width=1080&height=1221 1080w`,
-                                    },
-                                  },
-                                },
-                                children: f(q, {
+                                }),
+                                f(R, {
+                                  __fromCanvasComponent: !0,
+                                  children: f(o, {
+                                    children: f(`p`, {
+                                      style: {
+                                        "--font-selector": `RlI7SW50ZXJEaXNwbGF5`,
+                                        "--framer-font-family": `"Inter Display", "Inter Display Placeholder", sans-serif`,
+                                        "--framer-font-size": `18px`,
+                                        "--framer-line-height": `27.6px`,
+                                        "--framer-text-color": `var(--token-a6d02d7b-c62e-4bdd-a986-baa8bce5578c, rgb(0, 2, 2))`,
+                                      },
+                                      children: `Carrying pride with elegance — embarking in true Senanayakian colours.`,
+                                    }),
+                                  }),
+                                  className: `framer-1srbmyl`,
+                                  "data-framer-name": `Subtitle`,
+                                  effect: Sa,
+                                  fonts: [`FR;InterDisplay`],
+                                  verticalAlignment: `top`,
+                                  withExternalLayout: !0,
+                                }),
+                              ],
+                            }),
+                            f(Y, {
+                              breakpoint: b,
+                              overrides: {
+                                binYOdBcM: {
                                   background: {
                                     alt: ``,
                                     fit: `fill`,
                                     loading: M(
-                                      (u?.y || 0) + 0 + 710 + 0 + 2768.6 + 40,
+                                      (u?.y || 0) + 0 + 775 + 0 + 2768.6 + 40,
                                     ),
                                     pixelHeight: 1221,
                                     pixelWidth: 1080,
@@ -8108,134 +8079,79 @@ visual director`,
                                     src: `https://framerusercontent.com/images/1OYuC5sakLW3J5Zga7uDk3wNzAI.png?width=1080&height=1221`,
                                     srcSet: `https://framerusercontent.com/images/1OYuC5sakLW3J5Zga7uDk3wNzAI.png?scale-down-to=1024&width=1080&height=1221 905w,https://framerusercontent.com/images/1OYuC5sakLW3J5Zga7uDk3wNzAI.png?width=1080&height=1221 1080w`,
                                   },
-                                  className: `framer-j939b3`,
-                                }),
-                              }),
-                            ],
-                          }),
-                        E() &&
-                          f(Y, {
-                            breakpoint: b,
-                            overrides: {
-                              AV4qGqEC9: {
-                                height: 475,
-                                width: `calc(min(${u?.width || `100vw`}, 1160px) - 32px)`,
-                                y: (u?.y || 0) + 0 + 829 + 0 + 3544.8,
+                                },
+                                nmuyZviuC: {
+                                  background: {
+                                    alt: ``,
+                                    fit: `fill`,
+                                    loading: M(
+                                      (u?.y || 0) + 0 + 905 + 9 + 2970.6 + 40,
+                                    ),
+                                    pixelHeight: 1221,
+                                    pixelWidth: 1080,
+                                    sizes: `432px`,
+                                    src: `https://framerusercontent.com/images/1OYuC5sakLW3J5Zga7uDk3wNzAI.png?width=1080&height=1221`,
+                                    srcSet: `https://framerusercontent.com/images/1OYuC5sakLW3J5Zga7uDk3wNzAI.png?scale-down-to=1024&width=1080&height=1221 905w,https://framerusercontent.com/images/1OYuC5sakLW3J5Zga7uDk3wNzAI.png?width=1080&height=1221 1080w`,
+                                  },
+                                },
                               },
+                              children: f(q, {
+                                background: {
+                                  alt: ``,
+                                  fit: `fill`,
+                                  loading: M(
+                                    (u?.y || 0) + 0 + 710 + 0 + 2768.6 + 40,
+                                  ),
+                                  pixelHeight: 1221,
+                                  pixelWidth: 1080,
+                                  sizes: `508px`,
+                                  src: `https://framerusercontent.com/images/1OYuC5sakLW3J5Zga7uDk3wNzAI.png?width=1080&height=1221`,
+                                  srcSet: `https://framerusercontent.com/images/1OYuC5sakLW3J5Zga7uDk3wNzAI.png?scale-down-to=1024&width=1080&height=1221 905w,https://framerusercontent.com/images/1OYuC5sakLW3J5Zga7uDk3wNzAI.png?width=1080&height=1221 1080w`,
+                                },
+                                className: `framer-j939b3`,
+                              }),
+                            }),
+                          ],
+                        }),
+                        E() &&
+                        f(Y, {
+                          breakpoint: b,
+                          overrides: {
+                            AV4qGqEC9: {
+                              height: 475,
+                              width: `calc(min(${u?.width || `100vw`}, 1160px) - 32px)`,
+                              y: (u?.y || 0) + 0 + 829 + 0 + 3544.8,
                             },
-                            children: f(U, {
-                              children: f(B, {
-                                className: `framer-1dqpp9l-container hidden-72rtr7 hidden-ebiaht hidden-193nlgj`,
-                                nodeId: `MgDuEZHgh`,
-                                scopeId: `augiA20Il`,
-                                children: f(vn, {
-                                  bz2SOKPAC: ua,
-                                  FKARN3Cfk: Ca(la),
-                                  height: `100%`,
-                                  id: `MgDuEZHgh`,
-                                  layoutId: `MgDuEZHgh`,
-                                  LKJDuHAih: wa(da, s),
-                                  style: { height: `100%`, width: `100%` },
-                                  width: `100%`,
-                                }),
+                          },
+                          children: f(U, {
+                            children: f(B, {
+                              className: `framer-1dqpp9l-container hidden-72rtr7 hidden-ebiaht hidden-193nlgj`,
+                              nodeId: `MgDuEZHgh`,
+                              scopeId: `augiA20Il`,
+                              children: f(vn, {
+                                bz2SOKPAC: ua,
+                                FKARN3Cfk: Ca(la),
+                                height: `100%`,
+                                id: `MgDuEZHgh`,
+                                layoutId: `MgDuEZHgh`,
+                                LKJDuHAih: wa(da, s),
+                                style: { height: `100%`, width: `100%` },
+                                width: `100%`,
                               }),
                             }),
                           }),
+                        }),
                         _(`div`, {
                           className: `framer-15qykm`,
                           "data-framer-name": `H2+Body`,
                           children: [
                             O() &&
-                              f(Y, {
-                                breakpoint: b,
-                                overrides: {
-                                  binYOdBcM: {
-                                    children: f(o, {
-                                      children: _(`h2`, {
-                                        style: {
-                                          "--font-selector": `R0Y7UGxheWZhaXIgRGlzcGxheS02MDBpdGFsaWM=`,
-                                          "--framer-font-family": `"Playfair Display", "Playfair Display Placeholder", serif`,
-                                          "--framer-font-size": `52px`,
-                                          "--framer-font-style": `italic`,
-                                          "--framer-font-weight": `600`,
-                                          "--framer-line-height": `40%`,
-                                          "--framer-text-alignment": `center`,
-                                          "--framer-text-color": `var(--token-c05d7eb5-3b85-4d38-a5b8-65cb0e0a1652, rgb(255, 255, 255))`,
-                                          "--framer-text-transform": `capitalize`,
-                                        },
-                                        children: [
-                                          `School`,
-                                          f(`span`, {
-                                            style: {
-                                              "--font-selector": `RlI7SW50ZXJEaXNwbGF5LVNlbWlCb2xk`,
-                                              "--framer-font-family": `"Inter Display", "Inter Display Placeholder", sans-serif`,
-                                              "--framer-font-style": `normal`,
-                                            },
-                                            children: ` `,
-                                          }),
-                                          `Awards`,
-                                          f(`span`, {
-                                            style: {
-                                              "--font-selector": `RlI7SW50ZXJEaXNwbGF5LVNlbWlCb2xk`,
-                                              "--framer-font-family": `"Inter Display", "Inter Display Placeholder", sans-serif`,
-                                              "--framer-font-style": `normal`,
-                                            },
-                                            children: ` `,
-                                          }),
-                                        ],
-                                      }),
-                                    }),
-                                    fonts: [
-                                      `GF;Playfair Display-600italic`,
-                                      `FR;InterDisplay-SemiBold`,
-                                    ],
-                                  },
-                                  nmuyZviuC: {
-                                    children: f(o, {
-                                      children: _(`h2`, {
-                                        style: {
-                                          "--font-selector": `R0Y7UGxheWZhaXIgRGlzcGxheS02MDBpdGFsaWM=`,
-                                          "--framer-font-family": `"Playfair Display", "Playfair Display Placeholder", serif`,
-                                          "--framer-font-size": `52px`,
-                                          "--framer-font-style": `italic`,
-                                          "--framer-font-weight": `600`,
-                                          "--framer-line-height": `40%`,
-                                          "--framer-text-alignment": `center`,
-                                          "--framer-text-color": `var(--token-c05d7eb5-3b85-4d38-a5b8-65cb0e0a1652, rgb(255, 255, 255))`,
-                                          "--framer-text-transform": `capitalize`,
-                                        },
-                                        children: [
-                                          `School`,
-                                          f(`span`, {
-                                            style: {
-                                              "--font-selector": `RlI7SW50ZXJEaXNwbGF5LVNlbWlCb2xk`,
-                                              "--framer-font-family": `"Inter Display", "Inter Display Placeholder", sans-serif`,
-                                              "--framer-font-style": `normal`,
-                                            },
-                                            children: ` `,
-                                          }),
-                                          `Awards`,
-                                          f(`span`, {
-                                            style: {
-                                              "--font-selector": `RlI7SW50ZXJEaXNwbGF5LVNlbWlCb2xk`,
-                                              "--framer-font-family": `"Inter Display", "Inter Display Placeholder", sans-serif`,
-                                              "--framer-font-style": `normal`,
-                                            },
-                                            children: ` `,
-                                          }),
-                                        ],
-                                      }),
-                                    }),
-                                    fonts: [
-                                      `GF;Playfair Display-600italic`,
-                                      `FR;InterDisplay-SemiBold`,
-                                    ],
-                                  },
-                                },
-                                children: f(R, {
-                                  __fromCanvasComponent: !0,
+                            f(Y, {
+                              breakpoint: b,
+                              overrides: {
+                                binYOdBcM: {
                                   children: f(o, {
-                                    children: f(`h2`, {
+                                    children: _(`h2`, {
                                       style: {
                                         "--font-selector": `R0Y7UGxheWZhaXIgRGlzcGxheS02MDBpdGFsaWM=`,
                                         "--framer-font-family": `"Playfair Display", "Playfair Display Placeholder", serif`,
@@ -8247,92 +8163,176 @@ visual director`,
                                         "--framer-text-color": `var(--token-c05d7eb5-3b85-4d38-a5b8-65cb0e0a1652, rgb(255, 255, 255))`,
                                         "--framer-text-transform": `capitalize`,
                                       },
-                                      children: `School Awards `,
+                                      children: [
+                                        `School`,
+                                        f(`span`, {
+                                          style: {
+                                            "--font-selector": `RlI7SW50ZXJEaXNwbGF5LVNlbWlCb2xk`,
+                                            "--framer-font-family": `"Inter Display", "Inter Display Placeholder", sans-serif`,
+                                            "--framer-font-style": `normal`,
+                                          },
+                                          children: ` `,
+                                        }),
+                                        `Awards`,
+                                        f(`span`, {
+                                          style: {
+                                            "--font-selector": `RlI7SW50ZXJEaXNwbGF5LVNlbWlCb2xk`,
+                                            "--framer-font-family": `"Inter Display", "Inter Display Placeholder", sans-serif`,
+                                            "--framer-font-style": `normal`,
+                                          },
+                                          children: ` `,
+                                        }),
+                                      ],
                                     }),
                                   }),
-                                  className: `framer-17eqxwi hidden-9w4hrp`,
-                                  "data-framer-name": `Meet Your Dream Team`,
-                                  fonts: [`GF;Playfair Display-600italic`],
-                                  verticalAlignment: `top`,
-                                  withExternalLayout: !0,
-                                }),
-                              }),
-                            O() &&
-                              f(R, {
-                                __fromCanvasComponent: !0,
-                                children: f(o, {
-                                  children: f(`h2`, {
-                                    style: {
-                                      "--font-selector": `SW50ZXItU2VtaUJvbGQ=`,
-                                      "--framer-font-size": `35px`,
-                                      "--framer-font-weight": `600`,
-                                      "--framer-line-height": `140%`,
-                                      "--framer-text-alignment": `center`,
-                                      "--framer-text-color": `var(--token-c05d7eb5-3b85-4d38-a5b8-65cb0e0a1652, rgb(255, 255, 255))`,
-                                      "--framer-text-transform": `capitalize`,
-                                    },
-                                    children: `creator awards`,
+                                  fonts: [
+                                    `GF;Playfair Display-600italic`,
+                                    `FR;InterDisplay-SemiBold`,
+                                  ],
+                                },
+                                nmuyZviuC: {
+                                  children: f(o, {
+                                    children: _(`h2`, {
+                                      style: {
+                                        "--font-selector": `R0Y7UGxheWZhaXIgRGlzcGxheS02MDBpdGFsaWM=`,
+                                        "--framer-font-family": `"Playfair Display", "Playfair Display Placeholder", serif`,
+                                        "--framer-font-size": `52px`,
+                                        "--framer-font-style": `italic`,
+                                        "--framer-font-weight": `600`,
+                                        "--framer-line-height": `40%`,
+                                        "--framer-text-alignment": `center`,
+                                        "--framer-text-color": `var(--token-c05d7eb5-3b85-4d38-a5b8-65cb0e0a1652, rgb(255, 255, 255))`,
+                                        "--framer-text-transform": `capitalize`,
+                                      },
+                                      children: [
+                                        `School`,
+                                        f(`span`, {
+                                          style: {
+                                            "--font-selector": `RlI7SW50ZXJEaXNwbGF5LVNlbWlCb2xk`,
+                                            "--framer-font-family": `"Inter Display", "Inter Display Placeholder", sans-serif`,
+                                            "--framer-font-style": `normal`,
+                                          },
+                                          children: ` `,
+                                        }),
+                                        `Awards`,
+                                        f(`span`, {
+                                          style: {
+                                            "--font-selector": `RlI7SW50ZXJEaXNwbGF5LVNlbWlCb2xk`,
+                                            "--framer-font-family": `"Inter Display", "Inter Display Placeholder", sans-serif`,
+                                            "--framer-font-style": `normal`,
+                                          },
+                                          children: ` `,
+                                        }),
+                                      ],
+                                    }),
                                   }),
-                                }),
-                                className: `framer-8e3bt0 hidden-9w4hrp`,
-                                "data-framer-name": `Meet Your Dream Team`,
-                                fonts: [`Inter-SemiBold`],
-                                verticalAlignment: `top`,
-                                withExternalLayout: !0,
-                              }),
-                            E() &&
-                              f(R, {
+                                  fonts: [
+                                    `GF;Playfair Display-600italic`,
+                                    `FR;InterDisplay-SemiBold`,
+                                  ],
+                                },
+                              },
+                              children: f(R, {
                                 __fromCanvasComponent: !0,
                                 children: f(o, {
                                   children: f(`h2`, {
                                     style: {
                                       "--font-selector": `R0Y7UGxheWZhaXIgRGlzcGxheS02MDBpdGFsaWM=`,
                                       "--framer-font-family": `"Playfair Display", "Playfair Display Placeholder", serif`,
-                                      "--framer-font-size": `39px`,
+                                      "--framer-font-size": `52px`,
                                       "--framer-font-style": `italic`,
                                       "--framer-font-weight": `600`,
-                                      "--framer-line-height": `50%`,
+                                      "--framer-line-height": `40%`,
                                       "--framer-text-alignment": `center`,
                                       "--framer-text-color": `var(--token-c05d7eb5-3b85-4d38-a5b8-65cb0e0a1652, rgb(255, 255, 255))`,
                                       "--framer-text-transform": `capitalize`,
                                     },
-                                    children: `school Awards`,
+                                    children: `School Awards `,
                                   }),
                                 }),
-                                className: `framer-1qbciz1 hidden-72rtr7 hidden-ebiaht hidden-193nlgj`,
+                                className: `framer-17eqxwi hidden-9w4hrp`,
                                 "data-framer-name": `Meet Your Dream Team`,
                                 fonts: [`GF;Playfair Display-600italic`],
                                 verticalAlignment: `top`,
                                 withExternalLayout: !0,
                               }),
-                            E() &&
-                              f(R, {
-                                __fromCanvasComponent: !0,
-                                children: f(o, {
-                                  children: f(`h2`, {
-                                    style: {
-                                      "--font-selector": `SW50ZXItU2VtaUJvbGQ=`,
-                                      "--framer-font-size": `23px`,
-                                      "--framer-font-weight": `600`,
-                                      "--framer-line-height": `120%`,
-                                      "--framer-text-alignment": `center`,
-                                      "--framer-text-color": `var(--token-c05d7eb5-3b85-4d38-a5b8-65cb0e0a1652, rgb(255, 255, 255))`,
-                                      "--framer-text-transform": `capitalize`,
-                                    },
-                                    children: `creator Awards`,
-                                  }),
+                            }),
+                            O() &&
+                            f(R, {
+                              __fromCanvasComponent: !0,
+                              children: f(o, {
+                                children: f(`h2`, {
+                                  style: {
+                                    "--font-selector": `SW50ZXItU2VtaUJvbGQ=`,
+                                    "--framer-font-size": `35px`,
+                                    "--framer-font-weight": `600`,
+                                    "--framer-line-height": `140%`,
+                                    "--framer-text-alignment": `center`,
+                                    "--framer-text-color": `var(--token-c05d7eb5-3b85-4d38-a5b8-65cb0e0a1652, rgb(255, 255, 255))`,
+                                    "--framer-text-transform": `capitalize`,
+                                  },
+                                  children: `creator awards`,
                                 }),
-                                className: `framer-ndz598 hidden-72rtr7 hidden-ebiaht hidden-193nlgj`,
-                                "data-framer-name": `Meet Your Dream Team`,
-                                fonts: [`Inter-SemiBold`],
-                                verticalAlignment: `top`,
-                                withExternalLayout: !0,
                               }),
+                              className: `framer-8e3bt0 hidden-9w4hrp`,
+                              "data-framer-name": `Meet Your Dream Team`,
+                              fonts: [`Inter-SemiBold`],
+                              verticalAlignment: `top`,
+                              withExternalLayout: !0,
+                            }),
                             E() &&
-                              f(`div`, {
-                                className: `framer-nct3u9 hidden-72rtr7 hidden-ebiaht hidden-193nlgj`,
-                                "data-framer-name": `Plasma`,
+                            f(R, {
+                              __fromCanvasComponent: !0,
+                              children: f(o, {
+                                children: f(`h2`, {
+                                  style: {
+                                    "--font-selector": `R0Y7UGxheWZhaXIgRGlzcGxheS02MDBpdGFsaWM=`,
+                                    "--framer-font-family": `"Playfair Display", "Playfair Display Placeholder", serif`,
+                                    "--framer-font-size": `39px`,
+                                    "--framer-font-style": `italic`,
+                                    "--framer-font-weight": `600`,
+                                    "--framer-line-height": `50%`,
+                                    "--framer-text-alignment": `center`,
+                                    "--framer-text-color": `var(--token-c05d7eb5-3b85-4d38-a5b8-65cb0e0a1652, rgb(255, 255, 255))`,
+                                    "--framer-text-transform": `capitalize`,
+                                  },
+                                  children: `school Awards`,
+                                }),
                               }),
+                              className: `framer-1qbciz1 hidden-72rtr7 hidden-ebiaht hidden-193nlgj`,
+                              "data-framer-name": `Meet Your Dream Team`,
+                              fonts: [`GF;Playfair Display-600italic`],
+                              verticalAlignment: `top`,
+                              withExternalLayout: !0,
+                            }),
+                            E() &&
+                            f(R, {
+                              __fromCanvasComponent: !0,
+                              children: f(o, {
+                                children: f(`h2`, {
+                                  style: {
+                                    "--font-selector": `SW50ZXItU2VtaUJvbGQ=`,
+                                    "--framer-font-size": `23px`,
+                                    "--framer-font-weight": `600`,
+                                    "--framer-line-height": `120%`,
+                                    "--framer-text-alignment": `center`,
+                                    "--framer-text-color": `var(--token-c05d7eb5-3b85-4d38-a5b8-65cb0e0a1652, rgb(255, 255, 255))`,
+                                    "--framer-text-transform": `capitalize`,
+                                  },
+                                  children: `creator Awards`,
+                                }),
+                              }),
+                              className: `framer-ndz598 hidden-72rtr7 hidden-ebiaht hidden-193nlgj`,
+                              "data-framer-name": `Meet Your Dream Team`,
+                              fonts: [`Inter-SemiBold`],
+                              verticalAlignment: `top`,
+                              withExternalLayout: !0,
+                            }),
+                            E() &&
+                            f(`div`, {
+                              className: `framer-nct3u9 hidden-72rtr7 hidden-ebiaht hidden-193nlgj`,
+                              "data-framer-name": `Plasma`,
+                            }),
                             f(R, {
                               __fromCanvasComponent: !0,
                               children: f(o, {
@@ -8618,475 +8618,151 @@ visual director`,
                               }),
                             }),
                             E() &&
-                              f(Y, {
-                                breakpoint: b,
-                                overrides: {
-                                  AV4qGqEC9: {
-                                    height: 578,
-                                    width: `max(min(${u?.width || `100vw`}, 1160px) - 32px, 50px)`,
-                                    y:
-                                      (u?.y || 0) +
-                                      0 +
-                                      829 +
-                                      0 +
-                                      4356.9 +
-                                      0 +
-                                      2408,
-                                  },
+                            f(Y, {
+                              breakpoint: b,
+                              overrides: {
+                                AV4qGqEC9: {
+                                  height: 578,
+                                  width: `max(min(${u?.width || `100vw`}, 1160px) - 32px, 50px)`,
+                                  y:
+                                    (u?.y || 0) +
+                                    0 +
+                                    829 +
+                                    0 +
+                                    4356.9 +
+                                    0 +
+                                    2408,
                                 },
-                                children: f(U, {
-                                  children: f(B, {
-                                    className: `framer-119pog1-container hidden-72rtr7 hidden-ebiaht hidden-193nlgj`,
-                                    isModuleExternal: !0,
-                                    nodeId: `m2ZJmKUjR`,
-                                    scopeId: `augiA20Il`,
-                                    children: f(Z, {
-                                      fb_jC0b_S: `https://forms.gle/3tUxBp3YXPrPRab57`,
-                                      g00LJCSg8: `Of The Year`,
-                                      height: `100%`,
-                                      id: `m2ZJmKUjR`,
-                                      layoutId: `m2ZJmKUjR`,
-                                      style: { width: `100%` },
-                                      variant: Q(`qoawDqr0s`),
-                                      width: `100%`,
-                                      WiQAc6QPE: $(
-                                        {
-                                          pixelHeight: 1350,
-                                          pixelWidth: 1080,
-                                          src: `/esper/images/nh3h81q0fvwhtveiazr9frdwi4.png?width=1080&height=1350`,
-                                          srcSet: `/esper/images/nh3h81q0fvwhtveiazr9frdwi4.png?scale-down-to=1024&width=1080&height=1350 819w,/esper/images/nh3h81q0fvwhtveiazr9frdwi4.png?width=1080&height=1350 1080w`,
-                                        },
-                                        ``,
-                                      ),
-                                      x4R5Mb5Jq: `Article Writer`,
-                                    }),
+                              },
+                              children: f(U, {
+                                children: f(B, {
+                                  className: `framer-119pog1-container hidden-72rtr7 hidden-ebiaht hidden-193nlgj`,
+                                  isModuleExternal: !0,
+                                  nodeId: `m2ZJmKUjR`,
+                                  scopeId: `augiA20Il`,
+                                  children: f(Z, {
+                                    fb_jC0b_S: `https://forms.gle/3tUxBp3YXPrPRab57`,
+                                    g00LJCSg8: `Of The Year`,
+                                    height: `100%`,
+                                    id: `m2ZJmKUjR`,
+                                    layoutId: `m2ZJmKUjR`,
+                                    style: { width: `100%` },
+                                    variant: Q(`qoawDqr0s`),
+                                    width: `100%`,
+                                    WiQAc6QPE: $(
+                                      {
+                                        pixelHeight: 1350,
+                                        pixelWidth: 1080,
+                                        src: `/esper/images/nh3h81q0fvwhtveiazr9frdwi4.png?width=1080&height=1350`,
+                                        srcSet: `/esper/images/nh3h81q0fvwhtveiazr9frdwi4.png?scale-down-to=1024&width=1080&height=1350 819w,/esper/images/nh3h81q0fvwhtveiazr9frdwi4.png?width=1080&height=1350 1080w`,
+                                      },
+                                      ``,
+                                    ),
+                                    x4R5Mb5Jq: `Article Writer`,
                                   }),
                                 }),
                               }),
+                            }),
                             E() &&
-                              f(Y, {
-                                breakpoint: b,
-                                overrides: {
-                                  AV4qGqEC9: {
-                                    height: 578,
-                                    width: `max(min(${u?.width || `100vw`}, 1160px) - 32px, 50px)`,
-                                    y:
-                                      (u?.y || 0) +
-                                      0 +
-                                      829 +
-                                      0 +
-                                      4356.9 +
-                                      0 +
-                                      3010,
-                                  },
+                            f(Y, {
+                              breakpoint: b,
+                              overrides: {
+                                AV4qGqEC9: {
+                                  height: 578,
+                                  width: `max(min(${u?.width || `100vw`}, 1160px) - 32px, 50px)`,
+                                  y:
+                                    (u?.y || 0) +
+                                    0 +
+                                    829 +
+                                    0 +
+                                    4356.9 +
+                                    0 +
+                                    3010,
                                 },
-                                children: f(U, {
-                                  children: f(B, {
-                                    className: `framer-p7fjgv-container hidden-72rtr7 hidden-ebiaht hidden-193nlgj`,
-                                    isModuleExternal: !0,
-                                    nodeId: `bzsAAzWkC`,
-                                    scopeId: `augiA20Il`,
-                                    children: f(Z, {
-                                      fb_jC0b_S: `https://forms.gle/dXuGF1sCkLtZ1escA`,
-                                      g00LJCSg8: `Of The Year`,
-                                      height: `100%`,
-                                      id: `bzsAAzWkC`,
-                                      layoutId: `bzsAAzWkC`,
-                                      style: { width: `100%` },
-                                      variant: Q(`qoawDqr0s`),
-                                      width: `100%`,
-                                      WiQAc6QPE: $(
-                                        {
-                                          pixelHeight: 1350,
-                                          pixelWidth: 1080,
-                                          src: `/esper/images/7yqzd58x3tmsvmblicznfphxg.png?width=1080&height=1350`,
-                                          srcSet: `/esper/images/7yqzd58x3tmsvmblicznfphxg.png?scale-down-to=1024&width=1080&height=1350 819w,/esper/images/7yqzd58x3tmsvmblicznfphxg.png?width=1080&height=1350 1080w`,
-                                        },
-                                        ``,
-                                      ),
-                                      x4R5Mb5Jq: `Sci - Fi Artist`,
-                                    }),
+                              },
+                              children: f(U, {
+                                children: f(B, {
+                                  className: `framer-p7fjgv-container hidden-72rtr7 hidden-ebiaht hidden-193nlgj`,
+                                  isModuleExternal: !0,
+                                  nodeId: `bzsAAzWkC`,
+                                  scopeId: `augiA20Il`,
+                                  children: f(Z, {
+                                    fb_jC0b_S: `https://forms.gle/dXuGF1sCkLtZ1escA`,
+                                    g00LJCSg8: `Of The Year`,
+                                    height: `100%`,
+                                    id: `bzsAAzWkC`,
+                                    layoutId: `bzsAAzWkC`,
+                                    style: { width: `100%` },
+                                    variant: Q(`qoawDqr0s`),
+                                    width: `100%`,
+                                    WiQAc6QPE: $(
+                                      {
+                                        pixelHeight: 1350,
+                                        pixelWidth: 1080,
+                                        src: `/esper/images/7yqzd58x3tmsvmblicznfphxg.png?width=1080&height=1350`,
+                                        srcSet: `/esper/images/7yqzd58x3tmsvmblicznfphxg.png?scale-down-to=1024&width=1080&height=1350 819w,/esper/images/7yqzd58x3tmsvmblicznfphxg.png?width=1080&height=1350 1080w`,
+                                      },
+                                      ``,
+                                    ),
+                                    x4R5Mb5Jq: `Sci - Fi Artist`,
                                   }),
                                 }),
                               }),
+                            }),
                           ],
                         }),
                         F() &&
-                          f(na, {
-                            animate: Ta,
-                            className: `framer-nrbcmf hidden-ebiaht hidden-9w4hrp`,
-                            "data-framer-appear-id": `nrbcmf`,
-                            "data-framer-name": `Bottom`,
-                            initial: ma,
-                            optimized: !0,
-                          }),
+                        f(na, {
+                          animate: Ta,
+                          className: `framer-nrbcmf hidden-ebiaht hidden-9w4hrp`,
+                          "data-framer-appear-id": `nrbcmf`,
+                          "data-framer-name": `Bottom`,
+                          initial: ma,
+                          optimized: !0,
+                        }),
                         O() &&
-                          _(Ji, {
-                            __framer__animate: { transition: ga },
-                            __framer__animateOnce: !0,
-                            __framer__enter: ha,
-                            __framer__exit: _a,
-                            __framer__styleAppearEffectEnabled: !0,
-                            __framer__threshold: 0.5,
-                            __perspectiveFX: !1,
-                            __targetOpacity: 1,
-                            className: `framer-p4q4wv hidden-9w4hrp`,
-                            "data-framer-name": `Team`,
-                            id: I,
-                            ref: L,
-                            children: [
-                              _(`div`, {
-                                className: `framer-1kbkbje`,
-                                "data-framer-name": `H2+Body`,
-                                children: [
-                                  f(R, {
-                                    __fromCanvasComponent: !0,
-                                    children: f(o, {
-                                      children: f(`h2`, {
-                                        style: {
-                                          "--font-selector": `SW50ZXItU2VtaUJvbGQ=`,
-                                          "--framer-font-size": `35px`,
-                                          "--framer-font-weight": `600`,
-                                          "--framer-line-height": `140%`,
-                                          "--framer-text-alignment": `center`,
-                                          "--framer-text-color": `var(--token-c05d7eb5-3b85-4d38-a5b8-65cb0e0a1652, rgb(255, 255, 255))`,
-                                          "--framer-text-transform": `capitalize`,
-                                        },
-                                        children: `creator awards`,
-                                      }),
-                                    }),
-                                    className: `framer-1n14928`,
-                                    "data-framer-name": `Meet Your Dream Team`,
-                                    fonts: [`Inter-SemiBold`],
-                                    verticalAlignment: `top`,
-                                    withExternalLayout: !0,
-                                  }),
-                                  z() &&
-                                    f(R, {
-                                      __fromCanvasComponent: !0,
-                                      children: f(o, {
-                                        children: f(`h2`, {
-                                          style: {
-                                            "--font-selector": `SW50ZXItU2VtaUJvbGQ=`,
-                                            "--framer-font-size": `35px`,
-                                            "--framer-font-weight": `600`,
-                                            "--framer-line-height": `140%`,
-                                            "--framer-text-alignment": `center`,
-                                            "--framer-text-color": `var(--token-c05d7eb5-3b85-4d38-a5b8-65cb0e0a1652, rgb(255, 255, 255))`,
-                                            "--framer-text-transform": `capitalize`,
-                                          },
-                                          children: `tech awards`,
-                                        }),
-                                      }),
-                                      className: `framer-124em4z hidden-ebiaht`,
-                                      "data-framer-name": `Meet Your Dream Team`,
-                                      fonts: [`Inter-SemiBold`],
-                                      verticalAlignment: `top`,
-                                      withExternalLayout: !0,
-                                    }),
-                                ],
-                              }),
-                              _(`div`, {
-                                className: `framer-153iuej`,
-                                "data-framer-name": `Team Collection`,
-                                children: [
-                                  f(Y, {
-                                    breakpoint: b,
-                                    overrides: {
-                                      binYOdBcM: {
-                                        width: `332px`,
-                                        y:
-                                          (u?.y || 0) +
-                                          0 +
-                                          775 +
-                                          0 +
-                                          4433.4 +
-                                          0 +
-                                          72 +
-                                          0 +
-                                          0,
+                        _(Ji, {
+                          __framer__animate: { transition: ga },
+                          __framer__animateOnce: !0,
+                          __framer__enter: ha,
+                          __framer__exit: _a,
+                          __framer__styleAppearEffectEnabled: !0,
+                          __framer__threshold: 0.5,
+                          __perspectiveFX: !1,
+                          __targetOpacity: 1,
+                          className: `framer-p4q4wv hidden-9w4hrp`,
+                          "data-framer-name": `Team`,
+                          id: I,
+                          ref: L,
+                          children: [
+                            _(`div`, {
+                              className: `framer-1kbkbje`,
+                              "data-framer-name": `H2+Body`,
+                              children: [
+                                f(R, {
+                                  __fromCanvasComponent: !0,
+                                  children: f(o, {
+                                    children: f(`h2`, {
+                                      style: {
+                                        "--font-selector": `SW50ZXItU2VtaUJvbGQ=`,
+                                        "--framer-font-size": `35px`,
+                                        "--framer-font-weight": `600`,
+                                        "--framer-line-height": `140%`,
+                                        "--framer-text-alignment": `center`,
+                                        "--framer-text-color": `var(--token-c05d7eb5-3b85-4d38-a5b8-65cb0e0a1652, rgb(255, 255, 255))`,
+                                        "--framer-text-transform": `capitalize`,
                                       },
-                                      nmuyZviuC: {
-                                        width: `363px`,
-                                        y:
-                                          (u?.y || 0) +
-                                          0 +
-                                          905 +
-                                          9 +
-                                          5458.4 +
-                                          9 +
-                                          68 +
-                                          0 +
-                                          0,
-                                      },
-                                    },
-                                    children: f(U, {
-                                      height: 578,
-                                      width: `max((min(${u?.width || `100vw`}, 1160px) - 72px) / 4, 50px)`,
-                                      y:
-                                        (u?.y || 0) +
-                                        0 +
-                                        710 +
-                                        0 +
-                                        4433.4 +
-                                        0 +
-                                        72 +
-                                        0 +
-                                        0,
-                                      children: f(B, {
-                                        className: `framer-aw3jnk-container`,
-                                        isModuleExternal: !0,
-                                        nodeId: `KGhIHXXuQ`,
-                                        scopeId: `augiA20Il`,
-                                        children: f(Z, {
-                                          g00LJCSg8: `Of The Year`,
-                                          height: `100%`,
-                                          id: `KGhIHXXuQ`,
-                                          layoutId: `KGhIHXXuQ`,
-                                          style: { width: `100%` },
-                                          variant: Q(`AvHcalqs8`),
-                                          width: `100%`,
-                                          WiQAc6QPE: $(
-                                            {
-                                              pixelHeight: 1350,
-                                              pixelWidth: 1080,
-                                              src: `/esper/images/nh3h81q0fvwhtveiazr9frdwi4.png?width=1080&height=1350`,
-                                              srcSet: `/esper/images/nh3h81q0fvwhtveiazr9frdwi4.png?scale-down-to=1024&width=1080&height=1350 819w,/esper/images/nh3h81q0fvwhtveiazr9frdwi4.png?width=1080&height=1350 1080w`,
-                                            },
-                                            ``,
-                                          ),
-                                          x4R5Mb5Jq: `Article Writer`,
-                                        }),
-                                      }),
+                                      children: `creator awards`,
                                     }),
                                   }),
-                                  f(Y, {
-                                    breakpoint: b,
-                                    overrides: {
-                                      binYOdBcM: {
-                                        width: `332px`,
-                                        y:
-                                          (u?.y || 0) +
-                                          0 +
-                                          775 +
-                                          0 +
-                                          4433.4 +
-                                          0 +
-                                          72 +
-                                          0 +
-                                          0,
-                                      },
-                                      nmuyZviuC: {
-                                        width: `363px`,
-                                        y:
-                                          (u?.y || 0) +
-                                          0 +
-                                          905 +
-                                          9 +
-                                          5458.4 +
-                                          9 +
-                                          68 +
-                                          0 +
-                                          0,
-                                      },
-                                    },
-                                    children: f(U, {
-                                      height: 578,
-                                      width: `max((min(${u?.width || `100vw`}, 1160px) - 72px) / 4, 50px)`,
-                                      y:
-                                        (u?.y || 0) +
-                                        0 +
-                                        710 +
-                                        0 +
-                                        4433.4 +
-                                        0 +
-                                        72 +
-                                        0 +
-                                        0,
-                                      children: f(B, {
-                                        className: `framer-x8vgbu-container`,
-                                        isModuleExternal: !0,
-                                        nodeId: `GnyvOYGOz`,
-                                        scopeId: `augiA20Il`,
-                                        children: f(Y, {
-                                          breakpoint: b,
-                                          overrides: {
-                                            nmuyZviuC: {
-                                              fb_jC0b_S: `https://forms.gle/dXuGF1sCkLtZ1escA`,
-                                              WiQAc6QPE: $(
-                                                {
-                                                  pixelHeight: 1350,
-                                                  pixelWidth: 1080,
-                                                  src: `/esper/images/7yqzd58x3tmsvmblicznfphxg.png?width=1080&height=1350`,
-                                                  srcSet: `/esper/images/7yqzd58x3tmsvmblicznfphxg.png?scale-down-to=1024&width=1080&height=1350 819w,/esper/images/7yqzd58x3tmsvmblicznfphxg.png?width=1080&height=1350 1080w`,
-                                                },
-                                                ``,
-                                              ),
-                                              x4R5Mb5Jq: `Sci -Fi Artist`,
-                                            },
-                                          },
-                                          children: f(Z, {
-                                            g00LJCSg8: `Of The Year`,
-                                            height: `100%`,
-                                            id: `GnyvOYGOz`,
-                                            layoutId: `GnyvOYGOz`,
-                                            style: { width: `100%` },
-                                            variant: Q(`AvHcalqs8`),
-                                            width: `100%`,
-                                            WiQAc6QPE: $(
-                                              {
-                                                pixelHeight: 1350,
-                                                pixelWidth: 1080,
-                                                src: `/esper/images/dh6yersaxujk2enuqyj6hluea.png?width=1080&height=1350`,
-                                                srcSet: `/esper/images/dh6yersaxujk2enuqyj6hluea.png?scale-down-to=1024&width=1080&height=1350 819w,/esper/images/dh6yersaxujk2enuqyj6hluea.png?width=1080&height=1350 1080w`,
-                                              },
-                                              ``,
-                                            ),
-                                            x4R5Mb5Jq: `Ai Photo Manipulator`,
-                                          }),
-                                        }),
-                                      }),
-                                    }),
-                                  }),
-                                  z() &&
-                                    f(Y, {
-                                      breakpoint: b,
-                                      overrides: {
-                                        binYOdBcM: {
-                                          width: `332px`,
-                                          y:
-                                            (u?.y || 0) +
-                                            0 +
-                                            775 +
-                                            0 +
-                                            4433.4 +
-                                            0 +
-                                            72 +
-                                            0 +
-                                            0,
-                                        },
-                                      },
-                                      children: f(U, {
-                                        height: 578,
-                                        width: `max((min(${u?.width || `100vw`}, 1160px) - 72px) / 4, 50px)`,
-                                        y:
-                                          (u?.y || 0) +
-                                          0 +
-                                          710 +
-                                          0 +
-                                          4433.4 +
-                                          0 +
-                                          72 +
-                                          0 +
-                                          0,
-                                        children: f(B, {
-                                          className: `framer-1p6myi8-container hidden-ebiaht`,
-                                          isModuleExternal: !0,
-                                          nodeId: `ig4embC30`,
-                                          scopeId: `augiA20Il`,
-                                          children: f(Z, {
-                                            g00LJCSg8: `Of The Year`,
-                                            height: `100%`,
-                                            id: `ig4embC30`,
-                                            layoutId: `ig4embC30`,
-                                            style: { width: `100%` },
-                                            variant: Q(`AvHcalqs8`),
-                                            width: `100%`,
-                                            WiQAc6QPE: $(
-                                              {
-                                                pixelHeight: 1350,
-                                                pixelWidth: 1080,
-                                                src: `/esper/images/j3uotpvsjndvsjwj2mz7ji2v6cs.png?width=1080&height=1350`,
-                                                srcSet: `/esper/images/j3uotpvsjndvsjwj2mz7ji2v6cs.png?scale-down-to=1024&width=1080&height=1350 819w,/esper/images/j3uotpvsjndvsjwj2mz7ji2v6cs.png?width=1080&height=1350 1080w`,
-                                              },
-                                              ``,
-                                            ),
-                                            x4R5Mb5Jq: `Edu Coder`,
-                                          }),
-                                        }),
-                                      }),
-                                    }),
-                                  z() &&
-                                    f(Y, {
-                                      breakpoint: b,
-                                      overrides: {
-                                        binYOdBcM: {
-                                          width: `332px`,
-                                          y:
-                                            (u?.y || 0) +
-                                            0 +
-                                            775 +
-                                            0 +
-                                            4433.4 +
-                                            0 +
-                                            72 +
-                                            0 +
-                                            0,
-                                        },
-                                      },
-                                      children: f(U, {
-                                        height: 578,
-                                        width: `max((min(${u?.width || `100vw`}, 1160px) - 72px) / 4, 50px)`,
-                                        y:
-                                          (u?.y || 0) +
-                                          0 +
-                                          710 +
-                                          0 +
-                                          4433.4 +
-                                          0 +
-                                          72 +
-                                          0 +
-                                          0,
-                                        children: f(B, {
-                                          className: `framer-oxq9dj-container hidden-ebiaht`,
-                                          isModuleExternal: !0,
-                                          nodeId: `Vdr2KD_T0`,
-                                          scopeId: `augiA20Il`,
-                                          children: f(Z, {
-                                            g00LJCSg8: `Of The Year`,
-                                            height: `100%`,
-                                            id: `Vdr2KD_T0`,
-                                            layoutId: `Vdr2KD_T0`,
-                                            style: { width: `100%` },
-                                            variant: Q(`AvHcalqs8`),
-                                            width: `100%`,
-                                            WiQAc6QPE: $(
-                                              {
-                                                pixelHeight: 1350,
-                                                pixelWidth: 1080,
-                                                src: `/esper/images/7yqzd58x3tmsvmblicznfphxg.png?width=1080&height=1350`,
-                                                srcSet: `/esper/images/7yqzd58x3tmsvmblicznfphxg.png?scale-down-to=1024&width=1080&height=1350 819w,/esper/images/7yqzd58x3tmsvmblicznfphxg.png?width=1080&height=1350 1080w`,
-                                              },
-                                              ``,
-                                            ),
-                                            x4R5Mb5Jq: `Sci - Fi Artist`,
-                                          }),
-                                        }),
-                                      }),
-                                    }),
-                                ],
-                              }),
-                            ],
-                          }),
-                        ee() &&
-                          _(Ji, {
-                            __framer__animate: { transition: ga },
-                            __framer__animateOnce: !0,
-                            __framer__enter: ha,
-                            __framer__exit: _a,
-                            __framer__styleAppearEffectEnabled: !0,
-                            __framer__threshold: 0.5,
-                            __perspectiveFX: !1,
-                            __targetOpacity: 1,
-                            className: `framer-1nbg65x hidden-72rtr7 hidden-9w4hrp hidden-193nlgj`,
-                            "data-framer-name": `Team`,
-                            id: te,
-                            ref: ne,
-                            children: [
-                              f(`div`, {
-                                className: `framer-un73em`,
-                                "data-framer-name": `H2+Body`,
-                                children: f(R, {
+                                  className: `framer-1n14928`,
+                                  "data-framer-name": `Meet Your Dream Team`,
+                                  fonts: [`Inter-SemiBold`],
+                                  verticalAlignment: `top`,
+                                  withExternalLayout: !0,
+                                }),
+                                z() &&
+                                f(R, {
                                   __fromCanvasComponent: !0,
                                   children: f(o, {
                                     children: f(`h2`, {
@@ -9102,94 +8778,158 @@ visual director`,
                                       children: `tech awards`,
                                     }),
                                   }),
-                                  className: `framer-1dmm7nv`,
+                                  className: `framer-124em4z hidden-ebiaht`,
                                   "data-framer-name": `Meet Your Dream Team`,
                                   fonts: [`Inter-SemiBold`],
                                   verticalAlignment: `top`,
                                   withExternalLayout: !0,
                                 }),
-                              }),
-                              _(`div`, {
-                                className: `framer-cp2zc9`,
-                                "data-framer-name": `Team Collection`,
-                                children: [
-                                  f(Y, {
-                                    breakpoint: b,
-                                    overrides: {
-                                      nmuyZviuC: {
-                                        y:
-                                          (u?.y || 0) +
-                                          0 +
-                                          905 +
-                                          9 +
-                                          6230.4 +
-                                          9 +
-                                          68 +
-                                          0 +
-                                          0,
-                                      },
+                              ],
+                            }),
+                            _(`div`, {
+                              className: `framer-153iuej`,
+                              "data-framer-name": `Team Collection`,
+                              children: [
+                                f(Y, {
+                                  breakpoint: b,
+                                  overrides: {
+                                    binYOdBcM: {
+                                      width: `332px`,
+                                      y:
+                                        (u?.y || 0) +
+                                        0 +
+                                        775 +
+                                        0 +
+                                        4433.4 +
+                                        0 +
+                                        72 +
+                                        0 +
+                                        0,
                                     },
-                                    children: f(U, {
-                                      height: 578,
+                                    nmuyZviuC: {
                                       width: `363px`,
-                                      children: f(B, {
-                                        className: `framer-1hi9gnm-container`,
-                                        isModuleExternal: !0,
-                                        nodeId: `AcWIYlUmn`,
-                                        scopeId: `augiA20Il`,
-                                        children: f(Z, {
-                                          fb_jC0b_S: `https://forms.gle/dXnkPzsVAvJXCqBZ9`,
-                                          g00LJCSg8: `Of The Year`,
-                                          height: `100%`,
-                                          id: `AcWIYlUmn`,
-                                          layoutId: `AcWIYlUmn`,
-                                          style: { width: `100%` },
-                                          variant: Q(`AvHcalqs8`),
-                                          width: `100%`,
-                                          WiQAc6QPE: $(
-                                            {
-                                              pixelHeight: 1350,
-                                              pixelWidth: 1080,
-                                              src: `/esper/images/j3uotpvsjndvsjwj2mz7ji2v6cs.png?width=1080&height=1350`,
-                                              srcSet: `/esper/images/j3uotpvsjndvsjwj2mz7ji2v6cs.png?scale-down-to=1024&width=1080&height=1350 819w,/esper/images/j3uotpvsjndvsjwj2mz7ji2v6cs.png?width=1080&height=1350 1080w`,
-                                            },
-                                            ``,
-                                          ),
-                                          x4R5Mb5Jq: `Edu Coder`,
-                                        }),
+                                      y:
+                                        (u?.y || 0) +
+                                        0 +
+                                        905 +
+                                        9 +
+                                        5458.4 +
+                                        9 +
+                                        68 +
+                                        0 +
+                                        0,
+                                    },
+                                  },
+                                  children: f(U, {
+                                    height: 578,
+                                    width: `max((min(${u?.width || `100vw`}, 1160px) - 72px) / 4, 50px)`,
+                                    y:
+                                      (u?.y || 0) +
+                                      0 +
+                                      710 +
+                                      0 +
+                                      4433.4 +
+                                      0 +
+                                      72 +
+                                      0 +
+                                      0,
+                                    children: f(B, {
+                                      className: `framer-aw3jnk-container`,
+                                      isModuleExternal: !0,
+                                      nodeId: `KGhIHXXuQ`,
+                                      scopeId: `augiA20Il`,
+                                      children: f(Z, {
+                                        g00LJCSg8: `Of The Year`,
+                                        height: `100%`,
+                                        id: `KGhIHXXuQ`,
+                                        layoutId: `KGhIHXXuQ`,
+                                        style: { width: `100%` },
+                                        variant: Q(`AvHcalqs8`),
+                                        width: `100%`,
+                                        WiQAc6QPE: $(
+                                          {
+                                            pixelHeight: 1350,
+                                            pixelWidth: 1080,
+                                            src: `/esper/images/nh3h81q0fvwhtveiazr9frdwi4.png?width=1080&height=1350`,
+                                            srcSet: `/esper/images/nh3h81q0fvwhtveiazr9frdwi4.png?scale-down-to=1024&width=1080&height=1350 819w,/esper/images/nh3h81q0fvwhtveiazr9frdwi4.png?width=1080&height=1350 1080w`,
+                                          },
+                                          ``,
+                                        ),
+                                        x4R5Mb5Jq: `Article Writer`,
                                       }),
                                     }),
                                   }),
-                                  f(Y, {
-                                    breakpoint: b,
-                                    overrides: {
-                                      nmuyZviuC: {
-                                        y:
-                                          (u?.y || 0) +
-                                          0 +
-                                          905 +
-                                          9 +
-                                          6230.4 +
-                                          9 +
-                                          68 +
-                                          0 +
-                                          0,
-                                      },
+                                }),
+                                f(Y, {
+                                  breakpoint: b,
+                                  overrides: {
+                                    binYOdBcM: {
+                                      width: `332px`,
+                                      y:
+                                        (u?.y || 0) +
+                                        0 +
+                                        775 +
+                                        0 +
+                                        4433.4 +
+                                        0 +
+                                        72 +
+                                        0 +
+                                        0,
                                     },
-                                    children: f(U, {
-                                      height: 578,
+                                    nmuyZviuC: {
                                       width: `363px`,
-                                      children: f(B, {
-                                        className: `framer-czai9s-container`,
-                                        isModuleExternal: !0,
-                                        nodeId: `WGbRs3End`,
-                                        scopeId: `augiA20Il`,
+                                      y:
+                                        (u?.y || 0) +
+                                        0 +
+                                        905 +
+                                        9 +
+                                        5458.4 +
+                                        9 +
+                                        68 +
+                                        0 +
+                                        0,
+                                    },
+                                  },
+                                  children: f(U, {
+                                    height: 578,
+                                    width: `max((min(${u?.width || `100vw`}, 1160px) - 72px) / 4, 50px)`,
+                                    y:
+                                      (u?.y || 0) +
+                                      0 +
+                                      710 +
+                                      0 +
+                                      4433.4 +
+                                      0 +
+                                      72 +
+                                      0 +
+                                      0,
+                                    children: f(B, {
+                                      className: `framer-x8vgbu-container`,
+                                      isModuleExternal: !0,
+                                      nodeId: `GnyvOYGOz`,
+                                      scopeId: `augiA20Il`,
+                                      children: f(Y, {
+                                        breakpoint: b,
+                                        overrides: {
+                                          nmuyZviuC: {
+                                            fb_jC0b_S: `https://forms.gle/dXuGF1sCkLtZ1escA`,
+                                            WiQAc6QPE: $(
+                                              {
+                                                pixelHeight: 1350,
+                                                pixelWidth: 1080,
+                                                src: `/esper/images/7yqzd58x3tmsvmblicznfphxg.png?width=1080&height=1350`,
+                                                srcSet: `/esper/images/7yqzd58x3tmsvmblicznfphxg.png?scale-down-to=1024&width=1080&height=1350 819w,/esper/images/7yqzd58x3tmsvmblicznfphxg.png?width=1080&height=1350 1080w`,
+                                              },
+                                              ``,
+                                            ),
+                                            x4R5Mb5Jq: `Sci -Fi Artist`,
+                                          },
+                                        },
                                         children: f(Z, {
-                                          fb_jC0b_S: `https://forms.gle/84j6hWFD2v1ngk966`,
                                           g00LJCSg8: `Of The Year`,
                                           height: `100%`,
-                                          id: `WGbRs3End`,
-                                          layoutId: `WGbRs3End`,
+                                          id: `GnyvOYGOz`,
+                                          layoutId: `GnyvOYGOz`,
                                           style: { width: `100%` },
                                           variant: Q(`AvHcalqs8`),
                                           width: `100%`,
@@ -9202,164 +8942,424 @@ visual director`,
                                             },
                                             ``,
                                           ),
-                                          x4R5Mb5Jq: `AI manipulator`,
+                                          x4R5Mb5Jq: `Ai Photo Manipulator`,
                                         }),
                                       }),
                                     }),
                                   }),
-                                ],
-                              }),
-                            ],
-                          }),
-                        E() &&
-                          _(`div`, {
-                            className: `framer-2bek0m hidden-72rtr7 hidden-ebiaht hidden-193nlgj`,
-                            "data-framer-name": `H2+Body`,
-                            children: [
-                              f(R, {
+                                }),
+                                z() &&
+                                f(Y, {
+                                  breakpoint: b,
+                                  overrides: {
+                                    binYOdBcM: {
+                                      width: `332px`,
+                                      y:
+                                        (u?.y || 0) +
+                                        0 +
+                                        775 +
+                                        0 +
+                                        4433.4 +
+                                        0 +
+                                        72 +
+                                        0 +
+                                        0,
+                                    },
+                                  },
+                                  children: f(U, {
+                                    height: 578,
+                                    width: `max((min(${u?.width || `100vw`}, 1160px) - 72px) / 4, 50px)`,
+                                    y:
+                                      (u?.y || 0) +
+                                      0 +
+                                      710 +
+                                      0 +
+                                      4433.4 +
+                                      0 +
+                                      72 +
+                                      0 +
+                                      0,
+                                    children: f(B, {
+                                      className: `framer-1p6myi8-container hidden-ebiaht`,
+                                      isModuleExternal: !0,
+                                      nodeId: `ig4embC30`,
+                                      scopeId: `augiA20Il`,
+                                      children: f(Z, {
+                                        g00LJCSg8: `Of The Year`,
+                                        height: `100%`,
+                                        id: `ig4embC30`,
+                                        layoutId: `ig4embC30`,
+                                        style: { width: `100%` },
+                                        variant: Q(`AvHcalqs8`),
+                                        width: `100%`,
+                                        WiQAc6QPE: $(
+                                          {
+                                            pixelHeight: 1350,
+                                            pixelWidth: 1080,
+                                            src: `/esper/images/j3uotpvsjndvsjwj2mz7ji2v6cs.png?width=1080&height=1350`,
+                                            srcSet: `/esper/images/j3uotpvsjndvsjwj2mz7ji2v6cs.png?scale-down-to=1024&width=1080&height=1350 819w,/esper/images/j3uotpvsjndvsjwj2mz7ji2v6cs.png?width=1080&height=1350 1080w`,
+                                          },
+                                          ``,
+                                        ),
+                                        x4R5Mb5Jq: `Edu Coder`,
+                                      }),
+                                    }),
+                                  }),
+                                }),
+                                z() &&
+                                f(Y, {
+                                  breakpoint: b,
+                                  overrides: {
+                                    binYOdBcM: {
+                                      width: `332px`,
+                                      y:
+                                        (u?.y || 0) +
+                                        0 +
+                                        775 +
+                                        0 +
+                                        4433.4 +
+                                        0 +
+                                        72 +
+                                        0 +
+                                        0,
+                                    },
+                                  },
+                                  children: f(U, {
+                                    height: 578,
+                                    width: `max((min(${u?.width || `100vw`}, 1160px) - 72px) / 4, 50px)`,
+                                    y:
+                                      (u?.y || 0) +
+                                      0 +
+                                      710 +
+                                      0 +
+                                      4433.4 +
+                                      0 +
+                                      72 +
+                                      0 +
+                                      0,
+                                    children: f(B, {
+                                      className: `framer-oxq9dj-container hidden-ebiaht`,
+                                      isModuleExternal: !0,
+                                      nodeId: `Vdr2KD_T0`,
+                                      scopeId: `augiA20Il`,
+                                      children: f(Z, {
+                                        g00LJCSg8: `Of The Year`,
+                                        height: `100%`,
+                                        id: `Vdr2KD_T0`,
+                                        layoutId: `Vdr2KD_T0`,
+                                        style: { width: `100%` },
+                                        variant: Q(`AvHcalqs8`),
+                                        width: `100%`,
+                                        WiQAc6QPE: $(
+                                          {
+                                            pixelHeight: 1350,
+                                            pixelWidth: 1080,
+                                            src: `/esper/images/7yqzd58x3tmsvmblicznfphxg.png?width=1080&height=1350`,
+                                            srcSet: `/esper/images/7yqzd58x3tmsvmblicznfphxg.png?scale-down-to=1024&width=1080&height=1350 819w,/esper/images/7yqzd58x3tmsvmblicznfphxg.png?width=1080&height=1350 1080w`,
+                                          },
+                                          ``,
+                                        ),
+                                        x4R5Mb5Jq: `Sci - Fi Artist`,
+                                      }),
+                                    }),
+                                  }),
+                                }),
+                              ],
+                            }),
+                          ],
+                        }),
+                        ee() &&
+                        _(Ji, {
+                          __framer__animate: { transition: ga },
+                          __framer__animateOnce: !0,
+                          __framer__enter: ha,
+                          __framer__exit: _a,
+                          __framer__styleAppearEffectEnabled: !0,
+                          __framer__threshold: 0.5,
+                          __perspectiveFX: !1,
+                          __targetOpacity: 1,
+                          className: `framer-1nbg65x hidden-72rtr7 hidden-9w4hrp hidden-193nlgj`,
+                          "data-framer-name": `Team`,
+                          id: te,
+                          ref: ne,
+                          children: [
+                            f(`div`, {
+                              className: `framer-un73em`,
+                              "data-framer-name": `H2+Body`,
+                              children: f(R, {
                                 __fromCanvasComponent: !0,
                                 children: f(o, {
                                   children: f(`h2`, {
-                                    dir: `auto`,
                                     style: {
-                                      "--font-selector": `R0Y7UGxheWZhaXIgRGlzcGxheS02MDBpdGFsaWM=`,
-                                      "--framer-font-family": `"Playfair Display", "Playfair Display Placeholder", serif`,
-                                      "--framer-font-size": `39px`,
-                                      "--framer-font-style": `italic`,
+                                      "--font-selector": `SW50ZXItU2VtaUJvbGQ=`,
+                                      "--framer-font-size": `35px`,
                                       "--framer-font-weight": `600`,
-                                      "--framer-line-height": `50%`,
+                                      "--framer-line-height": `140%`,
                                       "--framer-text-alignment": `center`,
                                       "--framer-text-color": `var(--token-c05d7eb5-3b85-4d38-a5b8-65cb0e0a1652, rgb(255, 255, 255))`,
                                       "--framer-text-transform": `capitalize`,
                                     },
-                                    children: `our Judges`,
+                                    children: `tech awards`,
                                   }),
                                 }),
-                                className: `framer-12hyy7m`,
+                                className: `framer-1dmm7nv`,
                                 "data-framer-name": `Meet Your Dream Team`,
-                                fonts: [`GF;Playfair Display-600italic`],
+                                fonts: [`Inter-SemiBold`],
                                 verticalAlignment: `top`,
                                 withExternalLayout: !0,
                               }),
-                              f(R, {
-                                __fromCanvasComponent: !0,
-                                children: f(o, {
-                                  children: _(`p`, {
-                                    dir: `auto`,
-                                    style: {
-                                      "--font-selector": `RlI7SW50ZXJEaXNwbGF5LUxpZ2h0`,
-                                      "--framer-font-family": `"Inter Display", "Inter Display Placeholder", sans-serif`,
-                                      "--framer-font-size": `18px`,
-                                      "--framer-font-weight": `300`,
-                                      "--framer-line-height": `140%`,
-                                      "--framer-text-alignment": `center`,
-                                      "--framer-text-color": `var(--token-3ecf9004-c795-4969-8dc2-46e9a5f93615, rgb(214, 214, 214))`,
+                            }),
+                            _(`div`, {
+                              className: `framer-cp2zc9`,
+                              "data-framer-name": `Team Collection`,
+                              children: [
+                                f(Y, {
+                                  breakpoint: b,
+                                  overrides: {
+                                    nmuyZviuC: {
+                                      y:
+                                        (u?.y || 0) +
+                                        0 +
+                                        905 +
+                                        9 +
+                                        6230.4 +
+                                        9 +
+                                        68 +
+                                        0 +
+                                        0,
                                     },
-                                    children: [
-                                      f(`strong`, {
-                                        children: `Our esteemed, `,
+                                  },
+                                  children: f(U, {
+                                    height: 578,
+                                    width: `363px`,
+                                    children: f(B, {
+                                      className: `framer-1hi9gnm-container`,
+                                      isModuleExternal: !0,
+                                      nodeId: `AcWIYlUmn`,
+                                      scopeId: `augiA20Il`,
+                                      children: f(Z, {
+                                        fb_jC0b_S: `https://forms.gle/dXnkPzsVAvJXCqBZ9`,
+                                        g00LJCSg8: `Of The Year`,
+                                        height: `100%`,
+                                        id: `AcWIYlUmn`,
+                                        layoutId: `AcWIYlUmn`,
+                                        style: { width: `100%` },
+                                        variant: Q(`AvHcalqs8`),
+                                        width: `100%`,
+                                        WiQAc6QPE: $(
+                                          {
+                                            pixelHeight: 1350,
+                                            pixelWidth: 1080,
+                                            src: `/esper/images/j3uotpvsjndvsjwj2mz7ji2v6cs.png?width=1080&height=1350`,
+                                            srcSet: `/esper/images/j3uotpvsjndvsjwj2mz7ji2v6cs.png?scale-down-to=1024&width=1080&height=1350 819w,/esper/images/j3uotpvsjndvsjwj2mz7ji2v6cs.png?width=1080&height=1350 1080w`,
+                                          },
+                                          ``,
+                                        ),
+                                        x4R5Mb5Jq: `Edu Coder`,
                                       }),
-                                      f(`span`, {
-                                        style: {
-                                          "--font-selector": `RlI7SW50ZXJEaXNwbGF5`,
-                                          "--framer-font-weight": `400`,
-                                        },
-                                        children: f(`strong`, {
-                                          children: `nationally and internationally `,
-                                        }),
-                                      }),
-                                      f(`strong`, {
-                                        children: `recognized judges for ESPER Awards ’26—upholding fairness, integrity, and thoughtful evaluation.`,
-                                      }),
-                                    ],
+                                    }),
                                   }),
                                 }),
-                                className: `framer-1ee6nr4`,
-                                "data-framer-name": `Our dedicated team blends diverse expertise, innovative thinking, and a passion for excellence to turn your vision into reality.`,
-                                fonts: [
-                                  `FR;InterDisplay-Light`,
-                                  `FR;InterDisplay`,
-                                  `FR;InterDisplay-Bold`,
-                                ],
-                                verticalAlignment: `top`,
-                                withExternalLayout: !0,
+                                f(Y, {
+                                  breakpoint: b,
+                                  overrides: {
+                                    nmuyZviuC: {
+                                      y:
+                                        (u?.y || 0) +
+                                        0 +
+                                        905 +
+                                        9 +
+                                        6230.4 +
+                                        9 +
+                                        68 +
+                                        0 +
+                                        0,
+                                    },
+                                  },
+                                  children: f(U, {
+                                    height: 578,
+                                    width: `363px`,
+                                    children: f(B, {
+                                      className: `framer-czai9s-container`,
+                                      isModuleExternal: !0,
+                                      nodeId: `WGbRs3End`,
+                                      scopeId: `augiA20Il`,
+                                      children: f(Z, {
+                                        fb_jC0b_S: `https://forms.gle/84j6hWFD2v1ngk966`,
+                                        g00LJCSg8: `Of The Year`,
+                                        height: `100%`,
+                                        id: `WGbRs3End`,
+                                        layoutId: `WGbRs3End`,
+                                        style: { width: `100%` },
+                                        variant: Q(`AvHcalqs8`),
+                                        width: `100%`,
+                                        WiQAc6QPE: $(
+                                          {
+                                            pixelHeight: 1350,
+                                            pixelWidth: 1080,
+                                            src: `/esper/images/dh6yersaxujk2enuqyj6hluea.png?width=1080&height=1350`,
+                                            srcSet: `/esper/images/dh6yersaxujk2enuqyj6hluea.png?scale-down-to=1024&width=1080&height=1350 819w,/esper/images/dh6yersaxujk2enuqyj6hluea.png?width=1080&height=1350 1080w`,
+                                          },
+                                          ``,
+                                        ),
+                                        x4R5Mb5Jq: `AI manipulator`,
+                                      }),
+                                    }),
+                                  }),
+                                }),
+                              ],
+                            }),
+                          ],
+                        }),
+                        E() &&
+                        _(`div`, {
+                          className: `framer-2bek0m hidden-72rtr7 hidden-ebiaht hidden-193nlgj`,
+                          "data-framer-name": `H2+Body`,
+                          children: [
+                            f(R, {
+                              __fromCanvasComponent: !0,
+                              children: f(o, {
+                                children: f(`h2`, {
+                                  dir: `auto`,
+                                  style: {
+                                    "--font-selector": `R0Y7UGxheWZhaXIgRGlzcGxheS02MDBpdGFsaWM=`,
+                                    "--framer-font-family": `"Playfair Display", "Playfair Display Placeholder", serif`,
+                                    "--framer-font-size": `39px`,
+                                    "--framer-font-style": `italic`,
+                                    "--framer-font-weight": `600`,
+                                    "--framer-line-height": `50%`,
+                                    "--framer-text-alignment": `center`,
+                                    "--framer-text-color": `var(--token-c05d7eb5-3b85-4d38-a5b8-65cb0e0a1652, rgb(255, 255, 255))`,
+                                    "--framer-text-transform": `capitalize`,
+                                  },
+                                  children: `our Judges`,
+                                }),
                               }),
-                            ],
-                          }),
+                              className: `framer-12hyy7m`,
+                              "data-framer-name": `Meet Your Dream Team`,
+                              fonts: [`GF;Playfair Display-600italic`],
+                              verticalAlignment: `top`,
+                              withExternalLayout: !0,
+                            }),
+                            f(R, {
+                              __fromCanvasComponent: !0,
+                              children: f(o, {
+                                children: _(`p`, {
+                                  dir: `auto`,
+                                  style: {
+                                    "--font-selector": `RlI7SW50ZXJEaXNwbGF5LUxpZ2h0`,
+                                    "--framer-font-family": `"Inter Display", "Inter Display Placeholder", sans-serif`,
+                                    "--framer-font-size": `18px`,
+                                    "--framer-font-weight": `300`,
+                                    "--framer-line-height": `140%`,
+                                    "--framer-text-alignment": `center`,
+                                    "--framer-text-color": `var(--token-3ecf9004-c795-4969-8dc2-46e9a5f93615, rgb(214, 214, 214))`,
+                                  },
+                                  children: [
+                                    f(`strong`, {
+                                      children: `Our esteemed, `,
+                                    }),
+                                    f(`span`, {
+                                      style: {
+                                        "--font-selector": `RlI7SW50ZXJEaXNwbGF5`,
+                                        "--framer-font-weight": `400`,
+                                      },
+                                      children: f(`strong`, {
+                                        children: `nationally and internationally `,
+                                      }),
+                                    }),
+                                    f(`strong`, {
+                                      children: `recognized judges for ESPER Awards ’26—upholding fairness, integrity, and thoughtful evaluation.`,
+                                    }),
+                                  ],
+                                }),
+                              }),
+                              className: `framer-1ee6nr4`,
+                              "data-framer-name": `Our dedicated team blends diverse expertise, innovative thinking, and a passion for excellence to turn your vision into reality.`,
+                              fonts: [
+                                `FR;InterDisplay-Light`,
+                                `FR;InterDisplay`,
+                                `FR;InterDisplay-Bold`,
+                              ],
+                              verticalAlignment: `top`,
+                              withExternalLayout: !0,
+                            }),
+                          ],
+                        }),
                       ],
                     }),
                     E() &&
-                      _(T.div, {
-                        className: `framer-o0xigs hidden-72rtr7 hidden-ebiaht hidden-193nlgj`,
-                        "data-framer-name": `Plasma`,
-                        layout: w,
-                        children: [
-                          f(Y, {
-                            breakpoint: b,
-                            overrides: {
-                              AV4qGqEC9: {
-                                background: {
-                                  alt: ``,
-                                  fit: `fill`,
-                                  loading: M((u?.y || 0) + 0 + -1),
-                                  pixelHeight: 1080,
-                                  pixelWidth: 1920,
-                                  positionX: `right`,
-                                  positionY: `center`,
-                                  sizes: `550px`,
-                                  src: `/esper/images/uinxiuqfy89scr4h14ee0fbc.png?width=1920&height=1080`,
-                                  srcSet: `/esper/images/uinxiuqfy89scr4h14ee0fbc.png?scale-down-to=512&width=1920&height=1080 512w,/esper/images/uinxiuqfy89scr4h14ee0fbc.png?scale-down-to=1024&width=1920&height=1080 1024w,/esper/images/uinxiuqfy89scr4h14ee0fbc.png?width=1920&height=1080 1920w`,
-                                },
-                              },
-                            },
-                            children: f(q, {
+                    _(T.div, {
+                      className: `framer-o0xigs hidden-72rtr7 hidden-ebiaht hidden-193nlgj`,
+                      "data-framer-name": `Plasma`,
+                      layout: w,
+                      children: [
+                        f(Y, {
+                          breakpoint: b,
+                          overrides: {
+                            AV4qGqEC9: {
                               background: {
                                 alt: ``,
                                 fit: `fill`,
+                                loading: M((u?.y || 0) + 0 + -1),
                                 pixelHeight: 1080,
                                 pixelWidth: 1920,
                                 positionX: `right`,
                                 positionY: `center`,
+                                sizes: `550px`,
                                 src: `/esper/images/uinxiuqfy89scr4h14ee0fbc.png?width=1920&height=1080`,
                                 srcSet: `/esper/images/uinxiuqfy89scr4h14ee0fbc.png?scale-down-to=512&width=1920&height=1080 512w,/esper/images/uinxiuqfy89scr4h14ee0fbc.png?scale-down-to=1024&width=1920&height=1080 1024w,/esper/images/uinxiuqfy89scr4h14ee0fbc.png?width=1920&height=1080 1920w`,
                               },
-                              className: `framer-1eq4zmj`,
-                              children: f(U, {
-                                children: f(B, {
-                                  className: `framer-1pry9as-container`,
-                                  isAuthoredByUser: !0,
-                                  isModuleExternal: !0,
-                                  nodeId: `LF9nICiG0`,
-                                  scopeId: `augiA20Il`,
-                                  children: f(Ze, {
-                                    animation: { animate: !0, speed: 10 },
-                                    height: `100%`,
-                                    id: `LF9nICiG0`,
-                                    intensity: 31,
-                                    layoutId: `LF9nICiG0`,
-                                    position: 0,
-                                    radius: `0px`,
-                                    rays: 36,
-                                    raysColor: {
-                                      color: `rgb(255, 191, 102)`,
-                                      color1: `rgb(255, 255, 255)`,
-                                      color2: `rgb(255, 203, 71)`,
-                                      mode: `single`,
-                                    },
-                                    reach: 30,
-                                    style: { height: `100%`, width: `100%` },
-                                    width: `100%`,
-                                  }),
+                            },
+                          },
+                          children: f(q, {
+                            background: {
+                              alt: ``,
+                              fit: `fill`,
+                              pixelHeight: 1080,
+                              pixelWidth: 1920,
+                              positionX: `right`,
+                              positionY: `center`,
+                              src: `/esper/images/uinxiuqfy89scr4h14ee0fbc.png?width=1920&height=1080`,
+                              srcSet: `/esper/images/uinxiuqfy89scr4h14ee0fbc.png?scale-down-to=512&width=1920&height=1080 512w,/esper/images/uinxiuqfy89scr4h14ee0fbc.png?scale-down-to=1024&width=1920&height=1080 1024w,/esper/images/uinxiuqfy89scr4h14ee0fbc.png?width=1920&height=1080 1920w`,
+                            },
+                            className: `framer-1eq4zmj`,
+                            children: f(U, {
+                              children: f(B, {
+                                className: `framer-1pry9as-container`,
+                                isAuthoredByUser: !0,
+                                isModuleExternal: !0,
+                                nodeId: `LF9nICiG0`,
+                                scopeId: `augiA20Il`,
+                                children: f(Ze, {
+                                  animation: { animate: !0, speed: 10 },
+                                  height: `100%`,
+                                  id: `LF9nICiG0`,
+                                  intensity: 31,
+                                  layoutId: `LF9nICiG0`,
+                                  position: 0,
+                                  radius: `0px`,
+                                  rays: 36,
+                                  raysColor: {
+                                    color: `rgb(255, 191, 102)`,
+                                    color1: `rgb(255, 255, 255)`,
+                                    color2: `rgb(255, 203, 71)`,
+                                    mode: `single`,
+                                  },
+                                  reach: 30,
+                                  style: { height: `100%`, width: `100%` },
+                                  width: `100%`,
                                 }),
                               }),
                             }),
                           }),
-                          f(`div`, {
-                            className: `framer-1a5klvr`,
-                            "data-framer-name": `Overlay`,
-                          }),
-                        ],
-                      }),
+                        }),
+                        f(`div`, {
+                          className: `framer-1a5klvr`,
+                          "data-framer-name": `Overlay`,
+                        }),
+                      ],
+                    }),
                     f(Y, {
                       breakpoint: b,
                       overrides: {
@@ -9406,151 +9406,151 @@ visual director`,
                       }),
                     }),
                     E() &&
-                      _(Ji, {
-                        __framer__animate: { transition: ga },
-                        __framer__animateOnce: !0,
-                        __framer__enter: ha,
-                        __framer__exit: _a,
-                        __framer__styleAppearEffectEnabled: !0,
-                        __framer__threshold: 0.5,
-                        __perspectiveFX: !1,
-                        __targetOpacity: 1,
-                        className: `framer-1sv1kgx hidden-72rtr7 hidden-ebiaht hidden-193nlgj`,
-                        "data-framer-name": `Team`,
-                        id: H,
-                        layout: w,
-                        ref: W,
-                        children: [
-                          _(`div`, {
-                            className: `framer-1og5q3n`,
-                            "data-framer-name": `H2+Body`,
-                            children: [
-                              f(R, {
-                                __fromCanvasComponent: !0,
-                                children: f(o, {
-                                  children: f(`h2`, {
-                                    style: {
-                                      "--font-selector": `SW50ZXItU2VtaUJvbGQ=`,
-                                      "--framer-font-size": `39px`,
-                                      "--framer-font-weight": `600`,
-                                      "--framer-line-height": `50%`,
-                                      "--framer-text-alignment": `center`,
-                                      "--framer-text-color": `var(--token-c05d7eb5-3b85-4d38-a5b8-65cb0e0a1652, rgb(255, 255, 255))`,
-                                      "--framer-text-transform": `capitalize`,
-                                    },
-                                    children: `tech Awards`,
-                                  }),
-                                }),
-                                className: `framer-1b03h31`,
-                                "data-framer-name": `Meet Your Dream Team`,
-                                fonts: [`Inter-SemiBold`],
-                                verticalAlignment: `top`,
-                                withExternalLayout: !0,
-                              }),
-                              f(`div`, {
-                                className: `framer-11s4jop`,
-                                "data-framer-name": `Plasma`,
-                              }),
-                            ],
-                          }),
-                          _(`div`, {
-                            className: `framer-ti0ezp`,
-                            "data-framer-name": `Team Collection`,
-                            children: [
-                              f(Y, {
-                                breakpoint: b,
-                                overrides: {
-                                  AV4qGqEC9: {
-                                    width: `max(min(${u?.width || `100vw`}, 1160px) - 32px, 50px)`,
-                                    y:
-                                      (u?.y || 0) +
-                                      0 +
-                                      8813.9 +
-                                      0 +
-                                      102 +
-                                      0 +
-                                      0,
+                    _(Ji, {
+                      __framer__animate: { transition: ga },
+                      __framer__animateOnce: !0,
+                      __framer__enter: ha,
+                      __framer__exit: _a,
+                      __framer__styleAppearEffectEnabled: !0,
+                      __framer__threshold: 0.5,
+                      __perspectiveFX: !1,
+                      __targetOpacity: 1,
+                      className: `framer-1sv1kgx hidden-72rtr7 hidden-ebiaht hidden-193nlgj`,
+                      "data-framer-name": `Team`,
+                      id: H,
+                      layout: w,
+                      ref: W,
+                      children: [
+                        _(`div`, {
+                          className: `framer-1og5q3n`,
+                          "data-framer-name": `H2+Body`,
+                          children: [
+                            f(R, {
+                              __fromCanvasComponent: !0,
+                              children: f(o, {
+                                children: f(`h2`, {
+                                  style: {
+                                    "--font-selector": `SW50ZXItU2VtaUJvbGQ=`,
+                                    "--framer-font-size": `39px`,
+                                    "--framer-font-weight": `600`,
+                                    "--framer-line-height": `50%`,
+                                    "--framer-text-alignment": `center`,
+                                    "--framer-text-color": `var(--token-c05d7eb5-3b85-4d38-a5b8-65cb0e0a1652, rgb(255, 255, 255))`,
+                                    "--framer-text-transform": `capitalize`,
                                   },
+                                  children: `tech Awards`,
+                                }),
+                              }),
+                              className: `framer-1b03h31`,
+                              "data-framer-name": `Meet Your Dream Team`,
+                              fonts: [`Inter-SemiBold`],
+                              verticalAlignment: `top`,
+                              withExternalLayout: !0,
+                            }),
+                            f(`div`, {
+                              className: `framer-11s4jop`,
+                              "data-framer-name": `Plasma`,
+                            }),
+                          ],
+                        }),
+                        _(`div`, {
+                          className: `framer-ti0ezp`,
+                          "data-framer-name": `Team Collection`,
+                          children: [
+                            f(Y, {
+                              breakpoint: b,
+                              overrides: {
+                                AV4qGqEC9: {
+                                  width: `max(min(${u?.width || `100vw`}, 1160px) - 32px, 50px)`,
+                                  y:
+                                    (u?.y || 0) +
+                                    0 +
+                                    8813.9 +
+                                    0 +
+                                    102 +
+                                    0 +
+                                    0,
                                 },
-                                children: f(U, {
-                                  height: 578,
-                                  children: f(B, {
-                                    className: `framer-mwq59m-container`,
-                                    isModuleExternal: !0,
-                                    nodeId: `exj0Ftit5`,
-                                    scopeId: `augiA20Il`,
-                                    children: f(Z, {
-                                      fb_jC0b_S: `https://forms.gle/dXnkPzsVAvJXCqBZ9`,
-                                      g00LJCSg8: `Of The Year`,
-                                      height: `100%`,
-                                      id: `exj0Ftit5`,
-                                      layoutId: `exj0Ftit5`,
-                                      style: { width: `100%` },
-                                      variant: Q(`qoawDqr0s`),
-                                      width: `100%`,
-                                      WiQAc6QPE: $(
-                                        {
-                                          pixelHeight: 1350,
-                                          pixelWidth: 1080,
-                                          src: `/esper/images/j3uotpvsjndvsjwj2mz7ji2v6cs.png?width=1080&height=1350`,
-                                          srcSet: `/esper/images/j3uotpvsjndvsjwj2mz7ji2v6cs.png?scale-down-to=1024&width=1080&height=1350 819w,/esper/images/j3uotpvsjndvsjwj2mz7ji2v6cs.png?width=1080&height=1350 1080w`,
-                                        },
-                                        ``,
-                                      ),
-                                      x4R5Mb5Jq: `Edu Coder`,
-                                    }),
+                              },
+                              children: f(U, {
+                                height: 578,
+                                children: f(B, {
+                                  className: `framer-mwq59m-container`,
+                                  isModuleExternal: !0,
+                                  nodeId: `exj0Ftit5`,
+                                  scopeId: `augiA20Il`,
+                                  children: f(Z, {
+                                    fb_jC0b_S: `https://forms.gle/dXnkPzsVAvJXCqBZ9`,
+                                    g00LJCSg8: `Of The Year`,
+                                    height: `100%`,
+                                    id: `exj0Ftit5`,
+                                    layoutId: `exj0Ftit5`,
+                                    style: { width: `100%` },
+                                    variant: Q(`qoawDqr0s`),
+                                    width: `100%`,
+                                    WiQAc6QPE: $(
+                                      {
+                                        pixelHeight: 1350,
+                                        pixelWidth: 1080,
+                                        src: `/esper/images/j3uotpvsjndvsjwj2mz7ji2v6cs.png?width=1080&height=1350`,
+                                        srcSet: `/esper/images/j3uotpvsjndvsjwj2mz7ji2v6cs.png?scale-down-to=1024&width=1080&height=1350 819w,/esper/images/j3uotpvsjndvsjwj2mz7ji2v6cs.png?width=1080&height=1350 1080w`,
+                                      },
+                                      ``,
+                                    ),
+                                    x4R5Mb5Jq: `Edu Coder`,
                                   }),
                                 }),
                               }),
-                              f(Y, {
-                                breakpoint: b,
-                                overrides: {
-                                  AV4qGqEC9: {
-                                    width: `max(min(${u?.width || `100vw`}, 1160px) - 32px, 50px)`,
-                                    y:
-                                      (u?.y || 0) +
-                                      0 +
-                                      8813.9 +
-                                      0 +
-                                      102 +
-                                      0 +
-                                      602,
-                                  },
+                            }),
+                            f(Y, {
+                              breakpoint: b,
+                              overrides: {
+                                AV4qGqEC9: {
+                                  width: `max(min(${u?.width || `100vw`}, 1160px) - 32px, 50px)`,
+                                  y:
+                                    (u?.y || 0) +
+                                    0 +
+                                    8813.9 +
+                                    0 +
+                                    102 +
+                                    0 +
+                                    602,
                                 },
-                                children: f(U, {
-                                  height: 578,
-                                  children: f(B, {
-                                    className: `framer-1qqgxo9-container`,
-                                    isModuleExternal: !0,
-                                    nodeId: `Taq8NcHU4`,
-                                    scopeId: `augiA20Il`,
-                                    children: f(Z, {
-                                      fb_jC0b_S: `https://forms.gle/84j6hWFD2v1ngk966`,
-                                      g00LJCSg8: `Of The Year`,
-                                      height: `100%`,
-                                      id: `Taq8NcHU4`,
-                                      layoutId: `Taq8NcHU4`,
-                                      style: { width: `100%` },
-                                      variant: Q(`qoawDqr0s`),
-                                      width: `100%`,
-                                      WiQAc6QPE: $(
-                                        {
-                                          pixelHeight: 1350,
-                                          pixelWidth: 1080,
-                                          src: `/esper/images/dh6yersaxujk2enuqyj6hluea.png?width=1080&height=1350`,
-                                          srcSet: `/esper/images/dh6yersaxujk2enuqyj6hluea.png?scale-down-to=1024&width=1080&height=1350 819w,/esper/images/dh6yersaxujk2enuqyj6hluea.png?width=1080&height=1350 1080w`,
-                                        },
-                                        ``,
-                                      ),
-                                      x4R5Mb5Jq: `Ai Manipulator `,
-                                    }),
+                              },
+                              children: f(U, {
+                                height: 578,
+                                children: f(B, {
+                                  className: `framer-1qqgxo9-container`,
+                                  isModuleExternal: !0,
+                                  nodeId: `Taq8NcHU4`,
+                                  scopeId: `augiA20Il`,
+                                  children: f(Z, {
+                                    fb_jC0b_S: `https://forms.gle/84j6hWFD2v1ngk966`,
+                                    g00LJCSg8: `Of The Year`,
+                                    height: `100%`,
+                                    id: `Taq8NcHU4`,
+                                    layoutId: `Taq8NcHU4`,
+                                    style: { width: `100%` },
+                                    variant: Q(`qoawDqr0s`),
+                                    width: `100%`,
+                                    WiQAc6QPE: $(
+                                      {
+                                        pixelHeight: 1350,
+                                        pixelWidth: 1080,
+                                        src: `/esper/images/dh6yersaxujk2enuqyj6hluea.png?width=1080&height=1350`,
+                                        srcSet: `/esper/images/dh6yersaxujk2enuqyj6hluea.png?scale-down-to=1024&width=1080&height=1350 819w,/esper/images/dh6yersaxujk2enuqyj6hluea.png?width=1080&height=1350 1080w`,
+                                      },
+                                      ``,
+                                    ),
+                                    x4R5Mb5Jq: `Ai Manipulator `,
                                   }),
                                 }),
                               }),
-                            ],
-                          }),
-                        ],
-                      }),
+                            }),
+                          ],
+                        }),
+                      ],
+                    }),
                   ],
                 }),
                 f(`div`, { id: `overlay` }),

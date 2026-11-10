@@ -603,31 +603,31 @@
 })();
 
 // --- SEO OVERRIDE (Appended dynamically) ---
-(function() {
+(function () {
   const path = window.location.pathname;
-  let seoTitle = "ESPER Awards '26 - Sri Lanka's Premier Science Day | SSDSSC";
+  let seoTitle = "ESPER Awards '27 - Sri Lanka's Premier Science Day | SSDSSC";
   let seoDesc = "ESPER Awards is Sri Lanka's No.1 national school science day and innovation awards platform, organized by the Science Society of D. S. Senanayake College.";
   let seoKeywords = "ESPER Awards, Science Day Sri Lanka, Innovation Awards, SSDSSC, D.S. Senanayake College";
 
   if (path.includes('/esper/popular/register')) {
-    seoTitle = "Register for Most Popular Awards - ESPER '26 | SSDSSC";
-    seoDesc = "Register for the Most Popular category at the ESPER Awards '26. Showcase your talent and get recognized by the Science Society of D.S. Senanayake College.";
+    seoTitle = "Register for Most Popular Awards - ESPER '27 | SSDSSC";
+    seoDesc = "Register for the Most Popular category at the ESPER Awards '27. Showcase your talent and get recognized by the Science Society of D.S. Senanayake College.";
     seoKeywords = "ESPER Popular Registration, SSDSSC";
   } else if (path.includes('/esper/open') || path.includes('/esper/popular')) {
-    seoTitle = "Most Popular Awards - ESPER '26 | SSDSSC";
-    seoDesc = "Vote and discover the most popular entries in research, technology, and creativity at the ESPER Awards '26 by the Science Union of D.S. Senanayake College.";
+    seoTitle = "Most Popular Awards - ESPER '27 | SSDSSC";
+    seoDesc = "Vote and discover the most popular entries in research, technology, and creativity at the ESPER Awards '27 by the Science Union of D.S. Senanayake College.";
     seoKeywords = "ESPER Popular Awards, ESPER Voting, SSDSSC, Science Day";
   } else if (path.includes('/esper/inter')) {
-    seoTitle = "Inter School Awards - ESPER '26 | SSDSSC";
-    seoDesc = "Explore and register for the Inter School Awards categories at ESPER '26, organized by the Science Society of D.S. Senanayake College.";
+    seoTitle = "Inter School Awards - ESPER '27 | SSDSSC";
+    seoDesc = "Explore and register for the Inter School Awards categories at ESPER '27, organized by the Science Society of D.S. Senanayake College.";
     seoKeywords = "Inter School Awards, ESPER Awards, Science Day Sri Lanka, SSDSSC";
   } else if (path.includes('/esper/intra')) {
-    seoTitle = "Intra School Awards - ESPER '26 | SSDSSC";
-    seoDesc = "Explore and register for the Intra School Awards categories at ESPER '26, organized by the Science Society of D.S. Senanayake College.";
+    seoTitle = "Intra School Awards - ESPER '27 | SSDSSC";
+    seoDesc = "Explore and register for the Intra School Awards categories at ESPER '27, organized by the Science Society of D.S. Senanayake College.";
     seoKeywords = "Intra School Awards, ESPER Awards, Science Day Sri Lanka, SSDSSC";
   } else if (path.includes('/esper/register')) {
-    seoTitle = "Register for ESPER Awards '26 | SSDSSC";
-    seoDesc = "Register your school or team for the ESPER Awards '26, Sri Lanka's premier Science Day Awards Ceremony celebrating young innovators.";
+    seoTitle = "Register for ESPER Awards '27 | SSDSSC";
+    seoDesc = "Register your school or team for the ESPER Awards '27, Sri Lanka's premier Science Day Awards Ceremony celebrating young innovators.";
     seoKeywords = "ESPER Registration, Science Day Registration, SSDSSC";
   }
 
@@ -656,7 +656,7 @@
 // --- END SEO OVERRIDE ---
 
 // --- UNIVERSAL ESPER NAVIGATION HANDLER ---
-(function() {
+(function () {
   function fixAllLinks() {
     document.querySelectorAll("a").forEach(a => {
       const text = a.textContent.trim().toLowerCase();

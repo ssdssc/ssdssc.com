@@ -5,7 +5,7 @@ function replaceInFile(filePath, replacements) {
     if (!fs.existsSync(filePath)) return;
     let content = fs.readFileSync(filePath, 'utf8');
     let changed = false;
-    
+
     for (const [search, replace] of replacements) {
         if (content.includes(search)) {
             content = content.split(search).join(replace);
@@ -13,7 +13,7 @@ function replaceInFile(filePath, replacements) {
             console.log(`Replaced in ${filePath}`);
         }
     }
-    
+
     if (changed) {
         fs.writeFileSync(filePath, content, 'utf8');
     }
@@ -44,10 +44,10 @@ const esperJsFiles = [
 
 for (const file of esperJsFiles) {
     replaceInFile(path.join(__dirname, file), [
-        ["ESPER Awards 26 \\u2013 Sri Lanka's Premier Science Day & Innovation Awards | SSDSSC", "ESPER Awards '26 - Sri Lanka's Premier Science Day | SSDSSC"],
-        ["ESPER Awards 26 \u2013 Sri Lanka's Premier Science Day & Innovation Awards | SSDSSC", "ESPER Awards '26 - Sri Lanka's Premier Science Day | SSDSSC"],
-        ["ESPER Awards 26 \\u2013 Sri Lanka's Premier Science Day \\u0026 Innovation Awards | SSDSSC", "ESPER Awards '26 - Sri Lanka's Premier Science Day | SSDSSC"],
-        ["ESPER Awards 26 – Sri Lanka's Premier Science Day & Innovation Awards | SSDSSC", "ESPER Awards '26 - Sri Lanka's Premier Science Day | SSDSSC"],
+        ["Esper Awards 27 \\u2013 Sri Lanka's Premier Science Day & Innovation Awards | SSDSSC", "ESPER Awards '27 - Sri Lanka's Premier Science Day | SSDSSC"],
+        ["Esper Awards 27 \u2013 Sri Lanka's Premier Science Day & Innovation Awards | SSDSSC", "ESPER Awards '27 - Sri Lanka's Premier Science Day | SSDSSC"],
+        ["Esper Awards 27 \\u2013 Sri Lanka's Premier Science Day \\u0026 Innovation Awards | SSDSSC", "ESPER Awards '27 - Sri Lanka's Premier Science Day | SSDSSC"],
+        ["Esper Awards 27 – Sri Lanka's Premier Science Day & Innovation Awards | SSDSSC", "ESPER Awards '27 - Sri Lanka's Premier Science Day | SSDSSC"],
         ["ESPER Awards is Sri Lanka's No.1 national school science day and innovation awards platform, organized by the Science Society of D. S. Senanayake College (SSDSSC), bringing together students, schools and young innovators from across Sri Lanka.", "ESPER Awards is Sri Lanka's No.1 national school science day and innovation awards platform, organized by the Science Society of D. S. Senanayake College."]
     ]);
 }
