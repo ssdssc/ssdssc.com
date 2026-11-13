@@ -3,6 +3,40 @@ import { createClient } from '@supabase/supabase-js';
 // This is a server-side API route — never prerender it
 export const prerender = false;
 
+const CATEGORY_LABELS = {
+  // Inter Awards
+  'article-writer': 'Best Article Writer of the Year Award',
+  'research-team': 'Best Research Team of the Year',
+  'graphic-designer': 'Graphic Designer of the Year',
+  'edu-coder': 'EDU Coder of the Year',
+  'young-inventor': 'Best Young Inventor of the Year',
+  'popular-union': 'Most Popular Science Union of the Year',
+  'quiz-team': 'Most Popular School Science Quiz Team',
+  'science-union': 'Most Popular School Science Union',
+
+  // Open Awards
+  'build-team': 'Best Build Team (Debunked) of the Year',
+  'short-film': 'Best Short Film of the Year',
+  'photographer': 'Best Scientific Photographer of the Year',
+};
+
+async function syncToGoogleSheet(webhookUrl, payload) {
+  try {
+    const response = await fetch(webhookUrl, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(payload),
+      redirect: 'follow',
+      signal: typeof AbortSignal !== 'undefined' && AbortSignal.timeout ? AbortSignal.timeout(8000) : undefined,
+    });
+    if (!response.ok) {
+      console.warn(`[esper/register] Google Sheets responded with status ${response.status}`);
+    }
+  } catch (err) {
+    console.error('[esper/register] Google Sheets webhook failed:', err?.message || err);
+  }
+}
+
 export const POST = async ({ request }) => {
   // Use process.env (runtime) NOT import.meta.env (build-time).
   // Astro/Vite bakes import.meta.env at build time — if the var isn't set
@@ -178,7 +212,74 @@ export const POST = async ({ request }) => {
       );
     }
 
-    // 3. Success Response
+    // 5. Sync to Google Sheets (if webhook configured)
+    const sheetWebhook = process.env.ESPER_GOOGLE_SHEET_WEBHOOK_URL || process.env.GOOGLE_SHEET_WEBHOOK_URL;
+    if (sheetWebhook) {
+      try {
+        const categoryLabel = CATEGORY_LABELS[category] || category;
+        const colomboTime = new Date().toLocaleString('en-GB', {
+          timeZone: 'Asia/Colombo',
+          year: 'numeric',
+          month: 'short',
+          day: '2-digit',
+          hour: '2-digit',
+          minute: '2-digit',
+          second: '2-digit',
+          hour12: true,
+        });
+
+        let sheetPayload = {
+          timestamp: colomboTime,
+          category: categoryLabel,
+          categorySlug: category,
+          contactNumber,
+          email,
+          confirmed: (data.confirmation === true || data.confirmation === 'on') ? 'Yes' : 'No',
+        };
+
+        if (isIntra) {
+          sheetPayload = {
+            ...sheetPayload,
+            type: 'intra',
+            applicantName: (data.applicantName || '').trim(),
+            grade: (data.grade || '').trim(),
+            projectLink: (data.inventorDriveLink || data.articleDocLink || '').trim(),
+          };
+        } else if (isOpen) {
+          sheetPayload = {
+            ...sheetPayload,
+            type: 'open',
+            applicantName: (data.applicantName || '').trim(),
+            age: data.age ? parseInt(data.age, 10) : '',
+            photoUrl: (data.photographerPhotoUrl || '').trim(),
+            fileLink: (data.buildTeamPdfUrl || data.buildTeamDriveLink || data.shortFilmDriveLink || data.photographerPhotoUrl || '').trim(),
+            description: (data.photoDescription || '').trim(),
+          };
+        } else {
+          sheetPayload = {
+            ...sheetPayload,
+            type: 'inter',
+            schoolName: (data.schoolName || '').trim(),
+            schoolLogoUrl: (data.schoolLogoUrl || '').trim(),
+            applicantName: (data.applicantName || '').trim(),
+            grade: (data.grade || '').trim(),
+            applicantPhone: (data.applicantPhone || '').trim(),
+            presidentName: (data.presidentName || '').trim(),
+            presidentContact: contactNumber,
+            githubLink: (data.coderGithubLink || '').trim(),
+            hostedLink: (data.coderHostedLink || '').trim(),
+            youtubeLink: (data.coderYoutubeLink || '').trim(),
+            projectLink: (data.articleDocLink || data.researchDriveLink || data.designerDriveLink || data.inventorDriveLink || '').trim(),
+          };
+        }
+
+        await syncToGoogleSheet(sheetWebhook, sheetPayload);
+      } catch (sheetErr) {
+        console.error('[esper/register] Google Sheets sync handler error:', sheetErr);
+      }
+    }
+
+    // 6. Success Response
     return new Response(
       JSON.stringify({ success: true, message: 'Registration submitted successfully!' }),
       { status: 200, headers: { 'Content-Type': 'application/json' } }
