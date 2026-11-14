@@ -24,13 +24,13 @@ export default function SponsorMarquee() {
   const marqueeList = [...sponsors, ...sponsors];
 
   return (
-    <div className="w-full py-3 z-10 overflow-hidden relative [mask-image:linear-gradient(to_right,transparent_0%,black_12%,black_88%,transparent_100%)]">
-      {/* Side gradient fades */}
-      <div className="pointer-events-none absolute left-0 top-0 bottom-0 w-20 md:w-32 bg-gradient-to-r from-[#070707]/90 to-transparent z-10" />
-      <div className="pointer-events-none absolute right-0 top-0 bottom-0 w-20 md:w-32 bg-gradient-to-l from-[#070707]/90 to-transparent z-10" />
+    <div className="w-full max-w-[1440px] mx-auto py-3 z-10 overflow-hidden relative [mask-image:linear-gradient(to_right,transparent_0%,black_18%,black_82%,transparent_100%)]">
+      {/* Deep black fader overlays on sides */}
+      <div className="pointer-events-none absolute left-0 top-0 bottom-0 w-28 sm:w-44 md:w-64 lg:w-80 bg-gradient-to-r from-[#070707] via-[#070707]/90 to-transparent z-20" />
+      <div className="pointer-events-none absolute right-0 top-0 bottom-0 w-28 sm:w-44 md:w-64 lg:w-80 bg-gradient-to-l from-[#070707] via-[#070707]/90 to-transparent z-20" />
 
-      {/* Infinite sliding track */}
-      <div className="animate-sponsors-scroll flex items-center gap-10 md:gap-16">
+      {/* Infinite sliding track - generously spaced so no logo is ever seen twice in the same view */}
+      <div className="animate-sponsors-scroll flex items-center gap-20 sm:gap-28 md:gap-36 lg:gap-40 pl-10">
         {marqueeList.map((item, idx) => (
           <div
             key={idx}

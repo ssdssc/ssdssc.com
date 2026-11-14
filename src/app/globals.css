@@ -151,7 +151,7 @@ html, body {
   display: flex;
   width: max-content;
   align-items: center;
-  animation: esperSponsorsScroll 30s linear infinite;
+  animation: esperSponsorsScroll 38s linear infinite;
   will-change: transform;
 }
 
