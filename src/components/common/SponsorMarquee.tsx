@@ -17,7 +17,7 @@ const sponsors: Sponsor[] = [
   { name: "IEEE Sri Lanka Section", src: "/esper/images/nvzenooymu1olttjngo499jcbnw.png", height: 32 },
   { name: "Events Avenue", src: "/esper/images/5dvidyczitj8ceqx69gnqzwki4.png", height: 42 },
   { name: "SLT Mobitel", src: "/esper/images/1axaeepaiboo6au7fywunhesdak.png", height: 36 },
-  { name: "Janindu Leelananda", src: "/esper/images/jjgqmnck9dnrlm4aktoerjvkp9a.png", height: 34 },
+  { name: "Janindu Leelananda", src: "/esper/images/jjgqmnck9dnrlm4aktoerjvkp9a.png", height: 44 },
 ];
 
 export default function SponsorMarquee() {
@@ -42,7 +42,7 @@ export default function SponsorMarquee() {
               src={item.src}
               alt={item.name}
               style={{ height: `${item.height}px` }}
-              className="w-auto max-w-[180px] object-contain block"
+              className="w-auto max-w-[200px] object-contain block"
               loading="lazy"
             />
           </div>
