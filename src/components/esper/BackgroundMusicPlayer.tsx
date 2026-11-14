@@ -68,12 +68,7 @@ export default function BackgroundMusicPlayer() {
       }
     };
 
-    if (savedState === "playing") {
-      tryPlay();
-    } else if (savedState === "muted") {
-      setIsPlaying(false);
-    } else {
-      // First visit: try autoplay
+    if (savedState !== "muted") {
       tryPlay();
     }
 
@@ -120,7 +115,7 @@ export default function BackgroundMusicPlayer() {
           setIsPlaying(true);
           sessionStorage.setItem("esper_bg_music", "playing");
         })
-        .catch((e) => console.log("Audio playback failed:", e));
+        .catch(() => {});
     }
   };
 

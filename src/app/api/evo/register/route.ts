@@ -1,4 +1,4 @@
-import { createClient } from "@supabase/supabase-js";
+import { createClient, type SupabaseClient } from "@supabase/supabase-js";
 import { Resend } from "resend";
 import { NextResponse } from "next/server";
 
@@ -34,7 +34,7 @@ function generateCode(subjectSlug: string) {
   return `${prefix}-${suffix}`;
 }
 
-async function generateUniqueCode(supabase: any, subjectSlug: string) {
+async function generateUniqueCode(supabase: SupabaseClient, subjectSlug: string) {
   for (let attempt = 0; attempt < 20; attempt++) {
     const code = generateCode(subjectSlug);
     const { data } = await supabase
@@ -63,7 +63,12 @@ function buildEmailHtml({
   quizUrl,
 }: {
   schoolName: string;
-  members: any[];
+  members: Array<{
+    name: string;
+    isCaptain?: boolean;
+    accessCode?: string;
+    subject?: string;
+  }>;
   quizUrl: string;
 }) {
   const rows = members
@@ -76,7 +81,7 @@ function buildEmailHtml({
           : ""
       }</td>
       <td class="subject-col" style="padding:12px 16px;border-bottom:1px solid #f0f0f0;font-size:14px;color:#555;">${
-        SUBJECT_LABEL[m.subject] || m.subject
+        (m.subject && SUBJECT_LABEL[m.subject]) || m.subject || ""
       }</td>
       <td style="padding:12px 16px;border-bottom:1px solid #f0f0f0;">
         <span class="code-badge" style="font-family:monospace;font-size:15px;font-weight:700;letter-spacing:3px;color:#111;background:#f5f5f5;padding:5px 12px;border-radius:5px;display:inline-block;white-space:nowrap;">${
@@ -335,10 +340,11 @@ export async function POST(request: Request) {
       },
       { status: 200 }
     );
-  } catch (err: any) {
-    console.error("register handler error:", err);
+  } catch (err: unknown) {
+    const errorMsg = err instanceof Error ? err.message : String(err);
+    console.error("register handler error:", errorMsg);
     return NextResponse.json(
-      { error: "Internal server error: " + err.message },
+      { error: "Internal server error: " + errorMsg },
       { status: 500 }
     );
   }

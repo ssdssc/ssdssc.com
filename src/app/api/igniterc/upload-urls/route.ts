@@ -12,12 +12,19 @@ const FILE_KEYS = Object.freeze([
   ["societyLogo", "society"],
 ] as const);
 
-function validateFileMetadata(file: any, label: string) {
+interface FileValidation {
+  value?: { size: number; type: string; extension: string } | null;
+  error?: string;
+  status?: number;
+}
+
+function validateFileMetadata(file: unknown, label: string): FileValidation {
   if (file == null) return { value: null };
   if (typeof file !== "object") return { error: `${label} details are invalid.` };
 
-  const size = Number(file.size);
-  const type = typeof file.type === "string" ? file.type : "";
+  const fileObj = file as Record<string, unknown>;
+  const size = Number(fileObj.size);
+  const type = typeof fileObj.type === "string" ? fileObj.type : "";
   const extension = getLogoExtension(type);
 
   if (!Number.isInteger(size) || size <= 0) {
@@ -39,26 +46,26 @@ export async function POST(request: Request) {
     return jsonResponse({ error: "Registrations are closed.", closed: true }, 403);
   }
 
-  let payload: any;
+  let payload: Record<string, unknown> | null = null;
   try {
-    payload = await request.json();
+    payload = (await request.json()) as Record<string, unknown>;
   } catch {
     return jsonResponse({ error: "Invalid request." }, 400);
   }
 
-  const files = payload?.files;
+  const files = payload?.files as Record<string, unknown> | undefined;
   if (!files || typeof files !== "object") {
     return jsonResponse({ error: "No logo files were provided." }, 400);
   }
 
-  const validated: Record<string, any> = {};
+  const validated: Record<string, { size: number; type: string; extension: string } | null> = {};
   for (const [key, pathLabel] of FILE_KEYS) {
-    const result: any = validateFileMetadata(
+    const result = validateFileMetadata(
       files[key],
       pathLabel === "school" ? "School logo" : "Society logo"
     );
     if (result.error) return jsonResponse({ error: result.error }, result.status ?? 400);
-    validated[key] = result.value;
+    validated[key] = result.value ?? null;
   }
 
   if (!validated.schoolLogo && !validated.societyLogo) {
@@ -72,7 +79,7 @@ export async function POST(request: Request) {
   }
 
   const submissionId = crypto.randomUUID();
-  const uploads: Record<string, any> = {};
+  const uploads: Record<string, { path: string; signedUrl: string }> = {};
 
   for (const [key, pathLabel] of FILE_KEYS) {
     const file = validated[key];

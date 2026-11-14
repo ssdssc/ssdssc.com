@@ -1,7 +1,6 @@
 "use client";
 
 import { useState } from "react";
-import Link from "next/link";
 import { motion } from "framer-motion";
 import Header from "@/components/common/Header";
 import Footer from "@/components/common/Footer";
@@ -13,13 +12,29 @@ interface Props {
   rulesPdfUrl: string;
 }
 
+interface FormState {
+  registrationType: string;
+  schoolName: string;
+  presidentName: string;
+  contactNumber: string;
+  applicantName: string;
+  grade: string;
+  applicantPhone: string;
+  emailAddress: string;
+  awardCategory: string;
+  age: string;
+  inventorDriveLink: string;
+  photoDescription: string;
+  confirmation: boolean;
+}
+
 export default function EsperRegisterForm({
   type,
   title,
   description,
   rulesPdfUrl,
 }: Props) {
-  const [formData, setFormData] = useState<Record<string, any>>({
+  const [formData, setFormData] = useState<FormState>({
     registrationType: type,
     schoolName: type === "intra" ? "D. S. Senanayake College" : "",
     presidentName: "",
@@ -36,7 +51,6 @@ export default function EsperRegisterForm({
   });
 
   const [schoolLogo, setSchoolLogo] = useState<File | null>(null);
-  const [submissionFile, setSubmissionFile] = useState<File | null>(null);
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [statusMessage, setStatusMessage] = useState<{
     type: "success" | "error";
@@ -69,9 +83,6 @@ export default function EsperRegisterForm({
       if (schoolLogo) {
         body.append("schoolLogo", schoolLogo);
       }
-      if (submissionFile) {
-        body.append("submissionFile", submissionFile);
-      }
 
       const res = await fetch("/api/esper/register", {
         method: "POST",
@@ -90,10 +101,14 @@ export default function EsperRegisterForm({
           text: "Registration submitted successfully! Thank you for participating in ESPER.",
         });
       }
-    } catch (err: any) {
+    } catch (err: unknown) {
+      const errorMessage =
+        err instanceof Error
+          ? err.message
+          : "An unexpected error occurred. Please try again.";
       setStatusMessage({
         type: "error",
-        text: err?.message || "An unexpected error occurred. Please try again.",
+        text: errorMessage,
       });
     } finally {
       setIsSubmitting(false);

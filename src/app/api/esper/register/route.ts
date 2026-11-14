@@ -20,7 +20,7 @@ const CATEGORY_LABELS: Record<string, string> = {
 
 async function syncToGoogleSheet(
   webhookUrl: string,
-  payload: Record<string, any>
+  payload: Record<string, unknown>
 ) {
   try {
     const response = await fetch(webhookUrl, {
@@ -38,10 +38,11 @@ async function syncToGoogleSheet(
         `[esper/register] Google Sheets responded with status ${response.status}`
       );
     }
-  } catch (err: any) {
+  } catch (err: unknown) {
+    const errorMsg = err instanceof Error ? err.message : String(err);
     console.error(
       "[esper/register] Google Sheets webhook failed:",
-      err?.message || err
+      errorMsg
     );
   }
 }
@@ -68,26 +69,34 @@ export async function POST(request: Request) {
   const supabase = createClient(supabaseUrl, supabaseKey);
 
   try {
+    const str = (v: unknown): string =>
+      typeof v === "string" ? v.trim() : v != null ? String(v).trim() : "";
+
     const contentType = request.headers.get("content-type") || "";
-    let data: Record<string, any> = {};
+    let data: Record<string, unknown> = {};
     const fileUploads: Record<string, File> = {};
 
     if (contentType.includes("multipart/form-data")) {
       const formData = await request.formData();
       for (const [key, value] of formData.entries()) {
-        if (value && typeof value === "object" && typeof (value as any).arrayBuffer === "function" && (value as File).size > 0) {
+        if (
+          value &&
+          typeof value === "object" &&
+          typeof (value as File).arrayBuffer === "function" &&
+          (value as File).size > 0
+        ) {
           fileUploads[key] = value as File;
         } else if (typeof value === "string") {
           data[key] = value;
         }
       }
     } else {
-      data = await request.json();
+      data = (await request.json()) as Record<string, unknown>;
     }
 
-    const contactRaw = (data.contactNumber || data.applicantPhone || "").trim();
-    const email = (data.emailAddress || "").trim();
-    const category = (data.awardCategory || "").trim();
+    const contactRaw = str(data.contactNumber || data.applicantPhone);
+    const email = str(data.emailAddress);
+    const category = str(data.awardCategory);
 
     if (!email || !contactRaw || !category) {
       return NextResponse.json(
@@ -147,45 +156,44 @@ export async function POST(request: Request) {
       }
     }
 
-    let record: Record<string, any> = {};
+    let record: Record<string, unknown> = {};
 
     if (isIntra) {
       record = {
-        applicant_name: (data.applicantName || "").trim(),
-        grade: (data.grade || "").trim(),
+        applicant_name: str(data.applicantName),
+        grade: str(data.grade),
         contact_number: contactNumber,
         email: email,
         award_category: category,
-        drive_link: (data.inventorDriveLink || data.articleDocLink || "").trim(),
-        confirmed: data.confirmation === true || data.confirmation === "on",
+        drive_link: str(data.inventorDriveLink || data.articleDocLink),
+        confirmed: data.confirmation === true || str(data.confirmation) === "on",
         submission_data: data,
       };
     } else if (isOpen) {
       record = {
-        applicant_name: (data.applicantName || "").trim(),
-        age: data.age ? parseInt(data.age, 10) : null,
+        applicant_name: str(data.applicantName),
+        age: str(data.age) ? parseInt(str(data.age), 10) : null,
         contact_number: contactNumber,
         email: email,
         award_category: category,
-        drive_link: (
+        drive_link: str(
           data.photographerPhotoUrl ||
           data.buildTeamPdfUrl ||
           data.buildTeamDriveLink ||
-          data.shortFilmDriveLink ||
-          ""
-        ).trim(),
-        description: (data.photoDescription || "").trim(),
-        confirmed: data.confirmation === true || data.confirmation === "on",
+          data.shortFilmDriveLink
+        ),
+        description: str(data.photoDescription),
+        confirmed: data.confirmation === true || str(data.confirmation) === "on",
         submission_data: data,
       };
     } else {
       record = {
-        school_name: (data.schoolName || "").trim(),
-        president_name: (data.presidentName || "").trim(),
+        school_name: str(data.schoolName),
+        president_name: str(data.presidentName),
         contact_number: contactNumber,
         email: email,
         award_category: category,
-        confirmed: data.confirmation === true || data.confirmation === "on",
+        confirmed: data.confirmation === true || str(data.confirmation) === "on",
         submission_data: data,
       };
     }
@@ -245,7 +253,7 @@ export async function POST(request: Request) {
           hour12: true,
         });
 
-        let sheetPayload: Record<string, any> = {
+        let sheetPayload: Record<string, unknown> = {
           timestamp: colomboTime,
           category: categoryLabel,
           categorySlug: category,
@@ -261,51 +269,45 @@ export async function POST(request: Request) {
           sheetPayload = {
             ...sheetPayload,
             type: "intra",
-            applicantName: (data.applicantName || "").trim(),
-            grade: (data.grade || "").trim(),
-            projectLink: (
-              data.inventorDriveLink ||
-              data.articleDocLink ||
-              ""
-            ).trim(),
+            applicantName: str(data.applicantName),
+            grade: str(data.grade),
+            projectLink: str(data.inventorDriveLink || data.articleDocLink),
           };
         } else if (isOpen) {
           sheetPayload = {
             ...sheetPayload,
             type: "open",
-            applicantName: (data.applicantName || "").trim(),
-            age: data.age ? parseInt(data.age, 10) : "",
-            photoUrl: (data.photographerPhotoUrl || "").trim(),
-            fileLink: (
+            applicantName: str(data.applicantName),
+            age: str(data.age) ? parseInt(str(data.age), 10) : "",
+            photoUrl: str(data.photographerPhotoUrl),
+            fileLink: str(
               data.buildTeamPdfUrl ||
               data.buildTeamDriveLink ||
               data.shortFilmDriveLink ||
-              data.photographerPhotoUrl ||
-              ""
-            ).trim(),
-            description: (data.photoDescription || "").trim(),
+              data.photographerPhotoUrl
+            ),
+            description: str(data.photoDescription),
           };
         } else {
           sheetPayload = {
             ...sheetPayload,
             type: "inter",
-            schoolName: (data.schoolName || "").trim(),
-            schoolLogoUrl: (data.schoolLogoUrl || "").trim(),
-            applicantName: (data.applicantName || "").trim(),
-            grade: (data.grade || "").trim(),
-            applicantPhone: (data.applicantPhone || "").trim(),
-            presidentName: (data.presidentName || "").trim(),
+            schoolName: str(data.schoolName),
+            schoolLogoUrl: str(data.schoolLogoUrl),
+            applicantName: str(data.applicantName),
+            grade: str(data.grade),
+            applicantPhone: str(data.applicantPhone),
+            presidentName: str(data.presidentName),
             presidentContact: contactNumber,
-            githubLink: (data.coderGithubLink || "").trim(),
-            hostedLink: (data.coderHostedLink || "").trim(),
-            youtubeLink: (data.coderYoutubeLink || "").trim(),
-            projectLink: (
+            githubLink: str(data.coderGithubLink),
+            hostedLink: str(data.coderHostedLink),
+            youtubeLink: str(data.coderYoutubeLink),
+            projectLink: str(
               data.articleDocLink ||
               data.researchDriveLink ||
               data.designerDriveLink ||
-              data.inventorDriveLink ||
-              ""
-            ).trim(),
+              data.inventorDriveLink
+            ),
           };
         }
 
@@ -323,8 +325,9 @@ export async function POST(request: Request) {
       { success: true, message: "Registration submitted successfully!" },
       { status: 200 }
     );
-  } catch (err: any) {
-    console.error("Server Error:", err);
+  } catch (err: unknown) {
+    const errorMsg = err instanceof Error ? err.message : String(err);
+    console.error("Server Error:", errorMsg);
     return NextResponse.json(
       { error: "Internal server error" },
       { status: 500 }

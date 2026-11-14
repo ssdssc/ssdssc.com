@@ -12,7 +12,18 @@ import {
 } from "@/lib/ignitercRegistration.js";
 import { registrationsAreOpen } from "@/config/ignitercRegistration.js";
 
-function readText(payload: any, key: string, label: string, maxLength: number, required = false) {
+interface ReadResult {
+  value?: string | null;
+  error?: string;
+}
+
+function readText(
+  payload: Record<string, unknown> | null | undefined,
+  key: string,
+  label: string,
+  maxLength: number,
+  required = false
+): ReadResult {
   const raw = payload?.[key];
   if (raw == null || raw === "") {
     return required ? { error: `${label} is required.` } : { value: null };
@@ -25,11 +36,17 @@ function readText(payload: any, key: string, label: string, maxLength: number, r
   return { value };
 }
 
-function readPhone(payload: any, key: string, label: string, required = false) {
+function readPhone(
+  payload: Record<string, unknown> | null | undefined,
+  key: string,
+  label: string,
+  required = false
+): ReadResult {
   const raw = payload?.[key];
   if (raw == null || raw === "") {
     return required ? { error: `${label} is required.` } : { value: null };
   }
+  if (typeof raw !== "string") return { error: `Enter a valid ${label.toLowerCase()}.` };
 
   const value = normalizePhone(raw);
   return value
@@ -37,7 +54,11 @@ function readPhone(payload: any, key: string, label: string, required = false) {
     : { error: `Enter a valid ${label.toLowerCase()}.` };
 }
 
-function validateLogoPath(path: any, submissionId: string, kind: string) {
+function validateLogoPath(
+  path: unknown,
+  submissionId: string,
+  kind: string
+): ReadResult {
   if (path == null || path === "") return { value: null };
   if (typeof path !== "string" || !isSubmissionId(submissionId)) {
     return { error: "Logo upload details are invalid." };
@@ -49,7 +70,10 @@ function validateLogoPath(path: any, submissionId: string, kind: string) {
     : { error: "Logo upload details are invalid." };
 }
 
-async function verifyLogo(supabase: any, path: string | null) {
+async function verifyLogo(
+  supabase: NonNullable<ReturnType<typeof getSupabaseAdmin>>,
+  path: string | null
+) {
   if (!path) return true;
 
   const { data, error } = await supabase.storage
@@ -58,8 +82,8 @@ async function verifyLogo(supabase: any, path: string | null) {
 
   if (error || !data) return false;
 
-  const contentType = data.contentType ?? data.metadata?.mimetype;
-  const size = Number(data.size ?? data.metadata?.size);
+  const contentType = (data as { contentType?: string }).contentType ?? (data as { metadata?: { mimetype?: string } }).metadata?.mimetype;
+  const size = Number((data as { size?: number }).size ?? (data as { metadata?: { size?: number } }).metadata?.size);
   return (
     Boolean(LOGO_TYPES[contentType as keyof typeof LOGO_TYPES]) &&
     Number.isFinite(size) &&
@@ -68,7 +92,10 @@ async function verifyLogo(supabase: any, path: string | null) {
   );
 }
 
-async function removeUploads(supabase: any, paths: (string | null)[]) {
+async function removeUploads(
+  supabase: NonNullable<ReturnType<typeof getSupabaseAdmin>>,
+  paths: (string | null)[]
+) {
   const uploadedPaths = paths.filter(Boolean) as string[];
   if (uploadedPaths.length === 0) return;
   await supabase.storage.from(IGNITERC_LOGO_BUCKET).remove(uploadedPaths);
@@ -80,9 +107,9 @@ export async function POST(request: Request) {
     return jsonResponse({ error: "Registrations are closed.", closed: true }, 403);
   }
 
-  let payload: any;
+  let payload: Record<string, unknown> | null = null;
   try {
-    payload = await request.json();
+    payload = (await request.json()) as Record<string, unknown>;
   } catch {
     return jsonResponse({ error: "Invalid request." }, 400);
   }
@@ -99,11 +126,11 @@ export async function POST(request: Request) {
     ["homeAddress", "Home address", 500, true],
   ];
 
-  const values: Record<string, any> = {};
+  const values: Record<string, string | null> = {};
   for (const [key, label, maxLength, required] of fields) {
-    const result: any = readText(payload, key, label, maxLength, required);
+    const result = readText(payload, key, label, maxLength, required);
     if (result.error) return jsonResponse({ error: result.error }, 400);
-    values[key] = result.value;
+    values[key] = result.value ?? null;
   }
 
   if (values.contestantEmail && !isEmail(values.contestantEmail)) {
@@ -118,21 +145,21 @@ export async function POST(request: Request) {
   ];
 
   for (const [key, label, required] of phones) {
-    const result: any = readPhone(payload, key, label, required);
+    const result = readPhone(payload, key, label, required);
     if (result.error) return jsonResponse({ error: result.error }, 400);
-    values[key] = result.value;
+    values[key] = result.value ?? null;
   }
 
-  const gender = payload?.contestantGender;
+  const gender = typeof payload?.contestantGender === "string" ? payload.contestantGender : null;
   if (gender != null && gender !== "" && !GENDER_OPTIONS.includes(gender)) {
     return jsonResponse({ error: "Select a valid gender option." }, 400);
   }
   values.contestantGender = gender || null;
 
-  const submissionId = payload?.submissionId;
-  const schoolLogo: any = validateLogoPath(payload?.schoolLogoPath, submissionId, "school");
+  const submissionId = typeof payload?.submissionId === "string" ? payload.submissionId : "";
+  const schoolLogo = validateLogoPath(payload?.schoolLogoPath, submissionId, "school");
   if (schoolLogo.error) return jsonResponse({ error: schoolLogo.error }, 400);
-  const societyLogo: any = validateLogoPath(payload?.societyLogoPath, submissionId, "society");
+  const societyLogo = validateLogoPath(payload?.societyLogoPath, submissionId, "society");
   if (societyLogo.error) return jsonResponse({ error: societyLogo.error }, 400);
 
   const supabase = getSupabaseAdmin();
@@ -141,9 +168,12 @@ export async function POST(request: Request) {
     return jsonResponse({ error: "Registration is temporarily unavailable." }, 500);
   }
 
-  const uploadedPaths = [schoolLogo.value, societyLogo.value];
+  const uploadedPaths: (string | null)[] = [
+    schoolLogo.value ?? null,
+    societyLogo.value ?? null,
+  ];
   const logosAreValid = await Promise.all(
-    uploadedPaths.map((path) => verifyLogo(supabase, path))
+    uploadedPaths.map((logoPath) => verifyLogo(supabase, logoPath))
   );
   if (logosAreValid.some((valid) => !valid)) {
     await removeUploads(supabase, uploadedPaths);
