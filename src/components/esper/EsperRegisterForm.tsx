@@ -671,9 +671,9 @@ export default function EsperRegisterForm({
                         onChange={handleChange}
                       >
                         <option disabled value="">Select Grade...</option>
-                        {[...Array(13)].map((_, i) => (
-                          <option key={i + 1} value={`Grade ${i + 1}`}>
-                            Grade {i + 1}
+                        {[6, 7, 8, 9, 10, 11, 12, 13].map((gradeNum) => (
+                          <option key={gradeNum} value={`Grade ${gradeNum}`}>
+                            Grade {gradeNum}
                           </option>
                         ))}
                       </select>
