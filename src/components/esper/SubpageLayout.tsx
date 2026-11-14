@@ -56,8 +56,8 @@ export default function SubpageLayout({
 }: SubpageLayoutProps) {
   return (
     <div className="min-h-screen bg-[#070707] text-white flex flex-col selection:bg-[#ffd57e]/30 selection:text-[#ffd57e]">
-      {/* Hero with Subheader Video Background */}
-      <section className="relative w-full overflow-hidden bg-[#070707] border-b border-[#ffd57e]/15">
+      {/* Subheader Banner: Video Background + Navigation Only */}
+      <section className="relative w-full overflow-hidden bg-[#070707] border-b border-[#ffd57e]/15 min-h-[140px] md:min-h-[180px] flex flex-col justify-start">
         {/* Background Video */}
         <div className="absolute inset-0 w-full h-full pointer-events-none z-0">
           <video
@@ -71,18 +71,20 @@ export default function SubpageLayout({
             <source src="/esper/subheader-vid.mp4" type="video/mp4" />
           </video>
           {/* Overlay */}
-          <div className="absolute inset-0 bg-gradient-to-b from-[#070707]/80 via-[#070707]/60 to-[#070707]" />
+          <div className="absolute inset-0 bg-gradient-to-b from-[#070707]/60 via-[#070707]/30 to-[#070707]" />
         </div>
 
         {/* Navigation */}
         <Header />
+      </section>
 
-        {/* Subheader Content */}
+      {/* Texts Below Subheader & Above Cards */}
+      <section className="w-full max-w-[1160px] mx-auto px-6 pt-12 md:pt-16 pb-6 md:pb-10 flex flex-col items-center text-center gap-4 relative z-10">
         <motion.div
-          initial={{ opacity: 0, y: -30 }}
+          initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ type: "spring", stiffness: 360, damping: 60, mass: 0.5, delay: 0.1 }}
-          className="relative z-10 max-w-[1160px] mx-auto px-6 pt-28 md:pt-36 pb-20 md:pb-28 flex flex-col items-center text-center gap-4"
+          className="flex flex-col items-center text-center gap-4"
         >
           <span className="font-['Nebula',sans-serif] text-[12px] md:text-[13px] tracking-[0.22em] uppercase text-[#ffd57e]">
             {eyebrow}
@@ -94,7 +96,7 @@ export default function SubpageLayout({
             {description}
           </p>
 
-          <div className="flex flex-wrap items-center justify-center gap-4 mt-4">
+          <div className="flex flex-wrap items-center justify-center gap-4 mt-2">
             <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.98 }}>
               <Link
                 href={registerUrl}
@@ -121,7 +123,7 @@ export default function SubpageLayout({
       </section>
 
       {/* Awards Grid Section */}
-      <section className="w-full max-w-[1240px] mx-auto px-6 py-16 md:py-24 box-border relative z-10 flex flex-col items-center">
+      <section className="w-full max-w-[1240px] mx-auto px-6 pt-4 pb-16 md:pb-24 box-border relative z-10 flex flex-col items-center">
         <motion.div
           variants={containerVariants}
           initial="hidden"

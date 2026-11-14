@@ -279,8 +279,8 @@ export default function EsperRegisterForm({
 
   return (
     <div className="min-h-screen bg-[#070707] text-white flex flex-col selection:bg-[#ffd57e]/30 selection:text-[#ffd57e]">
-      {/* Subheader Hero with Video Background */}
-      <section className="relative w-full overflow-hidden bg-[#070707] border-b border-[#ffd57e]/15">
+      {/* Subheader Banner: Video Background + Top Navigation Header Only */}
+      <section className="relative w-full overflow-hidden bg-[#070707] border-b border-[#ffd57e]/15 min-h-[140px] md:min-h-[180px] flex flex-col justify-start">
         <div className="absolute inset-0 w-full h-full pointer-events-none z-0">
           <video
             autoPlay
@@ -292,27 +292,28 @@ export default function EsperRegisterForm({
           >
             <source src="/esper/subheader-vid.mp4" type="video/mp4" />
           </video>
-          <div className="absolute inset-0 bg-gradient-to-b from-[#070707]/85 via-[#070707]/65 to-[#070707]" />
+          <div className="absolute inset-0 bg-gradient-to-b from-[#070707]/60 via-[#070707]/30 to-[#070707]" />
         </div>
 
         {/* Inner Page Header */}
         <Header />
+      </section>
 
-        <div className="relative z-10 max-w-[1160px] mx-auto px-6 pt-28 md:pt-36 pb-16 md:pb-20 flex flex-col items-center text-center gap-3">
-          <span className="font-['Nebula',sans-serif] text-[12px] md:text-[13px] tracking-[0.22em] uppercase text-[#ffd57e]">
-            OFFICIAL REGISTRATION PORTAL
-          </span>
-          <h1 className="font-['Constantine',serif] text-4xl sm:text-5xl text-white tracking-[0.02em] font-normal m-0">
-            {title}
-          </h1>
-          <p className="font-['Plus_Jakarta_Sans',sans-serif] text-base md:text-lg text-white/80 max-w-xl">
-            {description}
-          </p>
-        </div>
+      {/* Texts Below Subheader & Above Form */}
+      <section className="w-full max-w-[1160px] mx-auto px-6 pt-12 md:pt-16 pb-4 flex flex-col items-center text-center gap-3 relative z-10">
+        <span className="font-['Nebula',sans-serif] text-[12px] md:text-[13px] tracking-[0.22em] uppercase text-[#ffd57e]">
+          OFFICIAL REGISTRATION PORTAL
+        </span>
+        <h1 className="font-['Constantine',serif] text-4xl sm:text-5xl md:text-6xl text-white tracking-[0.02em] font-normal m-0 leading-tight">
+          {title}
+        </h1>
+        <p className="font-['Plus_Jakarta_Sans',sans-serif] text-base md:text-lg text-white/80 max-w-xl leading-relaxed">
+          {description}
+        </p>
       </section>
 
       {/* Main Registration Form Body */}
-      <main className="page-container">
+      <main className="page-container" style={{ marginTop: "10px" }}>
         {statusMessage && (
           <div
             id="form-message"
