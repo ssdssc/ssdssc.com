@@ -6,14 +6,11 @@ export default function VenueSection() {
       <div className="flex flex-col md:flex-row items-center justify-between gap-10 md:gap-14">
         {/* Content */}
         <div className="flex-1 flex flex-col items-center md:items-start text-center md:text-left gap-4">
-          <span className="font-['Nebula',sans-serif] text-[12px] tracking-[0.22em] uppercase text-[#ffd57e]">
-            OFFICIAL VENUE
-          </span>
           <h2 className="font-['Constantine',serif] text-3xl sm:text-4xl md:text-5xl text-white tracking-[0.02em] font-normal leading-tight">
-            Embarked at Monarch Imperial
+            It Embarked At Monarch Imperial
           </h2>
           <p className="font-['Plus_Jakarta_Sans',sans-serif] text-base md:text-lg text-white/75 leading-relaxed max-w-lg">
-            The Pinnacle of School Science Excellence concluded in grand style at the prestigious Monarch Imperial, Colombo on 17th March 2026.
+            Carrying pride with elegance &mdash; embarking in true Senanayakian colours.
           </p>
         </div>
 

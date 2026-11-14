@@ -21,7 +21,7 @@ export default function ConcludedSection() {
   return (
     <section className="w-full max-w-[1160px] mx-auto px-4 py-16 md:py-24 box-border relative z-10 flex flex-col items-center text-center">
       {/* Title */}
-      <div className="flex flex-col items-center gap-2 mb-6">
+      <div className="flex flex-col items-center gap-2 mb-4">
         <h2 className="font-['Constantine',serif] flex flex-col items-center text-center leading-none">
           <span className="text-4xl sm:text-5xl md:text-6xl text-white tracking-[0.02em]">
             Esper &apos;26
@@ -30,18 +30,6 @@ export default function ConcludedSection() {
             successfully concluded !
           </span>
         </h2>
-      </div>
-
-      {/* Button to Album */}
-      <div className="mb-6">
-        <a
-          href="https://www.facebook.com/share/p/1Cfd1XF45A/?mibextid=wwXIfr"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="inline-flex items-center justify-center font-['Nebula',sans-serif] text-[13px] tracking-[0.08em] uppercase text-black font-semibold px-6 py-3.5 rounded-full bg-gradient-to-b from-[#ffd885] via-[#d49326] to-[#a66e0a] shadow-[inset_0px_1px_5px_rgba(0,0,0,0.25),0_4px_16px_rgba(212,147,38,0.4)] hover:brightness-110 hover:scale-105 transition-all duration-200"
-        >
-          Visit Full Album Here
-        </a>
       </div>
 
       {/* Description */}
@@ -82,6 +70,18 @@ export default function ConcludedSection() {
             />
           </div>
         ))}
+      </div>
+
+      {/* View Album Button - Placed AFTER gallery */}
+      <div className="mt-8 md:mt-10">
+        <a
+          href="https://www.facebook.com/share/p/1Cfd1XF45A/?mibextid=wwXIfr"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="inline-flex items-center justify-center font-['Nebula',sans-serif] text-[13px] tracking-[0.08em] uppercase text-black font-semibold px-6 py-3.5 rounded-full bg-gradient-to-b from-[#ffd885] via-[#d49326] to-[#a66e0a] shadow-[inset_0px_1px_5px_rgba(0,0,0,0.25),0_4px_16px_rgba(212,147,38,0.4)] hover:brightness-110 hover:scale-105 transition-all duration-200"
+        >
+          Visit Full Album Here
+        </a>
       </div>
     </section>
   );

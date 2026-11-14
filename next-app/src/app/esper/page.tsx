@@ -15,11 +15,11 @@ export default function EsperHomePage() {
   return (
     <main className="min-h-screen bg-[#070707] text-white flex flex-col selection:bg-[#ffd57e]/30 selection:text-[#ffd57e]">
       <HeroSection />
-      <DeranaSection />
       <CountdownSection />
       <AwardsSection />
-      <VenueSection />
       <ConcludedSection />
+      <VenueSection />
+      <DeranaSection />
       <Footer />
     </main>
   );
