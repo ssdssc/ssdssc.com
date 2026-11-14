@@ -169,6 +169,26 @@
           "/esper/images/bynxev1zjyb9bhwh1iwbz1zos60.jpg",
         "https://framerusercontent.com/sites/6DpVRkHafWL581Jb56P9ez/m3aPhWwZw.Clbc3sCN.mjs":
           "/esper/js/m3aphwwzw.clbc3scn.mjs",
+        "https://framerusercontent.com/sites/iyV7VNt2Dt1Y5p1EqXu5q/m3aPhWwZw.DYu7tj_-.mjs":
+          "/esper/js/m3aPhWwZw.DYu7tj_-.mjs",
+        "https://framerusercontent.com/sites/iyV7VNt2Dt1Y5p1EqXu5q/script_main.VpL499Yr.mjs":
+          "/esper/js/script_main.VpL499Yr.mjs",
+        "https://framerusercontent.com/sites/iyV7VNt2Dt1Y5p1EqXu5q/04KNLvbpislanL_zOXIFk9ejvaGSMORuTZYbyejRkQU.DMd3i_2I.mjs":
+          "/esper/js/04KNLvbpislanL_zOXIFk9ejvaGSMORuTZYbyejRkQU.DMd3i_2I.mjs",
+        "https://framerusercontent.com/sites/iyV7VNt2Dt1Y5p1EqXu5q/vtMx1ujdK.DBoDZC3O.mjs":
+          "/esper/js/vtMx1ujdK.DBoDZC3O.mjs",
+        "https://framerusercontent.com/sites/iyV7VNt2Dt1Y5p1EqXu5q/augiA20Il.RAqgRTJD.mjs":
+          "/esper/js/augiA20Il.RAqgRTJD.mjs",
+        "https://framerusercontent.com/sites/iyV7VNt2Dt1Y5p1EqXu5q/shared-lib.D_RJvpHY.mjs":
+          "/esper/js/shared-lib.D_RJvpHY.mjs",
+        "https://framerusercontent.com/sites/iyV7VNt2Dt1Y5p1EqXu5q/react.Cq8oxfYJ.mjs":
+          "/esper/js/react.Cq8oxfYJ.mjs",
+        "https://framerusercontent.com/sites/iyV7VNt2Dt1Y5p1EqXu5q/rolldown-runtime.DuUl1Rk5.mjs":
+          "/esper/js/rolldown-runtime.DuUl1Rk5.mjs",
+        "https://framerusercontent.com/sites/iyV7VNt2Dt1Y5p1EqXu5q/framer.BUXr1hGZ.mjs":
+          "/esper/js/framer.BUXr1hGZ.mjs",
+        "https://framerusercontent.com/sites/iyV7VNt2Dt1Y5p1EqXu5q/motion.Ba_qRR3p.mjs":
+          "/esper/js/motion.Ba_qRR3p.mjs",
         "https://framerusercontent.com/assets/2uIBiALfCHVpWbHqRMZutfT7giU.woff2":
           "/esper/font/2uibialfchvpwbhqrmzutft7giu.woff2",
         "https://framerusercontent.com/assets/Zwfz6xbVe5pmcWRJRgBDHnMkOkI.woff2":
@@ -766,27 +786,71 @@
       return;
     }
 
-    // On /esper/inter, always route card/register clicks to /esper/inter/register
+    // If already on any /register page, do not hijack form clicks!
+    if (window.location.pathname.includes("/register")) {
+      return;
+    }
+
+    function resolveCategorySlug(element) {
+      if (!element) return "";
+      let slug = element.getAttribute("data-category-slug") || "";
+      if (slug) return slug;
+
+      const rawHref = element.getAttribute("href") || element.getAttribute("data-href") || "";
+      if (rawHref.includes("category=")) {
+        const match = rawHref.match(/[?&]category=([^&#]+)/);
+        if (match && match[1]) return decodeURIComponent(match[1]);
+      }
+
+      const card = element.closest("[data-category-slug]") ||
+        element.closest("[data-framer-name='Card']") ||
+        element.closest(".framer-Wwu9j") ||
+        element.closest(".framer-61dahc-container, .framer-168vegr-container");
+
+      if (card) {
+        slug = card.getAttribute("data-category-slug") || "";
+        if (slug) return slug;
+        const text = (card.querySelector("h3, h4")?.textContent || card.textContent || "").toLowerCase();
+        if (text.includes("popular science") || text.includes("science union")) return "popular-union";
+        if (text.includes("article writer") || text.includes("article")) return "article-writer";
+        if (text.includes("research team") || text.includes("research")) return "research-team";
+        if (text.includes("graphic designer") || text.includes("designer")) return "graphic-designer";
+        if (text.includes("edu coder") || text.includes("coder")) return "edu-coder";
+        if (text.includes("young inventor") || text.includes("inventor")) return "young-inventor";
+        if (text.includes("build team") || text.includes("debunked")) return "build-team";
+        if (text.includes("short film")) return "short-film";
+        if (text.includes("photographer") || text.includes("scientific photo")) return "photographer";
+      }
+      return "";
+    }
+
+    // On /esper/inter, always route card/register clicks to /esper/inter/register with category
     if (window.location.pathname.includes("/inter") && (href.includes("/register") || text.includes("register") || name === 'subscribe button' || name === 'card')) {
       e.preventDefault();
       e.stopPropagation();
-      window.location.assign("/esper/inter/register");
+      const cat = resolveCategorySlug(a) || resolveCategorySlug(e.target);
+      const targetUrl = cat ? `/esper/inter/register?category=${encodeURIComponent(cat)}` : "/esper/inter/register";
+      window.location.assign(targetUrl);
       return;
     }
 
-    // On /esper/intra, always route card/register clicks to /esper/intra/register
+    // On /esper/intra, always route card/register clicks to /esper/intra/register with category
     if (window.location.pathname.includes("/intra") && (href.includes("/register") || text.includes("register") || name === 'subscribe button' || name === 'card')) {
       e.preventDefault();
       e.stopPropagation();
-      window.location.assign("/esper/intra/register");
+      const cat = resolveCategorySlug(a) || resolveCategorySlug(e.target);
+      const targetUrl = cat ? `/esper/intra/register?category=${encodeURIComponent(cat)}` : "/esper/intra/register";
+      window.location.assign(targetUrl);
       return;
     }
 
-    // On /esper/open, always route card/register clicks to /esper/open/register
+    // On /esper/open, always route card/register clicks to /esper/open/register with category
     if ((window.location.pathname.includes("/open") || window.location.pathname.includes("/popular")) && (href.includes("/register") || text.includes("register") || name === 'subscribe button' || name === 'card')) {
       e.preventDefault();
       e.stopPropagation();
-      window.location.assign("/esper/open/register");
+      const cat = resolveCategorySlug(a) || resolveCategorySlug(e.target);
+      const targetUrl = cat ? `/esper/open/register?category=${encodeURIComponent(cat)}` : "/esper/open/register";
+      window.location.assign(targetUrl);
       return;
     }
 
@@ -956,6 +1020,49 @@
         }
       }, 35);
     });
+  })();
+
+  // Ensure footer branding displays "Esper Awards '27" across all pages
+  (function enforceFooter27() {
+    function updateFooterText() {
+      try {
+        var targets = document.querySelectorAll(
+          '.framer-7heklo p, [data-framer-name="Tool"] p, [data-framer-name="Footer"] p, footer p'
+        );
+        for (var i = 0; i < targets.length; i++) {
+          var p = targets[i];
+          var text = p.textContent || "";
+          if (/Esper\s*Awards/i.test(text) && (/26/i.test(text) || !/27/i.test(text))) {
+            p.textContent = "Esper Awards '27";
+          }
+        }
+      } catch (err) {}
+    }
+
+    if (typeof document !== "undefined") {
+      if (document.readyState === "loading") {
+        document.addEventListener("DOMContentLoaded", updateFooterText);
+      } else {
+        updateFooterText();
+      }
+
+      if (typeof MutationObserver !== "undefined") {
+        var observer = new MutationObserver(function() {
+          updateFooterText();
+        });
+        observer.observe(document.documentElement, {
+          childList: true,
+          subtree: true,
+          characterData: true,
+        });
+      }
+
+      window.addEventListener("load", updateFooterText);
+      setTimeout(updateFooterText, 300);
+      setTimeout(updateFooterText, 800);
+      setTimeout(updateFooterText, 1500);
+      setTimeout(updateFooterText, 3000);
+    }
   })();
 })();
 // --- END UNIVERSAL ESPER NAVIGATION HANDLER ---

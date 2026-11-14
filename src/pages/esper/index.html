@@ -5181,6 +5181,87 @@
             --framer-text-transform: none
         }
     </style>
+        <style id="esper-hero-video-styles">
+        /* Hero background video */
+        .hero-plasma-video {
+            position: absolute !important;
+            top: 0 !important;
+            left: 0 !important;
+            width: 100% !important;
+            height: 100% !important;
+            object-fit: cover !important;
+            pointer-events: none !important;
+            z-index: 0 !important;
+            display: block !important;
+        }
+
+        /* Increased Hero Video section height (Desktop: 980px) */
+        .framer-7YhlT .framer-w3gto7,
+        .framer-7YhlT [data-framer-name="Plasma"] {
+            height: 980px !important;
+        }
+
+        @media (max-width: 1200px) {
+            .framer-7YhlT .framer-w3gto7,
+            .framer-7YhlT [data-framer-name="Plasma"] {
+                height: 780px !important;
+            }
+        }
+
+        @media (max-width: 810px) {
+            .framer-7YhlT .framer-o0xigs,
+            .framer-7YhlT .framer-w3gto7,
+            .framer-7YhlT [data-framer-name="Plasma"] {
+                height: 620px !important;
+            }
+        }
+
+        /* Push content after hero video down */
+        .framer-7YhlT .framer-nqkdlu {
+            margin-bottom: 120px !important;
+        }
+
+        @media (max-width: 1200px) {
+            .framer-7YhlT .framer-nqkdlu {
+                margin-bottom: 90px !important;
+            }
+        }
+
+        @media (max-width: 810px) {
+            .framer-7YhlT .framer-nqkdlu {
+                margin-bottom: 70px !important;
+            }
+        }
+
+        /* Hide static fallback images */
+        .framer-w3gto7 .framer-1wdis9r,
+        .framer-o0xigs .framer-1eq4zmj,
+        [data-framer-name="Plasma"] .framer-1wdis9r,
+        [data-framer-name="Plasma"] .framer-1eq4zmj,
+        [data-framer-name="Plasma"] img {
+            opacity: 0 !important;
+            visibility: hidden !important;
+            display: none !important;
+        }
+
+        /* Align overlay gradient at bottom of enlarged video */
+        .framer-7YhlT .framer-17jcdvw,
+        [data-framer-name="Overlay"] {
+            bottom: 0px !important;
+            height: 35% !important;
+            z-index: 1 !important;
+            pointer-events: none !important;
+        }
+
+        /* Hide left-side golden beam / light rays shader */
+        .framer-1opuij9-container,
+        .framer-1pry9as-container {
+            display: none !important;
+            visibility: hidden !important;
+            opacity: 0 !important;
+            pointer-events: none !important;
+        }
+    </style>
     <!-- Start of headEnd -->
 
     <!-- End of headEnd -->
@@ -5598,6 +5679,7 @@
             </div>
 
             <div class="framer-w3gto7 hidden-9w4hrp" data-framer-name="Plasma">
+                <video class="hero-plasma-video" src="/esper/images/hero-video.mp4" autoplay loop muted playsinline preload="auto" aria-hidden="true"></video>
                 <div class="ssr-variant hidden-ebiaht">
                     <div class="framer-1wdis9r">
                         <div style="position:absolute;border-radius:inherit;corner-shape:inherit;top:0;right:0;bottom:0;left:0"
@@ -8314,6 +8396,7 @@
             </div>
 
             <div class="framer-o0xigs hidden-72rtr7 hidden-ebiaht hidden-193nlgj" data-framer-name="Plasma">
+                <video class="hero-plasma-video" src="/esper/images/hero-video.mp4" autoplay loop muted playsinline preload="auto" aria-hidden="true"></video>
                 <div class="ssr-variant hidden-9w4hrp">
                     <div class="framer-1eq4zmj">
                         <div style="position:absolute;border-radius:inherit;corner-shape:inherit;top:0;right:0;bottom:0;left:0"
@@ -9492,6 +9575,56 @@
     </div>
 
     <!-- Start of bodyEnd -->
+    <script>
+        (function() {
+            function ensureHeroPlasmaVideo() {
+                var plasmaContainers = document.querySelectorAll('.framer-w3gto7, .framer-o0xigs, [data-framer-name="Plasma"]');
+                plasmaContainers.forEach(function(c) {
+                    if (!c.closest('.framer-7YhlT')) return;
+                    var video = c.querySelector('video.hero-plasma-video');
+                    if (!video) {
+                        video = document.createElement('video');
+                        video.className = 'hero-plasma-video';
+                        video.src = '/esper/images/hero-video.mp4';
+                        video.autoplay = true;
+                        video.loop = true;
+                        video.muted = true;
+                        video.playsInline = true;
+                        video.setAttribute('aria-hidden', 'true');
+                        video.setAttribute('preload', 'auto');
+                        c.insertBefore(video, c.firstChild);
+                    }
+                    if (video.paused) {
+                        video.muted = true;
+                        video.play().catch(function() {});
+                    }
+                });
+            }
+
+            if (document.readyState === 'loading') {
+                document.addEventListener('DOMContentLoaded', ensureHeroPlasmaVideo);
+            } else {
+                ensureHeroPlasmaVideo();
+            }
+            window.addEventListener('load', ensureHeroPlasmaVideo);
+            var interval = setInterval(ensureHeroPlasmaVideo, 500);
+            setTimeout(function() { clearInterval(interval); }, 6000);
+
+            // Appear animation safeguard
+            function safeguardAppear() {
+                var els = document.querySelectorAll('[style*="opacity:0.001"], [style*="opacity: 0.001"]');
+                els.forEach(function(el) {
+                    if (parseFloat(window.getComputedStyle(el).opacity) < 0.1) {
+                        el.style.opacity = '1';
+                        el.style.transform = 'none';
+                        el.style.filter = 'none';
+                    }
+                });
+            }
+            setTimeout(safeguardAppear, 1000);
+            setTimeout(safeguardAppear, 2000);
+        })();
+    </script>
 
     <!-- End of bodyEnd -->
 </body>

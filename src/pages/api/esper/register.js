@@ -1,4 +1,5 @@
 import { createClient } from '@supabase/supabase-js';
+import { checkGoogleLink } from './verify-link.js';
 
 // This is a server-side API route — never prerender it
 export const prerender = false;
@@ -35,6 +36,19 @@ async function syncToGoogleSheet(webhookUrl, payload) {
   } catch (err) {
     console.error('[esper/register] Google Sheets webhook failed:', err?.message || err);
   }
+}
+
+function formatPhoneNumber(phone) {
+  if (!phone) return '';
+  let clean = phone.trim();
+  if (!clean) return '';
+  if (!clean.startsWith('+94')) {
+    if (clean.startsWith('0')) {
+      clean = clean.substring(1).trim();
+    }
+    clean = '+94' + clean;
+  }
+  return clean;
 }
 
 export const POST = async ({ request }) => {
@@ -96,15 +110,32 @@ export const POST = async ({ request }) => {
       );
     }
 
-    // 2. Format Contact Number (Ensure +94 prefix)
-    let contactNumber = contactRaw;
-    if (!contactNumber.startsWith('+94')) {
-      // Remove leading zero if present
-      if (contactNumber.startsWith('0')) {
-        contactNumber = contactNumber.substring(1);
+    // 1b. Check Google Drive / Google Docs link privacy if provided
+    const linkToCheck = (
+      data.articleDocLink ||
+      data.researchDriveLink ||
+      data.designerDriveLink ||
+      data.inventorDriveLink ||
+      data.buildTeamDriveLink ||
+      data.shortFilmDriveLink ||
+      ''
+    ).trim();
+
+    if (linkToCheck) {
+      const linkCheck = await checkGoogleLink(linkToCheck);
+      if (linkCheck && linkCheck.accessible === false && linkCheck.reason === 'private') {
+        return new Response(
+          JSON.stringify({
+            error:
+              'Your Google link is Private (Restricted). Please open Google Drive/Docs → click Share → change General Access to "Anyone with the link can view", and submit again.',
+          }),
+          { status: 400, headers: { 'Content-Type': 'application/json' } }
+        );
       }
-      contactNumber = '+94' + contactNumber;
     }
+
+    // 2. Format Contact Number (Ensure +94 prefix)
+    const contactNumber = formatPhoneNumber(contactRaw);
 
     // 3. Determine target table & record structure
     const isIntra = ['young-inventor', 'article-writer'].includes(category) || data.registrationType === 'intra';
@@ -234,6 +265,7 @@ export const POST = async ({ request }) => {
           categorySlug: category,
           contactNumber,
           email,
+          contestantImageUrl: (data.contestantImageUrl || '').trim(),
           confirmed: (data.confirmation === true || data.confirmation === 'on') ? 'Yes' : 'No',
         };
 
@@ -270,6 +302,15 @@ export const POST = async ({ request }) => {
             hostedLink: (data.coderHostedLink || '').trim(),
             youtubeLink: (data.coderYoutubeLink || '').trim(),
             projectLink: (data.articleDocLink || data.researchDriveLink || data.designerDriveLink || data.inventorDriveLink || '').trim(),
+            // Additional team members for Best Research Team of the Year
+            member2Name: (data.researchMember2Name || '').trim(),
+            member2Phone: formatPhoneNumber(data.researchMember2Phone),
+            member3Name: (data.researchMember3Name || '').trim(),
+            member3Phone: formatPhoneNumber(data.researchMember3Phone),
+            member4Name: (data.researchMember4Name || '').trim(),
+            member4Phone: formatPhoneNumber(data.researchMember4Phone),
+            member5Name: (data.researchMember5Name || '').trim(),
+            member5Phone: formatPhoneNumber(data.researchMember5Phone),
           };
         }
 

@@ -3769,6 +3769,201 @@
   </style>
 
 
+    <style id="esper-inter-hero-video-styles">
+    /* Hero background video */
+    .hero-plasma-video {
+      position: absolute !important;
+      top: 0 !important;
+      left: 0 !important;
+      width: 100% !important;
+      height: 100% !important;
+      object-fit: cover !important;
+      pointer-events: none !important;
+      z-index: 0 !important;
+      display: block !important;
+    }
+
+    /* Reduced Hero Video section height only on /esper/inter */
+    .framer-LJlZq .framer-w3gto7,
+    .framer-LJlZq [data-framer-name="Plasma"] {
+      height: 650px !important;
+    }
+
+    @media (max-width: 1200px) {
+      .framer-LJlZq .framer-w3gto7,
+      .framer-LJlZq [data-framer-name="Plasma"] {
+        height: 540px !important;
+      }
+    }
+
+    @media (max-width: 810px) {
+      .framer-LJlZq .framer-o0xigs,
+      .framer-LJlZq .framer-w3gto7,
+      .framer-LJlZq [data-framer-name="Plasma"] {
+        height: 420px !important;
+      }
+    }
+
+    /* Hero Video Overlay Text on /esper/inter */
+    .hero-video-overlay-text {
+      position: relative;
+      z-index: 2;
+      width: 100%;
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 30px 24px 0 24px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      pointer-events: auto;
+    }
+
+    .hero-video-overlay-text .framer-15qykm {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 20px;
+    }
+
+    .hero-video-overlay-text .framer-17eqxwi {
+      display: block !important;
+      width: 100%;
+      transform: none;
+    }
+
+    .hero-video-overlay-text h2.framer-text {
+      font-family: "Playfair Display", "Playfair Display Placeholder", serif !important;
+      font-size: 56px !important;
+      font-style: italic !important;
+      font-weight: 600 !important;
+      line-height: 1.15 !important;
+      text-align: center !important;
+      color: #ffffff !important;
+      text-transform: capitalize !important;
+      margin: 0 !important;
+      text-shadow: 0 4px 24px rgba(0, 0, 0, 0.85);
+    }
+
+    .hero-video-overlay-text h2.framer-text a {
+      text-decoration: none !important;
+      color: inherit !important;
+    }
+
+    .hero-video-overlay-text .framer-w85e7j {
+      display: block !important;
+      max-width: 780px;
+      width: 100%;
+      transform: none;
+    }
+
+    .hero-video-overlay-text p.framer-text {
+      font-size: 16px !important;
+      line-height: 1.6 !important;
+      color: rgb(214, 214, 214) !important;
+      text-align: center !important;
+      margin: 0 !important;
+      text-shadow: 0 2px 12px rgba(0, 0, 0, 0.9);
+    }
+
+    .hero-video-overlay-text p.framer-text strong,
+    .hero-video-overlay-text p.framer-text a {
+      color: #ffffff !important;
+      text-decoration: none !important;
+    }
+
+    /* Content spacing after hero video */
+    .framer-LJlZq .framer-nqkdlu {
+      min-height: 520px !important;
+      margin-bottom: 20px !important;
+      gap: 40px !important;
+    }
+
+    /* Ensure full visibility of content on and after the hero video */
+    .framer-LJlZq .framer-lhng8p,
+    .framer-LJlZq #team,
+    .framer-LJlZq .framer-g159kn,
+    .framer-LJlZq .framer-15qykm,
+    .framer-LJlZq [data-framer-name="Team Collection"],
+    .framer-LJlZq [data-framer-name="H2+Body"] {
+      opacity: 1 !important;
+      visibility: visible !important;
+      transform: none !important;
+      filter: none !important;
+      z-index: 10 !important;
+    }
+
+    .framer-LJlZq .framer-g159kn {
+      display: grid !important;
+    }
+
+    @media (max-width: 1200px) {
+      .hero-video-overlay-text {
+        padding-top: 15px;
+      }
+      .hero-video-overlay-text h2.framer-text {
+        font-size: 46px !important;
+      }
+      .hero-video-overlay-text p.framer-text {
+        font-size: 15px !important;
+      }
+      .framer-LJlZq .framer-nqkdlu {
+        min-height: 440px !important;
+        margin-bottom: 10px !important;
+        gap: 30px !important;
+      }
+    }
+
+    @media (max-width: 810px) {
+      .hero-video-overlay-text {
+        padding: 10px 16px 0 16px;
+      }
+      .hero-video-overlay-text h2.framer-text {
+        font-size: 34px !important;
+        line-height: 1.2 !important;
+      }
+      .hero-video-overlay-text p.framer-text {
+        font-size: 13.5px !important;
+        line-height: 1.5 !important;
+      }
+      .framer-LJlZq .framer-nqkdlu {
+        min-height: 350px !important;
+        margin-bottom: 0px !important;
+        gap: 20px !important;
+      }
+    }
+
+    /* Hide static fallback images in Plasma */
+    .framer-w3gto7 .framer-1wdis9r,
+    .framer-o0xigs .framer-1eq4zmj,
+    [data-framer-name="Plasma"] .framer-1wdis9r,
+    [data-framer-name="Plasma"] .framer-1eq4zmj,
+    [data-framer-name="Plasma"] img {
+      opacity: 0 !important;
+      visibility: hidden !important;
+      display: none !important;
+    }
+
+    /* Align overlay gradient at bottom of plasma container */
+    .framer-LJlZq .framer-17jcdvw,
+    .framer-LJlZq .framer-1a5klvr,
+    [data-framer-name="Overlay"] {
+      bottom: 0px !important;
+      height: 35% !important;
+      z-index: 1 !important;
+      pointer-events: none !important;
+    }
+
+    /* Hide left-side golden beam / light rays shader */
+    .framer-1opuij9-container,
+    .framer-1pry9as-container {
+      display: none !important;
+      visibility: hidden !important;
+      opacity: 0 !important;
+      pointer-events: none !important;
+    }
+  </style>
   <!-- Start of headEnd -->
   <style>
     /* Card Grid: 3 columns on desktop, with 1st featured card centered on its own row */
@@ -4166,6 +4361,23 @@
         </div>
 
 
+        <!-- Hero Content on Video -->
+        <div class="hero-video-overlay-text">
+          <div class="framer-15qykm" data-framer-name="H2+Body">
+            <div class="framer-17eqxwi" data-framer-name="Meet Your Dream Team" data-framer-component-type="RichTextContainer" style="transform: none;">
+              <h2 class="framer-text" style="--font-selector: R0Y7UGxheWZhaXIgRGlzcGxheS02MDBpdGFsaWM=; --framer-font-family: &quot;Playfair Display&quot;, &quot;Playfair Display Placeholder&quot;, serif; --framer-font-size: 52px; --framer-font-style: italic; --framer-font-weight: 600; --framer-line-height: 120%; --framer-text-alignment: center; --framer-text-color: var(--token-c05d7eb5-3b85-4d38-a5b8-65cb0e0a1652, rgb(255, 255, 255)); --framer-text-transform: capitalize;">
+                <a href="/esper/inter" style="text-decoration: none; color: inherit;">Inter School Awards</a>
+              </h2>
+            </div>
+            <div class="framer-w85e7j" data-framer-name="Our dedicated team blends diverse expertise, innovative thinking, and a passion for excellence to turn your vision into reality." data-framer-component-type="RichTextContainer" style="transform: none;">
+              <p class="framer-text framer-styles-preset-1nu4r2j" data-styles-preset="vtMx1ujdK" style="--framer-text-alignment: center; --framer-text-color: var(--token-3ecf9004-c795-4969-8dc2-46e9a5f93615, rgb(214, 214, 214));">
+                <strong class="framer-text"><a href="/esper/inter" style="text-decoration: none; color: inherit;">Inter School Awards</a></strong> — Honouring the finest school science innovators, researchers, and creators across Sri Lanka, recognising outstanding achievements and visionary leadership in science and technology.
+              </p>
+            </div>
+          </div>
+        </div>
+
+
         <div class="framer-1np4c7y hidden-72rtr7 hidden-ebiaht hidden-193nlgj" data-framer-name="Spacer">
         </div>
 
@@ -4304,9 +4516,9 @@
 
 
       <div class="framer-lhng8p" data-framer-name="Team" id="team"
-        style="will-change:transform;opacity:0;transform:translateY(40px)">
+        style="will-change:transform;opacity:1;transform:none;">
         <div class="framer-nrbcmf" data-framer-appear-id="nrbcmf" data-framer-name="Bottom"
-          style="opacity:0.001;transform:translateY(40px)">
+          style="opacity:1;transform:none;">
           <div class="ssr-variant hidden-9w4hrp hidden-193nlgj hidden-ebiaht">
             <div class="framer-mxcy7w-container" data-framer-name="Brands" name="Brands">
               <div class="framer-pzdDs framer-1ye4me3 framer-v-1ye4me3" data-framer-name="Desktop" name="Brands"
@@ -6417,6 +6629,7 @@
 
 
       <div class="framer-w3gto7 hidden-9w4hrp" data-framer-name="Plasma">
+        <video class="hero-plasma-video" src="/esper/images/subheader-vid.mp4" autoplay loop muted playsinline preload="auto" aria-hidden="true"></video>
         <div class="ssr-variant hidden-ebiaht">
           <div class="framer-1wdis9r">
             <div data-framer-background-image-wrapper="true"
@@ -6495,6 +6708,7 @@
 
 
       <div class="framer-o0xigs hidden-72rtr7 hidden-ebiaht hidden-193nlgj" data-framer-name="Plasma">
+        <video class="hero-plasma-video" src="/esper/images/subheader-vid.mp4" autoplay loop muted playsinline preload="auto" aria-hidden="true"></video>
         <div class="ssr-variant hidden-9w4hrp">
           <div class="framer-1eq4zmj">
             <div data-framer-background-image-wrapper="true"
@@ -6858,11 +7072,11 @@
         if (!href) return;
 
         // Force all registrations on /esper/inter to go to /esper/inter/register
-        if (href.includes("/register") || href === "/esper/register" || href === "/esper/popular/register") {
+        if (href === "/esper/register" || href === "/esper/popular/register" || href === "/register") {
           href = "/esper/inter/register";
         }
 
-        if (href === "/esper/inter/register") {
+        if (href.startsWith("/esper/inter/register")) {
           if (window.location.pathname.includes("/register")) {
             console.log("ESPER Navigation: Already on register page, scrolling to form.");
             const form = document.querySelector("#contact") || document.querySelector(".framer-lhng8p") || document.querySelector("form");
@@ -6918,9 +7132,27 @@
           return;
         }
 
+        // Determine category if clicking a card or subscribe button
+        let catSlug = t.getAttribute('data-category-slug');
+        if (!catSlug) {
+          const cardEl = t.closest('[data-category-slug]') || t.closest('[data-framer-name="Card"]') || t.closest('.framer-Wwu9j');
+          if (cardEl) {
+            catSlug = cardEl.getAttribute('data-category-slug');
+            if (!catSlug) {
+              const hText = (cardEl.querySelector('h3, h4')?.textContent || cardEl.textContent || '').toLowerCase();
+              if (hText.includes('popular')) catSlug = 'popular-union';
+              else if (hText.includes('article')) catSlug = 'article-writer';
+              else if (hText.includes('research')) catSlug = 'research-team';
+              else if (hText.includes('graphic')) catSlug = 'graphic-designer';
+              else if (hText.includes('coder')) catSlug = 'edu-coder';
+              else if (hText.includes('inventor')) catSlug = 'young-inventor';
+            }
+          }
+        }
+
         // Any card or register button on /esper/inter MUST go to /esper/inter/register
         if (!href || href.includes("/register") || text.includes("register") || name === 'subscribe button' || name === 'card' || href.includes('/sci-union')) {
-          href = "/esper/inter/register";
+          href = catSlug ? `/esper/inter/register?category=${catSlug}` : (href && href.startsWith('/esper/inter/register') ? href : '/esper/inter/register');
         }
 
         console.log("ESPER Intercepted click on:", t.tagName, "Target:", href);
@@ -7032,30 +7264,30 @@
   </script>
 
 
-  <link fetchpriority="low" href="https://framerusercontent.com/sites/iyV7VNt2Dt1Y5p1EqXu5q/react.Cq8oxfYJ.mjs"
+  <link fetchpriority="low" href="/esper/js/react.Cq8oxfYJ.mjs"
     rel="modulepreload" />
   <link fetchpriority="low"
-    href="https://framerusercontent.com/sites/iyV7VNt2Dt1Y5p1EqXu5q/rolldown-runtime.DuUl1Rk5.mjs"
+    href="/esper/js/rolldown-runtime.DuUl1Rk5.mjs"
     rel="modulepreload" />
-  <link fetchpriority="low" href="https://framerusercontent.com/sites/iyV7VNt2Dt1Y5p1EqXu5q/framer.BUXr1hGZ.mjs"
+  <link fetchpriority="low" href="/esper/js/framer.BUXr1hGZ.mjs"
     rel="modulepreload" />
-  <link fetchpriority="low" href="https://framerusercontent.com/sites/iyV7VNt2Dt1Y5p1EqXu5q/motion.Ba_qRR3p.mjs"
+  <link fetchpriority="low" href="/esper/js/motion.Ba_qRR3p.mjs"
     rel="modulepreload" />
   <link fetchpriority="low"
-    href="https://framerusercontent.com/sites/iyV7VNt2Dt1Y5p1EqXu5q/04KNLvbpislanL_zOXIFk9ejvaGSMORuTZYbyejRkQU.DMd3i_2I.mjs"
+    href="/esper/js/04KNLvbpislanL_zOXIFk9ejvaGSMORuTZYbyejRkQU.DMd3i_2I.mjs"
     rel="modulepreload" />
-  <link fetchpriority="low" href="https://framerusercontent.com/sites/iyV7VNt2Dt1Y5p1EqXu5q/vtMx1ujdK.DBoDZC3O.mjs"
+  <link fetchpriority="low" href="/esper/js/vtMx1ujdK.DBoDZC3O.mjs"
     rel="modulepreload" />
-  <link fetchpriority="low" href="https://framerusercontent.com/sites/iyV7VNt2Dt1Y5p1EqXu5q/m3aPhWwZw.DYu7tj_-.mjs"
+  <link fetchpriority="low" href="/esper/js/m3aPhWwZw.DYu7tj_-.mjs"
     rel="modulepreload" />
-  <link fetchpriority="low" href="https://framerusercontent.com/sites/iyV7VNt2Dt1Y5p1EqXu5q/augiA20Il.RAqgRTJD.mjs"
+  <link fetchpriority="low" href="/esper/js/augiA20Il.RAqgRTJD.mjs"
     rel="modulepreload" />
-  <link fetchpriority="low" href="https://framerusercontent.com/sites/iyV7VNt2Dt1Y5p1EqXu5q/shared-lib.D_RJvpHY.mjs"
+  <link fetchpriority="low" href="/esper/js/shared-lib.D_RJvpHY.mjs"
     rel="modulepreload" />
-  <link fetchpriority="low" href="https://framerusercontent.com/sites/iyV7VNt2Dt1Y5p1EqXu5q/script_main.VpL499Yr.mjs"
+  <link fetchpriority="low" href="/esper/js/script_main.VpL499Yr.mjs"
     rel="modulepreload" />
   <script async="" data-framer-bundle="main" fetchpriority="low"
-    src="https://framerusercontent.com/sites/iyV7VNt2Dt1Y5p1EqXu5q/script_main.VpL499Yr.mjs" type="module">
+    src="/esper/js/script_main.VpL499Yr.mjs" type="module">
     </script>
 
 
@@ -7089,12 +7321,12 @@
         grid.style.setProperty('height', 'auto', 'important');
 
         const categories = [
-          { title: "Most Popular Science Union", sub: "Of The Year", image: "/esper/images/most%20popular%20science%20union.png" },
-          { title: "Best Article Writer", sub: "Of The Year Award", image: "/esper/images/Eureka.png" },
-          { title: "Best Research Team", sub: "Of The Year", image: "/esper/images/Agora.png" },
-          { title: "Graphic Designer", sub: "Of The Year", image: "/esper/images/Aesthetikos.png" },
-          { title: "EDU Coder", sub: "Of The Year", image: "/esper/images/Algorithmos.png" },
-          { title: "Best Young Inventor", sub: "Of The Year", image: "/esper/images/Daedalus.png" }
+          { title: "Most Popular Science Union", sub: "Of The Year", image: "/esper/images/most%20popular%20science%20union.png", slug: "popular-union" },
+          { title: "Best Article Writer", sub: "Of The Year Award", image: "/esper/images/Eureka.png", slug: "article-writer" },
+          { title: "Best Research Team", sub: "Of The Year", image: "/esper/images/Agora.png", slug: "research-team" },
+          { title: "Graphic Designer", sub: "Of The Year", image: "/esper/images/Aesthetikos.png", slug: "graphic-designer" },
+          { title: "EDU Coder", sub: "Of The Year", image: "/esper/images/Algorithmos.png", slug: "edu-coder" },
+          { title: "Best Young Inventor", sub: "Of The Year", image: "/esper/images/Daedalus.png", slug: "young-inventor" }
         ];
 
         const allCards = Array.from(grid.querySelectorAll('[data-framer-name="Card"]'));
@@ -7179,12 +7411,16 @@
                 img.setAttribute('srcset', `${targetSrc} 1080w`);
               }
             }
-            // Ensure card and button link directly to /esper/inter/register
+            // Ensure card and button link directly to /esper/inter/register with preselected category
+            const catSlug = categories[index]?.slug || '';
+            wrapper.setAttribute('data-category-slug', catSlug);
             wrapper.querySelectorAll('a').forEach(a => {
               const h = a.getAttribute('href') || '';
-              if (h.includes('/register')) {
-                a.setAttribute('href', '/esper/inter/register');
-                a.setAttribute('data-href', '/esper/inter/register');
+              if (h.includes('/register') || a.getAttribute('data-nested-link') === 'true' || a.classList.contains('framer-NuCN4') || a.classList.contains('framer-14ovzi3')) {
+                const targetUrl = catSlug ? `/esper/inter/register?category=${catSlug}` : '/esper/inter/register';
+                a.setAttribute('href', targetUrl);
+                a.setAttribute('data-href', targetUrl);
+                a.setAttribute('data-category-slug', catSlug);
               }
             });
             // Wire hover effect for cards so cloned cards match originals
@@ -7205,9 +7441,47 @@
         });
       }
 
+      function ensureHeroPlasmaVideo() {
+        const containers = document.querySelectorAll('.framer-w3gto7, .framer-o0xigs');
+        containers.forEach(c => {
+          if (!c.closest('.framer-LJlZq')) return;
+          let video = c.querySelector('video.hero-plasma-video');
+          if (!video) {
+            video = document.createElement('video');
+            video.className = 'hero-plasma-video';
+            video.src = '/esper/images/subheader-vid.mp4';
+            video.autoplay = true;
+            video.loop = true;
+            video.muted = true;
+            video.playsInline = true;
+            video.setAttribute('aria-hidden', 'true');
+            video.setAttribute('preload', 'auto');
+            c.insertBefore(video, c.firstChild);
+          }
+          if (video.paused) {
+            video.muted = true;
+            video.play().catch(() => {});
+          }
+        });
+      }
+
+      function safeguardAppear() {
+        var targets = document.querySelectorAll(
+          '.framer-lhng8p, #team, .framer-g159kn, .framer-15qykm, .hero-video-overlay-text, [data-framer-name="Team Collection"], [style*="opacity:0.001"], [style*="opacity: 0.001"], [style*="opacity:0;"], [style*="opacity: 0;"]'
+        );
+        targets.forEach(function(el) {
+          el.style.setProperty('opacity', '1', 'important');
+          el.style.setProperty('visibility', 'visible', 'important');
+          el.style.setProperty('transform', 'none', 'important');
+          el.style.setProperty('filter', 'none', 'important');
+        });
+      }
+
       function runUpdates() {
+        ensureHeroPlasmaVideo();
         ensureInterHeading();
         ensureSixCards();
+        safeguardAppear();
       }
 
       document.addEventListener('DOMContentLoaded', runUpdates);

@@ -3767,6 +3767,123 @@
     </style>
 
 
+        <style id="esper-register-hero-video-styles">
+        /* Hero background video */
+        .hero-plasma-video {
+            position: absolute !important;
+            top: 0 !important;
+            left: 0 !important;
+            width: 100% !important;
+            height: 100% !important;
+            object-fit: cover !important;
+            pointer-events: none !important;
+            z-index: 0 !important;
+            display: block !important;
+        }
+
+        /* Reduced Hero Video section height on register pages */
+        .framer-LJlZq .framer-w3gto7,
+        .framer-LJlZq [data-framer-name="Plasma"] {
+            height: 650px !important;
+        }
+
+        @media (max-width: 1200px) {
+            .framer-LJlZq .framer-w3gto7,
+            .framer-LJlZq [data-framer-name="Plasma"] {
+                height: 540px !important;
+            }
+        }
+
+        @media (max-width: 810px) {
+            .framer-LJlZq .framer-o0xigs,
+            .framer-LJlZq .framer-w3gto7,
+            .framer-LJlZq [data-framer-name="Plasma"] {
+                height: 420px !important;
+            }
+        }
+
+        /* Pull all content after the hero video upward on register pages */
+        .framer-LJlZq .framer-nqkdlu {
+            margin-bottom: -140px !important;
+        }
+
+        @media (max-width: 1200px) {
+            .framer-LJlZq .framer-nqkdlu {
+                margin-bottom: -90px !important;
+            }
+        }
+
+        @media (max-width: 810px) {
+            .framer-LJlZq .framer-nqkdlu {
+                margin-bottom: -50px !important;
+            }
+        }
+
+        /* Hide static fallback images in Plasma */
+        .framer-w3gto7 .framer-1wdis9r,
+        .framer-o0xigs .framer-1eq4zmj,
+        [data-framer-name="Plasma"] .framer-1wdis9r,
+        [data-framer-name="Plasma"] .framer-1eq4zmj,
+        [data-framer-name="Plasma"] img {
+            opacity: 0 !important;
+            visibility: hidden !important;
+            display: none !important;
+        }
+
+        /* Align overlay gradient at bottom of plasma container */
+        .framer-LJlZq .framer-17jcdvw,
+        .framer-LJlZq .framer-1a5klvr,
+        [data-framer-name="Overlay"] {
+            bottom: 0px !important;
+            height: 35% !important;
+            z-index: 1 !important;
+            pointer-events: none !important;
+        }
+
+        /* Hide left-side golden beam / light rays shader */
+        .framer-1opuij9-container,
+        .framer-1pry9as-container {
+            display: none !important;
+            visibility: hidden !important;
+            opacity: 0 !important;
+            pointer-events: none !important;
+        }
+    
+        .add-member-btn,
+        .remove-member-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            background: none !important;
+            border: none !important;
+            padding: 2px 0 !important;
+            color: rgba(255, 255, 255, 0.7) !important;
+            font-size: 12px !important;
+            font-weight: 500 !important;
+            cursor: pointer !important;
+            outline: none !important;
+            font-family: inherit !important;
+            text-decoration: none !important;
+            transition: color 0.15s ease, opacity 0.15s ease !important;
+        }
+
+        .add-member-btn:hover,
+        .remove-member-btn:hover {
+            color: #ffffff !important;
+            text-decoration: none !important;
+        }
+
+        .add-member-btn svg,
+        .remove-member-btn svg {
+            flex-shrink: 0;
+            display: block;
+        }
+
+        .add-member-btn:active,
+        .remove-member-btn:active {
+            opacity: 0.75 !important;
+        }
+    </style>
     <!-- Start of headEnd -->
     <!-- End of headEnd -->
 
@@ -4511,6 +4628,31 @@
             color: rgba(255, 255, 255, 0.5);
             margin-top: 4px;
             line-height: 1.4;
+            transition: color 0.2s ease;
+        }
+
+        .form-control.has-link-error {
+            border-color: rgba(239, 68, 68, 0.65) !important;
+            box-shadow: 0 0 0 2px rgba(239, 68, 68, 0.15) !important;
+        }
+
+        .field-subtext.has-link-error {
+            color: #ff6b6b !important;
+            font-weight: 500 !important;
+        }
+
+        .form-row-duo {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 14px;
+            width: 100%;
+        }
+
+        @media (max-width: 640px) {
+            .form-row-duo {
+                grid-template-columns: 1fr !important;
+                gap: 14px !important;
+            }
         }
     </style>
 </head>
@@ -7024,6 +7166,7 @@
 
 
             <div class="framer-w3gto7 hidden-9w4hrp" data-framer-name="Plasma">
+                <video class="hero-plasma-video" src="/esper/images/subheader-vid.mp4" autoplay loop muted playsinline preload="auto" aria-hidden="true"></video>
                 <div class="ssr-variant hidden-ebiaht">
                     <div class="framer-1wdis9r">
                         <div data-framer-background-image-wrapper="true"
@@ -7102,6 +7245,7 @@
 
 
             <div class="framer-o0xigs hidden-72rtr7 hidden-ebiaht hidden-193nlgj" data-framer-name="Plasma">
+                <video class="hero-plasma-video" src="/esper/images/subheader-vid.mp4" autoplay loop muted playsinline preload="auto" aria-hidden="true"></video>
                 <div class="ssr-variant hidden-9w4hrp">
                     <div class="framer-1eq4zmj">
                         <div data-framer-background-image-wrapper="true"
@@ -7595,30 +7739,30 @@
     </script>
 
 
-    <link fetchpriority="low" href="https://framerusercontent.com/sites/iyV7VNt2Dt1Y5p1EqXu5q/react.Cq8oxfYJ.mjs"
+    <link fetchpriority="low" href="/esper/js/react.Cq8oxfYJ.mjs"
         rel="modulepreload" />
     <link fetchpriority="low"
-        href="https://framerusercontent.com/sites/iyV7VNt2Dt1Y5p1EqXu5q/rolldown-runtime.DuUl1Rk5.mjs"
+        href="/esper/js/rolldown-runtime.DuUl1Rk5.mjs"
         rel="modulepreload" />
-    <link fetchpriority="low" href="https://framerusercontent.com/sites/iyV7VNt2Dt1Y5p1EqXu5q/framer.BUXr1hGZ.mjs"
+    <link fetchpriority="low" href="/esper/js/framer.BUXr1hGZ.mjs"
         rel="modulepreload" />
-    <link fetchpriority="low" href="https://framerusercontent.com/sites/iyV7VNt2Dt1Y5p1EqXu5q/motion.Ba_qRR3p.mjs"
+    <link fetchpriority="low" href="/esper/js/motion.Ba_qRR3p.mjs"
         rel="modulepreload" />
     <link fetchpriority="low"
-        href="https://framerusercontent.com/sites/iyV7VNt2Dt1Y5p1EqXu5q/04KNLvbpislanL_zOXIFk9ejvaGSMORuTZYbyejRkQU.DMd3i_2I.mjs"
+        href="/esper/js/04KNLvbpislanL_zOXIFk9ejvaGSMORuTZYbyejRkQU.DMd3i_2I.mjs"
         rel="modulepreload" />
-    <link fetchpriority="low" href="https://framerusercontent.com/sites/iyV7VNt2Dt1Y5p1EqXu5q/vtMx1ujdK.DBoDZC3O.mjs"
+    <link fetchpriority="low" href="/esper/js/vtMx1ujdK.DBoDZC3O.mjs"
         rel="modulepreload" />
-    <link fetchpriority="low" href="https://framerusercontent.com/sites/iyV7VNt2Dt1Y5p1EqXu5q/m3aPhWwZw.DYu7tj_-.mjs"
+    <link fetchpriority="low" href="/esper/js/m3aPhWwZw.DYu7tj_-.mjs"
         rel="modulepreload" />
-    <link fetchpriority="low" href="https://framerusercontent.com/sites/iyV7VNt2Dt1Y5p1EqXu5q/augiA20Il.RAqgRTJD.mjs"
+    <link fetchpriority="low" href="/esper/js/augiA20Il.RAqgRTJD.mjs"
         rel="modulepreload" />
-    <link fetchpriority="low" href="https://framerusercontent.com/sites/iyV7VNt2Dt1Y5p1EqXu5q/shared-lib.D_RJvpHY.mjs"
+    <link fetchpriority="low" href="/esper/js/shared-lib.D_RJvpHY.mjs"
         rel="modulepreload" />
-    <link fetchpriority="low" href="https://framerusercontent.com/sites/iyV7VNt2Dt1Y5p1EqXu5q/script_main.VpL499Yr.mjs"
+    <link fetchpriority="low" href="/esper/js/script_main.VpL499Yr.mjs"
         rel="modulepreload" />
     <script async="" data-framer-bundle="main" fetchpriority="low"
-        src="https://framerusercontent.com/sites/iyV7VNt2Dt1Y5p1EqXu5q/script_main.VpL499Yr.mjs" type="module">
+        src="/esper/js/script_main.VpL499Yr.mjs" type="module">
         </script>
 
 
@@ -7628,6 +7772,55 @@
 
 
     <!-- Start of bodyEnd -->
+    <script>
+        (function() {
+            function ensureHeroPlasmaVideo() {
+                var containers = document.querySelectorAll('.framer-w3gto7, .framer-o0xigs');
+                containers.forEach(function(c) {
+                    if (!c.closest('.framer-LJlZq')) return;
+                    var video = c.querySelector('video.hero-plasma-video');
+                    if (!video) {
+                        video = document.createElement('video');
+                        video.className = 'hero-plasma-video';
+                        video.src = '/esper/images/subheader-vid.mp4';
+                        video.autoplay = true;
+                        video.loop = true;
+                        video.muted = true;
+                        video.playsInline = true;
+                        video.setAttribute('aria-hidden', 'true');
+                        video.setAttribute('preload', 'auto');
+                        c.insertBefore(video, c.firstChild);
+                    }
+                    if (video.paused) {
+                        video.muted = true;
+                        video.play().catch(function() {});
+                    }
+                });
+            }
+
+            if (document.readyState === 'loading') {
+                document.addEventListener('DOMContentLoaded', ensureHeroPlasmaVideo);
+            } else {
+                ensureHeroPlasmaVideo();
+            }
+            window.addEventListener('load', ensureHeroPlasmaVideo);
+            var interval = setInterval(ensureHeroPlasmaVideo, 500);
+            setTimeout(function() { clearInterval(interval); }, 6000);
+
+            function safeguardAppear() {
+                var els = document.querySelectorAll('[style*="opacity:0.001"], [style*="opacity: 0.001"]');
+                els.forEach(function(el) {
+                    if (parseFloat(window.getComputedStyle(el).opacity) < 0.1) {
+                        el.style.opacity = '1';
+                        el.style.transform = 'none';
+                        el.style.filter = 'none';
+                    }
+                });
+            }
+            setTimeout(safeguardAppear, 1000);
+            setTimeout(safeguardAppear, 2000);
+        })();
+    </script>
     <!-- End of bodyEnd -->
 
     <template id="custom-esper-form">
@@ -7741,6 +7934,44 @@
                                     placeholder="yourname@gmail.com" required="" type="email" />
                             </div>
                         </div>
+                        <div class="form-row">
+                            <label for="contestant-image">Contestant Image</label>
+                            <div class="input-wrapper">
+                                <label class="file-upload-box" for="contestant-image">
+                                    <div class="file-upload-icon">
+                                        <svg width="22" height="22" viewBox="0 0 24 24" fill="none"
+                                            stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                            stroke-linejoin="round">
+                                            <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                                            <circle cx="12" cy="7" r="4"></circle>
+                                        </svg>
+                                    </div>
+                                    <div class="file-upload-text">
+                                        <span class="file-upload-title" id="contestant-image-filename"
+                                            data-default-text="Click or drag &amp; drop to upload photo">Click or drag &amp;
+                                            drop to upload photo</span>
+                                        <span class="file-upload-hint">PNG, JPG, or WebP (Formal headshot / portrait recommended)</span>
+                                    </div>
+                                    <button type="button" class="file-upload-clear" title="Remove photo"
+                                        onclick="window.clearFileUpload(event, this)"
+                                        onmousedown="event.stopPropagation();" ontouchstart="event.stopPropagation();">
+                                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none"
+                                            stroke="currentColor" stroke-width="2.5" stroke-linecap="round"
+                                            stroke-linejoin="round">
+                                            <line x1="18" y1="6" x2="6" y2="18"></line>
+                                            <line x1="6" y1="6" x2="18" y2="18"></line>
+                                        </svg>
+                                    </button>
+                                    <input class="file-input-hidden" id="contestant-image" name="contestantImage" type="file"
+                                        accept="image/png,image/jpeg,image/webp"
+                                        onchange="window.handleContestantImageChange(this)" />
+                                </label>
+                                <span class="field-subtext" style="display: flex; align-items: center; gap: 6px; margin-top: 6px; color: rgba(255, 255, 255, 0.6);">
+                                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink: 0;"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg>
+                                    <span>Securely stored and used only for certificates &amp; awards presentation.</span>
+                                </span>
+                            </div>
+                        </div>
                     </div>
                     <div class="form-column" id="column-submission-details">
                         <div class="form-row">
@@ -7817,6 +8048,110 @@
                                 </div>
                                 <span class="field-subtext">Please ensure the Google Drive folder link sharing setting
                                     is set to &ldquo;Anyone with the link can view&rdquo;.</span>
+                            </div>
+
+                            <div class="team-members-divider" style="margin: 18px 0 10px; padding-top: 14px; border-top: 1px solid rgba(255, 255, 255, 0.12); display: flex; flex-direction: column; gap: 4px;">
+                                <span style="font-size: 13px; font-weight: 600; letter-spacing: 0.05em; text-transform: uppercase; color: rgba(255, 255, 255, 0.85);">
+                                    Additional Team Members (Up to 4)
+                                </span>
+                                <span style="font-size: 12px; line-height: 1.4; color: rgba(255, 255, 255, 0.5);">
+                                    Team Leader is registered on the left. Enter remaining members below (optional if team has fewer than 5 members).
+                                </span>
+                            </div>
+
+                            <!-- Member 2 (shown by default) -->
+                            <div class="form-row-duo" id="research-member-2-row">
+                                <div class="form-row">
+                                    <label for="research-member-2-name">Member 2 Full Name</label>
+                                    <div class="input-wrapper">
+                                        <input class="form-control" id="research-member-2-name" name="researchMember2Name"
+                                            placeholder="Full name" type="text" data-optional="true" />
+                                    </div>
+                                </div>
+                                <div class="form-row">
+                                    <label for="research-member-2-phone">Member 2 Contact</label>
+                                    <div class="input-wrapper phone-input">
+                                        <span class="country-code">+94</span>
+                                        <input class="form-control" id="research-member-2-phone" name="researchMember2Phone"
+                                            placeholder="XX XXX XXXX" type="tel" data-optional="true" />
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Member 3 (shown by default) -->
+                            <div class="form-row-duo" id="research-member-3-row">
+                                <div class="form-row">
+                                    <label for="research-member-3-name">Member 3 Full Name</label>
+                                    <div class="input-wrapper">
+                                        <input class="form-control" id="research-member-3-name" name="researchMember3Name"
+                                            placeholder="Full name" type="text" data-optional="true" />
+                                    </div>
+                                </div>
+                                <div class="form-row">
+                                    <label for="research-member-3-phone">Member 3 Contact</label>
+                                    <div class="input-wrapper phone-input">
+                                        <span class="country-code">+94</span>
+                                        <input class="form-control" id="research-member-3-phone" name="researchMember3Phone"
+                                            placeholder="XX XXX XXXX" type="tel" data-optional="true" />
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Member 4 (hidden by default, appears on clicking Add Member) -->
+                            <div class="form-row-duo" id="research-member-4-row" style="display: none;">
+                                <div class="form-row">
+                                    <label for="research-member-4-name">Member 4 Full Name</label>
+                                    <div class="input-wrapper">
+                                        <input class="form-control" id="research-member-4-name" name="researchMember4Name"
+                                            placeholder="Full name" type="text" data-optional="true" />
+                                    </div>
+                                </div>
+                                <div class="form-row">
+                                    <label for="research-member-4-phone">Member 4 Contact</label>
+                                    <div class="input-wrapper phone-input">
+                                        <span class="country-code">+94</span>
+                                        <input class="form-control" id="research-member-4-phone" name="researchMember4Phone"
+                                            placeholder="XX XXX XXXX" type="tel" data-optional="true" />
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Member 5 (hidden by default, appears on clicking Add Member, max 5 total members) -->
+                            <div class="form-row-duo" id="research-member-5-row" style="display: none;">
+                                <div class="form-row">
+                                    <label for="research-member-5-name">Member 5 Full Name</label>
+                                    <div class="input-wrapper">
+                                        <input class="form-control" id="research-member-5-name" name="researchMember5Name"
+                                            placeholder="Full name" type="text" data-optional="true" />
+                                    </div>
+                                </div>
+                                <div class="form-row">
+                                    <label for="research-member-5-phone">Member 5 Contact</label>
+                                    <div class="input-wrapper phone-input">
+                                        <span class="country-code">+94</span>
+                                        <input class="form-control" id="research-member-5-phone" name="researchMember5Phone"
+                                            placeholder="XX XXX XXXX" type="tel" data-optional="true" />
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Team Member Action Buttons -->
+                            <div id="research-members-actions" style="margin-top: 6px; display: flex; align-items: center; gap: 16px;">
+                                <button type="button" id="research-add-member-btn" class="add-member-btn" onclick="window.addResearchTeamMember(event)">
+                                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                                        <circle cx="12" cy="12" r="10"></circle>
+                                        <line x1="12" y1="8" x2="12" y2="16"></line>
+                                        <line x1="8" y1="12" x2="16" y2="12"></line>
+                                    </svg>
+                                    <span>Add Member</span>
+                                </button>
+                                <button type="button" id="research-remove-member-btn" class="remove-member-btn" onclick="window.removeLastResearchMember(event)" style="display: none;">
+                                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                                        <circle cx="12" cy="12" r="10"></circle>
+                                        <line x1="8" y1="12" x2="16" y2="12"></line>
+                                    </svg>
+                                    <span>Remove Member</span>
+                                </button>
                             </div>
                         </div>
 
@@ -7992,6 +8327,129 @@
             }
         };
 
+        window.handleContestantImageChange = function (input) {
+            const uploadBox = input.closest('.file-upload-box');
+            const filenameEl = uploadBox ? uploadBox.querySelector('.file-upload-title') : document.getElementById('contestant-image-filename');
+            const iconEl = uploadBox ? uploadBox.querySelector('.file-upload-icon') : null;
+            if (iconEl && !iconEl.dataset.defaultHtml) {
+                iconEl.dataset.defaultHtml = iconEl.innerHTML;
+            }
+            if (input.files && input.files.length > 0) {
+                const file = input.files[0];
+                const sizeKB = (file.size / 1024).toFixed(1);
+                if (filenameEl) filenameEl.textContent = `${file.name} (${sizeKB} KB)`;
+                if (uploadBox) uploadBox.classList.add('has-file');
+
+                if (file.type.startsWith('image/') && iconEl) {
+                    const reader = new FileReader();
+                    reader.onload = function (e) {
+                        iconEl.innerHTML = `<img src="${e.target.result}" alt="Contestant Preview" />`;
+                    };
+                    reader.readAsDataURL(file);
+                }
+            } else {
+                if (filenameEl) filenameEl.textContent = 'Click or drag & drop to upload photo';
+                if (uploadBox) uploadBox.classList.remove('has-file');
+                if (iconEl && iconEl.dataset.defaultHtml) {
+                    iconEl.innerHTML = iconEl.dataset.defaultHtml;
+                }
+            }
+        };
+
+        window.addResearchTeamMember = function (event) {
+            if (event) {
+                event.preventDefault();
+                event.stopPropagation();
+            }
+            const form = document.getElementById('esper-registration-form') || document;
+            const m4Row = form.querySelector('#research-member-4-row');
+            const m5Row = form.querySelector('#research-member-5-row');
+
+            const isM4Hidden = !m4Row || m4Row.style.display === 'none';
+            const isM5Hidden = !m5Row || m5Row.style.display === 'none';
+
+            if (isM4Hidden) {
+                if (m4Row) m4Row.style.display = 'grid';
+            } else if (isM5Hidden) {
+                if (m5Row) m5Row.style.display = 'grid';
+            }
+            window.syncResearchMembersVisibility();
+        };
+
+        window.removeLastResearchMember = function (event) {
+            if (event) {
+                event.preventDefault();
+                event.stopPropagation();
+            }
+            const form = document.getElementById('esper-registration-form') || document;
+            const m4Row = form.querySelector('#research-member-4-row');
+            const m5Row = form.querySelector('#research-member-5-row');
+
+            const isM5Visible = m5Row && m5Row.style.display !== 'none';
+            const isM4Visible = m4Row && m4Row.style.display !== 'none';
+
+            if (isM5Visible) {
+                m5Row.style.display = 'none';
+                const nameInput = m5Row.querySelector('input[name="researchMember5Name"]');
+                const phoneInput = m5Row.querySelector('input[name="researchMember5Phone"]');
+                if (nameInput) nameInput.value = '';
+                if (phoneInput) phoneInput.value = '';
+            } else if (isM4Visible) {
+                m4Row.style.display = 'none';
+                const nameInput = m4Row.querySelector('input[name="researchMember4Name"]');
+                const phoneInput = m4Row.querySelector('input[name="researchMember4Phone"]');
+                if (nameInput) nameInput.value = '';
+                if (phoneInput) phoneInput.value = '';
+            }
+            window.syncResearchMembersVisibility();
+        };
+
+        window.removeResearchMember = function (memberNum) {
+            const form = document.getElementById('esper-registration-form') || document;
+            const row = form.querySelector('#research-member-' + memberNum + '-row');
+            if (row) {
+                row.style.display = 'none';
+                const nameInput = row.querySelector('input[name="researchMember' + memberNum + 'Name"]');
+                const phoneInput = row.querySelector('input[name="researchMember' + memberNum + 'Phone"]');
+                if (nameInput) nameInput.value = '';
+                if (phoneInput) phoneInput.value = '';
+            }
+            window.syncResearchMembersVisibility();
+        };
+
+        window.syncResearchMembersVisibility = function () {
+            const form = document.getElementById('esper-registration-form') || document;
+            const m4Row = form.querySelector('#research-member-4-row');
+            const m5Row = form.querySelector('#research-member-5-row');
+            const addBtn = form.querySelector('#research-add-member-btn');
+            const removeBtn = form.querySelector('#research-remove-member-btn');
+
+            const m4Name = form.querySelector('input[name="researchMember4Name"]');
+            const m4Phone = form.querySelector('input[name="researchMember4Phone"]');
+            const m5Name = form.querySelector('input[name="researchMember5Name"]');
+            const m5Phone = form.querySelector('input[name="researchMember5Phone"]');
+
+            const hasM4 = (m4Name && m4Name.value.trim()) || (m4Phone && m4Phone.value.trim());
+            const hasM5 = (m5Name && m5Name.value.trim()) || (m5Phone && m5Phone.value.trim());
+
+            if (hasM4 || hasM5) {
+                if (m4Row && m4Row.style.display === 'none') m4Row.style.display = 'grid';
+            }
+            if (hasM5) {
+                if (m5Row && m5Row.style.display === 'none') m5Row.style.display = 'grid';
+            }
+
+            const isM4Visible = m4Row && m4Row.style.display !== 'none';
+            const isM5Visible = m5Row && m5Row.style.display !== 'none';
+
+            if (addBtn) {
+                addBtn.style.display = isM5Visible ? 'none' : 'inline-flex';
+            }
+            if (removeBtn) {
+                removeBtn.style.display = (isM4Visible || isM5Visible) ? 'inline-flex' : 'none';
+            }
+        };
+
         window.handleAwardCategoryChange = function (selectEl) {
             const selected = selectEl.value;
             const form = selectEl.closest('form');
@@ -8003,14 +8461,124 @@
                 const inputs = group.querySelectorAll('input, select, textarea');
                 inputs.forEach(input => {
                     if (isMatch) {
-                        input.setAttribute('required', '');
+                        if (!input.hasAttribute('data-optional')) {
+                            input.setAttribute('required', '');
+                        }
                     } else {
                         input.removeAttribute('required');
                         input.value = '';
                     }
                 });
             });
+            if (selected === 'research-team' && window.syncResearchMembersVisibility) {
+                window.syncResearchMembersVisibility();
+            }
         };
+
+        // Real-time Google link privacy verification
+        (function initLinkVerification() {
+            const linkInputs = document.querySelectorAll(
+                'input[name="articleDocLink"], input[name="researchDriveLink"], input[name="designerDriveLink"], input[name="inventorDriveLink"], input[name="buildTeamDriveLink"], input[name="shortFilmDriveLink"]'
+            );
+
+            let checkTimer = null;
+
+            function clearWarning(input) {
+                input.classList.remove('has-link-error');
+                delete input.dataset.linkPrivate;
+                const row = input.closest('.form-row') || input.parentElement;
+                const subtext = row ? row.querySelector('.field-subtext') : null;
+                if (subtext && subtext.dataset.defaultHtml) {
+                    subtext.innerHTML = subtext.dataset.defaultHtml;
+                    subtext.classList.remove('has-link-error');
+                }
+                const oldBox = row ? row.querySelector('.link-privacy-warning') : null;
+                if (oldBox) oldBox.remove();
+            }
+
+            function showWarning(input, message) {
+                input.classList.add('has-link-error');
+                input.dataset.linkPrivate = 'true';
+                const row = input.closest('.form-row') || input.parentElement;
+                const subtext = row ? row.querySelector('.field-subtext') : null;
+                if (subtext) {
+                    if (!subtext.dataset.defaultHtml) {
+                        subtext.dataset.defaultHtml = subtext.innerHTML;
+                    }
+                    subtext.classList.add('has-link-error');
+                    subtext.innerHTML = '<strong>This link is Private (Restricted).</strong> Please change General Access to &ldquo;Anyone with the link can view&rdquo;.';
+                }
+                const oldBox = row ? row.querySelector('.link-privacy-warning') : null;
+                if (oldBox) oldBox.remove();
+            }
+
+            async function verifyInput(input) {
+                const val = (input.value || '').trim();
+                if (!val) {
+                    clearWarning(input);
+                    return true;
+                }
+
+                if (!val.includes('docs.google.com') && !val.includes('drive.google.com')) {
+                    clearWarning(input);
+                    return true;
+                }
+
+                try {
+                    const res = await fetch('/api/esper/verify-link', {
+                        method: 'POST',
+                        headers: { 'Content-Type': 'application/json' },
+                        body: JSON.stringify({ url: val }),
+                    });
+                    const data = await res.json();
+
+                    if (input.value.trim() !== val) return true;
+
+                    if (data && data.accessible === false && data.reason === 'private') {
+                        showWarning(input, data.message);
+                        return false;
+                    } else {
+                        clearWarning(input);
+                        return true;
+                    }
+                } catch (err) {
+                    clearWarning(input);
+                    return true;
+                }
+            }
+
+            window.verifyActiveGoogleLink = async function (form) {
+                const activeCategoryGroup = form.querySelector('.category-fields-group[style*="display: flex"], .category-fields-group:not([style*="display: none"])');
+                if (!activeCategoryGroup) return true;
+                const linkInput = activeCategoryGroup.querySelector(
+                    'input[name="articleDocLink"], input[name="researchDriveLink"], input[name="designerDriveLink"], input[name="inventorDriveLink"], input[name="buildTeamDriveLink"], input[name="shortFilmDriveLink"]'
+                );
+                if (!linkInput || !linkInput.value.trim()) return true;
+
+                if (linkInput.dataset.linkPrivate === 'true') {
+                    linkInput.focus();
+                    return false;
+                }
+
+                const ok = await verifyInput(linkInput);
+                if (!ok) linkInput.focus();
+                return ok;
+            };
+
+            linkInputs.forEach(input => {
+                input.addEventListener('input', () => {
+                    clearTimeout(checkTimer);
+                    checkTimer = setTimeout(() => verifyInput(input), 400);
+                });
+                input.addEventListener('paste', () => {
+                    setTimeout(() => verifyInput(input), 60);
+                });
+                input.addEventListener('blur', () => {
+                    clearTimeout(checkTimer);
+                    verifyInput(input);
+                });
+            });
+        })();
 
         window.handleEsperFormSubmit = async function (event) {
             event.preventDefault();
@@ -8018,6 +8586,19 @@
             const btn = form.querySelector('.submit-btn');
             const originalText = btn.innerText;
             const msgBox = form.querySelector('#form-message');
+
+            // Check Google link accessibility before proceeding
+            if (window.verifyActiveGoogleLink) {
+                const isLinkOk = await window.verifyActiveGoogleLink(form);
+                if (!isLinkOk) {
+                    msgBox.style.display = 'block';
+                    msgBox.style.backgroundColor = '#f8d7da';
+                    msgBox.style.color = '#721c24';
+                    msgBox.style.border = '1px solid #f5c6cb';
+                    msgBox.innerText = 'Please set your Google link to "Anyone with the link can view" before submitting.';
+                    return;
+                }
+            }
 
             btn.innerText = 'Submitting...';
             btn.disabled = true;
@@ -8042,12 +8623,14 @@
                     form.reset();
                     const logoText = form.querySelector('#school-logo-filename');
                     if (logoText) logoText.textContent = 'Click or drag & drop to upload school logo';
-                    const logoBox = form.querySelector('.file-upload-box');
-                    if (logoBox) logoBox.classList.remove('has-file');
-                    const logoIcon = form.querySelector('.file-upload-icon');
-                    if (logoIcon && logoIcon.dataset.defaultHtml) {
-                        logoIcon.innerHTML = logoIcon.dataset.defaultHtml;
-                    }
+                    const contestantText = form.querySelector('#contestant-image-filename');
+                    if (contestantText) contestantText.textContent = 'Click or drag & drop to upload photo';
+                    const uploadBoxes = form.querySelectorAll('.file-upload-box');
+                    uploadBoxes.forEach(box => {
+                        box.classList.remove('has-file');
+                        const icon = box.querySelector('.file-upload-icon');
+                        if (icon && icon.dataset.defaultHtml) icon.innerHTML = icon.dataset.defaultHtml;
+                    });
                     const categoryGroups = form.querySelectorAll('.category-fields-group');
                     categoryGroups.forEach(group => {
                         group.style.display = 'none';
@@ -8106,24 +8689,59 @@
                     team.appendChild(wrapper);
                 }
                 if (observer) observer.disconnect();
+
+                // Auto-select category if specified in URL query parameter (?category=...)
+                enforceSelectedCategoryFromUrl();
+                setTimeout(() => {
+                    const formTarget = wrapper.querySelector('#esper-registration-form') || wrapper;
+                    if (formTarget) {
+                        formTarget.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                    }
+                }, 150);
             }
             isInjecting = false;
         }
 
+        function enforceSelectedCategoryFromUrl() {
+            const urlParams = new URLSearchParams(window.location.search);
+            const requestedCategory = urlParams.get('category');
+            if (!requestedCategory) return;
+            const selectEl = document.getElementById('award-category');
+            if (!selectEl) return;
+            const opt = selectEl.querySelector(`option[value="${requestedCategory}"]`);
+            if (opt && selectEl.value !== requestedCategory) {
+                selectEl.value = requestedCategory;
+                if (window.handleAwardCategoryChange) {
+                    window.handleAwardCategoryChange(selectEl);
+                }
+                selectEl.dispatchEvent(new Event('change', { bubbles: true }));
+            }
+        }
+
         const observer = new MutationObserver(() => {
             injectRegistrationForm();
+            enforceSelectedCategoryFromUrl();
         });
 
         observer.observe(document.body, { childList: true, subtree: true });
 
         if (document.readyState === 'loading') {
-            document.addEventListener('DOMContentLoaded', injectRegistrationForm);
+            document.addEventListener('DOMContentLoaded', () => {
+                injectRegistrationForm();
+                enforceSelectedCategoryFromUrl();
+            });
         } else {
             injectRegistrationForm();
+            enforceSelectedCategoryFromUrl();
         }
-        window.addEventListener('load', injectRegistrationForm);
-        setTimeout(injectRegistrationForm, 200);
-        setTimeout(injectRegistrationForm, 800);
+        window.addEventListener('load', () => {
+            injectRegistrationForm();
+            enforceSelectedCategoryFromUrl();
+        });
+        setTimeout(() => { injectRegistrationForm(); enforceSelectedCategoryFromUrl(); }, 100);
+        setTimeout(() => { injectRegistrationForm(); enforceSelectedCategoryFromUrl(); }, 300);
+        setTimeout(() => { injectRegistrationForm(); enforceSelectedCategoryFromUrl(); }, 800);
+        setTimeout(() => { enforceSelectedCategoryFromUrl(); }, 1500);
     </script>
 
 
