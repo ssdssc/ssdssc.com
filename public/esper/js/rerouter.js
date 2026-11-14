@@ -62,6 +62,8 @@
         "/index.html": "/esper",
         "https://orchid-themes-501884.framer.app/popular": "/esper/open",
         "/inter": "/esper/inter",
+        "/open": "/esper/open",
+        "/open/": "/esper/open",
         "/intra": "/esper/intra",
         "https://ssdssc.com/inter": "/esper/inter",
         "https://ssdssc.com/intra": "/esper/intra",
@@ -694,6 +696,10 @@
         text.includes("school popular awards") ||
         text === "popular awards" ||
         text.includes("open awards") ||
+        href === "/open" ||
+        href.endsWith("/open") ||
+        href === "/open/" ||
+        href.endsWith("/open/") ||
         href === "/popular" ||
         href.endsWith("/popular") ||
         href.includes("ssdssc.com/popular") ||
@@ -804,6 +810,10 @@
       text.includes("school popular awards") ||
       text === "popular awards" ||
       text.includes("open awards") ||
+      href === "/open" ||
+      href.endsWith("/open") ||
+      href === "/open/" ||
+      href.endsWith("/open/") ||
       href === "/popular" ||
       href.endsWith("/popular") ||
       href.includes("ssdssc.com/popular") ||
@@ -825,6 +835,535 @@
         const style = document.createElement("style");
         style.id = "esper-mobile-nav-style";
         style.textContent = `
+          .framer-13kfmgi-container {
+            order: 9 !important;
+            position: relative !important;
+            top: auto !important;
+            left: auto !important;
+            margin: 16px auto !important;
+          }
+          .framer-SSS4a,
+          .framer-SSS4a.framer-1exli70,
+          .framer-SSS4a.framer-v-19y430h,
+          .framer-SSS4a.framer-v-w7utna,
+          .framer-SSS4a.framer-v-w7utna.framer-1exli70 {
+            width: 100% !important;
+            max-width: 100vw !important;
+            box-sizing: border-box !important;
+          }
+          .framer-SSS4a .framer-bu79ji {
+            width: 100% !important;
+            max-width: 100% !important;
+            box-sizing: border-box !important;
+          }
+          .framer-SSS4a .framer-1qupc9b {
+            width: 100% !important;
+            max-width: 100% !important;
+            box-sizing: border-box !important;
+            padding: 16px 20px !important;
+          }
+          .framer-bmBk0,
+          .framer-bmBk0.framer-1e142ra {
+            width: 100% !important;
+            max-width: 1248px !important;
+            margin: 0 auto !important;
+            padding: 32px 24px 48px !important;
+            box-sizing: border-box !important;
+            overflow: visible !important;
+            gap: 0 !important;
+          }
+          .framer-bmBk0 .framer-dfko03 {
+            display: flex !important;
+            flex-direction: row !important;
+            justify-content: space-between !important;
+            align-items: center !important;
+            width: 100% !important;
+            max-width: 100% !important;
+            margin: 0 !important;
+            padding: 0 !important;
+            box-sizing: border-box !important;
+            overflow: visible !important;
+            font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif !important;
+            font-size: 13.5px !important;
+            font-weight: 400 !important;
+            line-height: 1.5 !important;
+            letter-spacing: normal !important;
+            text-transform: none !important;
+          }
+          .framer-bmBk0 .framer-15pyp2k,
+          .framer-bmBk0 .framer-15pyp2k * {
+            font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif !important;
+            font-size: 13.5px !important;
+            text-transform: none !important;
+            letter-spacing: normal !important;
+          }
+          .framer-bmBk0 .framer-7heklo,
+          .framer-bmBk0 .framer-7heklo * {
+            font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif !important;
+            font-size: 13.5px !important;
+            text-transform: none !important;
+            letter-spacing: normal !important;
+          }
+          /* Esper '27 Coming Soon Typography & Centering */
+          .esper27-coming-soon-content {
+            align-items: center !important;
+            text-align: center !important;
+          }
+          .esper27-coming-soon-eyebrow {
+            font-family: "Constantine", serif !important;
+            font-size: 26px !important;
+            letter-spacing: 0.14em !important;
+            text-transform: uppercase !important;
+            color: #ffd57e !important;
+            font-style: normal !important;
+            font-weight: 400 !important;
+            text-align: center !important;
+            width: 100% !important;
+            display: block !important;
+            margin: 0 auto !important;
+            text-shadow: 0 0 16px rgba(255, 213, 126, 0.3) !important;
+          }
+          .esper27-coming-soon-title {
+            font-family: "Nebula", sans-serif !important;
+            font-size: 52px !important;
+            line-height: 1.15 !important;
+            letter-spacing: 0.08em !important;
+            text-transform: uppercase !important;
+            color: #ffffff !important;
+            font-style: normal !important;
+            font-weight: 400 !important;
+            text-align: center !important;
+            width: 100% !important;
+            display: block !important;
+            margin: 4px auto 12px auto !important;
+          }
+          .esper27-coming-soon-subtitle {
+            text-align: center !important;
+            margin: 0 auto 16px auto !important;
+          }
+          .esper27-counter-wrap {
+            display: flex !important;
+            flex-direction: column !important;
+            align-items: center !important;
+            width: 100% !important;
+          }
+          .esper27-counter-grid {
+            margin: 0 auto !important;
+          }
+          @media (max-width: 900px) {
+            .esper27-coming-soon-eyebrow {
+              font-size: 20px !important;
+              letter-spacing: 0.12em !important;
+            }
+            .esper27-coming-soon-title {
+              font-size: 38px !important;
+              letter-spacing: 0.05em !important;
+            }
+          }
+          /* Center align Monarch Imperial section content & subtitle */
+          .framer-wt6gb8 .framer-46ipdk {
+            display: flex !important;
+            flex-direction: column !important;
+            align-items: center !important;
+            text-align: center !important;
+          }
+          .framer-wt6gb8 .framer-m71xm8,
+          .framer-wt6gb8 .framer-m71xm8 h2,
+          .framer-m71xm8,
+          .framer-m71xm8 h2 {
+            text-align: center !important;
+            margin: 0 auto !important;
+          }
+          .framer-wt6gb8 .framer-1srbmyl,
+          .framer-wt6gb8 .framer-1srbmyl p,
+          .framer-1srbmyl,
+          .framer-1srbmyl p {
+            text-align: center !important;
+            margin: 0 auto !important;
+            width: 100% !important;
+          }
+          /* Hero background video */
+          .framer-w3gto7,
+          [data-framer-name="Plasma"] {
+            display: block !important;
+            visibility: visible !important;
+            opacity: 1 !important;
+          }
+          .esper-hero-video-bg {
+            position: absolute !important;
+            top: 0 !important;
+            left: 0 !important;
+            width: 100% !important;
+            height: 100% !important;
+            object-fit: cover !important;
+            object-position: center !important;
+            z-index: 0 !important;
+            pointer-events: none !important;
+          }
+
+          /* Shining animation for Esper '27 countdown boxes */
+          .esper27-counter-box {
+            position: relative !important;
+            overflow: hidden !important;
+            background: linear-gradient(180deg, rgba(26, 24, 20, 0.72) 0%, rgba(12, 12, 14, 0.88) 100%) !important;
+            border: 1px solid rgba(255, 213, 126, 0.22) !important;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.45), 0 0 10px rgba(255, 190, 77, 0.08), inset 0 1px 0 rgba(255, 255, 255, 0.12), inset 0 0 16px rgba(255, 213, 126, 0.04) !important;
+            backdrop-filter: blur(12px) !important;
+            -webkit-backdrop-filter: blur(12px) !important;
+            transition: border-color 0.4s ease, box-shadow 0.4s ease, transform 0.4s cubic-bezier(0.16, 1, 0.3, 1) !important;
+            animation: esperBoxGlowPulse 5s ease-in-out infinite alternate !important;
+          }
+          .esper27-counter-box:hover {
+            transform: translateY(-3px) scale(1.02) !important;
+            border-color: rgba(255, 213, 126, 0.6) !important;
+            box-shadow: 0 12px 36px rgba(0, 0, 0, 0.6), 0 0 25px rgba(255, 190, 77, 0.28), inset 0 1px 0 rgba(255, 255, 255, 0.2), inset 0 0 18px rgba(255, 213, 126, 0.12) !important;
+          }
+          .esper27-counter-box::after {
+            content: "" !important;
+            position: absolute !important;
+            top: 0 !important;
+            left: 0 !important;
+            width: 100% !important;
+            height: 100% !important;
+            background: linear-gradient(
+              110deg,
+              transparent 0%,
+              transparent 25%,
+              rgba(255, 215, 130, 0.03) 38%,
+              rgba(255, 235, 180, 0.15) 46%,
+              rgba(255, 255, 255, 0.35) 50%,
+              rgba(255, 235, 180, 0.15) 54%,
+              rgba(255, 215, 130, 0.03) 62%,
+              transparent 75%,
+              transparent 100%
+            ) !important;
+            transform: translateX(-160%) skewX(-20deg) translateZ(0) !important;
+            pointer-events: none !important;
+            mix-blend-mode: screen !important;
+            will-change: transform, opacity !important;
+            animation: esperSmoothShineSweep 5.5s cubic-bezier(0.22, 1, 0.36, 1) infinite !important;
+          }
+          .esper27-counter-grid .esper27-counter-box:nth-child(1)::after,
+          #esper27-countdown .esper27-counter-box:nth-child(1)::after {
+            animation-delay: 0s !important;
+          }
+          .esper27-counter-grid .esper27-counter-box:nth-child(2)::after,
+          #esper27-countdown .esper27-counter-box:nth-child(2)::after {
+            animation-delay: 0.18s !important;
+          }
+          .esper27-counter-grid .esper27-counter-box:nth-child(3)::after,
+          #esper27-countdown .esper27-counter-box:nth-child(3)::after {
+            animation-delay: 0.36s !important;
+          }
+          .esper27-counter-grid .esper27-counter-box:nth-child(4)::after,
+          #esper27-countdown .esper27-counter-box:nth-child(4)::after {
+            animation-delay: 0.54s !important;
+          }
+          @keyframes esperSmoothShineSweep {
+            0% {
+              transform: translateX(-160%) skewX(-20deg) translateZ(0);
+              opacity: 0;
+            }
+            3% {
+              opacity: 1;
+            }
+            26% {
+              transform: translateX(160%) skewX(-20deg) translateZ(0);
+              opacity: 1;
+            }
+            28%, 100% {
+              transform: translateX(160%) skewX(-20deg) translateZ(0);
+              opacity: 0;
+            }
+          }
+          @keyframes esperBoxGlowPulse {
+            0%, 100% {
+              border-color: rgba(255, 213, 126, 0.2);
+              box-shadow: 0 8px 32px rgba(0, 0, 0, 0.45), 0 0 8px rgba(255, 190, 77, 0.06), inset 0 1px 0 rgba(255, 255, 255, 0.1);
+            }
+            50% {
+              border-color: rgba(255, 213, 126, 0.42);
+              box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5), 0 0 18px rgba(255, 190, 77, 0.18), inset 0 1px 0 rgba(255, 255, 255, 0.16), inset 0 0 12px rgba(255, 213, 126, 0.08);
+            }
+          }
+          .esper27-countdown-value {
+            text-shadow: 0 0 12px rgba(255, 213, 126, 0.55), 0 0 24px rgba(255, 190, 77, 0.25) !important;
+            animation: esperTextShine 3s ease-in-out infinite alternate !important;
+          }
+          @keyframes esperTextShine {
+            0%, 100% {
+              text-shadow: 0 0 8px rgba(255, 213, 126, 0.45), 0 0 16px rgba(255, 190, 77, 0.2);
+              color: #ffd57e;
+            }
+            50% {
+              text-shadow: 0 0 18px rgba(255, 255, 255, 0.85), 0 0 32px rgba(255, 213, 126, 0.75), 0 0 45px rgba(255, 190, 77, 0.4);
+              color: #ffffff;
+            }
+          }
+          /* ==========================================================================
+             UNIFIED LUXURY SHINING ANIMATIONS (CARDS & BUTTONS ON ALL PAGES)
+             ========================================================================== */
+          .esper-award-card,
+          [data-framer-name="Card"],
+          a.framer-14ovzi3,
+          .framer-Wwu9j.framer-1hq3fz8,
+          .framer-Wwu9j {
+            transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1) !important;
+            text-decoration: none !important;
+          }
+          .esper-award-card:hover,
+          [data-framer-name="Card"]:hover,
+          a.framer-14ovzi3:hover,
+          .framer-Wwu9j.framer-1hq3fz8:hover,
+          .framer-Wwu9j:hover {
+            transform: translateY(-6px) !important;
+          }
+          .esper-award-card-text,
+          .esper-award-card .framer-1sg81zm,
+          .esper-award-card .framer-1uwndhu,
+          .esper-award-card .framer-nsuui8,
+          .esper-award-card .framer-1rquw6u,
+          [data-framer-name="Card"] .framer-1sg81zm,
+          [data-framer-name="Card"] .framer-1uwndhu,
+          [data-framer-name="Card"] .framer-nsuui8,
+          [data-framer-name="Card"] .framer-1rquw6u {
+            text-align: center !important;
+            display: flex !important;
+            flex-direction: column !important;
+            align-items: center !important;
+            justify-content: center !important;
+            width: 100% !important;
+          }
+          .esper-award-card-title,
+          [data-framer-name="Card"] .framer-nsuui8 h3,
+          [data-framer-name="Card"] .framer-nsuui8 .framer-text {
+            font-family: "Constantine", serif !important;
+            font-size: 20px !important;
+            font-weight: 600 !important;
+            line-height: 1.25 !important;
+            letter-spacing: 0.02em !important;
+            color: #ffffff !important;
+            margin: 14px auto 4px auto !important;
+            text-align: center !important;
+            white-space: nowrap !important;
+            overflow: hidden !important;
+            text-overflow: ellipsis !important;
+            width: 100% !important;
+            display: block !important;
+          }
+          .esper-award-card-sub,
+          [data-framer-name="Card"] .framer-1rquw6u p,
+          [data-framer-name="Card"] .framer-1rquw6u .framer-text {
+            font-family: "Nebula", sans-serif !important;
+            font-size: 12px !important;
+            letter-spacing: 0.1em !important;
+            text-transform: uppercase !important;
+            color: #ffd57e !important;
+            margin: 0 auto !important;
+            text-align: center !important;
+            width: 100% !important;
+            display: block !important;
+          }
+          .esper-award-card-imgwrap,
+          .framer-9xp6kq,
+          [data-framer-name="Member Image"] {
+            position: relative !important;
+            overflow: hidden !important;
+            border-radius: 20px !important;
+            border: 1px solid rgba(255, 213, 126, 0.22) !important;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5) !important;
+            transition: border-color 0.4s ease, box-shadow 0.4s ease !important;
+          }
+          .esper-award-card:hover .esper-award-card-imgwrap,
+          [data-framer-name="Card"]:hover .framer-9xp6kq,
+          a.framer-14ovzi3:hover .framer-9xp6kq,
+          .framer-Wwu9j:hover .framer-9xp6kq,
+          [data-framer-name="Card"]:hover [data-framer-name="Member Image"] {
+            border-color: rgba(255, 213, 126, 0.85) !important;
+            box-shadow: 0 16px 45px rgba(0, 0, 0, 0.9), 0 0 35px rgba(255, 190, 77, 0.45), inset 0 0 18px rgba(255, 213, 126, 0.2) !important;
+          }
+          .esper-award-card-imgwrap::before,
+          .framer-9xp6kq::before,
+          [data-framer-name="Member Image"]::before {
+            content: "" !important;
+            position: absolute !important;
+            top: 0 !important;
+            left: 0 !important;
+            width: 100% !important;
+            height: 100% !important;
+            background: linear-gradient(
+              115deg,
+              transparent 0%,
+              transparent 28%,
+              rgba(255, 215, 130, 0.04) 40%,
+              rgba(255, 235, 180, 0.18) 47%,
+              rgba(255, 255, 255, 0.45) 50%,
+              rgba(255, 235, 180, 0.18) 53%,
+              rgba(255, 215, 130, 0.04) 60%,
+              transparent 72%,
+              transparent 100%
+            ) !important;
+            transform: translateX(-150%) skewX(-20deg) translateZ(0) !important;
+            pointer-events: none !important;
+            opacity: 0 !important;
+            z-index: 6 !important;
+            mix-blend-mode: screen !important;
+            will-change: transform, opacity !important;
+          }
+          .esper-award-card:hover .esper-award-card-imgwrap::before,
+          [data-framer-name="Card"]:hover .framer-9xp6kq::before,
+          a.framer-14ovzi3:hover .framer-9xp6kq::before,
+          .framer-Wwu9j:hover .framer-9xp6kq::before,
+          [data-framer-name="Card"]:hover [data-framer-name="Member Image"]::before {
+            animation: esperCardShineSweep 0.9s cubic-bezier(0.22, 1, 0.36, 1) forwards !important;
+          }
+          @keyframes esperCardShineSweep {
+            0% {
+              transform: translateX(-150%) skewX(-20deg) translateZ(0);
+              opacity: 0;
+            }
+            10% {
+              opacity: 1;
+            }
+            90% {
+              opacity: 0.9;
+            }
+            100% {
+              transform: translateX(150%) skewX(-20deg) translateZ(0);
+              opacity: 0;
+            }
+          }
+          .esper-award-card .framer-z9yiom,
+          .framer-z9yiom,
+          [data-framer-name="Light Effect"] {
+            aspect-ratio: 1;
+            width: 420px !important;
+            height: 420px !important;
+            position: absolute !important;
+            top: -380px !important;
+            left: -380px !important;
+            overflow: hidden !important;
+            pointer-events: none !important;
+            transition: top 0.75s cubic-bezier(0.16, 1, 0.3, 1), left 0.75s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.5s ease !important;
+            opacity: 0.2 !important;
+            z-index: 4 !important;
+          }
+          .esper-award-card:hover .framer-z9yiom,
+          [data-framer-name="Card"]:hover .framer-z9yiom,
+          a.framer-14ovzi3:hover .framer-z9yiom,
+          .framer-Wwu9j:hover .framer-z9yiom,
+          [data-framer-name="Card"]:hover [data-framer-name="Light Effect"] {
+            top: 260px !important;
+            left: 200px !important;
+            opacity: 0.95 !important;
+          }
+          .esper-award-card:hover .esper-award-card-imgwrap {
+            border-color: rgba(255, 213, 126, 0.8) !important;
+            box-shadow: 0 16px 45px rgba(0, 0, 0, 0.9), 0 0 35px rgba(255, 190, 77, 0.4), inset 0 0 18px rgba(255, 213, 126, 0.2) !important;
+          }
+          .esper-award-card:hover .esper-award-card-title,
+          [data-framer-name="Card"]:hover .framer-nsuui8 h3,
+          a.framer-14ovzi3:hover .framer-nsuui8 h3,
+          .framer-Wwu9j:hover .framer-nsuui8 h3,
+          [data-framer-name="Card"]:hover .esper-award-card-title,
+          [data-framer-name="Card"]:hover .framer-nsuui8 .framer-text {
+            color: #ffd57e !important;
+            text-shadow: 0 0 14px rgba(255, 213, 126, 0.6) !important;
+          }
+          .esper-award-card-imgwrap img,
+          .framer-9xp6kq img,
+          .framer-1oeo7ga img,
+          [data-framer-name="Member Image"] img {
+            transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1) !important;
+          }
+          .esper-award-card:hover .esper-award-card-imgwrap img,
+          [data-framer-name="Card"]:hover .framer-9xp6kq img,
+          a.framer-14ovzi3:hover .framer-9xp6kq img,
+          .framer-Wwu9j:hover .framer-9xp6kq img,
+          [data-framer-name="Card"]:hover .framer-1oeo7ga img,
+          [data-framer-name="Card"]:hover [data-framer-name="Member Image"] img {
+            transform: scale(1.06) !important;
+          }
+          .framer-NuCN4,
+          [data-framer-name="Subscribe Button"] {
+            transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.3s ease !important;
+          }
+          .framer-NuCN4:hover,
+          [data-framer-name="Subscribe Button"]:hover {
+            transform: scale(1.04) translateY(-2px) !important;
+            box-shadow: 0 6px 20px rgba(255, 213, 126, 0.35) !important;
+          }
+          /* Luxury Gold Buttons (Watch Full Episode, Visit Full Album, Video Play Button) */
+          .framer-1gxryuz,
+          [data-framer-name="Orange Button"],
+          .framer-11ckt1l,
+          .framer-uiizrd-container a,
+          .framer-13kfmgi-container a,
+          .framer-1dbp5on-container a,
+          .framer-fe31eb-container a,
+          .framer-a7x7db-container a,
+          .framer-s59ln5-container a {
+            background: linear-gradient(180deg, #ffd885 0%, #d49326 50%, #a66e0a 100%) !important;
+            box-shadow: inset 0px 1px 2px rgba(255, 255, 255, 0.45), 0 4px 18px rgba(212, 147, 38, 0.35) !important;
+            border: 1px solid rgba(255, 225, 148, 0.45) !important;
+            transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1) !important;
+          }
+          .framer-1gxryuz:hover,
+          [data-framer-name="Orange Button"]:hover,
+          .framer-11ckt1l:hover,
+          .framer-uiizrd-container a:hover,
+          .framer-13kfmgi-container a:hover,
+          .framer-1dbp5on-container a:hover,
+          .framer-fe31eb-container a:hover,
+          .framer-a7x7db-container a:hover,
+          .framer-s59ln5-container a:hover {
+            background: linear-gradient(180deg, #ffe6a3 0%, #e5a73b 50%, #be8014 100%) !important;
+            box-shadow: inset 0px 1px 3px rgba(255, 255, 255, 0.65), 0 6px 26px rgba(229, 167, 59, 0.55) !important;
+            transform: translateY(-2px) !important;
+          }
+          .framer-1gxryuz .framer-swkj2d p,
+          .framer-1gxryuz .framer-swkj2d span,
+          [data-framer-name="Orange Button"] p,
+          [data-framer-name="Orange Button"] span {
+            color: #ffffff !important;
+            text-shadow: 0 1px 3px rgba(0, 0, 0, 0.5), 0 0 10px rgba(138, 88, 10, 0.4) !important;
+            font-weight: 500 !important;
+          }
+          .framer-GnrQ9.framer-ftv5ce,
+          .framer-GnrQ9,
+          .framer-ftv5ce,
+          [data-framer-name="Play"],
+          [data-framer-name="Pause"],
+          .framer-v-ftv5ce,
+          .framer-v-x07z0q {
+            background: linear-gradient(180deg, #ffd885 0%, #d49326 50%, #a66e0a 100%) !important;
+            box-shadow: inset 0px 1px 2px rgba(255, 255, 255, 0.5), 0 4px 22px rgba(212, 147, 38, 0.45) !important;
+            border: 1px solid rgba(255, 225, 148, 0.4) !important;
+            transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1) !important;
+          }
+          .framer-GnrQ9.framer-ftv5ce:hover,
+          .framer-GnrQ9:hover,
+          .framer-ftv5ce:hover,
+          [data-framer-name="Play"]:hover,
+          [data-framer-name="Pause"]:hover,
+          .framer-v-ftv5ce:hover,
+          .framer-v-x07z0q:hover {
+            background: linear-gradient(180deg, #ffe6a3 0%, #e5a73b 50%, #be8014 100%) !important;
+            box-shadow: inset 0px 1px 3px rgba(255, 255, 255, 0.7), 0 6px 30px rgba(229, 167, 59, 0.65) !important;
+            transform: scale(1.08) !important;
+          }
+          .framer-8e3bt0,
+          .framer-8e3bt0 *,
+          .framer-1qbciz1,
+          .framer-1qbciz1 *,
+          .framer-124em4z,
+          .framer-124em4z * {
+            font-family: "Constantine", serif !important;
+            font-style: normal !important;
+            font-weight: 400 !important;
+            letter-spacing: 0.02em !important;
+            text-transform: capitalize !important;
+          }
           .framer-z2h1x2 {
             cursor: pointer !important;
             pointer-events: auto !important;
@@ -844,20 +1383,124 @@
             transition: transform 0.25s ease, top 0.25s ease !important;
           }
 
-          /* Mobile form responsive alignment fix */
-          @media (max-width: 860px) {
+          /* Universal Card Title & Subtitle Overlap Fix */
+          .esper-awards-grid .esper-award-card-text,
+          .esper-award-card-text {
+            display: flex !important;
+            flex-direction: column !important;
+            align-items: center !important;
+            justify-content: flex-start !important;
+            width: 100% !important;
+            max-width: 280px !important;
+            height: auto !important;
+            min-height: 52px !important;
+            margin: 14px auto 0 auto !important;
+            padding: 0 4px !important;
+            position: relative !important;
+            box-sizing: border-box !important;
+          }
+          .esper-awards-grid .esper-award-card-text *,
+          .esper-award-card-text * {
+            box-sizing: border-box !important;
+          }
+          .esper-awards-grid .framer-1uwndhu,
+          .esper-award-card-text .framer-1uwndhu {
+            display: flex !important;
+            flex-direction: column !important;
+            align-items: center !important;
+            justify-content: flex-start !important;
+            width: 100% !important;
+            height: auto !important;
+            min-height: 48px !important;
+            position: static !important;
+            margin: 0 auto !important;
+            padding: 0 !important;
+            gap: 6px !important;
+            overflow: visible !important;
+          }
+          .esper-awards-grid .framer-nsuui8,
+          .esper-award-card-text .framer-nsuui8,
+          .esper-awards-grid .framer-1rquw6u,
+          .esper-award-card-text .framer-1rquw6u {
+            display: block !important;
+            position: static !important;
+            width: 100% !important;
+            max-width: 100% !important;
+            height: auto !important;
+            min-height: auto !important;
+            margin: 0 !important;
+            padding: 0 !important;
+            text-align: center !important;
+            overflow: visible !important;
+            white-space: normal !important;
+          }
+          .esper-awards-grid .esper-award-card-title,
+          .esper-award-card-title {
+            display: block !important;
+            position: static !important;
+            font-family: "Constantine", serif !important;
+            font-size: 19px !important;
+            line-height: 1.25 !important;
+            color: #ffffff !important;
+            text-align: center !important;
+            margin: 0 !important;
+            padding: 0 !important;
+            letter-spacing: 0.02em !important;
+            transition: color 0.3s ease !important;
+            white-space: normal !important;
+          }
+          .esper-awards-grid .esper-award-card-sub,
+          .esper-award-card-sub {
+            display: block !important;
+            position: static !important;
+            font-family: "Nebula", sans-serif !important;
+            font-size: 11px !important;
+            line-height: 1.3 !important;
+            color: #e5a93c !important;
+            text-transform: uppercase !important;
+            letter-spacing: 0.14em !important;
+            text-align: center !important;
+            margin: 6px 0 0 0 !important;
+            padding: 0 !important;
+            white-space: normal !important;
+          }
+
+          /* Universal Mobile Viewport & Responsiveness Fix */
+          @media (max-width: 899.98px) {
             html, body, #main {
               overflow-x: hidden !important;
               max-width: 100vw !important;
               width: 100% !important;
               box-sizing: border-box !important;
+              position: relative !important;
             }
+            .framer-7YhlT,
             .framer-LJlZq,
+            .framer-7YhlT.framer-72rtr7,
             .framer-LJlZq.framer-72rtr7,
+            .framer-7YhlT.framer-193nlgj,
             .framer-LJlZq.framer-193nlgj,
+            .framer-7YhlT.framer-ebiaht,
             .framer-LJlZq.framer-ebiaht,
+            .framer-7YhlT.framer-9w4hrp,
             .framer-LJlZq.framer-9w4hrp,
-            div[data-framer-root] {
+            div[data-framer-root],
+            .framer-nqkdlu,
+            .framer-fanaa3-container,
+            .framer-hozd2f-container,
+            .framer-1xskp1a,
+            .framer-bmBk0,
+            .framer-bmBk0.framer-1e142ra,
+            .framer-SSS4a,
+            .framer-SSS4a.framer-1exli70,
+            .framer-SSS4a.framer-v-19y430h.framer-1exli70,
+            header,
+            footer,
+            #esper27-coming-soon,
+            #esper-all-awards-section,
+            .esper-derana-header,
+            .framer-1ylbk1b,
+            .framer-1gzigij {
               width: 100% !important;
               max-width: 100vw !important;
               box-sizing: border-box !important;
@@ -877,6 +1520,26 @@
               display: flex !important;
               flex-direction: column !important;
               align-items: center !important;
+            }
+            .framer-1gzigij {
+              max-width: 100% !important;
+              width: 100% !important;
+              padding: 8px !important;
+              box-sizing: border-box !important;
+            }
+            .framer-bmBk0 .framer-dfko03 {
+              flex-direction: column !important;
+              align-items: center !important;
+              text-align: center !important;
+              gap: 16px !important;
+              padding: 24px 16px !important;
+            }
+            .framer-bmBk0 .framer-15pyp2k,
+            .framer-bmBk0 .framer-7heklo {
+              justify-content: center !important;
+              text-align: center !important;
+              flex-wrap: wrap !important;
+              width: 100% !important;
             }
             #injected-esper-form {
               width: 100% !important;
@@ -908,6 +1571,48 @@
               width: 100% !important;
               max-width: 100% !important;
               box-sizing: border-box !important;
+            }
+          }
+
+          @media (max-width: 680px) {
+            .esper-awards-grid,
+            .esper-awards-grid.esper-grid-intra,
+            .esper-awards-grid.esper-grid-open,
+            .framer-LJlZq .framer-g159kn {
+              grid-template-columns: 1fr !important;
+              max-width: 320px !important;
+              margin-left: auto !important;
+              margin-right: auto !important;
+              gap: 32px !important;
+              padding-left: 0 !important;
+              padding-right: 0 !important;
+            }
+            .esper-awards-grid-section {
+              padding: 40px 16px 80px 16px !important;
+              width: 100% !important;
+              max-width: 100vw !important;
+              box-sizing: border-box !important;
+              overflow-x: hidden !important;
+            }
+            .esper-internal-subheader {
+              padding: 80px 16px 40px 16px !important;
+              width: 100% !important;
+              max-width: 100vw !important;
+              box-sizing: border-box !important;
+              overflow-x: hidden !important;
+            }
+            .esper-universal-register-bottom {
+              width: 100% !important;
+              max-width: 100% !important;
+              margin-top: 48px !important;
+              padding: 0 12px !important;
+              box-sizing: border-box !important;
+            }
+            .esper-universal-register-bottom-card {
+              flex-direction: column !important;
+              text-align: center !important;
+              padding: 28px 16px !important;
+              gap: 20px !important;
             }
           }
         `;
@@ -959,3 +1664,428 @@
   })();
 })();
 // --- END UNIVERSAL ESPER NAVIGATION HANDLER ---
+
+
+// --- UNIVERSAL HERO VIDEO HANDLER ---
+(function initHeroVideo() {
+  function ensureHeroVideo() {
+    if (window.location.pathname.startsWith("/esper/inter") ||
+        window.location.pathname.startsWith("/esper/intra") ||
+        window.location.pathname.startsWith("/esper/open") ||
+        window.location.pathname.startsWith("/esper/popular")) {
+      return;
+    }
+
+    var plasma = document.querySelector(".framer-w3gto7, [data-framer-name=\"Plasma\"]");
+    var target = plasma;
+    if (!target) {
+      target = document.querySelector(".framer-nqkdlu");
+    }
+
+    if (target && !target.querySelector("video.esper-hero-video-bg")) {
+      var video = document.createElement("video");
+      video.className = "esper-hero-video-bg";
+      video.autoplay = true;
+      video.loop = true;
+      video.muted = true;
+      video.playsInline = true;
+      video.setAttribute("autoplay", "");
+      video.setAttribute("loop", "");
+      video.setAttribute("muted", "");
+      video.setAttribute("playsinline", "");
+      video.setAttribute("webkit-playsinline", "");
+      video.poster = "/esper/images/hero-poster.png";
+      video.src = "/esper/hero-video.mp4";
+      video.style.cssText = "position:absolute;top:0;left:0;width:100%;height:100%;object-fit:cover;object-position:center;z-index:0;pointer-events:none;";
+      target.prepend(video);
+      var playPromise = video.play();
+      if (playPromise !== undefined) {
+        playPromise.catch(function() {});
+      }
+    }
+  }
+
+  if (document.readyState === "loading") {
+    document.addEventListener("DOMContentLoaded", ensureHeroVideo);
+  } else {
+    ensureHeroVideo();
+  }
+  setInterval(ensureHeroVideo, 1200);
+})();
+
+// --- UNIVERSAL PAGE LOAD VISIBILITY & ESPER 27 HANDLER ---
+(function() {
+  function revealPageContent() {
+    var selectors = [
+      ".framer-lhng8p",
+      "[data-framer-name='Team']",
+      "[data-framer-name='Bottom']",
+      "[data-framer-appear-id]",
+      ".framer-nrbcmf",
+      ".ssr-variant",
+      ".framer-1ylbk1b"
+    ];
+    var els = document.querySelectorAll(selectors.join(","));
+    for (var i = 0; i < els.length; i++) {
+      var el = els[i];
+      if (el.style.opacity === "0" || el.style.opacity === "0.001") {
+        el.style.opacity = "1";
+        el.style.transform = "none";
+        el.style.filter = "none";
+      }
+    }
+
+    // Ensure bento gallery images are never covered by black overlays
+    document.querySelectorAll(".framer-ig4vtf-container [class*='bento-card'] > div").forEach(function(div) {
+      div.style.setProperty("display", "none", "important");
+      div.style.setProperty("opacity", "0", "important");
+    });
+    document.querySelectorAll(".framer-ig4vtf-container [class*='bento-card'] img").forEach(function(img) {
+      img.style.setProperty("opacity", "1", "important");
+      img.style.setProperty("visibility", "visible", "important");
+      img.style.setProperty("display", "block", "important");
+    });
+
+    removeOldAwardsSections();
+
+    window.dispatchEvent(new Event("scroll"));
+    window.dispatchEvent(new Event("resize"));
+  }
+
+  // Permanently remove old Creator Awards / Tech Awards static sections
+  function removeOldAwardsSections() {
+    var selectors = [
+      ".framer-15qykm",
+      ".framer-g159kn",
+      ".framer-8e3bt0",
+      ".framer-1qbciz1",
+      ".framer-ndz598",
+      ".framer-w85e7j",
+      ".framer-p4q4wv",
+      "#awards2",
+      ".framer-1kbkbje",
+      ".framer-1n14928",
+      ".framer-124em4z",
+      ".framer-153iuej",
+      ".framer-1nbg65x",
+      ".framer-1sv1kgx",
+      "#team-1",
+      "#team-2",
+      ".framer-cp2zc9",
+      ".framer-ti0ezp",
+      ".framer-un73em",
+      ".framer-1og5q3n"
+    ];
+    document.querySelectorAll(selectors.join(",")).forEach(function(el) {
+      el.remove();
+    });
+    document.querySelectorAll("h2, h3, p, div").forEach(function(el) {
+      var t = (el.textContent || "").trim().toLowerCase();
+      if (t === "creator awards" || t === "school awards" || t === "tech awards") {
+        var parentSection = el.closest(".framer-15qykm, .framer-p4q4wv, #awards2, .framer-g159kn, .framer-153iuej");
+        if (parentSection) {
+          parentSection.remove();
+        } else {
+          el.remove();
+        }
+      }
+    });
+  }
+
+  // Esper '26 Concluded Heading: Esper '26 (large) + successfully concluded ! (medium)
+  function updateConcludedHeading() {
+    var h2s = document.querySelectorAll(".framer-1ylbk1b h2, .esper-concluded-heading");
+    h2s.forEach(function(h2) {
+      if (!h2.querySelector(".esper-concluded-large")) {
+        h2.classList.add("esper-concluded-heading");
+        h2.innerHTML = '<span class="esper-concluded-large">Esper \'26</span><span class="esper-concluded-medium">successfully concluded !</span>';
+      }
+    });
+  }
+
+  // Esper '27 countdown: dates not announced yet, keep all as '--'
+  function updateCountdown() {
+    var dEls = document.querySelectorAll("#esper27-days, .esper27-days");
+    var hEls = document.querySelectorAll("#esper27-hours, .esper27-hours");
+    var mEls = document.querySelectorAll("#esper27-mins, .esper27-mins");
+    var sEls = document.querySelectorAll("#esper27-secs, .esper27-secs");
+
+    dEls.forEach(function(el) { el.textContent = "--"; });
+    hEls.forEach(function(el) { el.textContent = "--"; });
+    mEls.forEach(function(el) { el.textContent = "--"; });
+    sEls.forEach(function(el) { el.textContent = "--"; });
+  }
+
+  if (document.readyState === "loading") {
+    document.addEventListener("DOMContentLoaded", function() {
+      revealPageContent();
+      updateCountdown();
+      updateConcludedHeading();
+    });
+  } else {
+    revealPageContent();
+    updateCountdown();
+    updateConcludedHeading();
+  }
+
+  window.addEventListener("load", function() {
+    revealPageContent();
+    updateCountdown();
+    updateConcludedHeading();
+  });
+
+  // Universal footer updater
+  function updateFooter() {
+    var curYear = new Date().getFullYear();
+    // Target left author container
+    document.querySelectorAll(".framer-15pyp2k, [data-framer-name='Author']").forEach(function(el) {
+      el.innerHTML = '<span style="color: #888888;">Created by</span> <span style="color: #ffffff; font-weight: 500;">Team Ocular</span><span style="color: #888888;">, Re-Designed by</span> <a href="https://frametoque.com" target="_blank" rel="noopener noreferrer" style="color: #ffffff; font-weight: 500; text-decoration: underline; text-underline-offset: 3px;">Frametoque Digital</a>';
+    });
+
+    // Target right copyright container
+    document.querySelectorAll(".framer-7heklo, [data-framer-name='Tool'], [data-framer-name='Created by boucheedesign']").forEach(function(el) {
+      el.innerHTML = '<span style="color: #ffffff; white-space: nowrap;">© ' + curYear + ' SSDSSC. All Rights Reserved.</span>';
+    });
+  }
+
+  if (document.readyState === "loading") {
+    document.addEventListener("DOMContentLoaded", updateFooter);
+  } else {
+    updateFooter();
+  }
+  window.addEventListener("load", updateFooter);
+  setInterval(function() {
+    updateFooter();
+    updateConcludedHeading();
+  }, 1000);
+
+
+  setTimeout(revealPageContent, 40);
+  setTimeout(revealPageContent, 120);
+  setTimeout(revealPageContent, 300);
+  setTimeout(revealPageContent, 600);
+  setTimeout(revealPageContent, 1200);
+
+  setInterval(updateCountdown, 1000);
+
+
+  // ==========================================
+  // LENIS SMOOTH SCROLL ENGINE
+  // ==========================================
+(function(window, document) {
+  'use strict';
+  function clamp(e, t, n) { return Math.max(e, Math.min(t, n)); }
+  var p = window;
+  var R = clamp;
+  var i = function() {};
+  var te, z, B, V, H, U;
+
+   i(), te = class { advance(e) { if (!this.isRunning) return; let t = !1; if (this.lerp) this.value = function (e, t, n, r) { return function (e, t, n) { return (1 - n) * e + n * t }(e, t, 1 - Math.exp(-n * r)) }(this.value, this.to, 60 * this.lerp, e), Math.round(this.value) === this.to && (this.value = this.to, t = !0); else { this.currentTime += e; let n = R(0, this.currentTime / this.duration, 1); t = n >= 1; let r = t ? 1 : this.easing(n); this.value = this.from + (this.to - this.from) * r } t && this.stop(), this.onUpdate?.(this.value, t) } stop() { this.isRunning = !1 } fromTo(e, t, { lerp: n = .1, duration: r = 1, easing: i = (e => e), onStart: a, onUpdate: o }) { this.from = this.value = e, this.to = t, this.lerp = n, this.duration = r, this.easing = i, this.currentTime = 0, this.isRunning = !0, a?.(), this.onUpdate = o } }, z = class { constructor({ wrapper: e, content: t, autoResize: n = !0, debounce: r = 250 } = {}) { this.wrapper = e, this.content = t, n && (this.debouncedResize = function (e, t) { let n; return function () { let r = arguments, i = this; clearTimeout(n), n = setTimeout((function () { e.apply(i, r) }), t) } }(this.resize, r), this.wrapper === p ? p.addEventListener(`resize`, this.debouncedResize, !1) : (this.wrapperResizeObserver = new ResizeObserver(this.debouncedResize), this.wrapperResizeObserver.observe(this.wrapper)), this.contentResizeObserver = new ResizeObserver(this.debouncedResize), this.contentResizeObserver.observe(this.content)), this.resize() } destroy() { this.wrapperResizeObserver?.disconnect(), this.contentResizeObserver?.disconnect(), p.removeEventListener(`resize`, this.debouncedResize, !1) } resize = () => { this.onWrapperResize(), this.onContentResize() }; onWrapperResize = () => { this.wrapper === p ? (this.width = p.innerWidth, this.height = p.innerHeight) : (this.width = this.wrapper.clientWidth, this.height = this.wrapper.clientHeight) }; onContentResize = () => { this.wrapper === p ? (this.scrollHeight = this.content.scrollHeight, this.scrollWidth = this.content.scrollWidth) : (this.scrollHeight = this.wrapper.scrollHeight, this.scrollWidth = this.wrapper.scrollWidth) }; get limit() { return { x: this.scrollWidth - this.width, y: this.scrollHeight - this.height } } }, B = class { constructor() { this.events = {} } emit(e, ...t) { let n = this.events[e] || []; for (let e = 0, r = n.length; e < r; e++)n[e](...t) } on(e, t) { return this.events[e]?.push(t) || (this.events[e] = [t]), () => { this.events[e] = this.events[e]?.filter((e => t !== e)) } } off(e, t) { this.events[e] = this.events[e]?.filter((e => t !== e)) } destroy() { this.events = {} } }, V = 100 / 6, H = class { constructor(e, { wheelMultiplier: t = 1, touchMultiplier: n = 1 }) { this.element = e, this.wheelMultiplier = t, this.touchMultiplier = n, this.touchStart = { x: null, y: null }, this.emitter = new B, p.addEventListener(`resize`, this.onWindowResize, !1), this.onWindowResize(), this.element.addEventListener(`wheel`, this.onWheel, { passive: !1 }), this.element.addEventListener(`touchstart`, this.onTouchStart, { passive: !1 }), this.element.addEventListener(`touchmove`, this.onTouchMove, { passive: !1 }), this.element.addEventListener(`touchend`, this.onTouchEnd, { passive: !1 }) } on(e, t) { return this.emitter.on(e, t) } destroy() { this.emitter.destroy(), p.removeEventListener(`resize`, this.onWindowResize, !1), this.element.removeEventListener(`wheel`, this.onWheel, { passive: !1 }), this.element.removeEventListener(`touchstart`, this.onTouchStart, { passive: !1 }), this.element.removeEventListener(`touchmove`, this.onTouchMove, { passive: !1 }), this.element.removeEventListener(`touchend`, this.onTouchEnd, { passive: !1 }) } onTouchStart = e => { let { clientX: t, clientY: n } = e.targetTouches ? e.targetTouches[0] : e; this.touchStart.x = t, this.touchStart.y = n, this.lastDelta = { x: 0, y: 0 }, this.emitter.emit(`scroll`, { deltaX: 0, deltaY: 0, event: e }) }; onTouchMove = e => { let { clientX: t, clientY: n } = e.targetTouches ? e.targetTouches[0] : e, r = -(t - this.touchStart.x) * this.touchMultiplier, i = -(n - this.touchStart.y) * this.touchMultiplier; this.touchStart.x = t, this.touchStart.y = n, this.lastDelta = { x: r, y: i }, this.emitter.emit(`scroll`, { deltaX: r, deltaY: i, event: e }) }; onTouchEnd = e => { this.emitter.emit(`scroll`, { deltaX: this.lastDelta.x, deltaY: this.lastDelta.y, event: e }) }; onWheel = e => { let { deltaX: t, deltaY: n, deltaMode: r } = e; t *= r === 1 ? V : r === 2 ? this.windowWidth : 1, n *= r === 1 ? V : r === 2 ? this.windowHeight : 1, t *= this.wheelMultiplier, n *= this.wheelMultiplier, this.emitter.emit(`scroll`, { deltaX: t, deltaY: n, event: e }) }; onWindowResize = () => { this.windowWidth = p.innerWidth, this.windowHeight = p.innerHeight } }, U = class { constructor({ wrapper: e = p, content: t = document.documentElement, wheelEventsTarget: n = e, eventsTarget: r = n, smoothWheel: i = !0, syncTouch: a = !1, syncTouchLerp: o = .075, touchInertiaMultiplier: s = 35, duration: c, easing: l = (e => Math.min(1, 1.001 - 2 ** (-10 * e))), lerp: u = !c && .1, infinite: d = !1, orientation: f = `vertical`, gestureOrientation: m = `vertical`, touchMultiplier: h = 1, wheelMultiplier: g = 1, autoResize: _ = !0, prevent: v = !1, __experimental__naiveDimensions: y = !1 } = {}) { this.__isScrolling = !1, this.__isStopped = !1, this.__isLocked = !1, this.onVirtualScroll = ({ deltaX: e, deltaY: t, event: n }) => { if (n.ctrlKey) return; let r = n.type.includes(`touch`), i = n.type.includes(`wheel`); if (this.isTouching = n.type === `touchstart` || n.type === `touchmove`, this.options.syncTouch && r && n.type === `touchstart` && !this.isStopped && !this.isLocked) return void this.reset(); let a = e === 0 && t === 0, o = this.options.gestureOrientation === `vertical` && t === 0 || this.options.gestureOrientation === `horizontal` && e === 0; if (a || o) return; let s = n.composedPath(); s = s.slice(0, s.indexOf(this.rootElement)); let c = this.options.prevent; if (s.find((e => (typeof c == `function` ? c?.(e) : c) || e.hasAttribute?.call(e, `data-lenis-prevent`) || r && e.hasAttribute?.call(e, `data-lenis-prevent-touch`) || i && e.hasAttribute?.call(e, `data-lenis-prevent-wheel`) || e.classList?.contains(`lenis`) && !e.classList?.contains(`lenis-stopped`)))) return; if (this.isStopped || this.isLocked) return void n.preventDefault(); if (!(this.options.syncTouch && r || this.options.smoothWheel && i)) return this.isScrolling = `native`, void this.animate.stop(); n.preventDefault(); let l = t; this.options.gestureOrientation === `both` ? l = Math.abs(t) > Math.abs(e) ? t : e : this.options.gestureOrientation === `horizontal` && (l = e); let u = r && this.options.syncTouch, d = r && n.type === `touchend` && Math.abs(l) > 5; d && (l = this.velocity * this.options.touchInertiaMultiplier), this.scrollTo(this.targetScroll + l, Object.assign({ programmatic: !1 }, u ? { lerp: d ? this.options.syncTouchLerp : 1 } : { lerp: this.options.lerp, duration: this.options.duration, easing: this.options.easing })) }, this.onNativeScroll = () => { if (clearTimeout(this.__resetVelocityTimeout), delete this.__resetVelocityTimeout, this.__preventNextNativeScrollEvent) delete this.__preventNextNativeScrollEvent; else if (!1 === this.isScrolling || this.isScrolling === `native`) { let e = this.animatedScroll; this.animatedScroll = this.targetScroll = this.actualScroll, this.lastVelocity = this.velocity, this.velocity = this.animatedScroll - e, this.direction = Math.sign(this.animatedScroll - e), this.isScrolling = `native`, this.emit(), this.velocity !== 0 && (this.__resetVelocityTimeout = setTimeout((() => { this.lastVelocity = this.velocity, this.velocity = 0, this.isScrolling = !1, this.emit() }), 400)) } }, p.lenisVersion = `1.1.2`, e !== document.documentElement && e !== document.body || (e = p), this.options = { wrapper: e, content: t, wheelEventsTarget: n, eventsTarget: r, smoothWheel: i, syncTouch: a, syncTouchLerp: o, touchInertiaMultiplier: s, duration: c, easing: l, lerp: u, infinite: d, gestureOrientation: m, orientation: f, touchMultiplier: h, wheelMultiplier: g, autoResize: _, prevent: v, __experimental__naiveDimensions: y }, this.animate = new te, this.emitter = new B, this.dimensions = new z({ wrapper: e, content: t, autoResize: _ }), this.updateClassName(), this.userData = {}, this.time = 0, this.velocity = this.lastVelocity = 0, this.isLocked = !1, this.isStopped = !1, this.isScrolling = !1, this.targetScroll = this.animatedScroll = this.actualScroll, this.options.wrapper.addEventListener(`scroll`, this.onNativeScroll, !1), this.virtualScroll = new H(r, { touchMultiplier: h, wheelMultiplier: g }), this.virtualScroll.on(`scroll`, this.onVirtualScroll) } destroy() { this.emitter.destroy(), this.options.wrapper.removeEventListener(`scroll`, this.onNativeScroll, !1), this.virtualScroll.destroy(), this.dimensions.destroy(), this.cleanUpClassName() } on(e, t) { return this.emitter.on(e, t) } off(e, t) { return this.emitter.off(e, t) } setScroll(e) { this.isHorizontal ? this.rootElement.scrollLeft = e : this.rootElement.scrollTop = e } resize() { this.dimensions.resize() } emit({ userData: e = {} } = {}) { this.userData = e, this.emitter.emit(`scroll`, this), this.userData = {} } reset() { this.isLocked = !1, this.isScrolling = !1, this.animatedScroll = this.targetScroll = this.actualScroll, this.lastVelocity = this.velocity = 0, this.animate.stop() } start() { this.isStopped && (this.isStopped = !1, this.reset()) } stop() { this.isStopped || (this.isStopped = !0, this.animate.stop(), this.reset()) } raf(e) { let t = e - (this.time || e); this.time = e, this.animate.advance(.001 * t) } scrollTo(e, { offset: t = 0, immediate: n = !1, lock: r = !1, duration: i = this.options.duration, easing: a = this.options.easing, lerp: o = !i && this.options.lerp, onStart: s, onComplete: c, force: l = !1, programmatic: u = !0, userData: d = {} } = {}) { if (!this.isStopped && !this.isLocked || l) { if ([`top`, `left`, `start`].includes(e)) e = 0; else if ([`bottom`, `right`, `end`].includes(e)) e = this.limit; else { let n; if (typeof e == `string` ? n = document.querySelector(e) : e != null && e.nodeType && (n = e), n) { if (this.options.wrapper !== p) { let e = this.options.wrapper.getBoundingClientRect(); t -= this.isHorizontal ? e.left : e.top } let r = n.getBoundingClientRect(); e = (this.isHorizontal ? r.left : r.top) + this.animatedScroll } } if (typeof e == `number`) { if (e += t, e = Math.round(e), this.options.infinite ? u && (this.targetScroll = this.animatedScroll = this.scroll) : e = R(0, e, this.limit), n) return this.animatedScroll = this.targetScroll = e, this.setScroll(this.scroll), this.reset(), void (c == null || c(this)); e !== this.targetScroll && (u || (this.targetScroll = e), this.animate.fromTo(this.animatedScroll, e, { duration: i, easing: a, lerp: o, onStart: () => { r && (this.isLocked = !0), this.isScrolling = `smooth`, s?.(this) }, onUpdate: (e, t) => { this.isScrolling = `smooth`, this.lastVelocity = this.velocity, this.velocity = e - this.animatedScroll, this.direction = Math.sign(this.velocity), this.animatedScroll = e, this.setScroll(this.scroll), u && (this.targetScroll = e), t || this.emit({ userData: d }), t && (this.reset(), this.emit({ userData: d }), c?.(this), this.__preventNextNativeScrollEvent = !0) } })) } } } get rootElement() { return this.options.wrapper === p ? document.documentElement : this.options.wrapper } get limit() { return this.options.__experimental__naiveDimensions ? this.isHorizontal ? this.rootElement.scrollWidth - this.rootElement.clientWidth : this.rootElement.scrollHeight - this.rootElement.clientHeight : this.dimensions.limit[this.isHorizontal ? `x` : `y`] } get isHorizontal() { return this.options.orientation === `horizontal` } get actualScroll() { return this.isHorizontal ? this.rootElement.scrollLeft : this.rootElement.scrollTop } get scroll() { return this.options.infinite ? function (e, t) { return (e % t + t) % t }(this.animatedScroll, this.limit) : this.animatedScroll } get progress() { return this.limit === 0 ? 1 : this.scroll / this.limit } get isScrolling() { return this.__isScrolling } set isScrolling(e) { this.__isScrolling !== e && (this.__isScrolling = e, this.updateClassName()) } get isStopped() { return this.__isStopped } set isStopped(e) { this.__isStopped !== e && (this.__isStopped = e, this.updateClassName()) } get isLocked() { return this.__isLocked } set isLocked(e) { this.__isLocked !== e && (this.__isLocked = e, this.updateClassName()) } get isSmooth() { return this.isScrolling === `smooth` } get className() { let e = `lenis`; return this.isStopped && (e += ` lenis-stopped`), this.isLocked && (e += ` lenis-locked`), this.isScrolling && (e += ` lenis-scrolling`), this.isScrolling === `smooth` && (e += ` lenis-smooth`), e } updateClassName() { this.cleanUpClassName(), this.rootElement.className = `${this.rootElement.className} ${this.className}`.trim() } cleanUpClassName() { this.rootElement.className = this.rootElement.className.replace(/lenis(-\w+)?/g, ``).trim() } } 
+
+  window.Lenis = U;
+})(typeof window !== 'undefined' ? window : globalThis, typeof document !== 'undefined' ? document : {});
+
+
+  (function initUniversalSmoothScroll() {
+    if (typeof window === "undefined" || typeof document === "undefined") return;
+
+    if (window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+      document.documentElement.style.scrollBehavior = "smooth";
+      return;
+    }
+
+    var styleId = "lenis-smooth-scroll-styles";
+    if (!document.getElementById(styleId)) {
+      var style = document.createElement("style");
+      style.id = styleId;
+      style.textContent = [
+        "html.lenis, html.lenis body { height: auto; }",
+        ".lenis.lenis-smooth { scroll-behavior: auto !important; }",
+        ".lenis.lenis-smooth [data-lenis-prevent] { overscroll-behavior: contain; }",
+        ".lenis.lenis-stopped { overflow: hidden; }",
+        ".lenis.lenis-scrolling iframe { pointer-events: none; }",
+        "html { scroll-behavior: auto; }"
+      ].join('\n');
+      document.head.appendChild(style);
+    }
+
+    function setupLenis() {
+      if (typeof window.Lenis !== "function") return;
+      if (window.lenis && window.lenis.isSmooth) return;
+
+      try {
+        var lenis = new window.Lenis({
+          duration: 1.2,
+          easing: function(t) { return Math.min(1, 1.001 - Math.pow(2, -10 * t)); },
+          orientation: "vertical",
+          gestureOrientation: "vertical",
+          smoothWheel: true,
+          smoothTouch: false,
+          wheelMultiplier: 1.0,
+          touchMultiplier: 1.5,
+          infinite: false
+        });
+
+        window.lenis = lenis;
+
+        function raf(time) {
+          lenis.raf(time);
+          requestAnimationFrame(raf);
+        }
+        requestAnimationFrame(raf);
+
+        // Smooth scroll for internal anchor jumps (#contact, #team, etc.)
+        document.addEventListener("click", function(e) {
+          var a = e.target.closest("a[href*='#']");
+          if (!a) return;
+          var href = a.getAttribute("href") || "";
+          var hashIdx = href.indexOf("#");
+          if (hashIdx === -1) return;
+          var hash = href.slice(hashIdx);
+          if (!hash || hash === "#") return;
+
+          var path = href.slice(0, hashIdx);
+          if (path && path !== window.location.pathname && !window.location.href.includes(path)) return;
+
+          var target = document.querySelector(hash);
+          if (target) {
+            e.preventDefault();
+            e.stopPropagation();
+            lenis.scrollTo(target, { offset: -60, duration: 1.2 });
+          }
+        }, true);
+
+      } catch (err) {
+        console.warn("[ESPER] Lenis smooth scroll init:", err);
+      }
+    }
+
+    if (document.readyState === "loading") {
+      document.addEventListener("DOMContentLoaded", setupLenis);
+    } else {
+      setupLenis();
+    }
+    window.addEventListener("load", setupLenis);
+  })();
+
+
+  function removeWatchEpisodeButton() {
+    document.querySelectorAll(".framer-uiizrd-container, .framer-13kfmgi-container, [data-framer-name='Orange Button']").forEach(function(el) {
+      if (el.textContent && (el.textContent.includes("Full Episode") || el.textContent.includes("The Full Episode"))) {
+        el.remove();
+      }
+    });
+  }
+  if (document.readyState === "loading") {
+    document.addEventListener("DOMContentLoaded", removeWatchEpisodeButton);
+  } else {
+    removeWatchEpisodeButton();
+  }
+  window.addEventListener("load", removeWatchEpisodeButton);
+  setInterval(removeWatchEpisodeButton, 200);
+
+  // ESPER NAVIGATION & HERO VIDEO ENHANCEMENTS
+  (function initEsperNavAndHero() {
+    function setupNav() {
+      // Mobile menu toggle listener
+      document.addEventListener('click', function(e) {
+        var toggle = e.target.closest('.esper-mobile-toggle');
+        if (toggle) {
+          e.preventDefault();
+          var header = toggle.closest('.esper-top-header');
+          var dropdown = header ? header.querySelector('.esper-mobile-dropdown') : null;
+          if (dropdown) {
+            toggle.classList.toggle('is-open');
+            dropdown.classList.toggle('is-open');
+          }
+        }
+      });
+
+      // Close dropdown on click outside
+      document.addEventListener('click', function(e) {
+        if (!e.target.closest('.esper-top-header')) {
+          document.querySelectorAll('.esper-mobile-toggle.is-open').forEach(function(t) {
+            t.classList.remove('is-open');
+          });
+          document.querySelectorAll('.esper-mobile-dropdown.is-open').forEach(function(d) {
+            d.classList.remove('is-open');
+          });
+        }
+      });
+
+      // Homepage Framer nav Home link insertion & active state
+      function updateFramerNav() {
+        var framerNav = document.querySelector('nav.framer-1qupc9b');
+        if (framerNav && !framerNav.querySelector('a[href="/esper"]') && !framerNav.querySelector('.esper-framer-home-item')) {
+          var firstItem = framerNav.firstElementChild;
+          if (firstItem) {
+            var homeWrap = document.createElement('div');
+            homeWrap.className = 'esper-framer-home-item';
+            homeWrap.style.cssText = 'height: 100%; display: flex; align-items: center;';
+            homeWrap.innerHTML = '<a class="framer-88ORW framer-k2gp8 framer-mxw6ar framer-v-mxw6ar framer-1c72blj" href="/esper" style="height:100%"><div class="framer-j1yhrf" style="--framer-paragraph-spacing:0px;"><p class="framer-text framer-styles-preset-bgecq9" style="text-transform:uppercase;">HOME</p></div></a>';
+            framerNav.insertBefore(homeWrap, firstItem);
+          }
+        }
+
+        // Active state styling
+        var curPath = window.location.pathname.replace(/\/+$/, '') || '/esper';
+        document.querySelectorAll('nav.framer-1qupc9b a, .esper-header-nav a, .esper-mobile-dropdown a').forEach(function(a) {
+          var href = (a.getAttribute('href') || '').replace(/\/+$/, '') || '/esper';
+          if (href === curPath || (curPath === '' && href === '/esper')) {
+            a.classList.add('active');
+            var p = a.querySelector('p');
+            if (p) p.style.color = '#ffd57e';
+          }
+        });
+      }
+
+      updateFramerNav();
+      setInterval(updateFramerNav, 400);
+
+      // Hero video autoplay guarantee
+      function playHeroVideos() {
+        document.querySelectorAll('video.esper-combined-hero-video').forEach(function(vid) {
+          if (vid.paused) {
+            var p = vid.play();
+            if (p && typeof p.catch === 'function') p.catch(function() {});
+          }
+        });
+      }
+      playHeroVideos();
+      window.addEventListener('load', playHeroVideos);
+      document.addEventListener('touchstart', playHeroVideos, { once: true, passive: true });
+      document.addEventListener('click', playHeroVideos, { once: true, passive: true });
+    }
+
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', setupNav);
+    } else {
+      setupNav();
+    }
+  })();
+
+  // Global link fixer for /open -> /esper/open
+  function fixAllOpenLinks() {
+    document.querySelectorAll('a').forEach(function(a) {
+      var href = a.getAttribute('href') || '';
+      var rawHref = a.href || '';
+      var text = (a.textContent || '').trim().toLowerCase();
+      if (
+        href === '/open' || href === '/open/' || href.endsWith('/open') || href.endsWith('/open/') ||
+        rawHref.endsWith('/open') || rawHref.endsWith('/open/') ||
+        (text.includes('open awards') && !href.includes('/register'))
+      ) {
+        if (!href.includes('/register') && href !== '/esper/open') {
+          a.setAttribute('href', '/esper/open');
+        }
+      }
+    });
+  }
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', fixAllOpenLinks);
+  } else {
+    fixAllOpenLinks();
+  }
+  window.addEventListener('load', fixAllOpenLinks);
+  setInterval(fixAllOpenLinks, 400);
+})();

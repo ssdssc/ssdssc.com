@@ -1741,17 +1741,19 @@ var mt,
                     ref: r,
                     style: {
                       "--152s37q": vt(S),
-                      background: `linear-gradient(180deg, rgb(255, 119, 61) 0%, rgb(197, 57, 0) 100%)`,
+                      background: `linear-gradient(180deg, #ffd885 0%, #d49326 50%, #a66e0a 100%)`,
                       borderBottomLeftRadius: 100,
                       borderBottomRightRadius: 100,
                       borderTopLeftRadius: 100,
                       borderTopRightRadius: 100,
-                      boxShadow: `inset 0px 1px 5px 0px rgba(0, 0, 0, 0.25)`,
+                      boxShadow: `inset 0px 1px 2px rgba(255, 255, 255, 0.45), 0 4px 18px rgba(212, 147, 38, 0.35)`,
+                      border: `1px solid rgba(255, 225, 148, 0.45)`,
                       ...l,
                     },
                     variants: {
                       "knV6KwmH_-hover": {
-                        background: `linear-gradient(180deg, rgb(255, 91, 20) 0%, rgb(158, 45, 0) 100%)`,
+                        background: `linear-gradient(180deg, #ffe6a3 0%, #e5a73b 50%, #be8014 100%)`,
+                        boxShadow: `inset 0px 1px 3px rgba(255, 255, 255, 0.65), 0 6px 26px rgba(229, 167, 59, 0.55)`,
                       },
                       "v_X9zGVvr-hover": {
                         background: `linear-gradient(180deg, rgb(36, 36, 40) 0%, rgb(36, 36, 40) 100%)`,
@@ -3029,6 +3031,641 @@ var Jt,
         { supportsExplicitInterCodegen: !0 },
       ));
   });
+
+function esperComingSoonVNode() {
+  return _("div", {
+    className: "esper27-coming-soon-section",
+    id: "esper27-coming-soon",
+    style: {
+      order: 2,
+      width: "100%",
+      maxWidth: "1160px",
+      margin: "32px auto 48px auto",
+      padding: "0 16px",
+      boxSizing: "border-box"
+    },
+    children: [
+      _("div", {
+        className: "esper27-coming-soon-inner framer-wt6gb8",
+        style: {
+          display: "flex",
+          flexDirection: "row",
+          alignItems: "center",
+          justifyContent: "space-between",
+          gap: "40px",
+          width: "100%",
+          boxSizing: "border-box",
+          padding: "20px 0"
+        },
+        children: [
+          _("div", {
+            className: "esper27-coming-soon-content framer-46ipdk",
+            style: {
+              display: "flex",
+              flexDirection: "column",
+              alignItems: "center",
+              textAlign: "center",
+              flex: "1 0 0",
+              gap: "14px"
+            },
+            children: [
+              f("span", {
+                className: "esper27-coming-soon-eyebrow",
+                style: {
+                  fontFamily: "Constantine, serif",
+                  fontSize: "26px",
+                  letterSpacing: "0.14em",
+                  textTransform: "uppercase",
+                  color: "#ffd57e",
+                  fontWeight: "400",
+                  textAlign: "center",
+                  width: "100%",
+                  display: "block",
+                  margin: "0 auto"
+                },
+                children: "ESPER AWARDS ’27"
+              }),
+              _("h2", {
+                className: "esper27-coming-soon-title",
+                style: {
+                  fontFamily: "Nebula, sans-serif",
+                  fontSize: "52px",
+                  fontStyle: "normal",
+                  fontWeight: "400",
+                  lineHeight: "1.15",
+                  letterSpacing: "0.08em",
+                  textTransform: "uppercase",
+                  color: "#ffffff",
+                  textAlign: "center",
+                  width: "100%",
+                  display: "block",
+                  margin: "6px auto 14px auto"
+                },
+                children: "Coming Soon ."
+              }),
+              f("p", {
+                className: "esper27-coming-soon-subtitle",
+                style: {
+                  fontFamily: "Plus Jakarta Sans, sans-serif",
+                  fontSize: "16px",
+                  lineHeight: "1.65",
+                  color: "rgba(255, 255, 255, 0.72)",
+                  maxWidth: "420px",
+                  margin: "0 auto 16px auto",
+                  textAlign: "center"
+                },
+                children: "A new era of school science excellence and innovation — stay tuned for what’s next."
+              }),
+              _("div", {
+                className: "esper27-counter-wrap",
+                style: { width: "100%", marginTop: "8px", display: "flex", flexDirection: "column", alignItems: "center" },
+                children: _("div", {
+                  className: "esper27-counter-grid",
+                  id: "esper27-countdown",
+                  style: {
+                    display: "grid",
+                    gridTemplateColumns: "repeat(4, minmax(68px, 1fr))",
+                    gap: "14px",
+                    maxWidth: "440px",
+                    margin: "0 auto"
+                  },
+                  children: [
+                    _("div", {
+                      className: "esper27-counter-box",
+                      style: {
+                        background: "rgba(255, 255, 255, 0.03)",
+                        border: "1px solid rgba(255, 213, 126, 0.22)",
+                        borderRadius: "16px",
+                        padding: "16px 10px",
+                        textAlign: "center",
+                        display: "flex",
+                        flexDirection: "column",
+                        alignItems: "center",
+                        justifyContent: "center",
+                        boxShadow: "0 4px 20px rgba(0,0,0,0.35)",
+                        backdropFilter: "blur(12px)"
+                      },
+                      children: [
+                        f("span", {
+                          id: "esper27-days",
+                          className: "esper27-countdown-value",
+                          style: {
+                            fontFamily: "Constantine, serif",
+                            fontSize: "32px",
+                            fontWeight: "400",
+                            color: "#ffffff",
+                            lineHeight: "1"
+                          },
+                          children: "--"
+                        }),
+                        f("span", {
+                          className: "esper27-countdown-label",
+                          style: {
+                            fontFamily: "Nebula, sans-serif",
+                            fontSize: "10px",
+                            letterSpacing: "0.18em",
+                            color: "#ffd57e",
+                            marginTop: "6px",
+                            textTransform: "uppercase"
+                          },
+                          children: "DAYS"
+                        })
+                      ]
+                    }),
+                    _("div", {
+                      className: "esper27-counter-box",
+                      style: {
+                        background: "rgba(255, 255, 255, 0.03)",
+                        border: "1px solid rgba(255, 213, 126, 0.22)",
+                        borderRadius: "16px",
+                        padding: "16px 10px",
+                        textAlign: "center",
+                        display: "flex",
+                        flexDirection: "column",
+                        alignItems: "center",
+                        justifyContent: "center",
+                        boxShadow: "0 4px 20px rgba(0,0,0,0.35)",
+                        backdropFilter: "blur(12px)"
+                      },
+                      children: [
+                        f("span", {
+                          id: "esper27-hours",
+                          className: "esper27-countdown-value",
+                          style: {
+                            fontFamily: "Constantine, serif",
+                            fontSize: "32px",
+                            fontWeight: "400",
+                            color: "#ffffff",
+                            lineHeight: "1"
+                          },
+                          children: "--"
+                        }),
+                        f("span", {
+                          className: "esper27-countdown-label",
+                          style: {
+                            fontFamily: "Nebula, sans-serif",
+                            fontSize: "10px",
+                            letterSpacing: "0.18em",
+                            color: "#ffd57e",
+                            marginTop: "6px",
+                            textTransform: "uppercase"
+                          },
+                          children: "HOURS"
+                        })
+                      ]
+                    }),
+                    _("div", {
+                      className: "esper27-counter-box",
+                      style: {
+                        background: "rgba(255, 255, 255, 0.03)",
+                        border: "1px solid rgba(255, 213, 126, 0.22)",
+                        borderRadius: "16px",
+                        padding: "16px 10px",
+                        textAlign: "center",
+                        display: "flex",
+                        flexDirection: "column",
+                        alignItems: "center",
+                        justifyContent: "center",
+                        boxShadow: "0 4px 20px rgba(0,0,0,0.35)",
+                        backdropFilter: "blur(12px)"
+                      },
+                      children: [
+                        f("span", {
+                          id: "esper27-mins",
+                          className: "esper27-countdown-value",
+                          style: {
+                            fontFamily: "Constantine, serif",
+                            fontSize: "32px",
+                            fontWeight: "400",
+                            color: "#ffffff",
+                            lineHeight: "1"
+                          },
+                          children: "--"
+                        }),
+                        f("span", {
+                          className: "esper27-countdown-label",
+                          style: {
+                            fontFamily: "Nebula, sans-serif",
+                            fontSize: "10px",
+                            letterSpacing: "0.18em",
+                            color: "#ffd57e",
+                            marginTop: "6px",
+                            textTransform: "uppercase"
+                          },
+                          children: "MINS"
+                        })
+                      ]
+                    }),
+                    _("div", {
+                      className: "esper27-counter-box",
+                      style: {
+                        background: "rgba(255, 255, 255, 0.03)",
+                        border: "1px solid rgba(255, 213, 126, 0.22)",
+                        borderRadius: "16px",
+                        padding: "16px 10px",
+                        textAlign: "center",
+                        display: "flex",
+                        flexDirection: "column",
+                        alignItems: "center",
+                        justifyContent: "center",
+                        boxShadow: "0 4px 20px rgba(0,0,0,0.35)",
+                        backdropFilter: "blur(12px)"
+                      },
+                      children: [
+                        f("span", {
+                          id: "esper27-secs",
+                          className: "esper27-countdown-value",
+                          style: {
+                            fontFamily: "Constantine, serif",
+                            fontSize: "32px",
+                            fontWeight: "400",
+                            color: "#ffd57e",
+                            lineHeight: "1"
+                          },
+                          children: "--"
+                        }),
+                        f("span", {
+                          className: "esper27-countdown-label",
+                          style: {
+                            fontFamily: "Nebula, sans-serif",
+                            fontSize: "10px",
+                            letterSpacing: "0.18em",
+                            color: "#ffd57e",
+                            marginTop: "6px",
+                            textTransform: "uppercase"
+                          },
+                          children: "SECS"
+                        })
+                      ]
+                    })
+                  ]
+                })
+              })
+            ]
+          }),
+          f("div", {
+            className: "esper27-coming-soon-poster framer-j939b3",
+            style: {
+              borderRadius: "40px",
+              width: "508px",
+              maxWidth: "100%",
+              height: "635px",
+              overflow: "hidden",
+              border: "1px solid rgba(255, 213, 126, 0.25)",
+              boxShadow: "0 24px 60px rgba(0, 0, 0, 0.6)",
+              flexShrink: 0
+            },
+            children: f("img", {
+              src: "/esper/Esper%20coming%20soon.png",
+              alt: "ESPER '27 Coming Soon",
+              style: {
+                width: "100%",
+                height: "100%",
+                objectFit: "cover",
+                borderRadius: "inherit",
+                display: "block"
+              }
+            })
+          })
+        ]
+      })
+    ]
+  });
+}
+
+
+const ESPER_ALL_AWARDS = [
+  {
+    title: "Graphic Designer",
+    sub: "Inter School Award",
+    img: "/esper/images/Aesthetikos.png",
+    link: "/esper/inter"
+  },
+  {
+    title: "Best Short Film",
+    sub: "Open Category Award",
+    img: "/esper/images/Best%20short%20film%20of%20the%20year.png",
+    link: "/esper/open"
+  },
+  {
+    title: "Wildlife Photographer",
+    sub: "Open Category Award",
+    img: "/esper/images/Opticos.png",
+    link: "/esper/open"
+  },
+  {
+    title: "Best Research Team",
+    sub: "Inter School Award",
+    img: "/esper/images/Agora.png",
+    link: "/esper/inter"
+  },
+  {
+    title: "Most Popular Science Union",
+    sub: "Inter School Award",
+    img: "/esper/images/most%20popular%20science%20union.png",
+    link: "/esper/inter"
+  },
+  {
+    title: "Best Article Writer",
+    sub: "Inter & Intra Award",
+    img: "/esper/images/Eureka.png",
+    link: "/esper/inter"
+  },
+  {
+    title: "Best Young Inventor",
+    sub: "Intra School Award",
+    img: "/esper/images/Daedalus.png",
+    link: "/esper/intra"
+  },
+  {
+    title: "EDU Coder",
+    sub: "Inter School Award",
+    img: "/esper/images/Algorithmos.png",
+    link: "/esper/inter"
+  },
+  {
+    title: "Best Build Team",
+    sub: "Open Category Award",
+    img: "/esper/images/Debunked.png",
+    link: "/esper/open"
+  }
+];
+
+function renderAwardCardVNode(item, idx, keySuffix) {
+  return f("a", {
+    key: `award-${idx}-${keySuffix}`,
+    href: item.link,
+    className: "esper-award-card framer-14ovzi3 framer-y1pa43",
+    "data-framer-name": "Card",
+    style: {
+      display: "flex",
+      flexDirection: "column",
+      width: "272px",
+      minWidth: "272px",
+      maxWidth: "272px",
+      flexShrink: 0,
+      textDecoration: "none",
+      color: "inherit",
+      cursor: "pointer",
+      position: "relative"
+    },
+    children: [
+      _("div", {
+        className: "esper-award-card-imgwrap framer-9xp6kq",
+        "data-framer-name": "Member Image",
+        style: {
+          width: "272px",
+          height: "340px",
+          borderRadius: "20px",
+          position: "relative",
+          overflow: "hidden",
+          background: "#0a0a0a",
+          border: "1px solid rgba(255, 255, 255, 0.08)",
+          boxSizing: "border-box"
+        },
+        children: [
+          f("div", {
+            className: "framer-1oeo7ga",
+            style: {
+              width: "100%",
+              height: "100%",
+              position: "absolute",
+              top: 0,
+              left: 0
+            },
+            children: f("img", {
+              src: item.img,
+              alt: item.title,
+              loading: "lazy",
+              decoding: "async",
+              style: {
+                display: "block",
+                width: "100%",
+                height: "100%",
+                borderRadius: "20px",
+                objectFit: "cover",
+                objectPosition: "center"
+              }
+            })
+          }),
+          f("div", {
+            className: "framer-z9yiom",
+            "data-framer-name": "Light Effect",
+            style: {
+              position: "absolute",
+              inset: 0,
+              pointerEvents: "none",
+              borderRadius: "20px",
+              background: "radial-gradient(40.2% 99.2% at 50% 50%, rgba(222, 222, 222, 0.2) 0%, rgba(68, 68, 68, 0) 100%)",
+              filter: "blur(15px)",
+              WebkitFilter: "blur(15px)",
+              transform: "rotate(45deg)"
+            }
+          })
+        ]
+      }),
+      _("div", {
+        className: "esper-award-card-text framer-1sg81zm",
+        "data-framer-name": "Text+Icon",
+        style: {
+          display: "flex",
+          flexDirection: "column",
+          alignItems: "center",
+          textAlign: "center",
+          marginTop: "14px",
+          padding: "0 4px",
+          width: "100%",
+          boxSizing: "border-box"
+        },
+        children: [
+          f("h3", {
+            className: "esper-award-card-title framer-text",
+            style: {
+              fontFamily: "Constantine, serif",
+              fontSize: "20px",
+              fontWeight: "600",
+              lineHeight: "1.25",
+              letterSpacing: "0.02em",
+              color: "#ffffff",
+              margin: "0 auto 4px auto",
+              textAlign: "center",
+              whiteSpace: "nowrap",
+              overflow: "hidden",
+              textOverflow: "ellipsis",
+              width: "100%"
+            },
+            children: item.title
+          }),
+          f("p", {
+            className: "esper-award-card-sub framer-text",
+            style: {
+              fontFamily: "Nebula, sans-serif",
+              fontSize: "12px",
+              letterSpacing: "0.1em",
+              textTransform: "uppercase",
+              color: "#ffd57e",
+              margin: "0 auto",
+              textAlign: "center",
+              width: "100%"
+            },
+            children: item.sub
+          })
+        ]
+      })
+    ]
+  });
+}
+
+function esperAwardsCarouselVNode() {
+  const cards = ESPER_ALL_AWARDS.map((item, idx) => renderAwardCardVNode(item, idx, "orig"))
+    .concat(ESPER_ALL_AWARDS.map((item, idx) => renderAwardCardVNode(item, idx, "clone")));
+
+  return _("div", {
+    className: "esper-awards-carousel-section",
+    id: "esper-all-awards-section",
+    style: {
+      order: 3,
+      width: "100%",
+      margin: "40px auto 60px auto",
+      position: "relative",
+      boxSizing: "border-box",
+      overflow: "hidden"
+    },
+    children: [
+      _("div", {
+        className: "esper-awards-header",
+        style: {
+          display: "flex",
+          flexDirection: "column",
+          alignItems: "center",
+          textAlign: "center",
+          gap: "10px",
+          padding: "0 16px",
+          marginBottom: "36px",
+          boxSizing: "border-box"
+        },
+        children: [
+          f("span", {
+            className: "esper-awards-eyebrow",
+            style: {
+              fontFamily: "Nebula, sans-serif",
+              fontSize: "13px",
+              letterSpacing: "0.18em",
+              textTransform: "uppercase",
+              color: "#ffd57e",
+              fontWeight: "400"
+            },
+            children: "INTER • INTRA • OPEN AWARDS"
+          }),
+          _("h2", {
+            className: "esper-awards-title",
+            style: {
+              fontFamily: "Constantine, serif",
+              fontSize: "52px",
+              fontStyle: "normal",
+              fontWeight: "400",
+              lineHeight: "1.15",
+              letterSpacing: "0.02em",
+              color: "#ffffff",
+              margin: "2px 0 6px 0"
+            },
+            children: "All Awards"
+          }),
+          f("p", {
+            className: "esper-awards-desc",
+            style: {
+              fontFamily: "Plus Jakarta Sans, sans-serif",
+              fontSize: "16px",
+              lineHeight: "1.6",
+              color: "#a1a1aa",
+              maxWidth: "650px",
+              margin: 0
+            },
+            children: "Celebrating excellence across school and open categories — honouring outstanding innovators, researchers, and creators."
+          })
+        ]
+      }),
+      _("div", {
+        className: "esper-awards-carousel-viewport",
+        style: {
+          width: "100%",
+          overflow: "hidden",
+          position: "relative",
+          padding: "10px 0 20px 0"
+        },
+        children: [
+          _("div", {
+            className: "esper-awards-carousel-track",
+            style: {
+              display: "flex",
+              gap: "24px",
+              width: "max-content"
+            },
+            children: cards
+          })
+        ]
+      })
+    ]
+  });
+}
+
+function esperDeranaHeaderVNode() {
+  return _("div", {
+    className: "esper-derana-header",
+    style: {
+      order: 8,
+      width: "100%",
+      maxWidth: "1160px",
+      margin: "48px auto 16px auto",
+      textAlign: "center",
+      display: "flex",
+      flexDirection: "column",
+      alignItems: "center",
+      gap: "10px",
+      padding: "0 16px",
+      boxSizing: "border-box"
+    },
+    children: [
+      f("span", {
+        className: "esper-section-eyebrow",
+        style: {
+          fontFamily: "Nebula, sans-serif",
+          fontSize: "13px",
+          letterSpacing: "0.18em",
+          textTransform: "uppercase",
+          color: "#ffd57e",
+          fontWeight: 400
+        },
+        children: "BROADCAST FEATURE"
+      }),
+      f("h2", {
+        className: "esper-derana-title",
+        style: {
+          fontFamily: '"Constantine", serif',
+          fontSize: "clamp(32px, 3.8vw, 48px)",
+          fontStyle: "normal",
+          fontWeight: 400,
+          letterSpacing: "0.02em",
+          color: "#ffffff",
+          margin: 0
+        },
+        children: "Esper '26 featured at Ada Derana 24"
+      }),
+      f("p", {
+        className: "esper-derana-subtitle",
+        style: {
+          fontFamily: '"Plus Jakarta Sans", sans-serif',
+          fontSize: "15px",
+          color: "rgba(255, 255, 255, 0.72)",
+          margin: 0,
+          maxWidth: "580px"
+        },
+        children: "Watch the special feature highlighting Sri Lanka’s premier school science day celebration."
+      })
+    ]
+  });
+}
+
 function sn(e, ...t) {
   let n = {};
   return (t?.forEach((t) => t && Object.assign(n, e[t])), n);
@@ -5093,11 +5730,13 @@ var Kr,
                   layoutId: `boPhwZ0iR`,
                   ref: t ?? C,
                   style: {
-                    background: `linear-gradient(180deg, var(--token-9ca352cf-e781-4754-be23-516091b00cfe, rgb(255, 129, 77)) /* {"name":"Orange 65"} */ 0%, var(--token-0aa6d802-236c-45d5-97bb-34c9b0e88964, rgb(255, 75, 0)) /* {"name":"Orange 50"} */ 100%)`,
+                    background: `linear-gradient(180deg, #ffd885 0%, #d49326 50%, #a66e0a 100%)`,
                     borderBottomLeftRadius: 295,
                     borderBottomRightRadius: 295,
                     borderTopLeftRadius: 295,
                     borderTopRightRadius: 295,
+                    boxShadow: `inset 0px 1px 2px rgba(255, 255, 255, 0.5), 0 4px 22px rgba(212, 147, 38, 0.45)`,
+                    border: `1px solid rgba(255, 225, 148, 0.4)`,
                     ...a,
                   },
                   ...Gr({ afz5MUbaa: { "data-framer-name": `Pause` } }, u, h),
@@ -6863,6 +7502,9 @@ e(() => {
                             }),
                           }),
                         }),
+                        esperComingSoonVNode(),
+                        esperAwardsCarouselVNode(),
+                        esperDeranaHeaderVNode(),
                         _(Ji, {
                           __framer__animate: { transition: ya },
                           __framer__animateOnce: !0,
@@ -7020,16 +7662,16 @@ e(() => {
                                     children: f(`h2`, {
                                       style: {
                                         "--font-selector": `R0Y7UGxheWZhaXIgRGlzcGxheS02MDBpdGFsaWM=`,
-                                        "--framer-font-family": `"Playfair Display", "Playfair Display Placeholder", serif`,
+                                        "--framer-font-family": `"Constantine", serif`,
                                         "--framer-font-size": `52px`,
-                                        "--framer-font-style": `italic`,
+                                        "--framer-font-style": `normal`,
                                         "--framer-font-weight": `600`,
                                         "--framer-line-height": `40%`,
                                         "--framer-text-alignment": `center`,
                                         "--framer-text-color": `var(--token-c05d7eb5-3b85-4d38-a5b8-65cb0e0a1652, rgb(255, 255, 255))`,
                                         "--framer-text-transform": `capitalize`,
                                       },
-                                      children: `successfully concluded ! `,
+                                      children: [f(`span`, { className: `esper-concluded-large`, children: `Esper '26` }), f(`span`, { className: `esper-concluded-medium`, children: `successfully concluded !` })],
                                     }),
                                   }),
                                 },
@@ -7041,21 +7683,21 @@ e(() => {
                                     dir: `auto`,
                                     style: {
                                       "--font-selector": `R0Y7UGxheWZhaXIgRGlzcGxheS02MDBpdGFsaWM=`,
-                                      "--framer-font-family": `"Playfair Display", "Playfair Display Placeholder", serif`,
+                                      "--framer-font-family": `"Constantine", serif`,
                                       "--framer-font-size": `52px`,
-                                      "--framer-font-style": `italic`,
+                                      "--framer-font-style": `normal`,
                                       "--framer-font-weight": `600`,
                                       "--framer-line-height": `40%`,
                                       "--framer-text-alignment": `center`,
                                       "--framer-text-color": `var(--token-c05d7eb5-3b85-4d38-a5b8-65cb0e0a1652, rgb(255, 255, 255))`,
                                       "--framer-text-transform": `capitalize`,
                                     },
-                                    children: `successfully concluded ! `,
+                                    children: [f(`span`, { className: `esper-concluded-large`, children: `Esper '26` }), f(`span`, { className: `esper-concluded-medium`, children: `successfully concluded !` })],
                                   }),
                                 }),
                                 className: `framer-jctzf6 hidden-9w4hrp`,
                                 "data-framer-name": `Meet Your Dream Team`,
-                                fonts: [`GF;Playfair Display-600italic`],
+                                fonts: [`GF;Constantine-600italic`],
                                 verticalAlignment: `top`,
                                 withExternalLayout: !0,
                               }),
@@ -7293,7 +7935,7 @@ e(() => {
                                     opacity: 1,
                                     overlayColor: `rgb(0, 0, 0)`,
                                     overlayOpacity: 0,
-                                    showOverlay: !0,
+                                    showOverlay: !1,
                                     spanConfig: [
                                       { colSpan: 2, imageIndex: 0, rowSpan: 1 },
                                       { colSpan: 1, imageIndex: 2, rowSpan: 2 },
@@ -7341,21 +7983,21 @@ e(() => {
                                   dir: `auto`,
                                   style: {
                                     "--font-selector": `R0Y7UGxheWZhaXIgRGlzcGxheS02MDBpdGFsaWM=`,
-                                    "--framer-font-family": `"Playfair Display", "Playfair Display Placeholder", serif`,
+                                    "--framer-font-family": `"Constantine", serif`,
                                     "--framer-font-size": `33px`,
-                                    "--framer-font-style": `italic`,
+                                    "--framer-font-style": `normal`,
                                     "--framer-font-weight": `600`,
                                     "--framer-line-height": `110%`,
                                     "--framer-text-alignment": `center`,
                                     "--framer-text-color": `var(--token-c05d7eb5-3b85-4d38-a5b8-65cb0e0a1652, rgb(255, 255, 255))`,
                                     "--framer-text-transform": `capitalize`,
                                   },
-                                  children: `successfully concluded ! `,
+                                  children: [f(`span`, { className: `esper-concluded-large`, children: `Esper '26` }), f(`span`, { className: `esper-concluded-medium`, children: `successfully concluded !` })],
                                 }),
                               }),
                               className: `framer-1bbxm6c hidden-72rtr7 hidden-ebiaht hidden-193nlgj`,
                               "data-framer-name": `Meet Your Dream Team`,
-                              fonts: [`GF;Playfair Display-600italic`],
+                              fonts: [`GF;Constantine-600italic`],
                               verticalAlignment: `top`,
                               withExternalLayout: !0,
                             }),
@@ -7500,7 +8142,7 @@ e(() => {
                             }),
                           ],
                         }),
-                        O() &&
+                        false &&
                         _(`div`, {
                           className: `framer-1kihxcd hidden-9w4hrp`,
                           "data-framer-name": `H2+Body`,
@@ -7512,9 +8154,9 @@ e(() => {
                                   dir: `auto`,
                                   style: {
                                     "--font-selector": `R0Y7UGxheWZhaXIgRGlzcGxheS02MDBpdGFsaWM=`,
-                                    "--framer-font-family": `"Playfair Display", "Playfair Display Placeholder", serif`,
+                                    "--framer-font-family": `"Constantine", serif`,
                                     "--framer-font-size": `52px`,
-                                    "--framer-font-style": `italic`,
+                                    "--framer-font-style": `normal`,
                                     "--framer-font-weight": `600`,
                                     "--framer-line-height": `40%`,
                                     "--framer-text-alignment": `center`,
@@ -7526,7 +8168,7 @@ e(() => {
                               }),
                               className: `framer-1djpwv1`,
                               "data-framer-name": `Meet Your Dream Team`,
-                              fonts: [`GF;Playfair Display-600italic`],
+                              fonts: [`GF;Constantine-600italic`],
                               verticalAlignment: `top`,
                               withExternalLayout: !0,
                             }),
@@ -7603,7 +8245,7 @@ e(() => {
                             }),
                           ],
                         }),
-                        E() &&
+                        false &&
                         _(`div`, {
                           className: `framer-1ovidn8 hidden-72rtr7 hidden-ebiaht hidden-193nlgj`,
                           "data-framer-name": `Services Cards`,
@@ -7740,7 +8382,7 @@ photographer,`,
                             }),
                           ],
                         }),
-                        O() &&
+                        false &&
                         _(`div`, {
                           className: `framer-1nvqr6w hidden-9w4hrp`,
                           "data-framer-name": `Services Cards`,
@@ -7952,26 +8594,17 @@ visual director`,
                                           _(`h2`, {
                                             style: {
                                               "--font-selector": `R0Y7UGxheWZhaXIgRGlzcGxheS02MDBpdGFsaWM=`,
-                                              "--framer-font-family": `"Playfair Display", "Playfair Display Placeholder", serif`,
+                                              "--framer-font-family": `"Constantine", serif`,
                                               "--framer-font-size": `64px`,
-                                              "--framer-font-style": `italic`,
+                                              "--framer-font-style": `normal`,
                                               "--framer-font-weight": `600`,
                                               "--framer-letter-spacing": `-3px`,
                                               "--framer-line-height": `110%`,
-                                              "--framer-text-alignment": `left`,
+                                              "--framer-text-alignment": `center`,
                                               "--framer-text-color": `rgb(255, 255, 255)`,
                                             },
                                             children: [
-                                              `Monarch Imperial `,
-                                              f(`span`, {
-                                                style: {
-                                                  "--font-selector": `RlI7SW50ZXJEaXNwbGF5LU1lZGl1bQ==`,
-                                                  "--framer-font-family": `"Inter Display", "Inter Display Placeholder", sans-serif`,
-                                                  "--framer-font-style": `normal`,
-                                                  "--framer-font-weight": `500`,
-                                                },
-                                                children: `.`,
-                                              }),
+                                              `Monarch Imperial`,
                                             ],
                                           }),
                                           f(`p`, {
@@ -7990,13 +8623,13 @@ visual director`,
                                         _(`h2`, {
                                           style: {
                                             "--font-selector": `R0Y7UGxheWZhaXIgRGlzcGxheS02MDBpdGFsaWM=`,
-                                            "--framer-font-family": `"Playfair Display", "Playfair Display Placeholder", serif`,
+                                            "--framer-font-family": `"Constantine", serif`,
                                             "--framer-font-size": `64px`,
-                                            "--framer-font-style": `italic`,
+                                            "--framer-font-style": `normal`,
                                             "--framer-font-weight": `600`,
                                             "--framer-letter-spacing": `-3px`,
                                             "--framer-line-height": `110%`,
-                                            "--framer-text-alignment": `left`,
+                                            "--framer-text-alignment": `center`,
                                             "--framer-text-color": `rgb(255, 255, 255)`,
                                           },
                                           children: [
@@ -8010,16 +8643,7 @@ visual director`,
                                               },
                                               children: `It Embarked At `,
                                             }),
-                                            `Monarch Imperial `,
-                                            f(`span`, {
-                                              style: {
-                                                "--font-selector": `RlI7SW50ZXJEaXNwbGF5LU1lZGl1bQ==`,
-                                                "--framer-font-family": `"Inter Display", "Inter Display Placeholder", sans-serif`,
-                                                "--framer-font-style": `normal`,
-                                                "--framer-font-weight": `500`,
-                                              },
-                                              children: `.`,
-                                            }),
+                                            `Monarch Imperial`,
                                           ],
                                         }),
                                         f(`p`, {
@@ -8033,7 +8657,7 @@ visual director`,
                                     "data-framer-name": `Main Title`,
                                     effect: xa,
                                     fonts: [
-                                      `GF;Playfair Display-600italic`,
+                                      `GF;Constantine-600italic`,
                                       `FR;InterDisplay-Medium`,
                                     ],
                                     verticalAlignment: `top`,
@@ -8049,6 +8673,8 @@ visual director`,
                                         "--framer-font-family": `"Inter Display", "Inter Display Placeholder", sans-serif`,
                                         "--framer-font-size": `18px`,
                                         "--framer-line-height": `27.6px`,
+                                        "--framer-text-alignment": `center`,
+                                        "textAlign": `center`,
                                         "--framer-text-color": `var(--token-a6d02d7b-c62e-4bdd-a986-baa8bce5578c, rgb(0, 2, 2))`,
                                       },
                                       children: `Carrying pride with elegance — embarking in true Senanayakian colours.`,
@@ -8141,7 +8767,7 @@ visual director`,
                             }),
                           }),
                         }),
-                        _(`div`, {
+                        false && _(`div`, {
                           className: `framer-15qykm`,
                           "data-framer-name": `H2+Body`,
                           children: [
@@ -8154,9 +8780,9 @@ visual director`,
                                     children: _(`h2`, {
                                       style: {
                                         "--font-selector": `R0Y7UGxheWZhaXIgRGlzcGxheS02MDBpdGFsaWM=`,
-                                        "--framer-font-family": `"Playfair Display", "Playfair Display Placeholder", serif`,
+                                        "--framer-font-family": `"Constantine", serif`,
                                         "--framer-font-size": `52px`,
-                                        "--framer-font-style": `italic`,
+                                        "--framer-font-style": `normal`,
                                         "--framer-font-weight": `600`,
                                         "--framer-line-height": `40%`,
                                         "--framer-text-alignment": `center`,
@@ -8186,7 +8812,7 @@ visual director`,
                                     }),
                                   }),
                                   fonts: [
-                                    `GF;Playfair Display-600italic`,
+                                    `GF;Constantine-600italic`,
                                     `FR;InterDisplay-SemiBold`,
                                   ],
                                 },
@@ -8195,9 +8821,9 @@ visual director`,
                                     children: _(`h2`, {
                                       style: {
                                         "--font-selector": `R0Y7UGxheWZhaXIgRGlzcGxheS02MDBpdGFsaWM=`,
-                                        "--framer-font-family": `"Playfair Display", "Playfair Display Placeholder", serif`,
+                                        "--framer-font-family": `"Constantine", serif`,
                                         "--framer-font-size": `52px`,
-                                        "--framer-font-style": `italic`,
+                                        "--framer-font-style": `normal`,
                                         "--framer-font-weight": `600`,
                                         "--framer-line-height": `40%`,
                                         "--framer-text-alignment": `center`,
@@ -8227,7 +8853,7 @@ visual director`,
                                     }),
                                   }),
                                   fonts: [
-                                    `GF;Playfair Display-600italic`,
+                                    `GF;Constantine-600italic`,
                                     `FR;InterDisplay-SemiBold`,
                                   ],
                                 },
@@ -8238,9 +8864,9 @@ visual director`,
                                   children: f(`h2`, {
                                     style: {
                                       "--font-selector": `R0Y7UGxheWZhaXIgRGlzcGxheS02MDBpdGFsaWM=`,
-                                      "--framer-font-family": `"Playfair Display", "Playfair Display Placeholder", serif`,
+                                      "--framer-font-family": `"Constantine", serif`,
                                       "--framer-font-size": `52px`,
-                                      "--framer-font-style": `italic`,
+                                      "--framer-font-style": `normal`,
                                       "--framer-font-weight": `600`,
                                       "--framer-line-height": `40%`,
                                       "--framer-text-alignment": `center`,
@@ -8252,7 +8878,7 @@ visual director`,
                                 }),
                                 className: `framer-17eqxwi hidden-9w4hrp`,
                                 "data-framer-name": `Meet Your Dream Team`,
-                                fonts: [`GF;Playfair Display-600italic`],
+                                fonts: [`GF;Constantine-600italic`],
                                 verticalAlignment: `top`,
                                 withExternalLayout: !0,
                               }),
@@ -8263,7 +8889,7 @@ visual director`,
                               children: f(o, {
                                 children: f(`h2`, {
                                   style: {
-                                    "--font-selector": `SW50ZXItU2VtaUJvbGQ=`,
+                                    "--framer-font-family": `"Constantine", serif`, "--framer-font-style": `normal`, "--framer-font-weight": `400`, "fontFamily": `"Constantine", serif`,
                                     "--framer-font-size": `35px`,
                                     "--framer-font-weight": `600`,
                                     "--framer-line-height": `140%`,
@@ -8287,9 +8913,9 @@ visual director`,
                                 children: f(`h2`, {
                                   style: {
                                     "--font-selector": `R0Y7UGxheWZhaXIgRGlzcGxheS02MDBpdGFsaWM=`,
-                                    "--framer-font-family": `"Playfair Display", "Playfair Display Placeholder", serif`,
+                                    "--framer-font-family": `"Constantine", serif`,
                                     "--framer-font-size": `39px`,
-                                    "--framer-font-style": `italic`,
+                                    "--framer-font-style": `normal`,
                                     "--framer-font-weight": `600`,
                                     "--framer-line-height": `50%`,
                                     "--framer-text-alignment": `center`,
@@ -8301,7 +8927,7 @@ visual director`,
                               }),
                               className: `framer-1qbciz1 hidden-72rtr7 hidden-ebiaht hidden-193nlgj`,
                               "data-framer-name": `Meet Your Dream Team`,
-                              fonts: [`GF;Playfair Display-600italic`],
+                              fonts: [`GF;Constantine-600italic`],
                               verticalAlignment: `top`,
                               withExternalLayout: !0,
                             }),
@@ -8311,7 +8937,7 @@ visual director`,
                               children: f(o, {
                                 children: f(`h2`, {
                                   style: {
-                                    "--font-selector": `SW50ZXItU2VtaUJvbGQ=`,
+                                    "--framer-font-family": `"Constantine", serif`, "--framer-font-style": `normal`, "--framer-font-weight": `400`, "fontFamily": `"Constantine", serif`,
                                     "--framer-font-size": `23px`,
                                     "--framer-font-weight": `600`,
                                     "--framer-line-height": `120%`,
@@ -8362,7 +8988,7 @@ visual director`,
                             }),
                           ],
                         }),
-                        _(`div`, {
+                        false && _(`div`, {
                           className: `framer-g159kn`,
                           "data-framer-name": `Team Collection`,
                           children: [
@@ -8721,7 +9347,7 @@ visual director`,
                           optimized: !0,
                         }),
                         O() &&
-                        _(Ji, {
+                        false && _(Ji, {
                           __framer__animate: { transition: ga },
                           __framer__animateOnce: !0,
                           __framer__enter: ha,
@@ -8744,7 +9370,7 @@ visual director`,
                                   children: f(o, {
                                     children: f(`h2`, {
                                       style: {
-                                        "--font-selector": `SW50ZXItU2VtaUJvbGQ=`,
+                                        "--framer-font-family": `"Constantine", serif`, "--framer-font-style": `normal`, "--framer-font-weight": `400`, "fontFamily": `"Constantine", serif`,
                                         "--framer-font-size": `35px`,
                                         "--framer-font-weight": `600`,
                                         "--framer-line-height": `140%`,
@@ -8767,7 +9393,7 @@ visual director`,
                                   children: f(o, {
                                     children: f(`h2`, {
                                       style: {
-                                        "--font-selector": `SW50ZXItU2VtaUJvbGQ=`,
+                                        "--framer-font-family": `"Constantine", serif`, "--framer-font-style": `normal`, "--framer-font-weight": `400`, "fontFamily": `"Constantine", serif`,
                                         "--framer-font-size": `35px`,
                                         "--framer-font-weight": `600`,
                                         "--framer-line-height": `140%`,
@@ -9068,7 +9694,7 @@ visual director`,
                             }),
                           ],
                         }),
-                        ee() &&
+                        false &&
                         _(Ji, {
                           __framer__animate: { transition: ga },
                           __framer__animateOnce: !0,
@@ -9091,7 +9717,7 @@ visual director`,
                                 children: f(o, {
                                   children: f(`h2`, {
                                     style: {
-                                      "--font-selector": `SW50ZXItU2VtaUJvbGQ=`,
+                                      "--framer-font-family": `"Constantine", serif`, "--framer-font-style": `normal`, "--framer-font-weight": `400`, "fontFamily": `"Constantine", serif`,
                                       "--framer-font-size": `35px`,
                                       "--framer-font-weight": `600`,
                                       "--framer-line-height": `140%`,
@@ -9211,7 +9837,7 @@ visual director`,
                             }),
                           ],
                         }),
-                        E() &&
+                        false &&
                         _(`div`, {
                           className: `framer-2bek0m hidden-72rtr7 hidden-ebiaht hidden-193nlgj`,
                           "data-framer-name": `H2+Body`,
@@ -9223,9 +9849,9 @@ visual director`,
                                   dir: `auto`,
                                   style: {
                                     "--font-selector": `R0Y7UGxheWZhaXIgRGlzcGxheS02MDBpdGFsaWM=`,
-                                    "--framer-font-family": `"Playfair Display", "Playfair Display Placeholder", serif`,
+                                    "--framer-font-family": `"Constantine", serif`,
                                     "--framer-font-size": `39px`,
-                                    "--framer-font-style": `italic`,
+                                    "--framer-font-style": `normal`,
                                     "--framer-font-weight": `600`,
                                     "--framer-line-height": `50%`,
                                     "--framer-text-alignment": `center`,
@@ -9237,7 +9863,7 @@ visual director`,
                               }),
                               className: `framer-12hyy7m`,
                               "data-framer-name": `Meet Your Dream Team`,
-                              fonts: [`GF;Playfair Display-600italic`],
+                              fonts: [`GF;Constantine-600italic`],
                               verticalAlignment: `top`,
                               withExternalLayout: !0,
                             }),
@@ -9288,7 +9914,7 @@ visual director`,
                         }),
                       ],
                     }),
-                    E() &&
+                    false &&
                     _(T.div, {
                       className: `framer-o0xigs hidden-72rtr7 hidden-ebiaht hidden-193nlgj`,
                       "data-framer-name": `Plasma`,
@@ -9405,7 +10031,7 @@ visual director`,
                         }),
                       }),
                     }),
-                    E() &&
+                    false &&
                     _(Ji, {
                       __framer__animate: { transition: ga },
                       __framer__animateOnce: !0,
@@ -9430,7 +10056,7 @@ visual director`,
                               children: f(o, {
                                 children: f(`h2`, {
                                   style: {
-                                    "--font-selector": `SW50ZXItU2VtaUJvbGQ=`,
+                                    "--framer-font-family": `"Constantine", serif`, "--framer-font-style": `normal`, "--framer-font-weight": `400`, "fontFamily": `"Constantine", serif`,
                                     "--framer-font-size": `39px`,
                                     "--framer-font-weight": `600`,
                                     "--framer-line-height": `50%`,
@@ -9708,10 +10334,10 @@ visual director`,
               weight: `400`,
             },
             {
-              cssFamilyName: `Playfair Display`,
+              cssFamilyName: `Constantine`,
               source: `google`,
               style: `italic`,
-              uiFamilyName: `Playfair Display`,
+              uiFamilyName: `Constantine`,
               url: `https://fonts.gstatic.com/s/playfairdisplay/v40/nuFRD-vYSZviVYUb_rj3ij__anPXDTnCjmHKM4nYO7KN_naUbtPK-F2rA0s.woff2`,
               weight: `600`,
             },
