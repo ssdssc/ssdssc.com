@@ -57,7 +57,7 @@ export default function SubpageLayout({
   return (
     <div className="min-h-screen bg-[#070707] text-white flex flex-col selection:bg-[#ffd57e]/30 selection:text-[#ffd57e]">
       {/* Subheader Banner: Video Background + Navigation Only */}
-      <section className="relative w-full overflow-hidden bg-[#070707] min-h-[140px] md:min-h-[180px] flex flex-col justify-start">
+      <section className="relative w-full overflow-hidden bg-[#070707] min-h-[280px] md:min-h-[380px] flex flex-col justify-start">
         {/* Background Video */}
         <div className="absolute inset-0 w-full h-full pointer-events-none z-0">
           <video
@@ -71,7 +71,7 @@ export default function SubpageLayout({
             <source src="/esper/subheader-vid.mp4" type="video/mp4" />
           </video>
           {/* Overlay */}
-          <div className="absolute inset-0 bg-gradient-to-b from-[#070707]/60 via-[#070707]/30 to-[#070707]" />
+          <div className="absolute inset-0 bg-gradient-to-b from-[#070707]/50 via-[#070707]/20 to-[#070707]" />
         </div>
 
         {/* Navigation */}
@@ -79,7 +79,7 @@ export default function SubpageLayout({
       </section>
 
       {/* Texts Below Subheader & Above Cards */}
-      <section className="w-full max-w-[1160px] mx-auto px-6 pt-12 md:pt-16 pb-6 md:pb-10 flex flex-col items-center text-center gap-4 relative z-10">
+      <section className="w-full max-w-[1160px] mx-auto px-6 pt-8 md:pt-12 pb-6 md:pb-10 flex flex-col items-center text-center gap-4 relative z-10">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
