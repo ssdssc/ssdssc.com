@@ -1,7 +1,7 @@
 import SubpageLayout from "@/components/esper/SubpageLayout";
 
 export const metadata = {
-  title: "Open Awards - ESPER '26",
+  title: "Open Awards - ESPER '27",
   description: "Recognizing visionaries, filmmakers, photographers, and builders pushing boundaries beyond schools.",
 };
 
@@ -29,7 +29,7 @@ const openAwards = [
 export default function OpenAwardsPage() {
   return (
     <SubpageLayout
-      eyebrow="ESPER '26 CATEGORY"
+      eyebrow="ESPER '27 CATEGORY"
       title="Open Awards"
       description="Recognizing visionaries, filmmakers, photographers, and builders pushing boundaries beyond schools."
       registerUrl="/esper/open/register"

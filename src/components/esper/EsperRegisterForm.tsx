@@ -397,7 +397,7 @@ export default function EsperRegisterForm({
                   className="w-5 h-5 mt-0.5 rounded border border-white/30 bg-black/60 accent-[#ffd57e] cursor-pointer"
                 />
                 <label htmlFor="confirmation" className="text-sm text-white/80 leading-relaxed cursor-pointer">
-                  I hereby confirm that all submitted details are authentic and represent official school or individual entry for the ESPER &apos;26 competition.
+                  I hereby confirm that all submitted details are authentic and represent official school or individual entry for the ESPER &apos;27 competition.
                 </label>
               </div>
 

@@ -1,7 +1,7 @@
 import SubpageLayout from "@/components/esper/SubpageLayout";
 
 export const metadata = {
-  title: "Inter School Awards - ESPER '26",
+  title: "Inter School Awards - ESPER '27",
   description: "Honouring the finest school science innovators, researchers, and creators across Sri Lanka.",
 };
 
@@ -41,7 +41,7 @@ const interAwards = [
 export default function InterSchoolAwardsPage() {
   return (
     <SubpageLayout
-      eyebrow="ESPER '26 CATEGORY"
+      eyebrow="ESPER '27 CATEGORY"
       title="Inter School Awards"
       description="Honouring the finest school science innovators, researchers, and creators across Sri Lanka."
       registerUrl="/esper/inter/register"

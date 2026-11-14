@@ -7,7 +7,7 @@ import ConcludedSection from "@/components/esper/ConcludedSection";
 import Footer from "@/components/common/Footer";
 
 export const metadata = {
-  title: "ESPER '26 - Sri Lanka's Premier Science Day & Awards Ceremony",
+  title: "ESPER '27 - Sri Lanka's Premier Science Day & Awards Ceremony",
   description: "The Pinnacle of School Science Excellence organized by the Science Society of D.S. Senanayake College.",
 };
 

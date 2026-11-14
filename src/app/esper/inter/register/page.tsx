@@ -1,8 +1,8 @@
 import EsperRegisterForm from "@/components/esper/EsperRegisterForm";
 
 export const metadata = {
-  title: "Register for Inter School Awards - ESPER '26",
-  description: "Official registration portal for Inter School Awards at ESPER '26.",
+  title: "Register for Inter School Awards - ESPER '27",
+  description: "Official registration portal for Inter School Awards at ESPER '27.",
 };
 
 export default function InterSchoolRegisterPage() {

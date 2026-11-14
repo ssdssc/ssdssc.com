@@ -40,7 +40,7 @@ export default function Header() {
         <Link
           href="/esper"
           className="inline-flex items-center no-underline transition-opacity duration-200 hover:opacity-85"
-          title="ESPER '26 Home"
+          title="ESPER '27 Home"
         >
           {/* eslint-disable-next-line @next/next/no-img-element */}
           <img
