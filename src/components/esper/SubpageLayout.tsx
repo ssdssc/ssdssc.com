@@ -57,7 +57,7 @@ export default function SubpageLayout({
   return (
     <div className="min-h-screen bg-[#070707] text-white flex flex-col selection:bg-[#ffd57e]/30 selection:text-[#ffd57e]">
       {/* Subheader Banner: Video Background + Navigation Only */}
-      <section className="relative w-full overflow-hidden bg-[#070707] border-b border-[#ffd57e]/15 min-h-[140px] md:min-h-[180px] flex flex-col justify-start">
+      <section className="relative w-full overflow-hidden bg-[#070707] min-h-[140px] md:min-h-[180px] flex flex-col justify-start">
         {/* Background Video */}
         <div className="absolute inset-0 w-full h-full pointer-events-none z-0">
           <video
