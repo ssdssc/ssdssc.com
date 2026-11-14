@@ -100,7 +100,7 @@ export default function SubpageLayout({
                 href={registerUrl}
                 className="inline-flex items-center justify-center font-['Nebula',sans-serif] text-[13px] tracking-[0.08em] uppercase text-black font-semibold px-8 py-3.5 rounded-full bg-gradient-to-b from-[#ffd885] via-[#d49326] to-[#a66e0a] shadow-[inset_0px_1px_5px_rgba(0,0,0,0.25),0_4px_16px_rgba(212,147,38,0.4)] hover:brightness-110 transition-all duration-200"
               >
-                REGISTER FOR AWARDS
+                Register Now
               </Link>
             </motion.div>
 
@@ -181,7 +181,7 @@ export default function SubpageLayout({
               href={registerUrl}
               className="inline-flex items-center justify-center font-['Nebula',sans-serif] text-[13px] tracking-[0.08em] uppercase text-black font-semibold px-8 py-3.5 rounded-full bg-gradient-to-b from-[#ffd885] via-[#d49326] to-[#a66e0a] shadow-[inset_0px_1px_5px_rgba(0,0,0,0.25),0_4px_16px_rgba(212,147,38,0.4)] hover:brightness-110 transition-all duration-200 mt-2"
             >
-              ENTER REGISTRATION PORTAL
+              Register Now
             </Link>
           </motion.div>
         </motion.div>
