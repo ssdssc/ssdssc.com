@@ -1,52 +1,13 @@
 "use client";
 
-import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 
 export default function CountdownSection() {
-  const [timeLeft, setTimeLeft] = useState({
-    days: "--",
-    hours: "--",
-    minutes: "--",
-    seconds: "--",
-  });
-
-  useEffect(() => {
-    // Target date for Esper 27 or future reveal
-    const targetDate = new Date("2027-03-17T09:00:00+05:30").getTime();
-
-    const updateTimer = () => {
-      const now = new Date().getTime();
-      const difference = targetDate - now;
-
-      if (difference <= 0) {
-        setTimeLeft({ days: "00", hours: "00", minutes: "00", seconds: "00" });
-        return;
-      }
-
-      const days = Math.floor(difference / (1000 * 60 * 60 * 24));
-      const hours = Math.floor((difference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-      const minutes = Math.floor((difference % (1000 * 60)) / (1000 * 60));
-      const seconds = Math.floor((difference % (1000 * 60)) / 1000);
-
-      setTimeLeft({
-        days: String(days).padStart(2, "0"),
-        hours: String(hours).padStart(2, "0"),
-        minutes: String(minutes).padStart(2, "0"),
-        seconds: String(seconds).padStart(2, "0"),
-      });
-    };
-
-    updateTimer();
-    const interval = setInterval(updateTimer, 1000);
-    return () => clearInterval(interval);
-  }, []);
-
   const counterBlocks = [
-    { label: "DAYS", value: timeLeft.days },
-    { label: "HOURS", value: timeLeft.hours },
-    { label: "MINS", value: timeLeft.minutes },
-    { label: "SECS", value: timeLeft.seconds },
+    { label: "DAYS", value: "--" },
+    { label: "HOURS", value: "--" },
+    { label: "MINS", value: "--" },
+    { label: "SECS", value: "--" },
   ];
 
   return (
@@ -70,7 +31,7 @@ export default function CountdownSection() {
             Prepare for the next chapter of school science excellence.
           </p>
 
-          {/* Countdown Grid */}
+          {/* Countdown Grid - Pending Date Announcement */}
           <div className="grid grid-cols-4 gap-3 md:gap-4 mt-4 w-full max-w-[420px]">
             {counterBlocks.map((block) => (
               <motion.div
