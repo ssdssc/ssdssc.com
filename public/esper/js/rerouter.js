@@ -823,7 +823,7 @@
         if (text.includes("graphic designer") || text.includes("designer")) return "graphic-designer";
         if (text.includes("edu coder") || text.includes("coder")) return "edu-coder";
         if (text.includes("young inventor") || text.includes("inventor")) return "young-inventor";
-        if (text.includes("build team") || text.includes("debunked")) return "build-team";
+        if (text.includes("build team") || text.includes("debunked") || text.includes("mythbuster")) return "build-team";
         if (text.includes("short film")) return "short-film";
         if (text.includes("photographer") || text.includes("scientific photo")) return "photographer";
       }

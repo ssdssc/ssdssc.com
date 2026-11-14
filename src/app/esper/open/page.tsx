@@ -13,13 +13,13 @@ const openAwards = [
     registerUrl: "/esper/open/register?category=short-film",
   },
   {
-    title: "Wildlife Photographer",
+    title: "Scientific Photographer",
     category: "Open Category Award",
     image: "/esper/images/Opticos.png",
     registerUrl: "/esper/open/register?category=photographer",
   },
   {
-    title: "Best Build Team",
+    title: "Mythbusters Competition",
     category: "Open Category Award",
     image: "/esper/images/Debunked.png",
     registerUrl: "/esper/open/register?category=build-team",

@@ -14,9 +14,9 @@ const CATEGORY_LABELS: Record<string, string> = {
   "science-union": "Most Popular School Science Union",
 
   // Open Awards
-  "build-team": "Best Build Team (Debunked) of the Year",
+  "build-team": "Mythbusters Competition",
   "short-film": "Best Short Film of the Year",
-  "photographer": "Best Scientific Photographer of the Year",
+  "photographer": "Scientific Photographer",
 };
 
 function formatPhoneNumber(phone: string): string {

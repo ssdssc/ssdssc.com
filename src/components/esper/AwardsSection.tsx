@@ -24,7 +24,7 @@ const awardCards: AwardCard[] = [
     href: "/esper/open/register?category=short-film",
   },
   {
-    title: "Wildlife Photographer",
+    title: "Scientific Photographer",
     category: "Open Category Award",
     image: "/esper/images/Opticos.png",
     href: "/esper/open/register?category=photographer",
@@ -60,7 +60,7 @@ const awardCards: AwardCard[] = [
     href: "/esper/inter/register?category=edu-coder",
   },
   {
-    title: "Best Build Team",
+    title: "Mythbusters Competition",
     category: "Open Category Award",
     image: "/esper/images/Debunked.png",
     href: "/esper/open/register?category=build-team",

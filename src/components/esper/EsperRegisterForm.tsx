@@ -752,9 +752,9 @@ export default function EsperRegisterForm({
                       )}
                       {type === "open" && (
                         <>
-                          <option value="build-team">Best Build Team (Debunked) of the Year</option>
+                          <option value="build-team">Mythbusters Competition</option>
                           <option value="short-film">Best Short Film of the Year</option>
-                          <option value="photographer">Best Scientific Photographer of the Year</option>
+                          <option value="photographer">Scientific Photographer</option>
                         </>
                       )}
                     </select>
