@@ -8,7 +8,8 @@ export default function Footer() {
       <div className="max-w-[1320px] mx-auto flex flex-col md:flex-row items-center justify-between gap-4 text-center md:text-left text-sm text-white/70">
         <div className="flex flex-wrap items-center justify-center md:justify-start gap-1.5">
           <span>Created by</span>
-          <span className="text-white font-medium">Team Ocular</span>,
+          <span className="text-white font-medium">Team Ocular</span>
+          <span className="text-white/40 mx-1">|</span>
           <span>Re-Designed by</span>
           <a
             href="https://frametoque.com"
