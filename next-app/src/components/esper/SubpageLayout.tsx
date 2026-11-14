@@ -123,7 +123,7 @@ export default function SubpageLayout({
             REGISTRATION PORTAL
           </span>
           <h2 className="font-['Constantine',serif] text-3xl md:text-4xl text-white font-normal">
-            Ready to Nominate or Submit?
+            Ready to Nominate?
           </h2>
           <p className="font-['Plus_Jakarta_Sans',sans-serif] text-white/70 max-w-lg">
             Submit your official entry through our secure registration portal before the deadline.
