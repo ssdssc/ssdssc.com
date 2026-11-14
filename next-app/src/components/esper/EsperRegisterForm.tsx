@@ -396,7 +396,7 @@ export default function EsperRegisterForm({
                 disabled={isSubmitting}
                 className="w-full h-14 mt-4 rounded-full font-['Nebula',sans-serif] text-[13px] tracking-[0.08em] uppercase text-black font-semibold bg-gradient-to-b from-[#ffd885] via-[#d49326] to-[#a66e0a] shadow-[0_4px_20px_rgba(212,147,38,0.35)] hover:brightness-110 hover:scale-[1.01] transition-all duration-200 disabled:opacity-50 disabled:pointer-events-none cursor-pointer"
               >
-                {isSubmitting ? "Submitting Registration..." : "Complete Official Registration"}
+                {isSubmitting ? "Submitting Registration..." : "Complete Registration"}
               </button>
             </div>
           </div>
