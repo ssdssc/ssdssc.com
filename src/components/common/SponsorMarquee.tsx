@@ -7,17 +7,18 @@ interface Sponsor {
 }
 
 const sponsors: Sponsor[] = [
-  { name: "Derana 24", src: "/esper/images/twwqyxotlhdxabp7dwhjedkyhae.png", height: 32 },
-  { name: "TV Derana", src: "/esper/images/b0gribr06czgnoidqqwzynyz2vc.png", height: 32 },
-  { name: "Ada Derana", src: "/esper/images/4zpxpjv88gcfrhqebf2a5hxevw.png", height: 34 },
-  { name: "FM Derana", src: "/esper/images/gvt2qwmuoxufwi7sozmrjjnxum.png", height: 30 },
-  { name: "Sirasa TV", src: "/esper/images/mdpsq2xil2s5agl02n5lk2em.png", height: 32 },
-  { name: "Helakuru", src: "/esper/images/gtmjsu8rsz7nqupbgqvlwlefw.webp", height: 28 },
-  { name: "Digitized.lk", src: "/esper/images/spigwnekuaj8rvgfpdanj0y0.png", height: 38 },
-  { name: "IEEE Sri Lanka Section", src: "/esper/images/nvzenooymu1olttjngo499jcbnw.png", height: 32 },
-  { name: "Events Avenue", src: "/esper/images/5dvidyczitj8ceqx69gnqzwki4.png", height: 42 },
-  { name: "SLT Mobitel", src: "/esper/images/1axaeepaiboo6au7fywunhesdak.png", height: 36 },
-  { name: "Janindu Leelananda", src: "/esper/images/jjgqmnck9dnrlm4aktoerjvkp9a.png", height: 44 },
+  { name: "Derana 24", src: "/esper/images/twwqyxotlhdxabp7dwhjedkyhae.png", height: 38 },
+  { name: "TV Derana", src: "/esper/images/tv_derana.png", height: 36 },
+  { name: "Ada Derana", src: "/esper/images/4zpxpjv88gcfrhqebf2a5hxevw.png", height: 38 },
+  { name: "FM Derana", src: "/esper/images/fm_derana.png", height: 38 },
+  { name: "Sirasa TV", src: "/esper/images/mdpsq2xil2s5agl02n5lk2em.png", height: 40 },
+  { name: "Helakuru", src: "/esper/images/gtmjsu8rsz7nqupbgqvlwlefw.webp", height: 36 },
+  { name: "Digitized.lk", src: "/esper/images/digitized_lk.png", height: 36 },
+  { name: "IEEE Sri Lanka Section", src: "/esper/images/ieee_sri_lanka.png", height: 36 },
+  { name: "Events Avenue", src: "/esper/images/5dvidyczitj8ceqx69gnqzwki4.png", height: 48 },
+  { name: "SLT Mobitel", src: "/esper/images/1axaeepaiboo6au7fywunhesdak.png", height: 38 },
+  { name: "Janindu Leelananda", src: "/esper/images/jjgqmnck9dnrlm4aktoerjvkp9a.png", height: 38 },
+  { name: "ESOFT", src: "/esper/images/esoft_metro_campus.png", height: 38 },
 ];
 
 export default function SponsorMarquee() {
