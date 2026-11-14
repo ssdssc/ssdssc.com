@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
 import "./globals.css";
+import "lenis/dist/lenis.css";
+import SmoothScroll from "@/components/common/SmoothScroll";
 
 export const metadata: Metadata = {
   title: "ESPER Awards '27 - Sri Lanka's Premier Science Day",
@@ -24,6 +26,7 @@ export default function RootLayout({
   return (
     <html lang="en" className="h-full bg-[#070707] text-white">
       <body className="min-h-full flex flex-col bg-[#070707] text-white antialiased">
+        <SmoothScroll />
         {children}
       </body>
     </html>
