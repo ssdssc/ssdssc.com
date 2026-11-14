@@ -125,5 +125,24 @@ html, body {
   animation-play-state: paused;
 }
 
+/* Infinite Sponsors Ticker Keyframes */
+@keyframes esperSponsorsScroll {
+  0% {
+    transform: translate3d(0, 0, 0);
+  }
+  100% {
+    transform: translate3d(-50%, 0, 0);
+  }
+}
+
+.animate-sponsors-scroll {
+  display: flex;
+  width: max-content;
+  align-items: center;
+  animation: esperSponsorsScroll 30s linear infinite;
+  will-change: transform;
+}
+
+
 
 
