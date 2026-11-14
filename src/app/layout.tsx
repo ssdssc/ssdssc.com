@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "ESPER '27 - Sri Lanka's Premier Science Day & Awards Ceremony",
+  title: "ESPER Awards '27 - Sri Lanka's Premier Science Day",
   description: "The Pinnacle of School Science Excellence organized by the Science Society of D.S. Senanayake College.",
   icons: {
     icon: [
