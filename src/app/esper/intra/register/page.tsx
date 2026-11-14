@@ -9,8 +9,8 @@ export default function IntraSchoolRegisterPage() {
   return (
     <EsperRegisterForm
       type="intra"
-      title="Intra School Awards Registration"
-      description="Exclusively for students of D.S. Senanayake College participating in the Intra-School science competitions."
+      title="Intra School Awards"
+      description="This form is strictly for official Science Union / Science Society representatives submitting on behalf of their school."
       rulesPdfUrl="/esper/Esper_Intra_School_Awards_Rules.pdf"
     />
   );

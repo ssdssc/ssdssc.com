@@ -114,11 +114,11 @@ export async function POST(request: Request) {
     }
 
     const isIntra =
-      ["young-inventor", "article-writer"].includes(category) ||
-      data.registrationType === "intra";
+      data.registrationType === "intra" ||
+      (!data.registrationType && ["young-inventor", "article-writer"].includes(category));
     const isOpen =
-      ["build-team", "short-film", "photographer"].includes(category) ||
-      data.registrationType === "open";
+      data.registrationType === "open" ||
+      (!data.registrationType && ["build-team", "short-film", "photographer"].includes(category));
 
     let targetTable = "esper_inter_registrations";
     if (isIntra) {

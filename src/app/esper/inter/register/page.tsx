@@ -9,8 +9,8 @@ export default function InterSchoolRegisterPage() {
   return (
     <EsperRegisterForm
       type="inter"
-      title="Inter School Awards Registration"
-      description="This form is strictly for official Science Union / Society representatives submitting on behalf of their school."
+      title="Inter School Awards"
+      description="This form is strictly for official Science Union / Science Society representatives submitting on behalf of their school."
       rulesPdfUrl="/esper/Esper_Inter_School_Awards_Rules.pdf"
     />
   );

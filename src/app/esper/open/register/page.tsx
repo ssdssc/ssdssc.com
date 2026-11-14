@@ -9,8 +9,8 @@ export default function OpenRegisterPage() {
   return (
     <EsperRegisterForm
       type="open"
-      title="Open Awards Registration"
-      description="Open category for all passionate researchers, wildlife photographers, builders, and short film creators across Sri Lanka."
+      title="Open Awards"
+      description="Registration for the ESPER Open Awards competition categories."
       rulesPdfUrl="/esper/Esper_Open_Awards_Rules.pdf"
     />
   );
