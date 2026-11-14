@@ -25,7 +25,20 @@ jobs:
         run: npm install --global vercel@latest
         
       - name: Pull Vercel Environment Information
-        run: vercel pull --yes --environment=production --token=${{ secrets.VERCEL_TOKEN }}
+        run: |
+          vercel pull --yes --environment=production --token=${{ secrets.VERCEL_TOKEN }}
+          node -e '
+            const fs = require("fs");
+            const file = ".vercel/project.json";
+            if (fs.existsSync(file)) {
+              const project = JSON.parse(fs.readFileSync(file, "utf8"));
+              if (project.settings) {
+                project.settings.framework = "nextjs";
+                delete project.settings.outputDirectory;
+                fs.writeFileSync(file, JSON.stringify(project, null, 2));
+              }
+            }
+          '
         
       - name: Build Project Artifacts
         run: vercel build --prod --token=${{ secrets.VERCEL_TOKEN }}
