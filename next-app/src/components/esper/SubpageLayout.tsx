@@ -3,7 +3,6 @@
 import Link from "next/link";
 import Header from "@/components/common/Header";
 import Footer from "@/components/common/Footer";
-import CustomCursor from "@/components/common/CustomCursor";
 
 export interface AwardItem {
   title: string;
@@ -31,8 +30,6 @@ export default function SubpageLayout({
 }: SubpageLayoutProps) {
   return (
     <div className="min-h-screen bg-[#070707] text-white flex flex-col selection:bg-[#ffd57e]/30 selection:text-[#ffd57e]">
-      <CustomCursor />
-
       {/* Hero with Subheader Video Background */}
       <section className="relative w-full overflow-hidden bg-[#070707] border-b border-[#ffd57e]/15">
         {/* Background Video */}

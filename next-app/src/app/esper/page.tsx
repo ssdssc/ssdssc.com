@@ -1,4 +1,3 @@
-import CustomCursor from "@/components/common/CustomCursor";
 import HeroSection from "@/components/esper/HeroSection";
 import DeranaSection from "@/components/esper/DeranaSection";
 import CountdownSection from "@/components/esper/CountdownSection";
@@ -15,7 +14,6 @@ export const metadata = {
 export default function EsperHomePage() {
   return (
     <main className="min-h-screen bg-[#070707] text-white flex flex-col selection:bg-[#ffd57e]/30 selection:text-[#ffd57e]">
-      <CustomCursor />
       <HeroSection />
       <DeranaSection />
       <CountdownSection />

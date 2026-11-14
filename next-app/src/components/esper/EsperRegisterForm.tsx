@@ -4,7 +4,6 @@ import { useState } from "react";
 import Link from "next/link";
 import Header from "@/components/common/Header";
 import Footer from "@/components/common/Footer";
-import CustomCursor from "@/components/common/CustomCursor";
 
 interface Props {
   type: "inter" | "intra" | "open";
@@ -102,8 +101,6 @@ export default function EsperRegisterForm({
 
   return (
     <div className="min-h-screen bg-[#070707] text-white flex flex-col selection:bg-[#ffd57e]/30 selection:text-[#ffd57e]">
-      <CustomCursor />
-
       {/* Subheader Hero */}
       <section className="relative w-full overflow-hidden bg-[#070707] border-b border-[#ffd57e]/15">
         <div className="absolute inset-0 w-full h-full pointer-events-none z-0">
