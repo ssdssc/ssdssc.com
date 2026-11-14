@@ -317,7 +317,7 @@ export default function EsperRegisterForm({
       {/* Texts Below Subheader & Above Form */}
       <section className="w-full max-w-[1160px] mx-auto px-6 pt-8 md:pt-12 pb-4 flex flex-col items-center text-center gap-3 relative z-10">
         <span className="font-['Nebula',sans-serif] text-[12px] md:text-[13px] tracking-[0.22em] uppercase text-[#ffd57e]">
-          OFFICIAL REGISTRATION PORTAL
+          ESPER &apos;27
         </span>
         <h1 className="font-['Constantine',serif] text-4xl sm:text-5xl md:text-6xl text-white tracking-[0.02em] font-normal m-0 leading-tight">
           {title}
