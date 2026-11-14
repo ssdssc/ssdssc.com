@@ -1,0 +1,126 @@
+"use client";
+
+import Link from "next/link";
+
+interface AwardCard {
+  title: string;
+  category: string;
+  image: string;
+  href: string;
+}
+
+const awardCards: AwardCard[] = [
+  {
+    title: "Graphic Designer",
+    category: "Inter School Award",
+    image: "/esper/images/Aesthetikos.png",
+    href: "/esper/inter",
+  },
+  {
+    title: "Best Short Film",
+    category: "Open Category Award",
+    image: "/esper/images/Best short film of the year.png",
+    href: "/esper/open",
+  },
+  {
+    title: "Wildlife Photographer",
+    category: "Open Category Award",
+    image: "/esper/images/Opticos.png",
+    href: "/esper/open",
+  },
+  {
+    title: "Best Research Team",
+    category: "Inter School Award",
+    image: "/esper/images/Agora.png",
+    href: "/esper/inter",
+  },
+  {
+    title: "Most Popular Science Union",
+    category: "Inter School Award",
+    image: "/esper/images/most popular science union.png",
+    href: "/esper/inter",
+  },
+  {
+    title: "Best Article Writer",
+    category: "Inter & Intra Award",
+    image: "/esper/images/Eureka.png",
+    href: "/esper/inter",
+  },
+  {
+    title: "Best Young Inventor",
+    category: "Intra School Award",
+    image: "/esper/images/Daedalus.png",
+    href: "/esper/intra",
+  },
+  {
+    title: "EDU Coder",
+    category: "Inter School Award",
+    image: "/esper/images/Algorithmos.png",
+    href: "/esper/inter",
+  },
+  {
+    title: "Best Build Team",
+    category: "Open Category Award",
+    image: "/esper/images/Debunked.png",
+    href: "/esper/open",
+  },
+];
+
+export default function AwardsSection() {
+  // Duplicate array for seamless infinite marquee loop
+  const duplicatedCards = [...awardCards, ...awardCards];
+
+  return (
+    <section id="esper-all-awards-section" className="w-full py-16 md:py-24 relative z-10 overflow-hidden box-border">
+      {/* Header */}
+      <div className="max-w-[1160px] mx-auto px-4 flex flex-col items-center text-center gap-3 mb-10">
+        <span className="font-['Nebula',sans-serif] text-[13px] tracking-[0.2em] uppercase text-[#ffd57e]">
+          INTER • INTRA • OPEN AWARDS
+        </span>
+        <h2 className="font-['Constantine',serif] text-3xl sm:text-4xl md:text-5xl text-white tracking-[0.02em] font-normal m-0">
+          All Awards
+        </h2>
+        <p className="font-['Plus_Jakarta_Sans',sans-serif] text-base md:text-lg text-white/75 max-w-xl">
+          Submit your entry through the official registration portal.
+        </p>
+      </div>
+
+      {/* Infinite Scrolling Carousel Viewport */}
+      <div className="w-full overflow-hidden relative py-4 [mask-image:linear-gradient(to_right,transparent_0%,black_5%,black_95%,transparent_100%)]">
+        <div className="flex gap-6 w-max animate-[esperAwardsAutoScroll_38s_linear_infinite] hover:[animation-play-state:paused]">
+          {duplicatedCards.map((card, idx) => (
+            <Link
+              key={idx}
+              href={card.href}
+              className="group flex flex-col w-[272px] min-w-[272px] flex-shrink-0 no-underline text-inherit cursor-pointer transition-transform duration-300 hover:-translate-y-1.5"
+            >
+              {/* Image Card Wrap */}
+              <div className="w-[272px] h-[340px] rounded-[20px] relative overflow-hidden bg-[#0d0d0d] border border-[#ffd57e]/22 shadow-[0_10px_30px_rgba(0,0,0,0.5)] transition-all duration-350 group-hover:border-[#ffd57e]/60 group-hover:shadow-[0_12px_40px_rgba(255,213,126,0.18)]">
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img
+                  src={card.image}
+                  alt={card.title}
+                  className="w-full h-full object-cover object-center block"
+                  loading="lazy"
+                />
+
+                {/* Golden Shine sweep on hover */}
+                <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none bg-gradient-to-tr from-transparent via-[#ffd57e]/15 to-transparent" />
+              </div>
+
+              {/* Title & Category Subtext */}
+              <div className="mt-3 text-center flex flex-col items-center">
+                <h3 className="font-['Constantine',serif] text-[20px] text-white font-semibold leading-snug tracking-[0.02em] group-hover:text-[#ffd57e] transition-colors">
+                  {card.title}
+                </h3>
+                <p className="font-['Nebula',sans-serif] text-[12px] text-[#ffd57e] tracking-[0.1em] uppercase mt-0.5">
+                  {card.category}
+                </p>
+              </div>
+            </Link>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+}
