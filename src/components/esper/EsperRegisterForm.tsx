@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import Link from "next/link";
+import { motion } from "framer-motion";
 import Header from "@/components/common/Header";
 import Footer from "@/components/common/Footer";
 
@@ -119,7 +120,12 @@ export default function EsperRegisterForm({
 
         <Header />
 
-        <div className="relative z-10 max-w-[1160px] mx-auto px-6 pt-28 md:pt-36 pb-16 md:pb-20 flex flex-col items-center text-center gap-3">
+        <motion.div
+          initial={{ opacity: 0, y: -30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ type: "spring", stiffness: 360, damping: 60, mass: 0.5, delay: 0.1 }}
+          className="relative z-10 max-w-[1160px] mx-auto px-6 pt-28 md:pt-36 pb-16 md:pb-20 flex flex-col items-center text-center gap-3"
+        >
           <span className="font-['Nebula',sans-serif] text-[12px] md:text-[13px] tracking-[0.22em] uppercase text-[#ffd57e]">
             OFFICIAL REGISTRATION PORTAL
           </span>
@@ -129,11 +135,16 @@ export default function EsperRegisterForm({
           <p className="font-['Plus_Jakarta_Sans',sans-serif] text-base md:text-lg text-white/80 max-w-xl">
             {description}
           </p>
-        </div>
+        </motion.div>
       </section>
 
       {/* Form Container */}
-      <main className="w-full max-w-[1160px] mx-auto px-6 py-12 md:py-16 flex-1">
+      <motion.main
+        initial={{ opacity: 0, y: 30 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ type: "spring", stiffness: 360, damping: 60, mass: 0.5, delay: 0.2 }}
+        className="w-full max-w-[1160px] mx-auto px-6 py-12 md:py-16 flex-1"
+      >
         {statusMessage && (
           <div
             className={`w-full max-w-2xl mx-auto mb-8 p-4 rounded-xl border text-center font-medium ${
@@ -391,17 +402,19 @@ export default function EsperRegisterForm({
               </div>
 
               {/* Submit Button */}
-              <button
+              <motion.button
+                whileHover={{ scale: 1.02 }}
+                whileTap={{ scale: 0.98 }}
                 type="submit"
                 disabled={isSubmitting}
-                className="w-full h-14 mt-4 rounded-full font-['Nebula',sans-serif] text-[13px] tracking-[0.08em] uppercase text-black font-semibold bg-gradient-to-b from-[#ffd885] via-[#d49326] to-[#a66e0a] shadow-[0_4px_20px_rgba(212,147,38,0.35)] hover:brightness-110 hover:scale-[1.01] transition-all duration-200 disabled:opacity-50 disabled:pointer-events-none cursor-pointer"
+                className="w-full h-14 mt-4 rounded-full font-['Nebula',sans-serif] text-[13px] tracking-[0.08em] uppercase text-black font-semibold bg-gradient-to-b from-[#ffd885] via-[#d49326] to-[#a66e0a] shadow-[0_4px_20px_rgba(212,147,38,0.35)] hover:brightness-110 transition-all duration-200 disabled:opacity-50 disabled:pointer-events-none cursor-pointer"
               >
                 {isSubmitting ? "Submitting Registration..." : "Complete Registration"}
-              </button>
+              </motion.button>
             </div>
           </div>
         </form>
-      </main>
+      </motion.main>
 
       <Footer />
     </div>

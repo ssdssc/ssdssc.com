@@ -1,5 +1,6 @@
 "use client";
 
+import { motion } from "framer-motion";
 import Header from "../common/Header";
 import SponsorMarquee from "../common/SponsorMarquee";
 
@@ -26,9 +27,14 @@ export default function HeroSection() {
       <Header />
 
       {/* Bottom Sponsor Logos */}
-      <div className="w-full mt-auto mb-4 z-10">
+      <motion.div
+        initial={{ opacity: 0, y: 30 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ type: "spring", stiffness: 360, damping: 60, mass: 0.5, delay: 0.2 }}
+        className="w-full mt-auto mb-4 z-10"
+      >
         <SponsorMarquee />
-      </div>
+      </motion.div>
     </section>
   );
 }

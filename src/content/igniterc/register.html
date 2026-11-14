@@ -6,7 +6,810 @@
         || (Number.isFinite(registrationDeadline) && Date.now() < registrationDeadline)
         ? 'open'
         : 'closed';
-    </script><link rel="stylesheet" href="/_astro/register@_@astro.D8GCNQFW.css"></head> <body> <a class="skip-link" href="#registration">Skip to registration</a> <header class="site-header"> <nav class="nav" aria-label="Registration navigation"> <div class="brand" role="img" aria-label="IgniteRC lightning mark"> <svg viewBox="0 0 42 100" aria-hidden="true"> <path fill="currentColor" d="M25 0 4 54h16L13 100l25-59H23L25 0Z"></path> </svg> </div> <div class="nav-links"> <a href="/igniterc">Event page</a> <a href="https://www.instagram.com/igniterc25/" target="_blank" rel="noreferrer">Instagram</a> <a class="nav-contact" href="tel:+94707670676">Contact us</a> </div> </nav> </header> <main> <section class="registration-hero" aria-labelledby="page-title"> <div class="hero-grid" aria-hidden="true"></div> <div class="hero-inner"> <p class="eyebrow">IgniteRC '27 · Registration</p> <h1 id="page-title">Get your school<br><span>on the grid.</span></h1> <p class="hero-copy">
+    </script><style>
+      :root {
+        --black: #020908;
+        --ink: #08130d;
+        --surface: #0a1612;
+        --surface-bright: #10231a;
+        --green: #14ef13;
+        --green-mid: #28b249;
+        --white: #f2f3f2;
+        --steel: #9caba4;
+        --muted: #7f9188;
+        --danger: #ff6b6b;
+        --page-pad: clamp(1rem, 4vw, 4.5rem);
+        --content: 1180px;
+      }
+
+      *,
+      *::before,
+      *::after {
+        box-sizing: border-box;
+      }
+
+      html {
+        background: var(--black);
+        scroll-behavior: smooth;
+      }
+
+      body {
+        min-width: 320px;
+        min-height: 100vh;
+        margin: 0;
+        overflow-x: hidden;
+        background:
+          radial-gradient(circle at 85% 8%, rgba(20, 239, 19, 0.09), transparent 28rem),
+          var(--black);
+        color: var(--white);
+        font-family: "Space Grotesk", sans-serif;
+      }
+
+      body::before {
+        position: fixed;
+        inset: 0;
+        z-index: 100;
+        pointer-events: none;
+        content: "";
+        opacity: 0.045;
+        background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 160 160' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.7'/%3E%3C/svg%3E");
+      }
+
+      a {
+        color: inherit;
+      }
+
+      ::selection {
+        background: var(--green);
+        color: var(--black);
+      }
+
+      :focus-visible {
+        outline: 2px solid var(--green);
+        outline-offset: 4px;
+      }
+
+      .skip-link {
+        position: fixed;
+        top: 0.75rem;
+        left: 0.75rem;
+        z-index: 200;
+        padding: 0.75rem 1rem;
+        background: var(--green);
+        color: var(--black);
+        font-weight: 700;
+        text-decoration: none;
+        transform: translateY(-180%);
+      }
+
+      .skip-link:focus {
+        transform: translateY(0);
+      }
+
+      .site-header {
+        position: fixed;
+        inset: 0 0 auto;
+        z-index: 50;
+        border-bottom: 1px solid rgba(242, 243, 242, 0.08);
+        background: rgba(2, 9, 8, 0.84);
+        backdrop-filter: blur(18px);
+      }
+
+      .nav {
+        width: min(100%, calc(var(--content) + var(--page-pad) * 2));
+        height: 74px;
+        margin: 0 auto;
+        padding: 0 var(--page-pad);
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 2rem;
+      }
+
+      .brand {
+        width: 38px;
+        height: 46px;
+        display: grid;
+        place-items: center;
+        color: var(--green);
+      }
+
+      .brand svg {
+        width: 18px;
+        height: 39px;
+        filter: drop-shadow(0 0 10px rgba(20, 239, 19, 0.5));
+      }
+
+      .nav-links {
+        display: flex;
+        align-items: center;
+        gap: clamp(1rem, 2.5vw, 2.2rem);
+      }
+
+      .nav-links a {
+        color: var(--steel);
+        font-family: "Oxanium", sans-serif;
+        font-size: 0.72rem;
+        font-weight: 600;
+        letter-spacing: 0.12em;
+        text-decoration: none;
+        text-transform: uppercase;
+        transition: color 160ms ease;
+      }
+
+      .nav-links a:hover {
+        color: var(--green);
+      }
+
+      .nav-contact {
+        padding: 0.72rem 1rem;
+        border: 1px solid rgba(20, 239, 19, 0.55);
+        color: var(--white) !important;
+      }
+
+      .registration-hero {
+        position: relative;
+        min-height: 500px;
+        padding: 9.5rem var(--page-pad) 5rem;
+        display: flex;
+        align-items: flex-end;
+        overflow: hidden;
+        isolation: isolate;
+      }
+
+      .registration-hero::before {
+        position: absolute;
+        inset: 0;
+        z-index: -3;
+        content: "";
+        background: url("/igniterc/igniterc-hero.webp") 68% 55% / cover;
+        opacity: 0.5;
+      }
+
+      .registration-hero::after {
+        position: absolute;
+        inset: 0;
+        z-index: -2;
+        content: "";
+        background:
+          linear-gradient(90deg, rgba(2, 9, 8, 0.98), rgba(2, 9, 8, 0.72) 48%, rgba(2, 9, 8, 0.2)),
+          linear-gradient(0deg, var(--black), transparent 72%);
+      }
+
+      .hero-grid {
+        position: absolute;
+        inset: 0;
+        z-index: -1;
+        opacity: 0.22;
+        background-image:
+          linear-gradient(rgba(242, 243, 242, 0.045) 1px, transparent 1px),
+          linear-gradient(90deg, rgba(242, 243, 242, 0.045) 1px, transparent 1px);
+        background-size: 64px 64px;
+        mask-image: linear-gradient(to right, black, transparent 75%);
+      }
+
+      .hero-inner {
+        width: min(100%, var(--content));
+        margin: 0 auto;
+      }
+
+      .eyebrow,
+      .section-index {
+        margin: 0 0 1rem;
+        color: var(--green);
+        font-family: "Oxanium", sans-serif;
+        font-size: 0.68rem;
+        font-weight: 600;
+        letter-spacing: 0.2em;
+        text-transform: uppercase;
+      }
+
+      .registration-hero h1 {
+        max-width: 980px;
+        margin: 0;
+        font-family: "Oxanium", sans-serif;
+        font-size: clamp(3.2rem, 8vw, 7.5rem);
+        font-weight: 600;
+        line-height: 0.88;
+        letter-spacing: -0.055em;
+        text-transform: uppercase;
+      }
+
+      .registration-hero h1 span {
+        color: transparent;
+        -webkit-text-stroke: 1px rgba(242, 243, 242, 0.55);
+      }
+
+      .hero-copy {
+        max-width: 610px;
+        margin: 1.55rem 0 0;
+        color: #b7c4be;
+        font-size: clamp(1rem, 1.5vw, 1.16rem);
+        line-height: 1.7;
+      }
+
+      .form-shell {
+        position: relative;
+        padding: 0 var(--page-pad) clamp(6rem, 10vw, 9rem);
+      }
+
+      .form-shell::before {
+        position: absolute;
+        inset: 0;
+        content: "";
+        pointer-events: none;
+        opacity: 0.24;
+        background: repeating-linear-gradient(
+          115deg,
+          transparent 0 120px,
+          rgba(20, 239, 19, 0.07) 121px 122px
+        );
+      }
+
+      .form-wrap {
+        position: relative;
+        z-index: 1;
+        width: min(100%, var(--content));
+        margin: 0 auto;
+      }
+
+      .form-intro {
+        margin-bottom: 1.5rem;
+        padding: 1rem 1.25rem;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 1rem;
+        border: 1px solid rgba(242, 243, 242, 0.1);
+        background: rgba(8, 19, 13, 0.82);
+        color: var(--steel);
+        font-size: 0.82rem;
+      }
+
+      .form-intro p {
+        margin: 0;
+      }
+
+      .form-intro strong {
+        color: var(--white);
+      }
+
+      .form-intro a {
+        flex: 0 0 auto;
+        color: var(--green);
+        font-family: "Oxanium", sans-serif;
+        font-size: 0.68rem;
+        font-weight: 600;
+        letter-spacing: 0.1em;
+        text-underline-offset: 0.3rem;
+        text-transform: uppercase;
+      }
+
+      .registration-form {
+        display: grid;
+        gap: 1.5rem;
+      }
+
+      .form-section {
+        position: relative;
+        padding: clamp(1.4rem, 4vw, 3.2rem);
+        overflow: hidden;
+        border: 1px solid rgba(242, 243, 242, 0.11);
+        background: linear-gradient(135deg, rgba(10, 22, 18, 0.98), rgba(5, 14, 10, 0.98));
+      }
+
+      .form-section::after {
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 7rem;
+        height: 3px;
+        content: "";
+        background: linear-gradient(90deg, transparent, var(--green));
+        box-shadow: 0 0 22px rgba(20, 239, 19, 0.35);
+      }
+
+      .section-heading {
+        margin-bottom: clamp(1.8rem, 4vw, 3rem);
+        padding-bottom: 1.5rem;
+        display: flex;
+        align-items: end;
+        justify-content: space-between;
+        gap: 2rem;
+        border-bottom: 1px solid rgba(242, 243, 242, 0.1);
+      }
+
+      .section-heading h2 {
+        margin: 0;
+        font-family: "Oxanium", sans-serif;
+        font-size: clamp(1.6rem, 4vw, 3.25rem);
+        font-weight: 600;
+        letter-spacing: -0.035em;
+        text-transform: uppercase;
+      }
+
+      .section-heading p {
+        max-width: 35ch;
+        margin: 0;
+        color: var(--muted);
+        font-size: 0.85rem;
+        line-height: 1.6;
+        text-align: right;
+      }
+
+      .field-grid {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 1.25rem;
+      }
+
+      .field {
+        min-width: 0;
+        display: grid;
+        gap: 0.55rem;
+      }
+
+      .field--full {
+        grid-column: 1 / -1;
+      }
+
+      .field label,
+      .upload-title {
+        color: #dce3df;
+        font-family: "Oxanium", sans-serif;
+        font-size: 0.75rem;
+        font-weight: 600;
+        letter-spacing: 0.06em;
+        text-transform: uppercase;
+      }
+
+      .required {
+        color: var(--green);
+      }
+
+      .optional {
+        margin-left: 0.4rem;
+        color: var(--muted);
+        font-family: "Space Grotesk", sans-serif;
+        font-size: 0.65rem;
+        font-weight: 500;
+        letter-spacing: 0.02em;
+        text-transform: none;
+      }
+
+      input,
+      select,
+      textarea {
+        width: 100%;
+        min-height: 54px;
+        border: 1px solid rgba(156, 171, 164, 0.24);
+        border-radius: 0;
+        outline: 0;
+        background: rgba(16, 35, 26, 0.78);
+        color: var(--white);
+        font: 500 0.98rem/1.4 "Space Grotesk", sans-serif;
+        transition:
+          border-color 160ms ease,
+          box-shadow 160ms ease,
+          background 160ms ease;
+      }
+
+      input,
+      select {
+        padding: 0 1rem;
+      }
+
+      textarea {
+        min-height: 120px;
+        padding: 0.9rem 1rem;
+        resize: vertical;
+      }
+
+      input::placeholder,
+      textarea::placeholder {
+        color: #74847c;
+      }
+
+      input:hover,
+      select:hover,
+      textarea:hover {
+        border-color: rgba(156, 171, 164, 0.42);
+      }
+
+      input:focus,
+      select:focus,
+      textarea:focus {
+        border-color: var(--green);
+        background: rgba(16, 35, 26, 0.98);
+        box-shadow: 0 0 0 3px rgba(20, 239, 19, 0.1);
+      }
+
+      select {
+        appearance: none;
+        cursor: pointer;
+        background-image:
+          linear-gradient(45deg, transparent 50%, var(--steel) 50%),
+          linear-gradient(135deg, var(--steel) 50%, transparent 50%);
+        background-position:
+          calc(100% - 20px) 24px,
+          calc(100% - 14px) 24px;
+        background-repeat: no-repeat;
+        background-size: 6px 6px, 6px 6px;
+      }
+
+      .upload-grid {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 1.25rem;
+      }
+
+      .upload-field {
+        min-width: 0;
+      }
+
+      .upload-title {
+        margin: 0 0 0.55rem;
+      }
+
+      .upload-zone {
+        min-height: 190px;
+        padding: 1.5rem;
+        display: grid;
+        place-items: center;
+        border: 1px dashed rgba(156, 171, 164, 0.56);
+        background: rgba(16, 35, 26, 0.58);
+        cursor: pointer;
+        text-align: center;
+        transition:
+          border-color 160ms ease,
+          background 160ms ease,
+          transform 160ms ease;
+      }
+
+      .upload-zone:hover,
+      .upload-zone:focus-within,
+      .upload-zone.is-dragging {
+        border-color: var(--green);
+        background: rgba(20, 239, 19, 0.055);
+      }
+
+      .upload-zone svg {
+        width: 2rem;
+        height: 2rem;
+        margin-bottom: 0.8rem;
+        color: var(--green);
+      }
+
+      .upload-zone strong {
+        display: block;
+        color: var(--white);
+        font-family: "Oxanium", sans-serif;
+        font-size: 0.9rem;
+        font-weight: 500;
+      }
+
+      .upload-zone span {
+        display: block;
+        margin-top: 0.45rem;
+        color: var(--muted);
+        font-size: 0.75rem;
+      }
+
+      .upload-zone .file-name {
+        max-width: 100%;
+        overflow: hidden;
+        color: var(--green);
+        text-overflow: ellipsis;
+        white-space: nowrap;
+      }
+
+      .upload-zone input {
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        opacity: 0;
+        pointer-events: none;
+      }
+
+      .form-footer {
+        padding: clamp(1.4rem, 4vw, 2.3rem);
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 2rem;
+        border: 1px solid rgba(242, 243, 242, 0.11);
+        background: var(--surface);
+      }
+
+      .form-footer p {
+        max-width: 55ch;
+        margin: 0;
+        color: var(--muted);
+        font-size: 0.82rem;
+        line-height: 1.6;
+      }
+
+      .submit-button,
+      .success-link {
+        position: relative;
+        isolation: isolate;
+        min-height: 54px;
+        padding: 0.9rem 1.5rem;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        gap: 0.7rem;
+        overflow: hidden;
+        border: 1px solid var(--green);
+        background: var(--green);
+        color: var(--black);
+        cursor: pointer;
+        font-family: "Oxanium", sans-serif;
+        font-size: 0.78rem;
+        font-weight: 700;
+        letter-spacing: 0.09em;
+        text-decoration: none;
+        text-transform: uppercase;
+        transition:
+          transform 160ms ease,
+          box-shadow 160ms ease;
+      }
+
+      .submit-button:hover,
+      .success-link:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 10px 30px rgba(20, 239, 19, 0.2);
+      }
+
+      .submit-button:disabled {
+        opacity: 0.58;
+        cursor: wait;
+        transform: none;
+        box-shadow: none;
+      }
+
+      .submit-button svg {
+        width: 1rem;
+        height: 1rem;
+      }
+
+      .form-message {
+        display: none;
+        padding: 1rem 1.15rem;
+        border: 1px solid rgba(255, 107, 107, 0.46);
+        background: rgba(255, 107, 107, 0.08);
+        color: #ffb4b4;
+        font-size: 0.9rem;
+      }
+
+      .form-message.is-visible {
+        display: block;
+      }
+
+      .success-panel {
+        display: none;
+        padding: clamp(2rem, 6vw, 5rem);
+        overflow: hidden;
+        border: 1px solid rgba(20, 239, 19, 0.35);
+        background:
+          radial-gradient(circle at 80% 10%, rgba(20, 239, 19, 0.1), transparent 22rem),
+          var(--surface);
+      }
+
+      .success-panel.is-visible {
+        display: block;
+      }
+
+      .closed-panel {
+        display: none;
+        padding: clamp(2rem, 6vw, 5rem);
+        overflow: hidden;
+        border: 1px solid rgba(242, 243, 242, 0.16);
+        background:
+          radial-gradient(circle at 80% 10%, rgba(20, 239, 19, 0.07), transparent 22rem),
+          var(--surface);
+      }
+
+      html[data-registration-state="closed"] .form-intro,
+      html[data-registration-state="closed"] .form-message,
+      html[data-registration-state="closed"] .registration-form {
+        display: none !important;
+      }
+
+      html[data-registration-state="closed"] .closed-panel {
+        display: block;
+      }
+
+      .closed-panel h2 {
+        max-width: 880px;
+        margin: 1rem 0 0;
+        font-family: "Oxanium", sans-serif;
+        font-size: clamp(2.7rem, 7vw, 6.5rem);
+        font-weight: 600;
+        line-height: 0.95;
+        letter-spacing: -0.05em;
+        text-transform: uppercase;
+      }
+
+      .closed-panel > p {
+        max-width: 610px;
+        margin: 1.5rem 0 0;
+        color: var(--steel);
+        font-size: 1.05rem;
+        line-height: 1.7;
+      }
+
+      .success-bolt {
+        width: 2.6rem;
+        height: 5rem;
+        color: var(--green);
+        filter: drop-shadow(0 0 18px rgba(20, 239, 19, 0.42));
+      }
+
+      .success-panel h2 {
+        max-width: 850px;
+        margin: 1.5rem 0 0;
+        font-family: "Oxanium", sans-serif;
+        font-size: clamp(2.5rem, 7vw, 6rem);
+        font-weight: 600;
+        line-height: 0.95;
+        letter-spacing: -0.05em;
+        text-transform: uppercase;
+      }
+
+      .success-panel > p {
+        max-width: 650px;
+        margin: 1.5rem 0 0;
+        color: var(--steel);
+        font-size: 1.05rem;
+        line-height: 1.7;
+      }
+
+      .success-actions {
+        margin-top: 2rem;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.8rem;
+      }
+
+      .success-link--ghost {
+        border-color: rgba(242, 243, 242, 0.25);
+        background: transparent;
+        color: var(--white);
+      }
+
+      .success-contacts {
+        margin-top: 2.5rem;
+        padding-top: 1.5rem;
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 1rem;
+        border-top: 1px solid rgba(242, 243, 242, 0.1);
+      }
+
+      .success-contacts span,
+      .success-contacts a {
+        display: block;
+      }
+
+      .success-contacts span {
+        color: var(--muted);
+        font-size: 0.7rem;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+      }
+
+      .success-contacts a {
+        margin-top: 0.3rem;
+        color: var(--white);
+        font-family: "Oxanium", sans-serif;
+        font-size: 0.9rem;
+        text-decoration-color: var(--green);
+        text-underline-offset: 0.3rem;
+      }
+
+      footer {
+        border-top: 1px solid rgba(242, 243, 242, 0.1);
+        background: #030806;
+      }
+
+      .footer-inner {
+        width: min(100%, calc(var(--content) + var(--page-pad) * 2));
+        margin: 0 auto;
+        padding: 2rem var(--page-pad);
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 2rem;
+        color: var(--muted);
+        font-size: 0.68rem;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+      }
+
+      .footer-inner a {
+        color: var(--steel);
+        text-underline-offset: 0.3rem;
+      }
+
+      @media (max-width: 760px) {
+        .nav-links a:not(.nav-contact) {
+          display: none;
+        }
+
+        .registration-hero {
+          min-height: 460px;
+          padding-top: 8rem;
+        }
+
+        .registration-hero::before {
+          background-position: 62% center;
+        }
+
+        .form-intro,
+        .section-heading,
+        .form-footer {
+          align-items: flex-start;
+          flex-direction: column;
+        }
+
+        .section-heading p {
+          text-align: left;
+        }
+
+        .field-grid,
+        .upload-grid,
+        .success-contacts {
+          grid-template-columns: 1fr;
+        }
+
+        .submit-button {
+          width: 100%;
+        }
+
+        .footer-inner {
+          align-items: flex-start;
+          flex-direction: column;
+        }
+      }
+
+      @media (max-width: 420px) {
+        .registration-hero h1 {
+          font-size: 3rem;
+        }
+
+        .form-section {
+          padding: 1.2rem;
+        }
+
+        .section-heading h2 {
+          font-size: 1.65rem;
+        }
+
+        input,
+        select {
+          min-height: 52px;
+        }
+
+        .upload-zone {
+          min-height: 165px;
+        }
+      }
+
+      @media (prefers-reduced-motion: reduce) {
+        html {
+          scroll-behavior: auto;
+        }
+
+        *,
+        *::before,
+        *::after {
+          animation-duration: 0.01ms !important;
+          animation-iteration-count: 1 !important;
+          transition-duration: 0.01ms !important;
+        }
+      }
+</style></head> <body> <a class="skip-link" href="#registration">Skip to registration</a> <header class="site-header"> <nav class="nav" aria-label="Registration navigation"> <div class="brand" role="img" aria-label="IgniteRC lightning mark"> <svg viewBox="0 0 42 100" aria-hidden="true"> <path fill="currentColor" d="M25 0 4 54h16L13 100l25-59H23L25 0Z"></path> </svg> </div> <div class="nav-links"> <a href="/igniterc">Event page</a> <a href="https://www.instagram.com/igniterc25/" target="_blank" rel="noreferrer">Instagram</a> <a class="nav-contact" href="tel:+94707670676">Contact us</a> </div> </nav> </header> <main> <section class="registration-hero" aria-labelledby="page-title"> <div class="hero-grid" aria-hidden="true"></div> <div class="hero-inner"> <p class="eyebrow">IgniteRC '27 · Registration</p> <h1 id="page-title">Get your school<br><span>on the grid.</span></h1> <p class="hero-copy">
 Build it. Tune it. Race it. Register for the ultimate build-your-own RC
             showdown by the Science Society of D. S. Senanayake College.
 </p> </div> </section> <section class="form-shell" id="registration" aria-label="IgniteRC registration form"> <div class="form-wrap"> <div class="form-intro"> <p><strong>One form. One contestant.</strong> Fields marked * are required.</p> <a href="https://tally.so/r/Gx5dKo" target="_blank" rel="noreferrer">
@@ -20,4 +823,209 @@ Your information is sent securely to the IgniteRC organising team.
 </p> <button class="submit-button" id="submit-button" type="submit"> <span data-submit-label>Submit registration</span> <svg viewBox="0 0 20 20" aria-hidden="true"> <path d="m7 4 6 6-6 6" fill="none" stroke="currentColor" stroke-width="1.8"></path> </svg> </button> </div> </form> <section class="success-panel" id="success-panel" tabindex="-1" aria-labelledby="success-title"> <svg class="success-bolt" viewBox="0 0 42 100" aria-hidden="true"> <path fill="currentColor" d="M25 0 4 54h16L13 100l25-59H23L25 0Z"></path> </svg> <p class="section-index">Registration received</p> <h2 id="success-title">You're on<br>the grid.</h2> <p>
 Your submission has been sent to the IgniteRC team. Join the official
               WhatsApp group for updates and read the competition rules before race day.
-</p> <div class="success-actions"> <a class="success-link" href="https://chat.whatsapp.com/FadrEGW5kH64bkdVtRn5ED" target="_blank" rel="noreferrer">Join WhatsApp group ↗</a> <a class="success-link success-link--ghost" href="https://drive.google.com/drive/folders/1n4toXjuTiVrMFsjpTEXJAuTyupJPIdj6?usp=drive_link" target="_blank" rel="noreferrer">Rules & regulations ↗</a> </div> <div class="success-contacts"> <div> <span>Kethmin Kithnula · Project head</span> <a href="tel:+94711472219">+94 71 147 2219</a> </div> <div> <span>Minuka Subasinghe · President</span> <a href="tel:+94707670676">+94 70 767 0676</a> </div> <div> <span>Okith Hettiarachchi · Secretary</span> <a href="tel:+94701701963">+94 70 170 1963</a> </div> </div> </section> </div> </section> </main> <footer> <div class="footer-inner"> <span>IgniteRC 2026 · Science Society of D. S.</span> <a href="/igniterc">Back to the event page</a> </div> </footer> <script type="module" src="/_astro/register.astro_astro_type_script_index_0_lang.DjJyYMQW.js"></script> <vercel-analytics data-props="{}" data-params="{}" data-pathname="/igniterc/register/"></vercel-analytics> <script type="module">var v=()=>{window.va||(window.va=function(...i){window.vaq||(window.vaq=[]),window.vaq.push(i)})},w="@vercel/analytics",h="2.0.1";function f(){return typeof window<"u"}function l(){try{const e="production"}catch{}return"production"}function m(e="auto"){if(e==="auto"){window.vam=l();return}window.vam=e}function y(){return(f()?window.vam:l())||"production"}function d(){return y()==="development"}function b(e,i){if(!e||!i)return e;let n=e;try{const t=Object.entries(i);for(const[r,s]of t)if(!Array.isArray(s)){const o=u(s);o.test(n)&&(n=n.replace(o,`/[${r}]`))}for(const[r,s]of t)if(Array.isArray(s)){const o=u(s.join("/"));o.test(n)&&(n=n.replace(o,`/[...${r}]`))}return n}catch{return e}}function u(e){return new RegExp(`/${g(e)}(?=[/?#]|$)`)}function g(e){return e.replace(/[.*+?^${}()|[\]\\]/g,"\\$&")}function E(e){return e.scriptSrc?a(e.scriptSrc):d()?"https://va.vercel-scripts.com/v1/script.debug.js":e.basePath?a(`${e.basePath}/insights/script.js`):"/_vercel/insights/script.js"}function k(e,i){var n;let t=e;if(i)try{t={...(n=JSON.parse(i))==null?void 0:n.analytics,...e}}catch{}m(t.mode);const r={sdkn:w+(t.framework?`/${t.framework}`:""),sdkv:h};return t.disableAutoTrack&&(r.disableAutoTrack="1"),t.viewEndpoint&&(r.viewEndpoint=a(t.viewEndpoint)),t.eventEndpoint&&(r.eventEndpoint=a(t.eventEndpoint)),t.sessionEndpoint&&(r.sessionEndpoint=a(t.sessionEndpoint)),d()&&t.debug===!1&&(r.debug="false"),t.dsn&&(r.dsn=t.dsn),t.endpoint?r.endpoint=t.endpoint:t.basePath&&(r.endpoint=a(`${t.basePath}/insights`)),{beforeSend:t.beforeSend,src:E(t),dataset:r}}function a(e){return e.startsWith("http://")||e.startsWith("https://")||e.startsWith("/")?e:`/${e}`}function S(e={debug:!0},i){var n;if(!f())return;const{beforeSend:t,src:r,dataset:s}=k(e,i);if(v(),t&&((n=window.va)==null||n.call(window,"beforeSend",t)),document.head.querySelector(`script[src*="${r}"]`))return;const o=document.createElement("script");o.src=r;for(const[c,p]of Object.entries(s))o.dataset[c]=p;o.defer=!0,o.onerror=()=>{const c=d()?"Please check if any ad blockers are enabled and try again.":"Be sure to enable Web Analytics for your project and deploy again. See https://vercel.com/docs/analytics/quickstart for more information.";console.log(`[Vercel Web Analytics] Failed to load script from ${r}. ${c}`)},document.head.appendChild(o)}function $({route:e,path:i}){var n;(n=window.va)==null||n.call(window,"pageview",{route:e,path:i})}function A(){try{return}catch{}}function j(){try{return}catch{}}customElements.define("vercel-analytics",class extends HTMLElement{constructor(){super();try{const i=JSON.parse(this.dataset.props??"{}"),n=JSON.parse(this.dataset.params??"{}");S({...i,disableAutoTrack:!0,framework:"astro",basePath:A(),beforeSend:window.webAnalyticsBeforeSend},j());const t=this.dataset.pathname;$({route:b(t??"",n),path:t})}catch(i){throw new Error(`Failed to parse WebAnalytics properties: ${i}`)}}});</script> </body></html>
+</p> <div class="success-actions"> <a class="success-link" href="https://chat.whatsapp.com/FadrEGW5kH64bkdVtRn5ED" target="_blank" rel="noreferrer">Join WhatsApp group ↗</a> <a class="success-link success-link--ghost" href="https://drive.google.com/drive/folders/1n4toXjuTiVrMFsjpTEXJAuTyupJPIdj6?usp=drive_link" target="_blank" rel="noreferrer">Rules & regulations ↗</a> </div> <div class="success-contacts"> <div> <span>Kethmin Kithnula · Project head</span> <a href="tel:+94711472219">+94 71 147 2219</a> </div> <div> <span>Minuka Subasinghe · President</span> <a href="tel:+94707670676">+94 70 767 0676</a> </div> <div> <span>Okith Hettiarachchi · Secretary</span> <a href="tel:+94701701963">+94 70 170 1963</a> </div> </div> </section> </div> </section> </main> <footer> <div class="footer-inner"> <span>IgniteRC 2026 · Science Society of D. S.</span> <a href="/igniterc">Back to the event page</a> </div> </footer>     <script>
+      const MAX_FILE_SIZE = 10 * 1024 * 1024;
+      const ALLOWED_TYPES = new Set(['image/jpeg', 'image/png', 'image/webp']);
+      const registrationsOpen = document.documentElement.dataset.registrationState === 'open';
+
+      const form = document.querySelector('#registration-form');
+      const submitButton = document.querySelector('#submit-button');
+      const submitLabel = document.querySelector('[data-submit-label]');
+      const message = document.querySelector('#form-message');
+      const successPanel = document.querySelector('#success-panel');
+      const fileInputs = {
+        schoolLogo: document.querySelector('#school-logo'),
+        societyLogo: document.querySelector('#society-logo'),
+      };
+
+      function setMessage(text = '') {
+        if (!(message instanceof HTMLElement)) return;
+        message.textContent = text;
+        message.classList.toggle('is-visible', Boolean(text));
+        if (text) message.focus();
+      }
+
+      function setSubmitting(isSubmitting, label = 'Submit registration') {
+        if (submitButton instanceof HTMLButtonElement) submitButton.disabled = isSubmitting;
+        if (submitLabel) submitLabel.textContent = label;
+      }
+
+      function validateFile(file, label) {
+        if (!file) return null;
+        if (!ALLOWED_TYPES.has(file.type)) {
+          return `${label} must be a JPG, PNG, or WebP image.`;
+        }
+        if (file.size > MAX_FILE_SIZE) {
+          return `${label} must be 10 MB or smaller.`;
+        }
+        if (file.size === 0) return `${label} is empty.`;
+        return null;
+      }
+
+      function updateFileName(key) {
+        const input = fileInputs[key];
+        const target = document.querySelector(`[data-file-name="${key}"]`);
+        const file = input instanceof HTMLInputElement ? input.files?.[0] : null;
+        if (target) target.textContent = file ? file.name : 'No file selected · 10 MB max';
+      }
+
+      Object.entries(fileInputs).forEach(([key, input]) => {
+        if (!(input instanceof HTMLInputElement)) return;
+        input.addEventListener('change', () => {
+          updateFileName(key);
+          const file = input.files?.[0];
+          const error = validateFile(file, key === 'schoolLogo' ? 'School logo' : 'Society logo');
+          input.setCustomValidity(error ?? '');
+          if (error) input.reportValidity();
+        });
+
+        const zone = document.querySelector(`[data-drop-zone="${key}"]`);
+        if (!(zone instanceof HTMLElement)) return;
+
+        ['dragenter', 'dragover'].forEach((eventName) => {
+          zone.addEventListener(eventName, (event) => {
+            event.preventDefault();
+            zone.classList.add('is-dragging');
+          });
+        });
+
+        ['dragleave', 'drop'].forEach((eventName) => {
+          zone.addEventListener(eventName, (event) => {
+            event.preventDefault();
+            zone.classList.remove('is-dragging');
+          });
+        });
+
+        zone.addEventListener('drop', (event) => {
+          const file = event.dataTransfer?.files?.[0];
+          if (!file) return;
+          const transfer = new DataTransfer();
+          transfer.items.add(file);
+          input.files = transfer.files;
+          input.dispatchEvent(new Event('change', { bubbles: true }));
+        });
+      });
+
+      async function requestUploadTargets(files) {
+        const response = await fetch('/api/igniterc/upload-urls', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({
+            files: Object.fromEntries(
+              Object.entries(files).map(([key, file]) => [
+                key,
+                file ? { name: file.name, size: file.size, type: file.type } : null,
+              ]),
+            ),
+          }),
+        });
+        const result = await response.json().catch(() => ({}));
+        if (!response.ok) throw new Error(result.error || 'Could not prepare logo uploads.');
+        return result;
+      }
+
+      async function uploadFile(file, target) {
+        const body = new FormData();
+        body.append('cacheControl', '3600');
+        body.append('', file);
+
+        const response = await fetch(target.signedUrl, {
+          method: 'PUT',
+          headers: { 'x-upsert': 'false' },
+          body,
+        });
+        if (!response.ok) throw new Error('A logo could not be uploaded. Please try again.');
+      }
+
+      form?.addEventListener('submit', async (event) => {
+        event.preventDefault();
+        setMessage();
+
+        if (!registrationsOpen) {
+          setMessage('Registrations are closed.');
+          return;
+        }
+
+        if (!(form instanceof HTMLFormElement) || !form.reportValidity()) return;
+
+        const schoolLogo = fileInputs.schoolLogo instanceof HTMLInputElement
+          ? fileInputs.schoolLogo.files?.[0] ?? null
+          : null;
+        const societyLogo = fileInputs.societyLogo instanceof HTMLInputElement
+          ? fileInputs.societyLogo.files?.[0] ?? null
+          : null;
+
+        const fileErrors = [
+          validateFile(schoolLogo, 'School logo'),
+          validateFile(societyLogo, 'Society logo'),
+        ].filter(Boolean);
+        if (fileErrors.length) {
+          setMessage(fileErrors[0]);
+          return;
+        }
+
+        setSubmitting(true, schoolLogo || societyLogo ? 'Preparing uploads…' : 'Submitting…');
+
+        try {
+          let submissionId = null;
+          let schoolLogoPath = null;
+          let societyLogoPath = null;
+
+          if (schoolLogo || societyLogo) {
+            const targets = await requestUploadTargets({ schoolLogo, societyLogo });
+            submissionId = targets.submissionId;
+            setSubmitting(true, 'Uploading logos…');
+
+            const uploads = [];
+            if (schoolLogo && targets.uploads?.schoolLogo) {
+              uploads.push(uploadFile(schoolLogo, targets.uploads.schoolLogo));
+              schoolLogoPath = targets.uploads.schoolLogo.path;
+            }
+            if (societyLogo && targets.uploads?.societyLogo) {
+              uploads.push(uploadFile(societyLogo, targets.uploads.societyLogo));
+              societyLogoPath = targets.uploads.societyLogo.path;
+            }
+            await Promise.all(uploads);
+            setSubmitting(true, 'Saving registration…');
+          }
+
+          const data = new FormData(form);
+          const payload = {
+            schoolName: data.get('schoolName'),
+            presidentName: data.get('presidentName'),
+            presidentContact: data.get('presidentContact'),
+            masterInChargeName: data.get('masterInChargeName'),
+            micContact: data.get('micContact'),
+            contestantFirstName: data.get('contestantFirstName'),
+            contestantLastName: data.get('contestantLastName'),
+            contestantEmail: data.get('contestantEmail'),
+            contestantPhone: data.get('contestantPhone'),
+            contestantGender: data.get('contestantGender'),
+            parentFirstName: data.get('parentFirstName'),
+            parentLastName: data.get('parentLastName'),
+            homeAddress: data.get('homeAddress'),
+            parentPhone: data.get('parentPhone'),
+            submissionId,
+            schoolLogoPath,
+            societyLogoPath,
+          };
+
+          const response = await fetch('/api/igniterc/register', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify(payload),
+          });
+          const result = await response.json().catch(() => ({}));
+          if (!response.ok) throw new Error(result.error || 'Registration could not be submitted.');
+
+          form.hidden = true;
+          document.querySelector('.form-intro')?.setAttribute('hidden', '');
+          successPanel?.classList.add('is-visible');
+          if (successPanel instanceof HTMLElement) successPanel.focus();
+          window.scrollTo({ top: document.querySelector('#registration')?.offsetTop ?? 0, behavior: 'smooth' });
+        } catch (error) {
+          setMessage(error instanceof Error ? error.message : 'Registration could not be submitted.');
+          setSubmitting(false);
+        }
+      });
+    </script> <vercel-analytics data-props="{}" data-params="{}" data-pathname="/igniterc/register/"></vercel-analytics> <script type="module">var v=()=>{window.va||(window.va=function(...i){window.vaq||(window.vaq=[]),window.vaq.push(i)})},w="@vercel/analytics",h="2.0.1";function f(){return typeof window<"u"}function l(){try{const e="production"}catch{}return"production"}function m(e="auto"){if(e==="auto"){window.vam=l();return}window.vam=e}function y(){return(f()?window.vam:l())||"production"}function d(){return y()==="development"}function b(e,i){if(!e||!i)return e;let n=e;try{const t=Object.entries(i);for(const[r,s]of t)if(!Array.isArray(s)){const o=u(s);o.test(n)&&(n=n.replace(o,`/[${r}]`))}for(const[r,s]of t)if(Array.isArray(s)){const o=u(s.join("/"));o.test(n)&&(n=n.replace(o,`/[...${r}]`))}return n}catch{return e}}function u(e){return new RegExp(`/${g(e)}(?=[/?#]|$)`)}function g(e){return e.replace(/[.*+?^${}()|[\]\\]/g,"\\$&")}function E(e){return e.scriptSrc?a(e.scriptSrc):d()?"https://va.vercel-scripts.com/v1/script.debug.js":e.basePath?a(`${e.basePath}/insights/script.js`):"/_vercel/insights/script.js"}function k(e,i){var n;let t=e;if(i)try{t={...(n=JSON.parse(i))==null?void 0:n.analytics,...e}}catch{}m(t.mode);const r={sdkn:w+(t.framework?`/${t.framework}`:""),sdkv:h};return t.disableAutoTrack&&(r.disableAutoTrack="1"),t.viewEndpoint&&(r.viewEndpoint=a(t.viewEndpoint)),t.eventEndpoint&&(r.eventEndpoint=a(t.eventEndpoint)),t.sessionEndpoint&&(r.sessionEndpoint=a(t.sessionEndpoint)),d()&&t.debug===!1&&(r.debug="false"),t.dsn&&(r.dsn=t.dsn),t.endpoint?r.endpoint=t.endpoint:t.basePath&&(r.endpoint=a(`${t.basePath}/insights`)),{beforeSend:t.beforeSend,src:E(t),dataset:r}}function a(e){return e.startsWith("http://")||e.startsWith("https://")||e.startsWith("/")?e:`/${e}`}function S(e={debug:!0},i){var n;if(!f())return;const{beforeSend:t,src:r,dataset:s}=k(e,i);if(v(),t&&((n=window.va)==null||n.call(window,"beforeSend",t)),document.head.querySelector(`script[src*="${r}"]`))return;const o=document.createElement("script");o.src=r;for(const[c,p]of Object.entries(s))o.dataset[c]=p;o.defer=!0,o.onerror=()=>{const c=d()?"Please check if any ad blockers are enabled and try again.":"Be sure to enable Web Analytics for your project and deploy again. See https://vercel.com/docs/analytics/quickstart for more information.";console.log(`[Vercel Web Analytics] Failed to load script from ${r}. ${c}`)},document.head.appendChild(o)}function $({route:e,path:i}){var n;(n=window.va)==null||n.call(window,"pageview",{route:e,path:i})}function A(){try{return}catch{}}function j(){try{return}catch{}}customElements.define("vercel-analytics",class extends HTMLElement{constructor(){super();try{const i=JSON.parse(this.dataset.props??"{}"),n=JSON.parse(this.dataset.params??"{}");S({...i,disableAutoTrack:!0,framework:"astro",basePath:A(),beforeSend:window.webAnalyticsBeforeSend},j());const t=this.dataset.pathname;$({route:b(t??"",n),path:t})}catch(i){throw new Error(`Failed to parse WebAnalytics properties: ${i}`)}}});</script> </body></html>

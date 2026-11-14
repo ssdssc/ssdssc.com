@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import { motion } from "framer-motion";
 
 interface AwardCard {
   title: string;
@@ -73,7 +74,13 @@ export default function AwardsSection() {
   return (
     <section id="esper-all-awards-section" className="w-full py-16 md:py-24 relative z-10 overflow-hidden box-border">
       {/* Header */}
-      <div className="max-w-[1160px] mx-auto px-4 flex flex-col items-center text-center gap-3 mb-10">
+      <motion.div
+        initial={{ opacity: 0, y: 35 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true, amount: 0.2 }}
+        transition={{ type: "spring", stiffness: 360, damping: 60, mass: 0.5 }}
+        className="max-w-[1160px] mx-auto px-4 flex flex-col items-center text-center gap-3 mb-10"
+      >
         <span className="font-['Nebula',sans-serif] text-[13px] tracking-[0.2em] uppercase text-[#ffd57e]">
           INTER • INTRA • OPEN AWARDS
         </span>
@@ -83,7 +90,7 @@ export default function AwardsSection() {
         <p className="font-['Plus_Jakarta_Sans',sans-serif] text-base md:text-lg text-white/75 max-w-xl">
           Submit your entry through the official registration portal.
         </p>
-      </div>
+      </motion.div>
 
       {/* Infinite Scrolling Carousel Viewport */}
       <div className="w-full overflow-hidden relative py-4 [mask-image:linear-gradient(to_right,transparent_0%,black_5%,black_95%,transparent_100%)]">
