@@ -7,12 +7,12 @@ export const metadata: Metadata = {
   icons: {
     icon: [
       {
-        url: "/esper/images/oegcbbhl1oso0nuozgcpgfshaus.png",
+        url: "/esper/favicon_esper.png",
         type: "image/png",
       },
     ],
-    apple: "/esper/images/gr0xzpumsqje6dkwbefsvlezx0.png",
-    shortcut: "/esper/images/oegcbbhl1oso0nuozgcpgfshaus.png",
+    apple: "/esper/favicon_esper.png",
+    shortcut: "/esper/favicon_esper.png",
   },
 };
 
