@@ -1519,27 +1519,29 @@ export default function EsperRegisterForm({
         }
 
         .submit-btn {
-          background: linear-gradient(180deg, var(--esper-accent-orange) 0%, var(--esper-accent-orange-dark) 100%);
-          color: #fff;
-          padding: 16px 40px;
+          background: linear-gradient(180deg, #ffd885 0%, #d49326 50%, #a66e0a 100%);
+          color: #000000;
+          padding: 16px 48px;
           border-radius: 100px;
-          font-weight: 600;
+          font-weight: 700;
           font-family: var(--font-instrument), 'Inter', sans-serif;
           font-size: 18px;
           letter-spacing: 0.5px;
           border: none;
           cursor: pointer;
-          transition: transform 0.2s, box-shadow 0.2s;
-          box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+          transition: transform 0.2s, box-shadow 0.2s, filter 0.2s;
+          box-shadow: inset 0px 1px 3px rgba(255, 255, 255, 0.4), 0 4px 20px rgba(212, 147, 38, 0.4);
         }
 
         .submit-btn:hover {
           transform: translateY(-2px);
-          box-shadow: 0 6px 18px rgba(0, 0, 0, 0.4);
+          filter: brightness(1.08);
+          box-shadow: inset 0px 1px 3px rgba(255, 255, 255, 0.5), 0 6px 24px rgba(212, 147, 38, 0.55);
         }
 
         .submit-btn:active {
           transform: translateY(0);
+          filter: brightness(0.96);
         }
 
         .submit-btn:disabled {
