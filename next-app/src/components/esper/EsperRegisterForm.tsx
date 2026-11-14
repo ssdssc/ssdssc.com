@@ -119,7 +119,7 @@ export default function EsperRegisterForm({
 
         <Header />
 
-        <div className="relative z-10 max-w-[1160px] mx-auto px-6 py-16 md:py-20 flex flex-col items-center text-center gap-3">
+        <div className="relative z-10 max-w-[1160px] mx-auto px-6 pt-28 md:pt-36 pb-16 md:pb-20 flex flex-col items-center text-center gap-3">
           <span className="font-['Nebula',sans-serif] text-[12px] md:text-[13px] tracking-[0.22em] uppercase text-[#ffd57e]">
             OFFICIAL REGISTRATION PORTAL
           </span>

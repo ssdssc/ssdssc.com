@@ -52,7 +52,7 @@ export default function SubpageLayout({
         <Header />
 
         {/* Subheader Content */}
-        <div className="relative z-10 max-w-[1160px] mx-auto px-6 py-20 md:py-28 flex flex-col items-center text-center gap-4">
+        <div className="relative z-10 max-w-[1160px] mx-auto px-6 pt-28 md:pt-36 pb-20 md:pb-28 flex flex-col items-center text-center gap-4">
           <span className="font-['Nebula',sans-serif] text-[12px] md:text-[13px] tracking-[0.22em] uppercase text-[#ffd57e]">
             {eyebrow}
           </span>

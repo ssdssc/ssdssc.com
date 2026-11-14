@@ -1,12 +1,23 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 
 export default function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
   const pathname = usePathname();
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 15);
+    };
+
+    handleScroll();
+    window.addEventListener("scroll", handleScroll, { passive: true });
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
   const navLinks = [
     { label: "INTER SCHOOL AWARDS", href: "/esper/inter" },
@@ -14,8 +25,16 @@ export default function Header() {
     { label: "OPEN AWARDS", href: "/esper/open" },
   ];
 
+  const hasBackground = isScrolled || mobileMenuOpen;
+
   return (
-    <header className="relative z-50 w-full bg-gradient-to-b from-[#040404]/85 via-[#040404]/45 to-[#040404]/15 backdrop-blur-[12px] border-b border-[#ffd57e]/15">
+    <header
+      className={`fixed top-0 left-0 right-0 z-50 w-full transition-all duration-300 ease-in-out ${
+        hasBackground
+          ? "bg-[#040404]/85 backdrop-blur-[12px] border-b border-[#ffd57e]/15 shadow-[0_4px_20px_rgba(0,0,0,0.5)]"
+          : "bg-transparent backdrop-blur-none border-b border-transparent shadow-none"
+      }`}
+    >
       <div className="max-w-[1320px] w-full mx-auto px-6 md:px-8 py-3.5 flex items-center justify-between box-border">
         {/* Brand Logo */}
         <Link
