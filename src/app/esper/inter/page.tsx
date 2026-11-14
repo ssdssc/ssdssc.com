@@ -41,7 +41,7 @@ const interAwards = [
 export default function InterSchoolAwardsPage() {
   return (
     <SubpageLayout
-      eyebrow="ESPER '27 CATEGORY"
+      eyebrow="ESPER '27"
       title="Inter School Awards"
       description="Honouring the finest school science innovators, researchers, and creators across Sri Lanka."
       registerUrl="/esper/inter/register"

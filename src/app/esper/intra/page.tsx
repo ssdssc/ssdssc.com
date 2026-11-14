@@ -23,7 +23,7 @@ const intraAwards = [
 export default function IntraSchoolAwardsPage() {
   return (
     <SubpageLayout
-      eyebrow="ESPER '27 CATEGORY"
+      eyebrow="ESPER '27"
       title="Intra School Awards"
       description="Celebrating scientific curiosity, invention, and creative talent within D.S. Senanayake College."
       registerUrl="/esper/intra/register"

@@ -29,7 +29,7 @@ const openAwards = [
 export default function OpenAwardsPage() {
   return (
     <SubpageLayout
-      eyebrow="ESPER '27 CATEGORY"
+      eyebrow="ESPER '27"
       title="Open Awards"
       description="Recognizing visionaries, filmmakers, photographers, and builders pushing boundaries beyond schools."
       registerUrl="/esper/open/register"
