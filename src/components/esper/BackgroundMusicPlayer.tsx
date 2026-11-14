@@ -156,11 +156,6 @@ export default function BackgroundMusicPlayer() {
             : "bg-[#0d0d0d]/80 border-white/20 hover:border-[#ffd57e]/60"
         }`}
       >
-        {/* Subtle breathing glow ring when playing */}
-        {isPlaying && (
-          <span className="absolute inset-0 rounded-full animate-ping opacity-25 bg-[#ffd57e] pointer-events-none" />
-        )}
-
         {/* Dynamic Icon */}
         <AnimatePresence mode="wait" initial={false}>
           {isPlaying ? (
