@@ -68,8 +68,8 @@ const awardCards: AwardCard[] = [
 ];
 
 export default function AwardsSection() {
-  // Duplicate array 3x for flawless infinite marquee loop on ultrawide displays
-  const duplicatedCards = [...awardCards, ...awardCards, ...awardCards];
+  // Duplicate array for seamless infinite marquee loop (-50% translation)
+  const duplicatedCards = [...awardCards, ...awardCards];
 
   return (
     <section id="esper-all-awards-section" className="w-full py-16 md:py-24 relative z-10 overflow-hidden box-border">

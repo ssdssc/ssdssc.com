@@ -117,7 +117,7 @@ html, body {
 .animate-awards-scroll {
   display: flex;
   width: max-content;
-  animation: esperAwardsAutoScroll 32s linear infinite;
+  animation: esperAwardsAutoScroll 46s linear infinite;
   will-change: transform;
 }
 
