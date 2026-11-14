@@ -10,13 +10,13 @@ const intraAwards = [
     title: "Best Young Inventor",
     category: "Intra School Award",
     image: "/esper/images/Daedalus.png",
-    registerUrl: "/esper/intra/register",
+    registerUrl: "/esper/intra/register?category=young-inventor",
   },
   {
     title: "Best Article Writer",
     category: "Intra School Award",
     image: "/esper/images/Eureka.png",
-    registerUrl: "/esper/intra/register",
+    registerUrl: "/esper/intra/register?category=article-writer",
   },
 ];
 

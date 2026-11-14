@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useRef } from "react";
+import { useState, useRef, useEffect } from "react";
 import Header from "@/components/common/Header";
 import Footer from "@/components/common/Footer";
 
@@ -101,6 +101,21 @@ export default function EsperRegisterForm({
     registrationType: type,
     schoolName: type === "intra" ? "D. S. Senanayake College" : "",
   });
+
+  // Automatically pre-select category from URL query parameters (e.g., ?category=research-team)
+  useEffect(() => {
+    if (typeof window !== "undefined") {
+      const params = new URLSearchParams(window.location.search);
+      const cat = params.get("category");
+      if (cat) {
+        // eslint-disable-next-line react-hooks/set-state-in-effect
+        setFormData((prev) => ({
+          ...prev,
+          awardCategory: cat,
+        }));
+      }
+    }
+  }, []);
 
   // File uploads
   const [schoolLogo, setSchoolLogo] = useState<File | null>(null);

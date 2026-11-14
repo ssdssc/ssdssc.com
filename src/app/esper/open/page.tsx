@@ -10,19 +10,19 @@ const openAwards = [
     title: "Best Short Film",
     category: "Open Category Award",
     image: "/esper/images/Best short film of the year.png",
-    registerUrl: "/esper/open/register",
+    registerUrl: "/esper/open/register?category=short-film",
   },
   {
     title: "Wildlife Photographer",
     category: "Open Category Award",
     image: "/esper/images/Opticos.png",
-    registerUrl: "/esper/open/register",
+    registerUrl: "/esper/open/register?category=photographer",
   },
   {
     title: "Best Build Team",
     category: "Open Category Award",
     image: "/esper/images/Debunked.png",
-    registerUrl: "/esper/open/register",
+    registerUrl: "/esper/open/register?category=build-team",
   },
 ];
 

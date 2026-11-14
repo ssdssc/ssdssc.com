@@ -10,31 +10,31 @@ const interAwards = [
     title: "Graphic Designer",
     category: "Inter School Award",
     image: "/esper/images/Aesthetikos.png",
-    registerUrl: "/esper/inter/register",
+    registerUrl: "/esper/inter/register?category=graphic-designer",
   },
   {
     title: "Best Research Team",
     category: "Inter School Award",
     image: "/esper/images/Agora.png",
-    registerUrl: "/esper/inter/register",
+    registerUrl: "/esper/inter/register?category=research-team",
   },
   {
     title: "Most Popular Science Union",
     category: "Inter School Award",
     image: "/esper/images/most popular science union.png",
-    registerUrl: "/esper/inter/register",
+    registerUrl: "/esper/inter/register?category=popular-union",
   },
   {
     title: "Best Article Writer",
     category: "Inter School Award",
     image: "/esper/images/Eureka.png",
-    registerUrl: "/esper/inter/register",
+    registerUrl: "/esper/inter/register?category=article-writer",
   },
   {
     title: "EDU Coder",
     category: "Inter School Award",
     image: "/esper/images/Algorithmos.png",
-    registerUrl: "/esper/inter/register",
+    registerUrl: "/esper/inter/register?category=edu-coder",
   },
 ];
 
