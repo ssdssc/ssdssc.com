@@ -104,4 +104,26 @@ html, body {
   background: rgba(255, 213, 126, 0.5);
 }
 
+/* Infinite Awards Marquee Keyframes */
+@keyframes esperAwardsAutoScroll {
+  0% {
+    transform: translate3d(0, 0, 0);
+  }
+  100% {
+    transform: translate3d(-50%, 0, 0);
+  }
+}
+
+.animate-awards-scroll {
+  display: flex;
+  width: max-content;
+  animation: esperAwardsAutoScroll 32s linear infinite;
+  will-change: transform;
+}
+
+.animate-awards-scroll:hover {
+  animation-play-state: paused;
+}
+
+
 
