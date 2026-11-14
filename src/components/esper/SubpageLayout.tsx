@@ -112,7 +112,7 @@ export default function SubpageLayout({
                   rel="noopener noreferrer"
                   className="inline-flex items-center justify-center font-['Nebula',sans-serif] text-[13px] tracking-[0.08em] uppercase text-white/90 font-medium px-6 py-3.5 rounded-full border border-[#ffd57e]/40 bg-black/40 backdrop-blur-sm hover:bg-[#ffd57e]/10 hover:border-[#ffd57e] transition-all duration-200"
                 >
-                  RULES & GUIDELINES (PDF)
+                  RULES & GUIDELINES
                 </a>
               </motion.div>
             )}
