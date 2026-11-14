@@ -126,7 +126,7 @@ export default function SubpageLayout({
             Ready to Nominate?
           </h2>
           <p className="font-['Plus_Jakarta_Sans',sans-serif] text-white/70 max-w-lg">
-            Submit your official entry through our secure registration portal before the deadline.
+            Submit your entry through our registration portal before the deadline.
           </p>
           <Link
             href={registerUrl}
