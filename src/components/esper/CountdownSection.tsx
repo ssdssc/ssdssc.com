@@ -22,7 +22,7 @@ export default function CountdownSection() {
           className="flex-1 flex flex-col items-center md:items-start text-center md:text-left gap-4"
         >
           <span className="font-['Constantine',serif] text-xl md:text-2xl tracking-[0.14em] uppercase text-[#ffd57e] drop-shadow-[0_0_16px_rgba(255,213,126,0.3)]">
-            THE SAGA CONTINUES
+            ESPER Awards &apos;27
           </span>
           <h2 className="font-['Nebula',sans-serif] text-4xl sm:text-5xl md:text-6xl text-white tracking-[0.08em] uppercase leading-tight">
             COMING SOON
