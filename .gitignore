@@ -41,11 +41,6 @@ next-env.d.ts
 .idea/
 .vscode/
 
-# old resources & backups
-old websites/
+# backups & scratch
 *.bak
 *_backup.png
-
-# screenshots
-/baseline-screenshots/
-/migrated-screenshots/
