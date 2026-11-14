@@ -7,16 +7,19 @@ interface Sponsor {
 }
 
 const sponsors: Sponsor[] = [
-  { name: "Derana 24", src: "/esper/images/twwqyxotlhdxabp7dwhjedkyhae.png", height: 26 },
+  { name: "Derana 24", src: "/esper/images/twwqyxotlhdxabp7dwhjedkyhae.png", height: 32 },
   { name: "TV Derana", src: "/esper/images/b0gribr06czgnoidqqwzynyz2vc.png", height: 32 },
-  { name: "Ada Derana", src: "/esper/images/4zpxpjv88gcfrhqebf2a5hxevw.png", height: 28 },
-  { name: "FM Derana", src: "/esper/images/gvt2qwmuoxufwi7sozmrjjnxum.png", height: 24 },
+  { name: "Ada Derana", src: "/esper/images/4zpxpjv88gcfrhqebf2a5hxevw.png", height: 34 },
+  { name: "FM Derana", src: "/esper/images/gvt2qwmuoxufwi7sozmrjjnxum.png", height: 30 },
   { name: "Equus", src: "/esper/images/mcxktlhkvhjojix8gkulbg6fmbk.png", height: 32 },
   { name: "Sirasa TV", src: "/esper/images/mdpsq2xil2s5agl02n5lk2em.png", height: 32 },
   { name: "Helakuru", src: "/esper/images/gtmjsu8rsz7nqupbgqvlwlefw.webp", height: 28 },
-  { name: "Digitized.lk", src: "/esper/images/spigwnekuaj8rvgfpdanj0y0.png", height: 26 },
-  { name: "Events Avenue", src: "/esper/images/5dvidyczitj8ceqx69gnqzwki4.png", height: 28 },
-  { name: "IEEE Sri Lanka Section", src: "/esper/images/nvzenooymu1olttjngo499jcbnw.png", height: 30 },
+  { name: "Digitized.lk", src: "/esper/images/spigwnekuaj8rvgfpdanj0y0.png", height: 38 },
+  { name: "IEEE Sri Lanka Section", src: "/esper/images/nvzenooymu1olttjngo499jcbnw.png", height: 32 },
+  { name: "Events Avenue", src: "/esper/images/5dvidyczitj8ceqx69gnqzwki4.png", height: 42 },
+  { name: "SLT Mobitel", src: "/esper/images/1axaeepaiboo6au7fywunhesdak.png", height: 36 },
+  { name: "Janindu Leelananda", src: "/esper/images/jjgqmnck9dnrlm4aktoerjvkp9a.png", height: 34 },
+  { name: "ESOFT", src: "/esper/images/rn7xmdm9kyhctv4im7cq2ylj0.png", height: 30 },
 ];
 
 export default function SponsorMarquee() {
@@ -41,7 +44,7 @@ export default function SponsorMarquee() {
               src={item.src}
               alt={item.name}
               style={{ height: `${item.height}px` }}
-              className="w-auto max-w-[140px] object-contain block"
+              className="w-auto max-w-[180px] object-contain block"
               loading="lazy"
             />
           </div>
