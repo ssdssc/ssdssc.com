@@ -2,7 +2,7 @@ import { NextResponse } from "next/server";
 
 export const dynamic = "force-dynamic";
 
-export async function checkGoogleLink(rawUrl: string) {
+async function checkGoogleLink(rawUrl: string) {
   if (!rawUrl || typeof rawUrl !== "string") {
     return { ok: false, accessible: false, reason: "missing_url", message: "URL is required." };
   }
