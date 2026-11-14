@@ -3,17 +3,56 @@
 import { useEffect, useRef, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 
+const TARGET_VOLUME = 0.35;
+const FADE_DURATION = 5.0; // 5-second fade in and fade out on loop
+
 export default function BackgroundMusicPlayer() {
   const audioRef = useRef<HTMLAudioElement | null>(null);
   const [isPlaying, setIsPlaying] = useState(false);
   const [hasInteracted, setHasInteracted] = useState(false);
 
+  // 5-second fade in / fade out looping manager
+  useEffect(() => {
+    let animId: number;
+
+    const manageVolumeFade = () => {
+      const audio = audioRef.current;
+      if (audio && !audio.paused && audio.duration) {
+        const cur = audio.currentTime;
+        const dur = audio.duration;
+
+        let targetVol = TARGET_VOLUME;
+
+        if (cur < FADE_DURATION) {
+          // 5 seconds fade in from beginning
+          targetVol = (cur / FADE_DURATION) * TARGET_VOLUME;
+        } else if (cur > dur - FADE_DURATION) {
+          // 5 seconds fade out toward the end
+          targetVol = Math.max(0, ((dur - cur) / FADE_DURATION) * TARGET_VOLUME);
+        }
+
+        audio.volume = Math.min(TARGET_VOLUME, Math.max(0, targetVol));
+
+        // Reset to beginning when reaching the end of the fade out
+        if (cur >= dur - 0.15) {
+          audio.currentTime = 0;
+        }
+      }
+      animId = requestAnimationFrame(manageVolumeFade);
+    };
+
+    animId = requestAnimationFrame(manageVolumeFade);
+
+    return () => {
+      cancelAnimationFrame(animId);
+    };
+  }, []);
+
   useEffect(() => {
     const audio = audioRef.current;
     if (!audio) return;
 
-    audio.volume = 0.35;
-    audio.loop = true;
+    audio.volume = 0; // Starts at 0 to smoothly fade in
 
     // Check if user previously set music preference in this session
     const savedState = sessionStorage.getItem("esper_bg_music");
@@ -85,6 +124,14 @@ export default function BackgroundMusicPlayer() {
     }
   };
 
+  const handleEnded = () => {
+    const audio = audioRef.current;
+    if (audio) {
+      audio.currentTime = 0;
+      audio.play().catch(() => {});
+    }
+  };
+
   return (
     <div className="fixed bottom-6 right-6 z-50 flex items-center pointer-events-auto select-none">
       {/* Hidden persistent audio element */}
@@ -92,6 +139,7 @@ export default function BackgroundMusicPlayer() {
         ref={audioRef}
         src="/esper/bg-music.mp3"
         preload="auto"
+        onEnded={handleEnded}
       />
 
       {/* Floating Mute/Unmute Button */}
