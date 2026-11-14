@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import BackgroundMusicPlayer from "@/components/esper/BackgroundMusicPlayer";
 
 export const metadata: Metadata = {
   title: "ESPER '27 - Sri Lanka's Premier Science Day & Awards Ceremony",
@@ -20,5 +21,10 @@ export default function EsperLayout({
 }: {
   children: React.ReactNode;
 }) {
-  return <>{children}</>;
+  return (
+    <>
+      {children}
+      <BackgroundMusicPlayer />
+    </>
+  );
 }
