@@ -132,6 +132,48 @@ export default function EsperRegisterForm({
     text: string;
   } | null>(null);
 
+  // Real-time Google Drive / Docs public link verification
+  const [linkStatus, setLinkStatus] = useState<{
+    checking: boolean;
+    error: string | null;
+  }>({ checking: false, error: null });
+
+  const verifyGoogleDriveLink = async (url: string) => {
+    const val = (url || "").trim();
+    if (!val) {
+      setLinkStatus({ checking: false, error: null });
+      return true;
+    }
+    if (!val.includes("docs.google.com") && !val.includes("drive.google.com")) {
+      setLinkStatus({ checking: false, error: null });
+      return true;
+    }
+    setLinkStatus({ checking: true, error: null });
+    try {
+      const res = await fetch("/api/esper/verify-link", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ url: val }),
+      });
+      const result = await res.json();
+      if (result && result.accessible === false && result.reason === "private") {
+        setLinkStatus({
+          checking: false,
+          error:
+            result.message ||
+            'This link is Private (Restricted). Please change General Access to "Anyone with the link can view".',
+        });
+        return false;
+      } else {
+        setLinkStatus({ checking: false, error: null });
+        return true;
+      }
+    } catch {
+      setLinkStatus({ checking: false, error: null });
+      return true;
+    }
+  };
+
   const handleChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement>
   ) => {
@@ -177,6 +219,31 @@ export default function EsperRegisterForm({
     e.preventDefault();
     setIsSubmitting(true);
     setStatusMessage(null);
+
+    const linkToCheck = (
+      formData.articleDocLink ||
+      formData.researchDriveLink ||
+      formData.designerDriveLink ||
+      formData.inventorDriveLink ||
+      formData.buildTeamDriveLink ||
+      formData.shortFilmDriveLink ||
+      ""
+    ).trim();
+
+    if (
+      linkToCheck &&
+      (linkToCheck.includes("docs.google.com") || linkToCheck.includes("drive.google.com"))
+    ) {
+      const isOk = await verifyGoogleDriveLink(linkToCheck);
+      if (!isOk) {
+        setIsSubmitting(false);
+        setStatusMessage({
+          type: "error",
+          text: 'The provided Google Drive / Google Docs link is Private (Restricted). Please update link access to "Anyone with the link can view" and try again.',
+        });
+        return;
+      }
+    }
 
     try {
       const data = new FormData();
@@ -748,9 +815,25 @@ export default function EsperRegisterForm({
                           type="url"
                           value={formData.articleDocLink}
                           onChange={handleChange}
+                          onBlur={(e) => verifyGoogleDriveLink(e.target.value)}
                         />
                       </div>
                       <span className="field-subtext">Please ensure the Google Doc link sharing setting is set to &ldquo;Anyone with the link can view&rdquo;.</span>
+                      {linkStatus.error && (
+                        <div style={{ marginTop: "6px", color: "#f87171", fontSize: "12px", display: "flex", alignItems: "center", gap: "6px" }}>
+                          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                            <circle cx="12" cy="12" r="10"></circle>
+                            <line x1="12" y1="8" x2="12" y2="12"></line>
+                            <line x1="12" y1="16" x2="12.01" y2="16"></line>
+                          </svg>
+                          <span>{linkStatus.error}</span>
+                        </div>
+                      )}
+                      {linkStatus.checking && (
+                        <div style={{ marginTop: "6px", color: "#ffd57e", fontSize: "12px" }}>
+                          Checking link accessibility...
+                        </div>
+                      )}
                     </div>
                   </div>
                 )}
@@ -770,9 +853,25 @@ export default function EsperRegisterForm({
                           type="url"
                           value={formData.researchDriveLink}
                           onChange={handleChange}
+                          onBlur={(e) => verifyGoogleDriveLink(e.target.value)}
                         />
                       </div>
                       <span className="field-subtext">Please ensure the Google Drive folder link sharing setting is set to &ldquo;Anyone with the link can view&rdquo;.</span>
+                      {linkStatus.error && (
+                        <div style={{ marginTop: "6px", color: "#f87171", fontSize: "12px", display: "flex", alignItems: "center", gap: "6px" }}>
+                          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                            <circle cx="12" cy="12" r="10"></circle>
+                            <line x1="12" y1="8" x2="12" y2="12"></line>
+                            <line x1="12" y1="16" x2="12.01" y2="16"></line>
+                          </svg>
+                          <span>{linkStatus.error}</span>
+                        </div>
+                      )}
+                      {linkStatus.checking && (
+                        <div style={{ marginTop: "6px", color: "#ffd57e", fontSize: "12px" }}>
+                          Checking link accessibility...
+                        </div>
+                      )}
                     </div>
 
                     {/* Additional Team Members (Up to 4) - as shown in original form */}
@@ -934,9 +1033,25 @@ export default function EsperRegisterForm({
                           type="url"
                           value={formData.designerDriveLink}
                           onChange={handleChange}
+                          onBlur={(e) => verifyGoogleDriveLink(e.target.value)}
                         />
                       </div>
                       <span className="field-subtext">Please ensure the Google Drive portfolio link sharing setting is set to &ldquo;Anyone with the link can view&rdquo;.</span>
+                      {linkStatus.error && (
+                        <div style={{ marginTop: "6px", color: "#f87171", fontSize: "12px", display: "flex", alignItems: "center", gap: "6px" }}>
+                          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                            <circle cx="12" cy="12" r="10"></circle>
+                            <line x1="12" y1="8" x2="12" y2="12"></line>
+                            <line x1="12" y1="16" x2="12.01" y2="16"></line>
+                          </svg>
+                          <span>{linkStatus.error}</span>
+                        </div>
+                      )}
+                      {linkStatus.checking && (
+                        <div style={{ marginTop: "6px", color: "#ffd57e", fontSize: "12px" }}>
+                          Checking link accessibility...
+                        </div>
+                      )}
                     </div>
                   </div>
                 )}
@@ -1008,9 +1123,25 @@ export default function EsperRegisterForm({
                           type="url"
                           value={formData.inventorDriveLink}
                           onChange={handleChange}
+                          onBlur={(e) => verifyGoogleDriveLink(e.target.value)}
                         />
                       </div>
                       <span className="field-subtext">Please ensure the Google Drive link sharing setting is set to &ldquo;Anyone with the link can view&rdquo;.</span>
+                      {linkStatus.error && (
+                        <div style={{ marginTop: "6px", color: "#f87171", fontSize: "12px", display: "flex", alignItems: "center", gap: "6px" }}>
+                          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                            <circle cx="12" cy="12" r="10"></circle>
+                            <line x1="12" y1="8" x2="12" y2="12"></line>
+                            <line x1="12" y1="16" x2="12.01" y2="16"></line>
+                          </svg>
+                          <span>{linkStatus.error}</span>
+                        </div>
+                      )}
+                      {linkStatus.checking && (
+                        <div style={{ marginTop: "6px", color: "#ffd57e", fontSize: "12px" }}>
+                          Checking link accessibility...
+                        </div>
+                      )}
                     </div>
                   </div>
                 )}
@@ -1030,9 +1161,25 @@ export default function EsperRegisterForm({
                           type="url"
                           value={formData.buildTeamDriveLink}
                           onChange={handleChange}
+                          onBlur={(e) => verifyGoogleDriveLink(e.target.value)}
                         />
                       </div>
                       <span className="field-subtext">Please ensure the Google Drive link sharing setting is set to &ldquo;Anyone with the link can view&rdquo;.</span>
+                      {linkStatus.error && (
+                        <div style={{ marginTop: "6px", color: "#f87171", fontSize: "12px", display: "flex", alignItems: "center", gap: "6px" }}>
+                          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                            <circle cx="12" cy="12" r="10"></circle>
+                            <line x1="12" y1="8" x2="12" y2="12"></line>
+                            <line x1="12" y1="16" x2="12.01" y2="16"></line>
+                          </svg>
+                          <span>{linkStatus.error}</span>
+                        </div>
+                      )}
+                      {linkStatus.checking && (
+                        <div style={{ marginTop: "6px", color: "#ffd57e", fontSize: "12px" }}>
+                          Checking link accessibility...
+                        </div>
+                      )}
                     </div>
                     <div className="form-row">
                       <label htmlFor="build-team-pdf">Upload Project PDF</label>
@@ -1094,9 +1241,25 @@ export default function EsperRegisterForm({
                           type="url"
                           value={formData.shortFilmDriveLink}
                           onChange={handleChange}
+                          onBlur={(e) => verifyGoogleDriveLink(e.target.value)}
                         />
                       </div>
                       <span className="field-subtext">Please ensure the Google Drive video file or folder link sharing setting is set to &ldquo;Anyone with the link can view&rdquo;.</span>
+                      {linkStatus.error && (
+                        <div style={{ marginTop: "6px", color: "#f87171", fontSize: "12px", display: "flex", alignItems: "center", gap: "6px" }}>
+                          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                            <circle cx="12" cy="12" r="10"></circle>
+                            <line x1="12" y1="8" x2="12" y2="12"></line>
+                            <line x1="12" y1="16" x2="12.01" y2="16"></line>
+                          </svg>
+                          <span>{linkStatus.error}</span>
+                        </div>
+                      )}
+                      {linkStatus.checking && (
+                        <div style={{ marginTop: "6px", color: "#ffd57e", fontSize: "12px" }}>
+                          Checking link accessibility...
+                        </div>
+                      )}
                     </div>
                   </div>
                 )}

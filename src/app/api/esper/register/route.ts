@@ -1,5 +1,6 @@
 import { createClient } from "@supabase/supabase-js";
 import { NextResponse } from "next/server";
+import { checkGoogleLink } from "@/lib/verifyGoogleLink";
 
 const CATEGORY_LABELS: Record<string, string> = {
   // Inter Awards
@@ -17,6 +18,19 @@ const CATEGORY_LABELS: Record<string, string> = {
   "short-film": "Best Short Film of the Year",
   "photographer": "Best Scientific Photographer of the Year",
 };
+
+function formatPhoneNumber(phone: string): string {
+  if (!phone) return "";
+  let clean = phone.trim();
+  if (!clean) return "";
+  if (!clean.startsWith("+94")) {
+    if (clean.startsWith("0")) {
+      clean = clean.substring(1).trim();
+    }
+    clean = "+94" + clean;
+  }
+  return clean;
+}
 
 async function syncToGoogleSheet(
   webhookUrl: string,
@@ -103,6 +117,29 @@ export async function POST(request: Request) {
         { error: "Missing required fields" },
         { status: 400 }
       );
+    }
+
+    // Check Google Drive / Google Docs link privacy if provided
+    const linkToCheck = str(
+      data.articleDocLink ||
+      data.researchDriveLink ||
+      data.designerDriveLink ||
+      data.inventorDriveLink ||
+      data.buildTeamDriveLink ||
+      data.shortFilmDriveLink
+    );
+
+    if (linkToCheck) {
+      const linkCheck = await checkGoogleLink(linkToCheck);
+      if (linkCheck && linkCheck.accessible === false && linkCheck.reason === "private") {
+        return NextResponse.json(
+          {
+            error:
+              'The provided Google Drive / Google Docs link is Private (Restricted). Please update link access to "Anyone with the link can view" and try again.',
+          },
+          { status: 400 }
+        );
+      }
     }
 
     let contactNumber = contactRaw;
@@ -308,6 +345,15 @@ export async function POST(request: Request) {
               data.designerDriveLink ||
               data.inventorDriveLink
             ),
+            // Additional team members for Best Research Team of the Year
+            member2Name: str(data.member2Name || data.researchMember2Name),
+            member2Phone: formatPhoneNumber(str(data.member2Contact || data.researchMember2Phone)),
+            member3Name: str(data.member3Name || data.researchMember3Name),
+            member3Phone: formatPhoneNumber(str(data.member3Contact || data.researchMember3Phone)),
+            member4Name: str(data.member4Name || data.researchMember4Name),
+            member4Phone: formatPhoneNumber(str(data.member4Contact || data.researchMember4Phone)),
+            member5Name: str(data.member5Name || data.researchMember5Name),
+            member5Phone: formatPhoneNumber(str(data.member5Contact || data.researchMember5Phone)),
           };
         }
 
