@@ -15,7 +15,7 @@ export default function HeroSection() {
           muted
           playsInline
           poster="/esper/images/hero-poster.png"
-          className="absolute inset-0 w-full h-full object-cover object-[center_30%]"
+          className="absolute inset-0 w-full h-full esper-hero-video"
         >
           <source src="/esper/hero-video.mp4" type="video/mp4" />
         </video>
