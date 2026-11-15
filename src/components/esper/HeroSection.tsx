@@ -9,16 +9,30 @@ export default function HeroSection() {
     <section className="relative w-full h-[100dvh] min-h-[640px] flex flex-col justify-between overflow-hidden bg-[#070707]">
       {/* Background Hero Video */}
       <div className="absolute inset-0 w-full h-full pointer-events-none z-0 overflow-hidden">
+        {/* Mobile Vertical Hero Video (< 768px) */}
+        <video
+          autoPlay
+          loop
+          muted
+          playsInline
+          poster="/esper/images/hero-poster-vertical.png"
+          className="md:hidden absolute inset-0 w-full h-full esper-hero-video-mobile"
+        >
+          <source src="/esper/hero-verticl.mp4" type="video/mp4" />
+        </video>
+
+        {/* Desktop Landscape Hero Video (>= 768px) */}
         <video
           autoPlay
           loop
           muted
           playsInline
           poster="/esper/images/hero-poster.png"
-          className="absolute inset-0 w-full h-full esper-hero-video"
+          className="hidden md:block absolute inset-0 w-full h-full esper-hero-video-desktop"
         >
           <source src="/esper/hero-video.mp4" type="video/mp4" />
         </video>
+
         {/* Subtle dark gradient overlay for high contrast readability */}
         <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-transparent to-black/80 pointer-events-none" />
       </div>
