@@ -165,6 +165,44 @@ html, body {
   will-change: transform;
 }
 
+/* Banner Golden Shining Keyframes */
+@keyframes esperBannerShine {
+  0% {
+    transform: translateX(0%) skewX(-20deg);
+    opacity: 0;
+  }
+  12% {
+    opacity: 1;
+  }
+  42% {
+    transform: translateX(560%) skewX(-20deg);
+    opacity: 1;
+  }
+  43%, 100% {
+    transform: translateX(560%) skewX(-20deg);
+    opacity: 0;
+  }
+}
+
+.animate-banner-shine {
+  animation: esperBannerShine 4.5s ease-in-out infinite;
+  will-change: transform, opacity;
+}
+
+@keyframes esperBannerGlowPulse {
+  0%, 100% {
+    opacity: 0.45;
+  }
+  50% {
+    opacity: 0.85;
+  }
+}
+
+.animate-banner-glow {
+  animation: esperBannerGlowPulse 3.5s ease-in-out infinite;
+}
+
+
 
 
 

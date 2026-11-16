@@ -72,7 +72,7 @@ export default function AwardsSection() {
   const duplicatedCards = [...awardCards, ...awardCards];
 
   return (
-    <section id="esper-all-awards-section" className="w-full py-16 md:py-24 relative z-10 overflow-hidden box-border">
+    <section id="esper-all-awards-section" className="w-full pt-16 pb-8 md:pt-24 md:pb-12 relative z-10 overflow-hidden box-border">
       {/* Header */}
       <motion.div
         initial={{ opacity: 0, y: 35 }}

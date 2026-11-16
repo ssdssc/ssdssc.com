@@ -2,6 +2,7 @@ import HeroSection from "@/components/esper/HeroSection";
 import DeranaSection from "@/components/esper/DeranaSection";
 import CountdownSection from "@/components/esper/CountdownSection";
 import AwardsSection from "@/components/esper/AwardsSection";
+import PopularBannerSection from "@/components/esper/PopularBannerSection";
 import VenueSection from "@/components/esper/VenueSection";
 import ConcludedSection from "@/components/esper/ConcludedSection";
 import Footer from "@/components/common/Footer";
@@ -17,6 +18,7 @@ export default function EsperHomePage() {
       <HeroSection />
       <CountdownSection />
       <AwardsSection />
+      <PopularBannerSection />
       <ConcludedSection />
       <VenueSection />
       <DeranaSection />
