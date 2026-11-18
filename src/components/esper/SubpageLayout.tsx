@@ -137,7 +137,7 @@ export default function SubpageLayout({
                 href={award.registerUrl}
                 className="group flex flex-col w-full no-underline text-inherit cursor-pointer transition-transform duration-300 hover:-translate-y-2 block"
               >
-                <div className="w-full aspect-[4/5] rounded-[20px] relative overflow-hidden bg-[#0d0d0d] border border-[#ffd57e]/22 shadow-[0_10px_30px_rgba(0,0,0,0.5)] transition-all duration-350 group-hover:border-[#ffd57e]/60 group-hover:shadow-[0_12px_40px_rgba(255,213,126,0.2)]">
+                <div className="w-full aspect-[4/5] rounded-[28px] sm:rounded-[32px] relative overflow-hidden bg-black transition-shadow duration-300 group-hover:shadow-[0_16px_36px_rgba(0,0,0,0.7),0_8px_25px_rgba(255,213,126,0.11)]">
                   {/* eslint-disable-next-line @next/next/no-img-element */}
                   <img
                     src={award.image}
@@ -145,7 +145,6 @@ export default function SubpageLayout({
                     className="w-full h-full object-cover object-center block"
                     loading="lazy"
                   />
-                  <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none bg-gradient-to-tr from-transparent via-[#ffd57e]/15 to-transparent" />
                 </div>
 
                 <div className="mt-3 text-center flex flex-col items-center">

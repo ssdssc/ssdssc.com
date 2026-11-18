@@ -14,13 +14,10 @@ export default function PopularBannerSection() {
         transition={{ type: "spring", stiffness: 360, damping: 60, mass: 0.5 }}
         className="w-full relative group"
       >
-        {/* Soft Golden Ambient Aura Behind Banner */}
-        <div className="absolute -inset-1.5 sm:-inset-2.5 bg-gradient-to-r from-[#ffd57e]/0 via-[#ffd57e]/20 to-[#ffd57e]/0 rounded-3xl blur-2xl opacity-60 group-hover:opacity-100 transition-opacity duration-700 pointer-events-none animate-banner-glow" />
-
         {/* Clickable Banner Container */}
         <Link
           href="/esper/inter/register?category=popular-union"
-          className="relative block w-full rounded-2xl md:rounded-3xl overflow-hidden border border-[#ffd57e]/30 group-hover:border-[#ffd57e]/75 bg-[#0a0a0a] shadow-[0_12px_40px_rgba(0,0,0,0.8),0_0_25px_rgba(255,213,126,0.12)] group-hover:shadow-[0_16px_50px_rgba(0,0,0,0.9),0_0_40px_rgba(255,213,126,0.32)] transition-all duration-500 ease-out transform-gpu group-hover:-translate-y-1 active:scale-[0.99] focus:outline-none focus-visible:ring-2 focus-visible:ring-[#ffd57e]"
+          className="relative block w-full rounded-[32px] sm:rounded-[40px] overflow-hidden shadow-[0_20px_50px_rgba(0,0,0,0.8)] bg-black transition-all duration-500 ease-out transform-gpu group-hover:-translate-y-1 active:scale-[0.99] focus:outline-none focus-visible:ring-2 focus-visible:ring-white/40"
           aria-label="Register for Most Popular Science Union of the Year"
         >
           {/* Banner Image */}
@@ -37,7 +34,7 @@ export default function PopularBannerSection() {
 
           {/* Shining Beam Animation Sweep Overlay */}
           <div
-            className="pointer-events-none absolute inset-0 overflow-hidden rounded-2xl md:rounded-3xl"
+            className="pointer-events-none absolute inset-0 overflow-hidden rounded-[32px] sm:rounded-[40px]"
             aria-hidden="true"
           >
             <div
@@ -48,12 +45,6 @@ export default function PopularBannerSection() {
               }}
             />
           </div>
-
-          {/* Golden Hover Vignette */}
-          <div
-            className="pointer-events-none absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 bg-gradient-to-t from-[#ffd57e]/12 via-transparent to-[#ffd57e]/5"
-            aria-hidden="true"
-          />
         </Link>
       </motion.div>
     </section>

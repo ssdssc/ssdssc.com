@@ -4,10 +4,10 @@ import { motion } from "framer-motion";
 
 export default function CountdownSection() {
   const counterBlocks = [
-    { label: "DAYS", value: "--" },
+    { label: "DAYS",  value: "--" },
     { label: "HOURS", value: "--" },
-    { label: "MINS", value: "--" },
-    { label: "SECS", value: "--" },
+    { label: "MINS",  value: "--" },
+    { label: "SECS",  value: "--" },
   ];
 
   return (
@@ -36,10 +36,9 @@ export default function CountdownSection() {
             {counterBlocks.map((block) => (
               <motion.div
                 key={block.label}
-                whileHover={{ scale: 1.05 }}
-                className="flex flex-col items-center justify-center p-3 md:p-4 rounded-xl bg-[#141414]/90 border border-[#ffd57e]/20 shadow-[0_4px_20px_rgba(0,0,0,0.5)] transition-colors hover:border-[#ffd57e]/50"
+                className="flex flex-col items-center justify-center"
               >
-                <span className="font-['Nebula',sans-serif] text-2xl sm:text-3xl md:text-4xl text-[#ffd57e] leading-none mb-1">
+                <span className="font-['Nebula',sans-serif] text-2xl sm:text-3xl md:text-4xl text-[#ffd57e] leading-none mb-1" style={{ display: "inline-block", transform: "scaleY(1.6)", transformOrigin: "center" }}>
                   {block.value}
                 </span>
                 <span className="font-['Nebula',sans-serif] text-[9px] md:text-[10px] tracking-[0.18em] uppercase text-white/65">
@@ -56,13 +55,14 @@ export default function CountdownSection() {
           whileInView={{ opacity: 1, scale: 1, y: 0 }}
           viewport={{ once: true, amount: 0.2 }}
           transition={{ type: "spring", stiffness: 360, damping: 60, mass: 0.5, delay: 0.15 }}
-          className="w-full max-w-[340px] md:max-w-[420px] rounded-2xl overflow-hidden border border-[#ffd57e]/25 shadow-[0_12px_40px_rgba(255,213,126,0.1)] bg-black/40"
+          className="w-full max-w-[360px] sm:max-w-[420px] md:max-w-[460px] lg:max-w-[490px] rounded-[32px] sm:rounded-[40px] overflow-hidden shadow-[0_20px_50px_rgba(0,0,0,0.8)] bg-black"
         >
           {/* eslint-disable-next-line @next/next/no-img-element */}
           <img
             src="/esper/Esper coming soon.png"
             alt="Esper '27 Coming Soon"
             className="w-full h-auto object-cover block"
+            loading="lazy"
           />
         </motion.div>
       </div>

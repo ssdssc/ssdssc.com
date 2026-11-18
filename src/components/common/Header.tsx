@@ -29,11 +29,10 @@ export default function Header() {
 
   return (
     <header
-      className={`fixed top-0 left-0 right-0 z-50 w-full transition-all duration-300 ease-in-out ${
-        hasBackground
-          ? "bg-[#040404]/85 backdrop-blur-[12px] border-b border-[#ffd57e]/15 shadow-[0_4px_20px_rgba(0,0,0,0.5)]"
-          : "bg-transparent backdrop-blur-none border-b border-transparent shadow-none"
-      }`}
+      className={`fixed top-0 left-0 right-0 z-50 w-full transition-all duration-300 ease-in-out ${hasBackground
+          ? "bg-[#040404]/85 backdrop-blur-[12px] shadow-[0_4px_20px_rgba(0,0,0,0.5)]"
+          : "bg-transparent backdrop-blur-none shadow-none"
+        }`}
     >
       <div className="max-w-[1320px] w-full mx-auto px-6 md:px-8 py-3.5 flex items-center justify-between box-border">
         {/* Brand Logo */}
@@ -58,11 +57,10 @@ export default function Header() {
               <Link
                 key={link.href}
                 href={link.href}
-                className={`font-['Nebula',sans-serif] text-[13px] tracking-[0.08em] uppercase transition-all duration-200 py-1.5 relative whitespace-nowrap ${
-                  isActive
+                className={`font-['Nebula',sans-serif] text-[13px] tracking-[0.08em] uppercase transition-all duration-200 py-1.5 relative whitespace-nowrap ${isActive
                     ? "text-[#ffd57e] drop-shadow-[0_0_14px_rgba(255,213,126,0.5)]"
                     : "text-white/75 hover:text-white hover:drop-shadow-[0_0_10px_rgba(255,255,255,0.6)]"
-                }`}
+                  }`}
               >
                 {link.label}
                 {isActive && (
@@ -82,14 +80,12 @@ export default function Header() {
           aria-expanded={mobileMenuOpen}
         >
           <span
-            className={`block w-6 h-[2px] bg-[#ffd57e] rounded-sm transition-transform duration-250 ease-in-out ${
-              mobileMenuOpen ? "translate-y-[4px] rotate-45" : ""
-            }`}
+            className={`block w-6 h-[2px] bg-[#ffd57e] rounded-sm transition-transform duration-250 ease-in-out ${mobileMenuOpen ? "translate-y-[4px] rotate-45" : ""
+              }`}
           />
           <span
-            className={`block w-6 h-[2px] bg-[#ffd57e] rounded-sm transition-transform duration-250 ease-in-out ${
-              mobileMenuOpen ? "-translate-y-[4px] -rotate-45" : ""
-            }`}
+            className={`block w-6 h-[2px] bg-[#ffd57e] rounded-sm transition-transform duration-250 ease-in-out ${mobileMenuOpen ? "-translate-y-[4px] -rotate-45" : ""
+              }`}
           />
         </button>
       </div>
@@ -104,9 +100,8 @@ export default function Header() {
                 key={link.href}
                 href={link.href}
                 onClick={() => setMobileMenuOpen(false)}
-                className={`font-['Nebula',sans-serif] text-[13px] tracking-[0.1em] uppercase py-2.5 border-b border-white/[0.06] transition-colors duration-200 ${
-                  isActive ? "text-[#ffd57e]" : "text-white/80 hover:text-[#ffd57e]"
-                }`}
+                className={`font-['Nebula',sans-serif] text-[13px] tracking-[0.1em] uppercase py-2.5 border-b border-white/[0.06] transition-colors duration-200 ${isActive ? "text-[#ffd57e]" : "text-white/80 hover:text-[#ffd57e]"
+                  }`}
               >
                 {link.label}
               </Link>

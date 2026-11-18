@@ -32,6 +32,13 @@ function formatPhoneNumber(phone: string): string {
   return clean;
 }
 
+/** Converts +94XXXXXXXXX → 0094XXXXXXXXX so Google Sheets won't
+ *  misinterpret the leading '+' as a formula or numeric sign. */
+function toSheetPhone(phone: string): string {
+  if (!phone) return "";
+  return phone.startsWith("+") ? "00" + phone.slice(1) : phone;
+}
+
 async function syncToGoogleSheet(
   webhookUrl: string,
   payload: Record<string, unknown>
@@ -111,10 +118,18 @@ export async function POST(request: Request) {
     const contactRaw = str(data.contactNumber || data.applicantPhone);
     const email = str(data.emailAddress);
     const category = str(data.awardCategory);
+    const confirmed = data.confirmation === true || str(data.confirmation) === "true" || str(data.confirmation) === "on";
 
     if (!email || !contactRaw || !category) {
       return NextResponse.json(
         { error: "Missing required fields" },
+        { status: 400 }
+      );
+    }
+
+    if (!confirmed) {
+      return NextResponse.json(
+        { error: "You must tick the confirmation checkbox before submitting." },
         { status: 400 }
       );
     }
@@ -294,8 +309,9 @@ export async function POST(request: Request) {
           timestamp: colomboTime,
           category: categoryLabel,
           categorySlug: category,
-          contactNumber,
+          contactNumber: toSheetPhone(contactNumber),
           email,
+          contestantPhotoUrl: str(data.contestantPhotoUrl),
           confirmed:
             data.confirmation === true || data.confirmation === "on"
               ? "Yes"
@@ -333,9 +349,9 @@ export async function POST(request: Request) {
             schoolLogoUrl: str(data.schoolLogoUrl),
             applicantName: str(data.applicantName),
             grade: str(data.grade),
-            applicantPhone: str(data.applicantPhone),
+            applicantPhone: toSheetPhone(formatPhoneNumber(str(data.applicantPhone))),
             presidentName: str(data.presidentName),
-            presidentContact: contactNumber,
+            presidentContact: toSheetPhone(contactNumber),
             githubLink: str(data.coderGithubLink),
             hostedLink: str(data.coderHostedLink),
             youtubeLink: str(data.coderYoutubeLink),
@@ -347,13 +363,13 @@ export async function POST(request: Request) {
             ),
             // Additional team members for Best Research Team of the Year
             member2Name: str(data.member2Name || data.researchMember2Name),
-            member2Phone: formatPhoneNumber(str(data.member2Contact || data.researchMember2Phone)),
+            member2Phone: toSheetPhone(formatPhoneNumber(str(data.member2Contact || data.researchMember2Phone))),
             member3Name: str(data.member3Name || data.researchMember3Name),
-            member3Phone: formatPhoneNumber(str(data.member3Contact || data.researchMember3Phone)),
+            member3Phone: toSheetPhone(formatPhoneNumber(str(data.member3Contact || data.researchMember3Phone))),
             member4Name: str(data.member4Name || data.researchMember4Name),
-            member4Phone: formatPhoneNumber(str(data.member4Contact || data.researchMember4Phone)),
+            member4Phone: toSheetPhone(formatPhoneNumber(str(data.member4Contact || data.researchMember4Phone))),
             member5Name: str(data.member5Name || data.researchMember5Name),
-            member5Phone: formatPhoneNumber(str(data.member5Contact || data.researchMember5Phone)),
+            member5Phone: toSheetPhone(formatPhoneNumber(str(data.member5Contact || data.researchMember5Phone))),
           };
         }
 

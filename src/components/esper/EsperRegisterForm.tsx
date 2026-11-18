@@ -121,10 +121,41 @@ export default function EsperRegisterForm({
   const [schoolLogo, setSchoolLogo] = useState<File | null>(null);
   const [buildTeamPdf, setBuildTeamPdf] = useState<File | null>(null);
   const [photographerPhoto, setPhotographerPhoto] = useState<File | null>(null);
+  const [contestantPhoto, setContestantPhoto] = useState<File | null>(null);
+
+  // Preview URLs (auto-revoked on file change / unmount)
+  const [schoolLogoPreview, setSchoolLogoPreview] = useState<string | null>(null);
+  const [contestantPhotoPreview, setContestantPhotoPreview] = useState<string | null>(null);
+  const [photographerPhotoPreview, setPhotographerPhotoPreview] = useState<string | null>(null);
+
+  useEffect(() => {
+    if (!schoolLogo) { setSchoolLogoPreview(null); return; }
+    const url = URL.createObjectURL(schoolLogo);
+    setSchoolLogoPreview(url);
+    return () => URL.revokeObjectURL(url);
+  }, [schoolLogo]);
+
+  useEffect(() => {
+    if (!contestantPhoto) { setContestantPhotoPreview(null); return; }
+    const url = URL.createObjectURL(contestantPhoto);
+    setContestantPhotoPreview(url);
+    return () => URL.revokeObjectURL(url);
+  }, [contestantPhoto]);
+
+  useEffect(() => {
+    if (!photographerPhoto) { setPhotographerPhotoPreview(null); return; }
+    const url = URL.createObjectURL(photographerPhoto);
+    setPhotographerPhotoPreview(url);
+    return () => URL.revokeObjectURL(url);
+  }, [photographerPhoto]);
 
   const schoolLogoInputRef = useRef<HTMLInputElement>(null);
   const buildTeamPdfInputRef = useRef<HTMLInputElement>(null);
   const photographerPhotoInputRef = useRef<HTMLInputElement>(null);
+  const contestantPhotoInputRef = useRef<HTMLInputElement>(null);
+
+  // Dynamic extra member count for Best Research Team (2 = members 2 & 3 minimum, up to 4 extra = 5 total)
+  const [extraMemberCount, setExtraMemberCount] = useState(2);
 
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [statusMessage, setStatusMessage] = useState<{
@@ -192,6 +223,9 @@ export default function EsperRegisterForm({
       ...prev,
       awardCategory: newCategory,
     }));
+    if (newCategory !== "research-team") {
+      setExtraMemberCount(2);
+    }
   };
 
   const clearSchoolLogo = (e: React.MouseEvent) => {
@@ -215,10 +249,91 @@ export default function EsperRegisterForm({
     if (photographerPhotoInputRef.current) photographerPhotoInputRef.current.value = "";
   };
 
+  const clearContestantPhoto = (e: React.MouseEvent) => {
+    e.preventDefault();
+    e.stopPropagation();
+    setContestantPhoto(null);
+    if (contestantPhotoInputRef.current) contestantPhotoInputRef.current.value = "";
+  };
+
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
     setStatusMessage(null);
+
+    // ── 1. Confirmation checkbox ──────────────────────────────────────────────
+    if (!formData.confirmation) {
+      setStatusMessage({
+        type: "error",
+        text: "Please tick the confirmation checkbox before submitting.",
+      });
+      setIsSubmitting(false);
+      return;
+    }
+
+    // ── 2. Required-field guard per registration type ─────────────────────────
+    const missing: string[] = [];
+
+    // Contestant Image is required on all Esper registration pages
+    if (!contestantPhoto) missing.push("Contestant Image");
+
+    if (type === "popular" || type === "inter") {
+      if (!formData.schoolName.trim()) missing.push("School Name");
+      if (!formData.presidentName.trim()) missing.push("President Name");
+      if (!formData.contactNumber.trim()) missing.push("Contact Number");
+      if (!formData.emailAddress.trim()) missing.push("Email Address");
+      if (!formData.awardCategory) missing.push("Award Category");
+    }
+
+    if (type === "inter") {
+      if (!formData.applicantName.trim()) missing.push("Applicant Name");
+      if (!formData.grade) missing.push("Grade");
+      if (!formData.applicantPhone.trim()) missing.push("Applicant Phone Number");
+      // Category-specific links
+      if (formData.awardCategory === "article-writer" && !formData.articleDocLink.trim()) missing.push("Google Docs Link");
+      if (formData.awardCategory === "research-team" && !formData.researchDriveLink.trim()) missing.push("Google Drive Link");
+      if (formData.awardCategory === "research-team" && !formData.member2Name.trim()) missing.push("Member 2 Full Name");
+      if (formData.awardCategory === "research-team" && !formData.member2Contact.trim()) missing.push("Member 2 Contact");
+      if (formData.awardCategory === "research-team" && !formData.member3Name.trim()) missing.push("Member 3 Full Name");
+      if (formData.awardCategory === "research-team" && !formData.member3Contact.trim()) missing.push("Member 3 Contact");
+      if (formData.awardCategory === "graphic-designer" && !formData.designerDriveLink.trim()) missing.push("Google Drive Link");
+      if (formData.awardCategory === "edu-coder") {
+        if (!formData.coderGithubLink.trim()) missing.push("GitHub Repository Link");
+        if (!formData.coderHostedLink.trim()) missing.push("Hosted Project Link");
+        if (!formData.coderYoutubeLink.trim()) missing.push("YouTube Video Link");
+      }
+      if (formData.awardCategory === "young-inventor" && !formData.inventorDriveLink.trim()) missing.push("Google Drive Link");
+    }
+
+    if (type === "intra") {
+      if (!formData.applicantName.trim()) missing.push("Applicant Name");
+      if (!formData.grade) missing.push("Grade");
+      if (!formData.contactNumber.trim()) missing.push("Contact Number");
+      if (!formData.emailAddress.trim()) missing.push("Email Address");
+      if (!formData.awardCategory) missing.push("Award Category");
+      if (formData.awardCategory === "young-inventor" && !formData.inventorDriveLink.trim()) missing.push("Google Drive Link");
+      if (formData.awardCategory === "article-writer" && !formData.articleDocLink.trim()) missing.push("Google Docs Link");
+    }
+
+    if (type === "open") {
+      if (!formData.applicantName.trim()) missing.push("Applicant Name");
+      if (!formData.age.trim()) missing.push("Age");
+      if (!formData.contactNumber.trim()) missing.push("Contact Number");
+      if (!formData.emailAddress.trim()) missing.push("Email Address");
+      if (!formData.awardCategory) missing.push("Award Category");
+      if (formData.awardCategory === "build-team" && !formData.buildTeamDriveLink.trim()) missing.push("Google Drive Link");
+      if (formData.awardCategory === "short-film" && !formData.shortFilmDriveLink.trim()) missing.push("Google Drive Link");
+      if (formData.awardCategory === "photographer" && !photographerPhoto) missing.push("Photograph Upload");
+    }
+
+    if (missing.length > 0) {
+      setStatusMessage({
+        type: "error",
+        text: `Please fill in all required fields: ${missing.join(", ")}.`,
+      });
+      setIsSubmitting(false);
+      return;
+    }
 
     const linkToCheck = (
       formData.articleDocLink ||
@@ -250,6 +365,9 @@ export default function EsperRegisterForm({
       data.append("registrationType", type);
       data.append("awardCategory", formData.awardCategory);
       data.append("confirmation", String(formData.confirmation));
+
+      // Contestant photo — attached for all registration types
+      if (contestantPhoto) data.append("contestantPhoto", contestantPhoto);
 
       if (type === "popular") {
         data.append("schoolName", formData.schoolName);
@@ -340,9 +458,12 @@ export default function EsperRegisterForm({
       setSchoolLogo(null);
       setBuildTeamPdf(null);
       setPhotographerPhoto(null);
+      setContestantPhoto(null);
+      setExtraMemberCount(2);
       if (schoolLogoInputRef.current) schoolLogoInputRef.current.value = "";
       if (buildTeamPdfInputRef.current) buildTeamPdfInputRef.current.value = "";
       if (photographerPhotoInputRef.current) photographerPhotoInputRef.current.value = "";
+      if (contestantPhotoInputRef.current) contestantPhotoInputRef.current.value = "";
     } catch (err: unknown) {
       const errorMessage =
         err instanceof Error
@@ -510,6 +631,62 @@ export default function EsperRegisterForm({
                   />
                 </div>
               </div>
+
+              {/* Contestant Image — popular form */}
+              <div className="form-row">
+                <label htmlFor="contestant-photo-popular">Contestant Image</label>
+                <div className="input-wrapper">
+                  <label className={`file-upload-box ${contestantPhoto ? "has-file" : ""}`} htmlFor="contestant-photo-popular">
+                    <div className="file-upload-icon">
+                      {contestantPhotoPreview ? (
+                        <img src={contestantPhotoPreview} alt="Contestant Preview" style={{ width: 40, height: 40, objectFit: "cover", borderRadius: 8, display: "block", flexShrink: 0 }} />
+                      ) : (
+                        <div style={{ width: 38, height: 38, background: "rgba(255,255,255,0.07)", borderRadius: 10, display: "flex", alignItems: "center", justifyContent: "center", flexShrink: 0 }}>
+                          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
+                            <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                            <circle cx="12" cy="7" r="4"></circle>
+                          </svg>
+                        </div>
+                      )}
+                    </div>
+                    <div className="file-upload-text">
+                      <span className="file-upload-title">
+                        {contestantPhoto ? `${contestantPhoto.name} (${(contestantPhoto.size / 1024).toFixed(1)} KB)` : "Click or drag & drop to upload photo"}
+                      </span>
+                      <span className="file-upload-hint">PNG, JPG, or WebP (Formal headshot / portrait recommended)</span>
+                    </div>
+                    {contestantPhoto && (
+                      <button
+                        type="button"
+                        className="file-upload-clear"
+                        title="Remove photo"
+                        onClick={clearContestantPhoto}
+                      >
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+                          <line x1="18" y1="6" x2="6" y2="18"></line>
+                          <line x1="6" y1="6" x2="18" y2="18"></line>
+                        </svg>
+                      </button>
+                    )}
+                    <input
+                      ref={contestantPhotoInputRef}
+                      className="file-input-hidden"
+                      id="contestant-photo-popular"
+                      name="contestantPhoto"
+                      type="file"
+                      accept="image/png,image/jpeg,image/webp"
+                      onChange={(e) => setContestantPhoto(e.target.files?.[0] || null)}
+                    />
+                  </label>
+                </div>
+                <span className="field-subtext" style={{ display: "flex", alignItems: "center", gap: "5px" }}>
+                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" style={{ flexShrink: 0 }}>
+                    <rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect>
+                    <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
+                  </svg>
+                  Securely stored and used only for certificates &amp; awards presentation.
+                </span>
+              </div>
             </>
           ) : (
             /* 2-COLUMN FORMS: INTER, INTRA, OPEN */
@@ -573,11 +750,17 @@ export default function EsperRegisterForm({
                       <div className="input-wrapper">
                         <label className={`file-upload-box ${schoolLogo ? "has-file" : ""}`} htmlFor="school-logo">
                           <div className="file-upload-icon">
-                            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                              <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
-                              <polyline points="17 8 12 3 7 8"></polyline>
-                              <line x1="12" y1="3" x2="12" y2="15"></line>
-                            </svg>
+                            {schoolLogoPreview ? (
+                              <img src={schoolLogoPreview} alt="School Logo Preview" style={{ width: 40, height: 40, objectFit: "cover", borderRadius: 8, display: "block", flexShrink: 0 }} />
+                            ) : (
+                              <div style={{ width: 38, height: 38, background: "rgba(255,255,255,0.07)", borderRadius: 10, display: "flex", alignItems: "center", justifyContent: "center", flexShrink: 0 }}>
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                                  <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                                  <polyline points="17 8 12 3 7 8"></polyline>
+                                  <line x1="12" y1="3" x2="12" y2="15"></line>
+                                </svg>
+                              </div>
+                            )}
                           </div>
                           <div className="file-upload-text">
                             <span className="file-upload-title" id="school-logo-filename">
@@ -717,6 +900,62 @@ export default function EsperRegisterForm({
                     />
                   </div>
                 </div>
+
+                {/* Contestant Image */}
+                <div className="form-row">
+                  <label htmlFor="contestant-photo">Contestant Image</label>
+                  <div className="input-wrapper">
+                    <label className={`file-upload-box ${contestantPhoto ? "has-file" : ""}`} htmlFor="contestant-photo">
+                      <div className="file-upload-icon">
+                        {contestantPhotoPreview ? (
+                          <img src={contestantPhotoPreview} alt="Contestant Preview" style={{ width: 40, height: 40, objectFit: "cover", borderRadius: 8, display: "block", flexShrink: 0 }} />
+                        ) : (
+                          <div style={{ width: 38, height: 38, background: "rgba(255,255,255,0.07)", borderRadius: 10, display: "flex", alignItems: "center", justifyContent: "center", flexShrink: 0 }}>
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
+                              <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                              <circle cx="12" cy="7" r="4"></circle>
+                            </svg>
+                          </div>
+                        )}
+                      </div>
+                      <div className="file-upload-text">
+                        <span className="file-upload-title">
+                          {contestantPhoto ? `${contestantPhoto.name} (${(contestantPhoto.size / 1024).toFixed(1)} KB)` : "Click or drag & drop to upload photo"}
+                        </span>
+                        <span className="file-upload-hint">PNG, JPG, or WebP (Formal headshot / portrait recommended)</span>
+                      </div>
+                      {contestantPhoto && (
+                        <button
+                          type="button"
+                          className="file-upload-clear"
+                          title="Remove photo"
+                          onClick={clearContestantPhoto}
+                        >
+                          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+                            <line x1="18" y1="6" x2="6" y2="18"></line>
+                            <line x1="6" y1="6" x2="18" y2="18"></line>
+                          </svg>
+                        </button>
+                      )}
+                      <input
+                        ref={contestantPhotoInputRef}
+                        className="file-input-hidden"
+                        id="contestant-photo"
+                        name="contestantPhoto"
+                        type="file"
+                        accept="image/png,image/jpeg,image/webp"
+                        onChange={(e) => setContestantPhoto(e.target.files?.[0] || null)}
+                      />
+                    </label>
+                  </div>
+                  <span className="field-subtext" style={{ display: "flex", alignItems: "center", gap: "5px" }}>
+                    <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" style={{ flexShrink: 0 }}>
+                      <rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect>
+                      <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
+                    </svg>
+                    Securely stored and used only for certificates &amp; awards presentation.
+                  </span>
+                </div>
               </div>
 
               {/* Right Column: Submission Details & Dynamic Category Fields */}
@@ -774,19 +1013,21 @@ export default function EsperRegisterForm({
                         rel="noopener noreferrer"
                       >
                         <div className="file-upload-icon">
-                          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                            <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
-                            <polyline points="14 2 14 8 20 8"></polyline>
-                            <line x1="16" y1="13" x2="8" y2="13"></line>
-                            <line x1="16" y1="17" x2="8" y2="17"></line>
-                            <polyline points="10 9 9 9 8 9"></polyline>
-                          </svg>
+                          <div style={{ width: 38, height: 38, background: "rgba(255,255,255,0.07)", borderRadius: 10, display: "flex", alignItems: "center", justifyContent: "center", flexShrink: 0 }}>
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                              <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                              <polyline points="14 2 14 8 20 8"></polyline>
+                              <line x1="16" y1="13" x2="8" y2="13"></line>
+                              <line x1="16" y1="17" x2="8" y2="17"></line>
+                              <polyline points="10 9 9 9 8 9"></polyline>
+                            </svg>
+                          </div>
                         </div>
                         <div className="file-upload-text">
                           <span className="file-upload-title">Click to download Rules &amp; Regulations</span>
                           <span className="file-upload-hint">PDF Document (Official Competition Rulebook)</span>
                         </div>
-                        <div className="file-download-arrow">
+                        <div style={{ width: 38, height: 38, background: "rgba(255,255,255,0.07)", borderRadius: 10, display: "flex", alignItems: "center", justifyContent: "center", flexShrink: 0 }}>
                           <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round">
                             <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
                             <polyline points="7 10 12 15 17 10"></polyline>
@@ -874,145 +1115,95 @@ export default function EsperRegisterForm({
                       )}
                     </div>
 
-                    {/* Additional Team Members (Up to 4) - as shown in original form */}
+                    {/* Additional Team Members — dynamic (min 2 extra = members 2&3, max 4 extra = members 2–5) */}
                     <div style={{ marginTop: "12px", borderTop: "1px solid rgba(255, 255, 255, 0.1)", paddingTop: "16px" }}>
                       <label style={{ fontSize: "13px", fontWeight: 600, textTransform: "uppercase", letterSpacing: "0.05em", color: "rgba(255, 255, 255, 0.9)", display: "block", marginBottom: "4px" }}>
                         ADDITIONAL TEAM MEMBERS (UP TO 4)
                       </label>
                       <p style={{ fontSize: "12px", color: "rgba(255, 255, 255, 0.5)", margin: "0 0 16px 0", lineHeight: "1.4" }}>
-                        Team Leader is registered on the left. Enter remaining members below (optional if team has fewer than 5 members).
+                        Team Leader is registered on the left. Enter remaining members below (minimum 2, maximum 4 additional members).
                       </p>
 
-                      {/* Member 2 */}
-                      <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "12px", marginBottom: "14px" }}>
-                        <div className="form-row">
-                          <label htmlFor="member2-name" style={{ fontSize: "12px" }}>Member 2 Full Name</label>
-                          <div className="input-wrapper">
-                            <input
-                              className="form-control"
-                              id="member2-name"
-                              name="member2Name"
-                              placeholder="Full name"
-                              type="text"
-                              value={formData.member2Name}
-                              onChange={handleChange}
-                            />
+                      {/* Dynamic member rows: extraMemberCount ranges from 2 to 4 */}
+                      {Array.from({ length: extraMemberCount }, (_, i) => {
+                        const num = i + 2; // 2, 3, 4, or 5
+                        const nameKey = `member${num}Name` as keyof FormFields;
+                        const contactKey = `member${num}Contact` as keyof FormFields;
+                        const isRequired = num <= 3; // Members 2 & 3 are required
+                        return (
+                          <div key={num} style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "12px", marginBottom: "14px" }}>
+                            <div className="form-row">
+                              <label htmlFor={`member${num}-name`} style={{ fontSize: "12px" }}>
+                                Member {num} Full Name
+                              </label>
+                              <div className="input-wrapper">
+                                <input
+                                  className="form-control"
+                                  id={`member${num}-name`}
+                                  name={nameKey}
+                                  placeholder="Full name"
+                                  type="text"
+                                  value={formData[nameKey] as string}
+                                  onChange={handleChange}
+                                />
+                              </div>
+                            </div>
+                            <div className="form-row">
+                              <label htmlFor={`member${num}-contact`} style={{ fontSize: "12px" }}>
+                                Member {num} Contact
+                              </label>
+                              <div className="input-wrapper phone-input">
+                                <span className="country-code">+94</span>
+                                <input
+                                  className="form-control"
+                                  id={`member${num}-contact`}
+                                  name={contactKey}
+                                  placeholder="XX XXX XXXX"
+                                  type="tel"
+                                  value={formData[contactKey] as string}
+                                  onChange={handleChange}
+                                />
+                              </div>
+                            </div>
                           </div>
-                        </div>
-                        <div className="form-row">
-                          <label htmlFor="member2-contact" style={{ fontSize: "12px" }}>Member 2 Contact</label>
-                          <div className="input-wrapper phone-input">
-                            <span className="country-code">+94</span>
-                            <input
-                              className="form-control"
-                              id="member2-contact"
-                              name="member2Contact"
-                              placeholder="XX XXX XXXX"
-                              type="tel"
-                              value={formData.member2Contact}
-                              onChange={handleChange}
-                            />
-                          </div>
-                        </div>
-                      </div>
+                        );
+                      })}
 
-                      {/* Member 3 */}
-                      <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "12px", marginBottom: "14px" }}>
-                        <div className="form-row">
-                          <label htmlFor="member3-name" style={{ fontSize: "12px" }}>Member 3 Full Name</label>
-                          <div className="input-wrapper">
-                            <input
-                              className="form-control"
-                              id="member3-name"
-                              name="member3Name"
-                              placeholder="Full name"
-                              type="text"
-                              value={formData.member3Name}
-                              onChange={handleChange}
-                            />
-                          </div>
-                        </div>
-                        <div className="form-row">
-                          <label htmlFor="member3-contact" style={{ fontSize: "12px" }}>Member 3 Contact</label>
-                          <div className="input-wrapper phone-input">
-                            <span className="country-code">+94</span>
-                            <input
-                              className="form-control"
-                              id="member3-contact"
-                              name="member3Contact"
-                              placeholder="XX XXX XXXX"
-                              type="tel"
-                              value={formData.member3Contact}
-                              onChange={handleChange}
-                            />
-                          </div>
-                        </div>
-                      </div>
-
-                      {/* Member 4 */}
-                      <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "12px", marginBottom: "14px" }}>
-                        <div className="form-row">
-                          <label htmlFor="member4-name" style={{ fontSize: "12px" }}>Member 4 Full Name</label>
-                          <div className="input-wrapper">
-                            <input
-                              className="form-control"
-                              id="member4-name"
-                              name="member4Name"
-                              placeholder="Full name"
-                              type="text"
-                              value={formData.member4Name}
-                              onChange={handleChange}
-                            />
-                          </div>
-                        </div>
-                        <div className="form-row">
-                          <label htmlFor="member4-contact" style={{ fontSize: "12px" }}>Member 4 Contact</label>
-                          <div className="input-wrapper phone-input">
-                            <span className="country-code">+94</span>
-                            <input
-                              className="form-control"
-                              id="member4-contact"
-                              name="member4Contact"
-                              placeholder="XX XXX XXXX"
-                              type="tel"
-                              value={formData.member4Contact}
-                              onChange={handleChange}
-                            />
-                          </div>
-                        </div>
-                      </div>
-
-                      {/* Member 5 */}
-                      <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "12px" }}>
-                        <div className="form-row">
-                          <label htmlFor="member5-name" style={{ fontSize: "12px" }}>Member 5 Full Name</label>
-                          <div className="input-wrapper">
-                            <input
-                              className="form-control"
-                              id="member5-name"
-                              name="member5Name"
-                              placeholder="Full name"
-                              type="text"
-                              value={formData.member5Name}
-                              onChange={handleChange}
-                            />
-                          </div>
-                        </div>
-                        <div className="form-row">
-                          <label htmlFor="member5-contact" style={{ fontSize: "12px" }}>Member 5 Contact</label>
-                          <div className="input-wrapper phone-input">
-                            <span className="country-code">+94</span>
-                            <input
-                              className="form-control"
-                              id="member5-contact"
-                              name="member5Contact"
-                              placeholder="XX XXX XXXX"
-                              type="tel"
-                              value={formData.member5Contact}
-                              onChange={handleChange}
-                            />
-                          </div>
-                        </div>
+                      {/* Add / Remove Member buttons */}
+                      <div style={{ display: "flex", gap: "16px", alignItems: "center", marginTop: "4px" }}>
+                        {extraMemberCount < 4 && (
+                          <button
+                            type="button"
+                            onClick={() => setExtraMemberCount((c) => c + 1)}
+                            style={{ display: "flex", alignItems: "center", gap: "5px", background: "none", border: "none", color: "rgba(255,255,255,0.7)", fontSize: "13px", cursor: "pointer", padding: 0 }}
+                          >
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                              <circle cx="12" cy="12" r="10" />
+                              <line x1="12" y1="8" x2="12" y2="16" />
+                              <line x1="8" y1="12" x2="16" y2="12" />
+                            </svg>
+                            Add Member
+                          </button>
+                        )}
+                        {extraMemberCount > 2 && (
+                          <button
+                            type="button"
+                            onClick={() => {
+                              const removedNum = extraMemberCount + 1;
+                              const nameKey = `member${removedNum}Name` as keyof FormFields;
+                              const contactKey = `member${removedNum}Contact` as keyof FormFields;
+                              setFormData((prev) => ({ ...prev, [nameKey]: "", [contactKey]: "" }));
+                              setExtraMemberCount((c) => c - 1);
+                            }}
+                            style={{ display: "flex", alignItems: "center", gap: "5px", background: "none", border: "none", color: "rgba(255,255,255,0.45)", fontSize: "13px", cursor: "pointer", padding: 0 }}
+                          >
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                              <circle cx="12" cy="12" r="10" />
+                              <line x1="8" y1="12" x2="16" y2="12" />
+                            </svg>
+                            Remove Member
+                          </button>
+                        )}
                       </div>
                     </div>
                   </div>
@@ -1186,11 +1377,23 @@ export default function EsperRegisterForm({
                       <div className="input-wrapper">
                         <label className={`file-upload-box ${buildTeamPdf ? "has-file" : ""}`} htmlFor="build-team-pdf">
                           <div className="file-upload-icon">
-                            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                              <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
-                              <polyline points="17 8 12 3 7 8"></polyline>
-                              <line x1="12" y1="3" x2="12" y2="15"></line>
-                            </svg>
+                            {buildTeamPdf ? (
+                              <div style={{ width: 40, height: 40, background: "#b91c1c", borderRadius: 8, display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center", flexShrink: 0, gap: 1 }}>
+                                <span style={{ color: "#fff", fontSize: 10, fontWeight: 700, letterSpacing: 0.5, lineHeight: 1 }}>PDF</span>
+                                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,0.7)" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                                  <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                                  <polyline points="14 2 14 8 20 8"></polyline>
+                                </svg>
+                              </div>
+                            ) : (
+                              <div style={{ width: 38, height: 38, background: "rgba(255,255,255,0.07)", borderRadius: 10, display: "flex", alignItems: "center", justifyContent: "center", flexShrink: 0 }}>
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                                  <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                                  <polyline points="17 8 12 3 7 8"></polyline>
+                                  <line x1="12" y1="3" x2="12" y2="15"></line>
+                                </svg>
+                              </div>
+                            )}
                           </div>
                           <div className="file-upload-text">
                             <span className="file-upload-title" id="build-team-pdf-filename">
@@ -1272,11 +1475,17 @@ export default function EsperRegisterForm({
                       <div className="input-wrapper">
                         <label className={`file-upload-box ${photographerPhoto ? "has-file" : ""}`} htmlFor="photographer-photo">
                           <div className="file-upload-icon">
-                            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                              <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
-                              <polyline points="17 8 12 3 7 8"></polyline>
-                              <line x1="12" y1="3" x2="12" y2="15"></line>
-                            </svg>
+                            {photographerPhotoPreview ? (
+                              <img src={photographerPhotoPreview} alt="Photo Preview" style={{ width: 40, height: 40, objectFit: "cover", borderRadius: 8, display: "block", flexShrink: 0 }} />
+                            ) : (
+                              <div style={{ width: 38, height: 38, background: "rgba(255,255,255,0.07)", borderRadius: 10, display: "flex", alignItems: "center", justifyContent: "center", flexShrink: 0 }}>
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                                  <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                                  <polyline points="17 8 12 3 7 8"></polyline>
+                                  <line x1="12" y1="3" x2="12" y2="15"></line>
+                                </svg>
+                              </div>
+                            )}
                           </div>
                           <div className="file-upload-text">
                             <span className="file-upload-title" id="photographer-photo-filename">
